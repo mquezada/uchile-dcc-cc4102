@@ -1,12 +1,13 @@
-#+OPTIONS: LaTeX:dvipng 
+#+OPTIONS: LaTeX:dvipng H:5 num:t
+#+LATEX_HEADER: \usepackage{babel}
+#+TITLE: CC4102/CC40A/CC53A - Dise\~no y An\'alisis de Algoritmos
+#+AUTHOR: J\'er\'emy Barbay
 
 * Lecture Notes CC4102
-** Presentación y Evaluación
+** Presentacion y Evaluacion
 *** Presentaciones
-**** Quien somos
+**** Quien somos?
      - franco-ingles-castellano
- - curso interactivo?
- - dos auxiliares
 **** Quien son? 
      * Quien
 	 - tomo el curso CC40A en los ultimos semestres?
@@ -20,16 +21,13 @@
     3. Tecnicas avanzadas de diseno y analisis de algoritmos (4 semanas = 8 charlas)
     4. Algoritmos no convencionales  (5 semanas = 10 charlas)
   * Modo
-   - *Clases expositivas* del profesor de catera
+   - *Clases expositivas* del profesor de catedra
      - buscando la participacion de los alumnos en pequenos
        problemas que se van proponiendo durante la exposicion.
-   - *Clases auxiliares* dedicadas a explicar ejemplos mas
-     extensos, resolver ejercicios propuestos, y preparacion pre y
-     post controles.
-   - *Exposicion* de las mejores tareas de los alumnos, como casos
-     de estudio de implementacion y experimentacion.
+   - *Clases auxiliares* dedicadas a explicar ejemplos mas extensos, resolver ejercicios propuestos, y preparacion pre y post controles.
+   - *Exposicion* de las mejores tareas de los alumnos, como casos de estudio de implementacion y experimentacion.
   * Evaluacion
-    * Old with three tareas
+    * Antiguamente: 3 tareas
 	 - [2/9] Examen (todas unidades)
 	 - [4/9] Controles
 	   - [2/9] Control 1 (unidades 1, 2 y parte de 3)
@@ -38,7 +36,7 @@
 	   - [1/9] Tarea 1
 	   - [1/9] Tarea 2
 	   - [1/9] Tarea 3
-    * New with 6 tareas
+    * Nuevo: 6 tareas
 	 - [2/9] Examen (todas unidades)
 	 - [4/9] Controles
 	   - [2/9] Control 1 (unidades 1, 2 y parte de 3)
@@ -51,15 +49,13 @@
 	   - [1/18] Tarea 5
 	   - [1/18] Tarea 6
   * Nota Final      
-    - controles y examen se promedian a partes iguales (el
-      examen reemplaca el peor control si la nota del examen es
-      mayor.)
+    - controles y examen se promedian a partes iguales (el examen reemplaza el peor control si la nota del examen es
+      mayor)
     - tareas se promedian a partes iguales
-    - nota final es 2/3 nota de controles y 1/3 de la nota de
-      tarea.
+    - nota final es 2/3 nota de controles y 1/3 de la nota de tarea.
 *** Programacion
     - Cuanto memoria hay en un computador? Como se maneja?
-   - Cual es la diferencia entre el disque duro y la memoria?
+   - Cual es la diferencia entre el disco duro y la memoria?
    - Cuanto procesadores hay en un computador? Como se programan?
    - Cual algoritmo elegir a implementar para un problema dicho?
    - Cual es la diferencia entre programacion imperativa y funcional?
@@ -71,63 +67,59 @@
      - Complejidad en promedio
      - Otros modelos computacionales?
 **** Complejidad Computacional
-     - Cual Algoritmos conocen? Cual son sus complejidad?
+     - Cual Algoritmos conocen? Cual son sus complejidades?
        - para buscar en un arreglo (ordenado? no ordenado?)
        - para ordenar un arreglo (en el modelo de comparaciones o no?)
-     - Cual cotas inferiores conocen?
+     - Cuales cotas inferiores conocen para...
        - buscar?
        - ordenar?
-     - Cual problemas dificiles conocen?
+     - Que problemas dificiles conocen?
        - elegir sus cursos
-       - assignar salas y horarios a los cursos
-       - assignar infermeros a hospitales
+       - asignar salas y horarios a los cursos
+       - asignar enfermeros a hospitales
 *** Busqueda y Codificacion de Enteros (BONUS)
     - A VER EN CASA O TUTORIAL
 ** 1. Conceptos basicos y complejidad (3 semanas = 6 charlas)
-*** Resultados de Aprendisajes de la Unidad
+*** Resultados de Aprendizajes de la Unidad
     - Comprender el concepto de complejidad de un problema como cota inferior
-    - conocer tecnicas elementales para demostrar cotas inferiores
+    - Conocer tecnicas elementales para demostrar cotas inferiores
     - Conocer algunos casos de estudio relevantes
     - Adquirir nociones basicas de experimentacion en algoritmos. 
 **** Principales casos de estudio 
-     - cota inferior para minimo y maximo de un arreglo
-     - caso promedio del quicksort
-     - cota inferior para busqueda en un arreglo con distintas probabilidades de acceso
-*** Repaso del proceso de diseno y analisis de un algoritmo.
+     - Cota inferior para minimo y maximo de un arreglo
+     - Caso promedio del quicksort
+     - Cota inferior para busqueda en un arreglo con distintas probabilidades de acceso
+*** Repaso del proceso de dise\~no y analisis de un algoritmo.
     * Problema de la Torre de Hanoi 
-      - definition
-      - cota superior
-      - cota inferior
+      - Definicion
+      - Cota superior
+      - Cota inferior
       - A VER EN CASA
     * Variantes de la Torre de Hanoi
-      - pesos distintos?
+      - Con pesos distintos?
       - Disk Pile Problem (n discos pero h<n tamanos)
-	- cota inferior en funcion de n, en funcion de n,h 
-	- cota superior en funcion de n, en funcion de n,h
+	- Cota inferior en funcion de n, en funcion de n,h 
+	- Cota superior en funcion de n, en funcion de n,h
       - A VER EN CASA
-    * Minimo (resp. maximo) de un arreglo
-      - cota superior
-      - cota inferior
-    * Minimo Maximo de un arreglo
-      - cota superior
-      - cota inferior
+    * Minimo (respectivamente maximo) de un arreglo
+      - Cota superior
+      - Cota inferior
+    * Minimo y Maximo de un arreglo
+      - Cota superior
+      - Cota inferior
 
 *** Minimo Maximo
 **** Cota inferior
      * Sean las variables siguentes:
        - $O$ los $o$ elementos todavia no comparados;
-       - $G$ los $g$ elementos que ``ganaron'' todas su
-	 comparaciones hasta ahora;
-       - $P$ los $p$ elementos que ``perdieron'' todas su
-	 comparaciones hasta ahora;
-       - $E$ las $e$ valores eliminadas (que perdieron al menos
-	 una comparacion, y ganaron al menos una comparacion);
+       - $G$ los $g$ elementos que ``ganaron'' todas sus comparaciones hasta ahora;
+       - $P$ los $p$ elementos que ``perdieron'' todas sus comparaciones hasta ahora;
+       - $E$ las $e$ valores eliminadas (que perdieron al menos una comparacion, y ganaron al menos una comparacion);
      -  $(o,g,p,e)$ describe el estado de cualquier algoritmo:
        -  siempre $o+g+p+e=n$;
        -  al inicio, $g=p=e=0$ y $o=n$;
        -  al final, $o=0$, $g=p=1$, y $e=n-2$.
-     -  Despues una comparacion $a?b$ en cualquier algoritmo del
-       	modelo de comparacion, $(o,g,p,e)$ cambia en funcion del
+     -  Despues una comparacion $a?b$ en cualquier algoritmo del modelo de comparacion, $(o,g,p,e)$ cambia en funcion del
        	resultado de la comparacion de la manera siguente:
        	$$
        	\begin{array}{c|c|c|c|c}
@@ -145,10 +137,8 @@
        	b\in E &               &                      &                      & o,g,p,e
        	\end{array}
        	$$
-     -  En algunas configuraciones, el cambio del vector estado
-       	depende del resultado de la comparacion: un adversario puede
-       	maximisar la complejidad del algoritmo eligando el resultado
-       	de cada comparacion. El arreglo siguente contiene en graso las
+     -  En algunas configuraciones, el cambio del vector estado depende del resultado de la comparacion: un adversario puede
+       	maximizar la complejidad del algoritmo eligando el resultado de cada comparacion. El arreglo siguente contiene en graso las
        	opciones que maximizan la complejidad del algoritmo:
        	$$
        	\begin{array}{c|c|c|c|c}
@@ -169,7 +159,7 @@
      -  Con estas opciones, hay
        -  $\lceil n/2\rceil$ transiciones de $O$ a $G\cup P$, y
        -  $n-2$ transiciones de $G\cup P$ a $E$.
-     -  Eso resulta en una complejidad en el peor case de $\lceil
+     -  Eso resulta en una complejidad en el peor caso de $\lceil
        	3n/2 \rceil-2 \in 3n/2 +O(1)$ comparaciones.
 
 **** Cota superior
@@ -246,8 +236,8 @@
 **** Al inicio, Ciencias de la computacion fue solamente experimentacion.
 ***** Turing y el codigo Enigma
       - el importante estaba de solucionar la instancia del dia
-	(romper la llave del dia, basado en los messages de
-	meteo, para decryptar los messages mas importantes)
+	romper la llave del dia, basado en los messages de
+	meteo, para decryptar los messages mas importantes
 	 - no mucho focus en el problema, aunque Turing si escribio
 	   la definicion de la Maquina universal.
 ***** Experimentacion basica 
