@@ -1,0 +1,32 @@
+* CC4102 Lecture (B205) <2011-03-08 Tue 12:00-13:30> COURSE INTRODUCTION 
+* CC4102 Lecture (B205) <2011-03-10 Thu 12:00-13:30> 1.1 ASYMPTOTICS 
+* CC4102 Lecture (B205) <2011-03-15 Tue 12:00-13:30> 1.2 MINMAX 
+* CC4102 Lecture (B205) <2011-03-17 Thu 12:00-13:30> 1.3 COTAS INFERIORES 
+* CC4102 Lecture (B205) <2011-03-22 Tue 12:00-13:30> 1.3 COTAS INFERIORES 
+* CC4102 Lecture (B205) <2011-03-24 Thu 12:00-13:30> 1.4 EXPERIMENTACIONES+RECURENCIAS 
+* CC4102 Lecture (B205) <2011-03-29 Tue 12:00-13:30> 2.1 Memoria Segundaria 
+* CC4102 Lecture (B205) <2011-03-31 Thu 12:00-13:30> 2.2: Diccionarios en Memoria Externa 
+* CC4102 Lecture (B205) <2011-04-05 Tue 12:00-13:30> 2.2: 
+* CC4102 Lecture (B205) <2011-04-07 Thu 12:00-13:30> 2.4: Colas de prioridad en Memoria Externa 
+* CC4102 Lecture (B205) <2011-04-12 Tue 12:00-13:30> 2.4: 
+* CC4102 Lecture (B205) <2011-04-14 Thu 12:00-13:30> 2.5: Mergesort en Memoria External 
+* CC4102 Lecture (B205) <2011-04-19 Tue 12:00-13:30> 3.1.1 Busqueda en dominios discretos 
+* CC4102 Lecture (B205) <2011-04-21 Thu 12:00-13:30> 3.1.2 Ordenamiento en dominios discretos 
+* CC4102 Lecture (B205) <2011-04-26 Tue 12:00-13:30> 3.2 Analisis amortizada y Colas de prioridades 
+* CC4102 Lecture (B205) <2011-04-28 Thu 12:00-13:30> 3.2 Binomial y Fibonacci Heaps 
+* CC4102 Lecture (B205) <2011-05-03 Tue 12:00-13:30> 3.3.1 Analisis "adaptiva": busqueda doblada 
+* CC4102 Lecture (B205) <2011-05-05 Thu 12:00-13:30> 3.3.2 Analisis "adaptiva": ordenamiento 
+* CC4102 Lecture (B205) <2011-05-10 Tue 12:00-13:30> 3.4.1 Algoritmos en Linea: List Accessing 
+* CC4102 Lecture (B205) <2011-05-12 Thu 12:00-13:30> 3.4.2 Algoritmos en Linea: Paginamiento Deterministico 
+* CC4102 Lecture (B205) [2011-05-17 Tue 12:00-13:30] :CANC:
+* CC4102 Lecture (B205) [2011-05-19 Thu 12:00-13:30] :CANC:
+* CC4102 Lecture (B205) <2011-05-24 Tue 12:00-13:30> 4.1.1 Tecnicas aleatorizadas 
+* CC4102 Lecture (B205) <2011-05-26 Thu 12:00-13:30> 4.1.2 cotas inferiores complejidad aleatorizada 
+* CC4102 Lecture (B205) <2011-05-31 Tue 12:00-13:30> 4.2.1 Aproximacion de problemas de optimizacion NP-hard 
+* CC4102 Lecture (B205) <2011-06-02 Thu 12:00-13:30> 4.2.1 BinPacking + Vertex Cover 
+* CC4102 Lecture (B205) <2011-06-07 Tue 12:00-13:30> 4.2.1 Traveling Salesman, Weighted Vertex Cover 
+* CC4102 Lecture (B205) <2011-06-09 Thu 12:00-13:30> 4.2.2 PTAS,FPTAS, Backpack 
+* CC4102 Lecture (B205) <2011-06-14 Tue 12:00-13:30> 4.3.1 Modelos de Parallelismo 
+* CC4102 Lecture (B205) <2011-06-16 Thu 12:00-13:30> 4.3.2 Max(A[1..n]), Lemma de Brent, Trabajo 
+* CC4102 Lecture (B205) <2011-06-21 Tue 12:00-13:30> 4.3.3 Ranking en Lista 
+* CC4102 Lecture (B205) <2011-06-23 Thu 12:00-13:30> 4.3.4 Prefijos en Paralelo 
