@@ -1,7 +1,13 @@
 #+TAGS: CQ(C) READING(R) TALK(T)
 #+DRAWERS: PROPERTIES LOGBOOK CLOCK PROOF SOLUTION
-#+OPTIONS: LaTeX:dvipng H:5 num:t
-#+LATEX_HEADER: \usepackage{babel}
+#+OPTIONS: LaTeX:dvipng 
+#+LATEX_HEADER:  \usepackage{fullpage}
+
+# THose options seem to cause problem when using C-c C-x C-l to 
+# preview LaTeX fragments (org-preview-latex-fragment) in class:
+# Disabled untill I see why  -- Jeremy
+  #+OPTIONS: LaTeX:dvipng H:5 num:t
+  #+LATEX_HEADER: \usepackage[spanish]{babel}
 
 #+TITLE: CC4102/CC40A/CC53A - Dise\~no y An\'alisis de Algoritmos
 #+AUTHOR: J\'er\'emy Barbay
@@ -9,6 +15,9 @@
 * Lecture Notes CC4102
   :CLOCK:
   CLOCK: [2011-03-08 Tue 11:18]--[2011-03-08 Tue 12:23] =>  1:05
+  :END:
+  :PROPERTIES:
+  :ID:       8083f75f-15d1-4cf8-a992-8b787d182c26
   :END:
 ** Presentación y Evaluación (1 charla)
 *** Presentaciones
@@ -224,10 +233,10 @@
       indicada, entonces la(s) relación(es) entre padres e hijos es
       (son):
 
-      1. [ ] Hijos del nodo j = {2*j, 2*j+1}
-      2. [ ] Padre del nodo k = floor(k/2) 
-      3. [ ] Hijos del nodo j = {2*j-1, 2*j}
-      4. [ ] Padre del nodo k = floor(k/2)+1 
+      1. [ ] Hijos del nodo $j = \{2*j, 2*j+1\}$
+      2. [ ] Padre del nodo $k = \lfloor k/2 \rfloor$ 
+      3. [ ] Hijos del nodo $j = \{2*j-1, 2*j\}$
+      4. [ ] Padre del nodo $k = \lfloor k/2 \rfloor+1$ 
       5. [ ] ningunos
 ***** TODO AVL
       La altura de un AVL con $n$ elementos es  
@@ -270,7 +279,7 @@
      - cota inferior para minimo y maximo de un arreglo
      - caso promedio del quicksort
      - cota inferior para busqueda en un arreglo con distintas probabilidades de acceso
-*** PREREQUISITOS
+*** PREREQUISITOS DE UNIDAD 
 **** Lista de themas en apuntes de CC3001 			    :READING:
     http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
 *** 1.1 Repaso del proceso de diseno y analisis de un algoritmo.
@@ -610,11 +619,11 @@
 **** Busqueda Ordenada (en el modelo de comparaciones)
        	1. Cota superior: $2\lg n$ vs $1+\lg n$
        	2. Cota inferior en el peor caso: Strategia de Adversario
-	   cota inferior en el peor caso de $1+\lg n$
+	   cota inferior en el peor caso de  $1+\lg n$
        	3. Cota inferior en el caso promedio uniforme
 	   - Teoria de la Informacion
 	   - = Arbol de Decision
-	   - cota inferior de $\lg(2n+1)$, i.e. de $1+\lsup\lg(n+1/2)\rsup$
+	   - cota inferior de $\lg(2n+1)$, i.e. de $1+\lceil\lg(n+1/2)\rceil$
        	4. La complejidad del problema
 	   - en el peor caso es $\Theta(\lg n)$
 	   - en el caso promedio es $\Theta(\lg n)$
@@ -1126,6 +1135,7 @@
        - Busqueda binaria en $\Theta(1+\lg n)$ (mejor que $2\lg n$)
        - Algoritmo en $2n/3 + O(1)$ comparaciones para min max
 ** 2. Algoritmos y Estructuras de Datos para Memoria Secundaria (3 semanas = 6 charlas)
+*** PREREQUISITOS DE UNIDAD 
 *** 2.1 Modelo de computacion en memoria secundaria. Accesos secuenciales y aleatorios
     1. Arquitectura de un computador: la memoria
        1) Muchos niveles de memoria
