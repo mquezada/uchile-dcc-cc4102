@@ -7,39 +7,38 @@
 #+AUTHOR: J\'er\'emy Barbay
 
 * Lecture Notes CC4102
-** Presentacion y Evaluacion
+  :CLOCK:
+  CLOCK: [2011-03-08 Tue 11:18]--[2011-03-08 Tue 12:23] =>  1:05
+  :END:
+** Presentación y Evaluación (1 charla)
 *** Presentaciones
-**** Quien somos?
-     - franco-ingles-castellano
+**** Quien somos
+ - franco-ingles-castellano
+ - curso interactivo?
+ - dos auxiliares
 **** Quien son? 
      * Quien
-	 - tomo el curso CC40A en los ultimos semestres?
-	 - toma CC53A
+	 - tomo el curso CC40A o CC4102 en los ultimos semestres?
+	 - toma CC53A?
        * Quien
 	 - piensa seguir en la universidad despues de magister?
 **** El curso
-     * Tematicas 
+  * =Tematicas= 
     1. Conceptos basicos y complejidad (3 semanas = 6 charlas)
     2. Algoritmos y Estructras de Datos para Memoria Secundaria (3 semanas = 6 charlas)
     3. Tecnicas avanzadas de diseno y analisis de algoritmos (4 semanas = 8 charlas)
     4. Algoritmos no convencionales  (5 semanas = 10 charlas)
-  * Modo
-   - *Clases expositivas* del profesor de catedra
+  * =Modo=
+   - *Clases expositivas* del profesor de catera
      - buscando la participacion de los alumnos en pequenos
        problemas que se van proponiendo durante la exposicion.
-   - *Clases auxiliares* dedicadas a explicar ejemplos mas extensos, resolver ejercicios propuestos, y preparacion pre y post controles.
-   - *Exposicion* de las mejores tareas de los alumnos, como casos de estudio de implementacion y experimentacion.
-  * Evaluacion
-    * Antiguamente: 3 tareas
-	 - [2/9] Examen (todas unidades)
-	 - [4/9] Controles
-	   - [2/9] Control 1 (unidades 1, 2 y parte de 3)
-	   - [2/9] Control 2 (unidades 3,4)
-	 - [1/3] Tareas
-	   - [1/9] Tarea 1
-	   - [1/9] Tarea 2
-	   - [1/9] Tarea 3
-    * Nuevo: 6 tareas
+   - *Clases auxiliares* dedicadas a explicar ejemplos mas
+     extensos, resolver ejercicios propuestos, y preparacion pre y
+     post controles.
+   - *Exposicion* de las mejores tareas de los alumnos, como casos
+     de estudio de implementacion y experimentacion.
+  * =Evaluacion=
+    * 2010 con 6 tareas y 2 controles
 	 - [2/9] Examen (todas unidades)
 	 - [4/9] Controles
 	   - [2/9] Control 1 (unidades 1, 2 y parte de 3)
@@ -51,18 +50,111 @@
 	   - [1/18] Tarea 4
 	   - [1/18] Tarea 5
 	   - [1/18] Tarea 6
-  * Nota Final      
-    - controles y examen se promedian a partes iguales (el examen reemplaza el peor control si la nota del examen es
-      mayor)
+    * 2010 con 6 tareas y 2 controles
+      - [1/3] Tareas
+	- [1/18] Tarea 1
+	- [1/18] Tarea 2
+	- [1/18] Tarea 3
+	- [1/18] Tarea 4
+	- [1/18] Tarea 5
+	- [1/18] Tarea 6
+      - [4/9] Controles
+	- [1/9] Control 1 (unidad 1)
+	- [2/9] Control 2 (unidades 2 y 3)
+	- [1/9] Control 3 (unidad 4)
+      - [2/9] Examen (todas unidades)
+  * =Nota Final=      
+    - controles se promedian a partes iguales
+    - el examen reemplaca el peor control si la nota del examen es
+      mayor.
     - tareas se promedian a partes iguales
-    - nota final es 2/3 nota de controles y 1/3 de la nota de tarea.
-*** Programacion
-    - Cuanto memoria hay en un computador? Como se maneja?
-   - Cual es la diferencia entre el disco duro y la memoria?
+*** Preguntas sobre la Programacion				       :TALK:
+   - Cuanto memoria hay en un computador? Como se maneja?
+   - Cual es la diferencia entre el disque duro y la memoria?
    - Cuanto procesadores hay en un computador? Como se programan?
    - Cual algoritmo elegir a implementar para un problema dicho?
    - Cual es la diferencia entre programacion imperativa y funcional?
-*** Conceptos basicos (test)
+*** Introduciendo "Concept questions": "Hanoi Tower" y "Disk Pile"
+    :LOGBOOK:
+    - State "DONE"       from "NEXT"       [2011-03-03 Thu 10:17]
+    :END:
+    :PROPERTIES:
+    :Effort:   0:10
+    :Energy:   ZERO
+    :Span:     hour
+    :END:
+**** Story of Eric Mazur					       :TALK:
+     - link to his talk on UTube 
+**** Hanoi Tower of height 4						 :CQ:
+     :PROPERTIES:
+     :END:
+     :SOLUTION: 
+     none of the above
+     :END:
+     :PROOF: 
+     - The complexity is *not* $2^{n}$ (think about the complexity to move a single disk).
+     - f(1)=1; f(n+1) = 2*f(n)+1 yields
+       | 1 | 2 | 3 |  4 |  5 |  6 |   7 |   8 |
+       |---+---+---+----+----+----+-----+-----|
+       | 1 | 3 | 7 | 15 | 31 | 63 | 127 | 253 |
+     :END:
+     What is the minimum number of moves required to move a Hanoi Tower of height $4$?
+       1) [ ] $4$
+       2) [ ] $4*\lg 4=4*2=8$
+       3) [ ] $4!=4*3*2*1 = 24$
+       4) [ ] $2^4 = 32$
+       5) [ ] none of the above
+
+**** Hanoi Tower of height 8						 :CQ:
+     :PROPERTIES:
+     :END:
+     :SOLUTION: 
+     none of the above
+     :END:
+     :PROOF: 
+     - The complexity is *not* $2^{n}$ (think about the complexity to move a single disk).
+     - f(1)=1; f(n+1) = 2*f(n)+1 yields
+       | 1 | 2 | 3 |  4 |  5 |  6 |   7 |   8 |
+       |---+---+---+----+----+----+-----+-----|
+       | 1 | 3 | 7 | 15 | 31 | 63 | 127 | 253 |
+     :END:
+     What is the minimum number of moves required to move a Hanoi Tower of height $8$?
+       1) [ ] $8$
+       2) [ ] $8*\lg 8=8*3=24$
+       3) [ ] $2^8 = 254$
+       4) [ ] $8! = 8*7*6*5*4*3*2*1 = 40320$
+       5) [ ] none of the above
+
+**** Disk Pile of height 8						 :CQ:
+     :PROPERTIES:
+     :SOLUTION: 
+     8   
+     :END:
+     :PROOF: 
+     The "minimum" can refer not only to the optimality of the solution, but also to the choice of the instance. 
+     The easiest instance of moving a disk pile is when all the disks have the same size, and hence can be moved in linear time.
+     :END:
+     What is the minimum number of moves required to move a disk pile
+     of height $8$?
+       1) [ ] $8$
+       2) [ ] $8*\lg 8=8*3=24$
+       3) [ ] $2^8$
+       4) [ ] $8!=8*7*6*5*4*3*2*1=?$
+       5) [ ] none of the above
+
+**** Disk Pile of height 8 with 2 disk sizes				 :CQ:
+     :PROPERTIES:
+     :PROOF: 
+     :END:
+     What is the minimum number of moves required to move a disk pile
+     of height $8$ in the worst case over the instances with exactly
+     two distinct sizes of disc?
+       1) [ ] $8$
+       2) [ ] $8*\lg 8=8*3=24$
+       3) [ ] $2^8$
+       4) [ ] $8!=8*7*6*5*4*3*2*1=?$
+       5) [ ] none of the above
+*** Conceptos basicos (recuerdando CC3001)
 **** Notaciones
      - $O(), o(), \Omega(), \omega(), \Theta(), \theta()$
 **** Definiciones
@@ -70,102 +162,261 @@
      - Complejidad en promedio
      - Otros modelos computacionales?
 **** Complejidad Computacional
-     - Cual Algoritmos conocen? Cual son sus complejidades?
+     - Cual Algoritmos conocen? Cual son sus complejidad?
        - para buscar en un arreglo (ordenado? no ordenado?)
        - para ordenar un arreglo (en el modelo de comparaciones o no?)
-     - Cuales cotas inferiores conocen para...
+     - Cual cotas inferiores conocen?
        - buscar?
        - ordenar?
-     - Que problemas dificiles conocen?
+     - Cual problemas dificiles conocen?
        - elegir sus cursos
-       - asignar salas y horarios a los cursos
-       - asignar enfermeros a hospitales
+       - assignar salas y horarios a los cursos
+       - assignar infermeros a hospitales
+**** Concept Questions [0/7] 
+***** TODO Asymptotics
+       :LOGBOOK:
+       - State "TODO"       from ""           [2011-03-10 Thu 11:55]
+       :END:
+| $f(n)$            | $g(n)$          | $f(n)\in O(g(n)$ | $f(n)\in \Omega(g(n)$ | $f(n)\in Theta(g(n)$ |
+|-------------------+-----------------+------------------+-----------------------+----------------------|
+| $3n+6$            | $100n-50$       |                  |                       |                      |
+| $n^{\frac{1}{2}}$ | $n^\frac{2}{3}$ |                  |                       |                      |
+***** TODO ¿Cuántos árboles binarios distintos se pueden construir con 3 nodos internos?
+      :LOGBOOK:
+      - State "TODO"       from ""           [2011-03-10 Thu 11:55]
+      :END:
+      1. [ ] 1
+      2. [ ] 3
+      3. [ ] 4
+      4. [ ] 6
+      5. [ ] otra
+***** TODO Arboles Binarios, nodos internos externos
+      Si se define i = número de nodos internos, e = número de nodos
+      externos, entonces se tiene que:
+      :LOGBOOK:
+      - State "TODO"       from ""           [2011-03-10 Thu 11:55]
+      :END:
+      1. [ ] i = e
+      2. [ ] e = i+1
+      3. [ ] i = e+1
+      4. [ ] e = 2^i
+      5. [ ] sin relacion
+***** TODO Sea n = número de nodos internos. Se define:
+      :LOGBOOK:
+      - State "TODO"       from ""           [2011-03-10 Thu 11:55]
+      :END:
+   * In = suma del largo de los caminos desde la raíz a cada nodo
+     interno (largo de caminos internos).
+   * En = suma del largo de los caminos desde la raíz a cada nodo
+     externo (largo de caminos externos).
+     Se tiene que:
+     1. [ ] En = In
+     2. [ ] En = In+1
+     3. [ ] En = In+n
+     4. [ ] En = In+2n
+     5. [ ] sin relacion
+***** TODO Heap
+      :LOGBOOK:
+      - State "TODO"       from ""           [2011-03-10 Thu 11:55]
+      :END:
+      La característica que permite que un heap se pueda almacenar
+      sin punteros es que, si se utiliza la numeración por niveles
+      indicada, entonces la(s) relación(es) entre padres e hijos es
+      (son):
+
+      1. [ ] Hijos del nodo j = {2*j, 2*j+1}
+      2. [ ] Padre del nodo k = floor(k/2) 
+      3. [ ] Hijos del nodo j = {2*j-1, 2*j}
+      4. [ ] Padre del nodo k = floor(k/2)+1 
+      5. [ ] ningunos
+***** TODO AVL
+      La altura de un AVL con $n$ elementos es  
+      1. [ ] $\log_\phi(n+1)+\Theta(1)$
+      2. [ ] en $O(\lg n)$
+      3. [ ] en $\Omega(\lg n)$
+      4. [X] en $\Theta(\lg n)$
+      5. [ ] ningunos o mas que dos
+***** TODO AVL h-> n
+      para una altura $h$ dada, cuantos nodos tiene un árbol AVL con
+      *mínimo* número de nodos que alcanza esa altura?
+      1. [ ] $h$
+      2. [ ] $2h$
+      3. [ ] $2^h$
+      4. [ ] $2^h-1$
+      5. [ ] ningunas de las respuestas  previas.
+
 *** Busqueda y Codificacion de Enteros (BONUS)
-    - A VER EN CASA O TUTORIAL
+**** Relacion entre busqueda ordenada y codigos			       :TALK:
+
+     | Algoritmo de busqueda      | Codigo por enteros |
+     |----------------------------+--------------------|
+     | Busqueda secuencial        | Codigo Unario      |
+     | Busqueda binaria           | Codigo Binario     |
+     | Busqueda doblada           | ???                |
+     | Busqueda por interpolacion | ???                |
+     | ???                        | Huffman Code       |
+
+     - A cuales algoritmos de busqueda ordenada corresponden codigos?
+     - A cuales codigos corresponden algoritmos de busqueda?
+
 ** 1. Conceptos basicos y complejidad (3 semanas = 6 charlas)
-*** Resultados de Aprendizajes de la Unidad
-    - Comprender el concepto de complejidad de un problema como cota inferior
-    - Conocer tecnicas elementales para demostrar cotas inferiores
-    - Conocer algunos casos de estudio relevantes
-    - Adquirir nociones basicas de experimentacion en algoritmos. 
+*** DESCRIPCION de la Unidad:
+**** Resultados de Aprendisajes de la Unidad
+     - Comprender el concepto de complejidad de un problema como cota inferior
+     - conocer tecnicas elementales para demostrar cotas inferiores
+     - Conocer algunos casos de estudio relevantes
+     - Adquirir nociones basicas de experimentacion en algoritmos. 
 **** Principales casos de estudio 
-     - Cota inferior para minimo y maximo de un arreglo
-     - Caso promedio del quicksort
-     - Cota inferior para busqueda en un arreglo con distintas probabilidades de acceso
-*** Repaso del proceso de dise\~no y analisis de un algoritmo.
-    * Problema de la Torre de Hanoi 
-      - Definicion
-      - Cota superior
-      - Cota inferior
-      - A VER EN CASA
-    * Variantes de la Torre de Hanoi
-      - Con pesos distintos?
-      - Disk Pile Problem (n discos pero h<n tamanos)
-	- Cota inferior en funcion de n, en funcion de n,h 
-	- Cota superior en funcion de n, en funcion de n,h
-      - A VER EN CASA
-    * Minimo (respectivamente maximo) de un arreglo
-      - Cota superior
-      - Cota inferior
-    * Minimo y Maximo de un arreglo
-      - Cota superior
-      - Cota inferior
+     - cota inferior para minimo y maximo de un arreglo
+     - caso promedio del quicksort
+     - cota inferior para busqueda en un arreglo con distintas probabilidades de acceso
+*** PREREQUISITOS
+**** Lista de themas en apuntes de CC3001 			    :READING:
+    http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
+*** 1.1 Repaso del proceso de diseno y analisis de un algoritmo.
+**** PREREQUISITOS
+***** "Bases de la programacion" en apuntes de CC3001		    :READING:
+      - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
+***** Notaciones asimptoticas					    :READING:
+	- $O()$  http://es.wikipedia.org/wiki/Cota_superior_asint%C3%B3tica
+	- $\Omega()$ http://es.wikipedia.org/wiki/Cota_inferior_asint%C3%B3tica
+	- $\Theta()$ http://es.wikipedia.org/wiki/Cota_ajustada_asint%C3%B3tica
+	- $o()$ (y $O()$) http://es.wikipedia.org/wiki/Notaci%C3%B3n_de_Landau
+	- $\omega()$
+	- $\theta()$
+***** AVL en  apuntes de CC3001					    :READING:
+      - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/#3
+**** Problema de la Torre de Hanoi				       :TALK:
+     - definition
+     - cota superior
+     - cota inferior
+**** Variantes de la Torre de Hanoi				       :TALK:
+    - pesos distintos?
+    - Disk Pile Problem ($n$ discos pero $h<n$ tamanos)
+      - cota inferior en funcion de $n$, en funcion de $n,h$ 
+      - cota superior en funcion de $n$, en funcion de $n,h$
+    - Precise Disk Pile Problem ($n$ discos con $n_i$ de tamaño $i$, $\forall i\in[1..h]$)
+      - cota inferior en funcion de $n$, en funcion de $h,n_1,...,n_h$ 
+      - cota superior en funcion de $n$, en funcion de $h,n_1,...,n_h$
+**** CONCEPT QUESTIONS [7/7] 						 :CQ:
+***** DONE [#A] Asymptotics						 :CP:
+       :LOGBOOK:
+       - State "DONE"       from "TODO"       [2011-03-15 Tue 11:05]
+       - State "TODO"       from ""           [2011-03-10 Thu 11:55]
+       :END:
+| $f(n)$            | $g(n)$          | $f(n)\in O(g(n)$ | $f(n)\in \Omega(g(n)$ | $f(n)\in Theta(g(n)$ |
+|-------------------+-----------------+------------------+-----------------------+----------------------|
+| $3n+6$            | $100n-50$       |                  |                       |                      |
+| $n^{\frac{1}{2}}$ | $n^\frac{2}{3}$ |                  |                       |                      |
+***** DONE [#A] ¿Cuántos árboles binarios distintos se pueden construir con 3 nodos internos?
+      :LOGBOOK:
+      - State "DONE"       from "TODO"       [2011-03-15 Tue 11:06]
+      - State "TODO"       from ""           [2011-03-10 Thu 11:55]
+      :END:
+      1. [ ] 1
+      2. [ ] 3
+      3. [ ] 4
+      4. [ ] 6
+      5. [ ] otra
+***** DONE Arboles Binarios, nodos internos externos
+      Si se define i = número de nodos internos, e = número de nodos
+      externos, entonces se tiene que:
+      :LOGBOOK:
+      - State "DONE"       from "TODO"       [2011-03-15 Tue 11:06]
+      - State "TODO"       from ""           [2011-03-10 Thu 11:55]
+      :END:
+      1. [ ] i = e
+      2. [ ] e = i+1
+      3. [ ] i = e+1
+      4. [ ] e = 2^i
+      5. [ ] sin relacion
+***** DONE Sea n = número de nodos internos. Se define:
+      :LOGBOOK:
+      - State "DONE"       from "TODO"       [2011-03-15 Tue 11:06]
+      - State "TODO"       from ""           [2011-03-10 Thu 11:55]
+      :END:
+   * In = suma del largo de los caminos desde la raíz a cada nodo
+     interno (largo de caminos internos).
+   * En = suma del largo de los caminos desde la raíz a cada nodo
+     externo (largo de caminos externos).
+     Se tiene que:
+     1. [ ] En = In
+     2. [ ] En = In+1
+     3. [ ] En = In+n
+     4. [ ] En = In+2n
+     5. [ ] sin relacion
+***** DONE Heap
+      :LOGBOOK:
+      - State "DONE"       from "TODO"       [2011-03-15 Tue 11:06]
+      - State "TODO"       from ""           [2011-03-10 Thu 11:55]
+      :END:
+      La característica que permite que un heap se pueda almacenar
+      sin punteros es que, si se utiliza la numeración por niveles
+      indicada, entonces la(s) relación(es) entre padres e hijos es
+      (son):
+      1. [ ] Hijos del nodo j = {2*j, 2*j+1}
+      2. [ ] Padre del nodo k = floor(k/2) 
+      3. [ ] Hijos del nodo j = {2*j-1, 2*j}
+      4. [ ] Padre del nodo k = floor(k/2)+1 
+      5. [ ] ningunos
+***** DONE AVL
+      :LOGBOOK:
+      - State "DONE"       from "TODO"       [2011-03-15 Tue 11:06]
+      :END:
+      La altura de un AVL con $n$ elementos es  
+      1. [ ] $\log_\phi(n+1)+\Theta(1)$
+      2. [ ] en $O(\lg n)$
+      3. [ ] en $\Omega(\lg n)$
+      4. [ ] en $\Theta(\lg n)$
+      5. [ ] ningunos o mas que dos
+***** DONE [#A] AVL h-> n
+      :SOLUTION:
+      5. otra respuesta
+      :END:
+      :PROOF:
+      (ref http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/#3  )
+      Sea $n_h$ el tamano del arbol AVL mas pequeno de altura $h$.
+      Experimentalemente, 
+      | $h$   | 1 | 2 | 3 | 4 |  5 |
+      |-------+---+---+---+---+----|
+      | $n_h$ | 2 | 3 | 5 | 8 | 13 |
+      Recursivamente, un tal arbol tiene
+      - un hijo de altura $h-1$ y con $n_{h-1}$ nodos
+      - un hijo de altura $h-2$ y con $n_{h-2}$ nodos 
 
-*** Minimo Maximo
-**** Cota inferior
-     * Sean las variables siguentes:
-       - $O$ los $o$ elementos todavia no comparados;
-       - $G$ los $g$ elementos que ``ganaron'' todas sus comparaciones hasta ahora;
-       - $P$ los $p$ elementos que ``perdieron'' todas sus comparaciones hasta ahora;
-       - $E$ las $e$ valores eliminadas (que perdieron al menos una comparacion, y ganaron al menos una comparacion);
-     -  $(o,g,p,e)$ describe el estado de cualquier algoritmo:
-       -  siempre $o+g+p+e=n$;
-       -  al inicio, $g=p=e=0$ y $o=n$;
-       -  al final, $o=0$, $g=p=1$, y $e=n-2$.
-     -  Despues una comparacion $a?b$ en cualquier algoritmo del modelo de comparacion, $(o,g,p,e)$ cambia en funcion del
-       	resultado de la comparacion de la manera siguente:
-       	$$
-       	\begin{array}{c|c|c|c|c}
-       	& a\in O        & a\in G               & a\in P               & a\in E      \\ 
-       	\hline %--------------------------------------
-       	b\in O & o-2,g+1,p+1,e & o-1,p,e+1            & o-1,g,p,e+1          & o-1,g+1,p,e \\
-       	&               & o-1,g,p+1,e          & o-1,g+1,p,e          & o-1,g,p+1,e \\
-       	\hline %--------------------------------------
-       	b\in G &               & o,g-1,p,e+1          & o,g,p,e              & o,g,p,e     \\ 
-       	&               &                      & o,g-1,p-1,e+2        & o,g-1,p,e+1 \\ 
-       	\hline %--------------------------------------
-       	b\in P &               &                      & o,g,p-1,e+1          & o,g,p,e     \\ 
-       	&               &                      &                      & o,g,p-1,e+1 \\ 
-       	\hline %--------------------------------------
-       	b\in E &               &                      &                      & o,g,p,e
-       	\end{array}
-       	$$
-     -  En algunas configuraciones, el cambio del vector estado depende del resultado de la comparacion: un adversario puede
-       	maximizar la complejidad del algoritmo eligando el resultado de cada comparacion. El arreglo siguente contiene en graso las
-       	opciones que maximizan la complejidad del algoritmo:
-       	$$
-       	\begin{array}{c|c|c|c|c}
-       	& a\in O        & a\in G               & a\in P               & a\in E           \\ 
-       	\hline %--------------------------------------
-       	b\in O & o-2,g+1,p+1,e & o-1,p,e+1            & o-1,g,p,e+1          & o-1,g+1,p,e      \\
-       	&               & \mathbf{o-1,g,p+1,e} & \mathbf{o-1,g+1,p,e} & o-1,g,p+1,e      \\
-       	\hline %--------------------------------------
-       	b\in G &               & o,g-1,p,e+1          & \mathbf{o,g,p,e}     & \mathbf{o,g,p,e} \\ 
-       	&               &                      & o,g-1,p-1,e+2        & o,g-1,p,e+1      \\ 
-       	\hline %--------------------------------------
-       	b\in P &               &                      & o,g,p-1,e+1          & \mathbf{o,g,p,e} \\ 
-       	&               &                      &                      & o,g,p-1,e+1      \\ 
-       	\hline %--------------------------------------
-       	b\in E &               &                      &                      & o,g,p,e
-       	\end{array}
-       	$$
-     -  Con estas opciones, hay
-       -  $\lceil n/2\rceil$ transiciones de $O$ a $G\cup P$, y
-       -  $n-2$ transiciones de $G\cup P$ a $E$.
-     -  Eso resulta en una complejidad en el peor caso de $\lceil
-       	3n/2 \rceil-2 \in 3n/2 +O(1)$ comparaciones.
+      Asi $n_h = 1+n_{h-1}+n_{h-2}$: es la forma de la secuencia de
+      Fibonacci (con distintas condiciones iniciales)!  
 
-**** Cota superior
+      La solucion es $n_h=\frac{\phi^{h+2}}{\sqrt{5}}$ (que no es en
+      la lista).
+      :END:
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-15 Tue 12:08]
+      - State "NEXT"       from "TODO"       [2011-03-15 Tue 11:06]
+      :END:
+      para una altura $h$ dada, cuantos nodos tiene un árbol AVL con
+      *mínimo* número de nodos que alcanza esa altura?
+      1. [ ] $h$
+      2. [ ] $2h$
+      3. [ ] $2^h$
+      4. [ ] $2^h-1$
+      5. [ ] otra respuesta
+
+*** 1.2 Minimo Maximo de un  arreglo
+**** PREREQUISITOS
+***** Cotas Inferiores en apuntes de CC3001			    :READING:
+   - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#1
+**** Minimo (resp. maximo) de un arreglo
+   - cota superior
+   - cota inferior
+**** Calcular el Minimo y el Maximo de un Arreglo en una sola computacion
+   - cota superior?
+     - cota superior para max + cota superior para min
+   - cota inferior?
+     - cota inferior para min + cota superior para max?
+     - min(cota inferior para min , cota superior para max?)
+
+**** Cota superior para el problema de minmax
 
      * Calcular el minimo con el algoritmo previo, y el maximo
        con un algoritmo simetrico, da una complejidad de $2n-2$
@@ -195,23 +446,181 @@
 	 $n$ es impar.
       -  en la clase $3n/2 + O(1)$ en ambos casos.
 
+**** Cota inferior para el problema de minmax
+     * Sean las variables siguentes:
+       - $O$ los $o$ elementos todavia no comparados;
+       - $G$ los $g$ elementos que ``ganaron'' todas su
+	 comparaciones hasta ahora;
+       - $P$ los $p$ elementos que ``perdieron'' todas su
+	 comparaciones hasta ahora;
+       - $E$ las $e$ valores eliminadas (que perdieron al menos
+	 una comparacion, y ganaron al menos una comparacion);
+     -  $(o,g,p,e)$ describe el estado de cualquier algoritmo:
+       -  siempre $o+g+p+e=n$;
+       -  al inicio, $g=p=e=0$ y $o=n$;
+       -  al final, $o=0$, $g=p=1$, y $e=n-2$.
+     -  Despues una comparacion $a?b$ en cualquier algoritmo del
+       	modelo de comparacion, $(o,g,p,e)$ cambia en funcion del
+       	resultado de la comparacion de la manera siguente:
+       	$$
+       	\begin{array}{c|c|c|c|c}
+       	& a\in O        & a\in G               & a\in P               & a\in E      \\ 
+       	\hline %--------------------------------------
+       	b\in O & o-2,g+1,p+1,e & o-1,p,e+1            & o-1,g,p,e+1          & o-1,g+1,p,e \\
+       	&               & o-1,g,p+1,e          & o-1,g+1,p,e          & o-1,g,p+1,e \\
+       	\hline %--------------------------------------
+       	b\in G &               & o,g-1,p,e+1          & o,g,p,e              & o,g,p,e     \\ 
+       	&               &                      & o,g-1,p-1,e+2        & o,g-1,p,e+1 \\ 
+       	\hline %--------------------------------------
+       	b\in P &               &                      & o,g,p-1,e+1          & o,g,p,e     \\ 
+       	&               &                      &                      & o,g,p-1,e+1 \\ 
+       	\hline %--------------------------------------
+       	b\in E &               &                      &                      & o,g,p,e
+       	\end{array}
+       	$$
+     -  En algunas configuraciones, el cambio del vector estado
+       	depende del resultado de la comparacion: un adversario puede
+       	maximisar la complejidad del algoritmo eligando el resultado
+       	de cada comparacion. El arreglo siguente contiene en graso las
+       	opciones que maximizan la complejidad del algoritmo:
+       	$$
+       	\begin{array}{c|c|c|c|c}
+       	& a\in O        & a\in G               & a\in P               & a\in E           \\ 
+       	\hline %--------------------------------------
+       	b\in O & o-2,g+1,p+1,e & o-1,p,e+1            & o-1,g,p,e+1          & o-1,g+1,p,e      \\
+       	&               & \mathbf{o-1,g,p+1,e} & \mathbf{o-1,g+1,p,e} & o-1,g,p+1,e      \\
+       	\hline %--------------------------------------
+       	b\in G &               & o,g-1,p,e+1          & \mathbf{o,g,p,e}     & \mathbf{o,g,p,e} \\ 
+       	&               &                      & o,g-1,p-1,e+2        & o,g-1,p,e+1      \\ 
+       	\hline %--------------------------------------
+       	b\in P &               &                      & o,g,p-1,e+1          & \mathbf{o,g,p,e} \\ 
+       	&               &                      &                      & o,g,p-1,e+1      \\ 
+       	\hline %--------------------------------------
+       	b\in E &               &                      &                      & o,g,p,e
+       	\end{array}
+       	$$
+     -  Con estas opciones, hay
+       -  $\lceil n/2\rceil$ transiciones de $O$ a $G\cup P$, y
+       -  $n-2$ transiciones de $G\cup P$ a $E$.
+     -  Eso resulta en una complejidad en el peor case de $\lceil
+       	3n/2 \rceil-2 \in 3n/2 +O(1)$ comparaciones.
 
-*** Tecnicas para demostrar cotas inferiores: 
+
+**** CONCEPT QUESTIONS [6/8] 						 :CQ:
+***** DONE Cota superior de (la complejidad de) Max ord
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-15 Tue 12:20]
+      :END:
+      Dado un arreglo ordenado de $n$ enteros, en cuanto accessos al
+      arreglo pueden  calcular su valor maximal?
+      1. [ ] $0$
+      2. [ ] $1$
+      3. [ ] $n-1$
+      4. [ ] $n$
+      5. [ ] otra
+***** NEXT Definicion de la mediana
+      Dado un arreglo de $n$ enteros, cual es la definicion correcta
+      de la mediana?
+      1. [ ] El promedio de las valores minima y maxima del arreglo.
+      2. [ ] La valor en el centro del arreglo.
+      3. [ ] La valor en el centro del arreglo ordenado.
+      4. [ ] La valor superior a $\lceil(n-1)/2\rceil$ valores y inferior a $\lfloor(n-1)/2\rfloor$ valores. 
+      5. [ ] otra respuesta.
+***** DONE Dificultad de problemas en arreglos
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-15 Tue 13:39]
+      :END:
+      Dado un arreglo de $n$ enteros, cual problema requiere mas
+      accessos al arreglo? Mas computacion?
+      1. [ ] Calcular la valor minima
+      2. [ ] Calcular la valor maxima
+      3. [ ] Calcular la valor mediana
+      4. [ ] Calcular la valor promedia
+      5. [ ] Son todos iguales
+***** DONE [#A] Cota Inferior para Max
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-15 Tue 13:39]
+      - State "NEXT"       from ""           [2011-03-15 Tue 11:08]
+      :END:
+      Dado un arreglo de $n$ enteros, cuanto comparaciones entre los
+      elementos del arreglo se necessitan para calcular su valor
+      maximal?
+      1. [ ] $0$
+      2. [ ] $1$
+      3. [ ] $n-1$
+      4. [ ] $n$
+      5. [ ] otra respuesta
+***** DONE Definicion del problema de MinMax
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-15 Tue 13:39]
+      :END:
+      Dado un arreglo $A$ de $n$ enteros, cual es la definicion del
+      problema de "minmax"?
+      1. [ ] calcular $\min_{i\in[1..n],j\in[i..n]} A[i]$
+      2. [ ] calcular $\min_{i\in[1..n]} \max{j\in[i..n]} A[i]$
+      3. [ ] calcular $(\min_{i\in[1..n]} A[i], \max_{i\in[1..n]} A[i])$
+      4. [ ] calcular $(\min_{i\in[1..n]} A[i], \max_{j\in[1..n]} A[j])$
+      5. [ ] otra respuesta
+      
+***** DONE Cotas de (la complejidad de) problemas combinados
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-15 Tue 13:39]
+      :END:
+      Dado dos problemas $A$ y $B$ (e.g. min y max), cada uno con un
+      algoritmo que le resuelve optimalemente con complejidad $f_A(n)$
+      y $f_B(n)$, cual es la complejidad del problema $AB$ (e.g. min
+      max)?
+      1. [ ] $\min\{f_A(n)$ , f_B(n)\}$
+      2. [ ] $f_A(n)$ + f_B(n)$
+      3. [ ] $(f_A(n)$ + f_B(n))/2$
+      4. [ ] $\max\{f_A(n)$ , f_B(n)\}$
+      5. [ ] otra respuesta
+***** DONE Cota *superior* de (la complejidad de) Min Max
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-15 Tue 13:39]
+      :END:
+      Dado un arreglo de $n$ enteros, en cuanto comparaciones
+      (cantidad exacta, no asimptotica) entre los elementos del
+      arreglo pueden calcular su valor maximal y minimal?
+      1. [ ] $n-1$
+      2. [X] $3n/2-2$ si $n$ es par, $3n/2 + 1/2$ si $n$ es impar.
+      3. [ ] $(n-1)+(n-2)$
+      4. [ ] $2(n-1)$
+      5. [ ] otra respuesta
+***** NEXT Cota *inferior* de (la complejidad de) Min Max
+      Dado un arreglo de $n$ enteros, cuanto comparaciones (cantidad
+      exacta, no asimptotica) entre los elementos del arreglo se
+      necessitan para calcular su valor maximal y minimal?
+      1. [ ] $n-1$
+      2. [ ] $\lceil 3n/2 \rceil-2$
+      3. [ ] $(n-1)+(n-2)$
+      4. [ ] $2(n-1)$
+      5. [ ] otra respuesta
+      
+
+
+*** 1.3 Tecnicas para demostrar cotas inferiores: 
     adversario, teoria de la informacion, reduccion
-    1) Busqueda Ordenada (en el modelo de comparaciones)
-       1. Cota superior: $2\lg n$ vs $1+\lg n$
-       2. Cota inferior en el peor caso: Strategia de Adversario
-	  cota inferior en el peor caso de $1+\lg n$
-       3. Cota inferior en el caso promedio uniforme
-	  - Teoria de la Informacion
-	  - = Arbol de Decision
-	  - cota inferior de $\lg(2n+1)$, i.e. de $1+\lsup\lg(n+1/2)\rsup$
-       4. La complejidad del problema
-	  - en el peor caso es $\Theta(\lg n)$
-	  - en el caso promedio es $\Theta(\lg n)$
-       5. Pregunta: en este problema las cotas inferiores en el peor
-	  caso y en el mejor caso son del mismo orden. Siempre es verdad?
-    2) Busqueda desordenada
+**** PREREQUISITOS
+     - de las apuntes de CC3001:
+       - Ordenacion / Cotas inferiores http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#1
+       - Ordenacion / Merge sort http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#5
+     - de las apuntes de CC4102:
+       - min max
+**** Busqueda Ordenada (en el modelo de comparaciones)
+       	1. Cota superior: $2\lg n$ vs $1+\lg n$
+       	2. Cota inferior en el peor caso: Strategia de Adversario
+	   cota inferior en el peor caso de $1+\lg n$
+       	3. Cota inferior en el caso promedio uniforme
+	   - Teoria de la Informacion
+	   - = Arbol de Decision
+	   - cota inferior de $\lg(2n+1)$, i.e. de $1+\lsup\lg(n+1/2)\rsup$
+       	4. La complejidad del problema
+	   - en el peor caso es $\Theta(\lg n)$
+	   - en el caso promedio es $\Theta(\lg n)$
+       	5. Pregunta: en este problema las cotas inferiores en el peor
+	   caso y en el mejor caso son del mismo orden. Siempre es verdad?
+**** Busqueda desordenada
        1. Complejidad en el peor caso es $\Theta(n)$
        2. Complejidad en el caso promedio?
 	  - cota superior
@@ -220,27 +629,349 @@
 	  - cota inferior
 	    - algoritmo offline, lemma del ave
 	  - A VER EN CASA O TUTORIAL: Huffman?
-    3) Ordenamiento (en el modelo de comparaciones)
-       - cota superior $O(n\lg n)$
-       - cota inferior en el peor caso
-	 - cual tecnica?
-	   - lema del ave?
-	   - Strategia de Adversario?
-	   - Arbol Binario de Decision
-	 - Resultado:
-	   - $\Omega(n \lg n)$
-       - cota inferior en el caso promedio
-	 - $\Omega(n \lg n)$
-    4) BONUS: complejidad en promedio y aleatorizada
-       - La relacion entre 
-	 - complejidad en promedio de un algoritmo deterministico
-	 - complejidad en el peor caso de un algoritmo aleatorizado (promedio sobre su aleatoria)
-*** Metodologia de experimentacion
+**** Ordenamiento (en el modelo de comparaciones)
+      - cota superior $O(n\lg n)$
+      - cota inferior en el peor caso
+	- cual tecnica?
+	  - lema del ave?
+	  - Strategia de Adversario?
+	  - Arbol Binario de Decision
+	- Resultado:
+	  - $\Omega(n \lg n)$
+      - cota inferior en el caso promedio
+	- $\Omega(n \lg n)$
+**** Lista de tecnicas para mostrar cotas inferiores
+    1. lema del ave
+    2. Strategia de Adversario
+    3. Arbol Binario de Decision
+    4. Lemma del Minimax (para complejidad en promedio y complejidad
+       de algoritmos aleatroizados)
+**** BONUS: complejidad en promedio y aleatorizada
+     - La relacion entre 
+       - complejidad en promedio de un algoritmo deterministico
+       - complejidad en el peor caso de un algoritmo aleatorizado
+         (promedio sobre su aleatoria)
+**** CONCEPT QUESTIONS [11/19] 						 :CQ:
+***** DONE Juego de las preguntas, $n=4$
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-17 Thu 13:32]
+      - State "NEXT"       from "CANC"       [2011-03-16 Wed 17:55]
+      - State "CANC"       from "NEXT"       [2011-03-16 Wed 17:49]
+      :END:
+      :SOLUTION:
+      $2$
+      :END:
+      :PROOF:
+      - $x<3$?
+	- $x<2$
+	  - 1
+	  - 2
+	- $x<4
+	  - 3
+	  - 4
+      :END:
+      Cuanta preguntas (e.g. "$x<4$?", "x=2"?)  se necesitan para
+      adivinar un entero entre $1$ y $4 (i.e. $x\in[1..4]$)?
+      1. [ ] 1
+      2. [ ] 2
+      3. [ ] 3
+      4. [ ] 4
+      5. [ ] otra
+***** DONE Juego de las preguntas, $n=1024$
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-17 Thu 13:32]
+      :END:
+      :SOLUTION:
+      $\log 1024=10$
+      :END:
+      :PROOF:
+      - Cada pregunta permite de reducir el tamano del domanio por dos.
+      - $1024=2^10$ es divido 10 veses por $10$ antes de ser reducido a $1$
+      - como sabemos que $x$ es un entero (en el rango), es suficiente
+      :END:
+      Cuanta preguntas (e.g. "$x<10$?", "x=10"?)  se necesitan para
+      adivinar un entero entre $1$ y $1024$?
+      1. [ ] 8
+      2. [ ] 9
+      3. [ ] 10
+      4. [ ] 11
+      5. [ ] otra
+
+***** DONE Codificacion de un simbolo
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-17 Thu 13:32]
+      :END:
+      Dado 1 simbolo elegido a dentro de $[1..\sigma]$
+      1. [ ] no se puede codificar *nunca* en $o(\lg\sigma)$ bits
+      2. [X] no se puede codificar *siempre* en $o(\lg\sigma)$ bits
+      3. [X] no se sabe *como codificar siempre* en $o(\lg\sigma)$ bits
+      4. [ ] no se sabe *si nunca se puede codificar* en $o(\lg\sigma)$ bits
+      5. [ ] otra
+
+***** DONE Definicion de un arbol de decision
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-17 Thu 13:32]
+      - State "NEXT"       from ""           [2011-03-17 Thu 11:55]
+      :END:
+      :SOLUTION:
+      :END:
+      :PROOF:
+      :END:
+      Un arbol de decision es definido como un arbol
+      1. [ ] modelisando algoritmos en el modelo de
+             comparacion.
+      2. [ ] binario donde cada hoja identifica una instancia.
+      3. [ ] binario donde cada nodo prueba una caracteristica de la
+             instancia.
+      4. [X] un arbol de grado finito donde cada hoja indica una
+             decision sobre la instancia.
+      5. [ ] otra.
+
+
+***** DONE Codificacion de $n$ simbolos
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-17 Thu 13:32]
+      :END:
+      Dado $n$ simbolos elegido a dentro de un alfabeto de tamaño  $\sigma$
+      1. [ ] no se puede codificar *nunca* en $o(n\lg\sigma)$ bits
+      2. [X] no se puede codificar *siempre* en $o(n\lg\sigma)$ bits
+      3. [X] no se sabe *como codificar siempre* en $o(n\lg\sigma)$ bits
+      4. [ ] no se sabe *si nunca se puede codificar* en $o(n\lg\sigma)$ bits
+      5. [ ] otra
+***** DONE Definicion de "InsertionRank"
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-17 Thu 13:32]
+      :END:
+      Dado un arreglo ordenado $A[1..n]$ de $n$ valores y una valor
+      $x$, cual(es) de estas definiciones del /Posicion de Insercion/
+      ("Insertion Rank") de $x$ en $A$ son incorectas?
+      ($A[0]=-\infty$ y $A[n+1]=+\infty$)
+      1. [ ] la posicion en cual $x$ deberia ser insertado por dejar
+             $A$ ordenado
+      2. [X] el entero $p\in[1..n+1]$ tal que $A[p-1]<x \leq A[p]$
+      3. [ ] el entero $p\in[0..n]$ tal que $A[p]\leq x < A[p+1]$
+      4. [ ] el entero $p\in[1..n]$ tal que $x = A[p]$
+      5. [ ] ningunos o mas que dos 
+***** DONE Dos tipos de busqueda ordenada
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-17 Thu 13:32]
+      :END:
+      Dado el codigo siguente, cual es la mejor manera de completarlo
+      para minimizar la complejidad (non asymptotica) en el peor caso?
+      El el caso promedio?
+
+      insertionRank(x,A,l,r) { 
+        if( $r-l<2$ ) return $l$ else { m=(l+r)/2; ... }
+      }
+    
+      1. [ ] if( $x<A[m]$ )  return insertionRank(x,A,l,m)
+             else if( $x>A[m]$ )  return insertionRank(x,A,m,r)
+             else if( $x=A[m]$ )  return $m$
+	     endif
+      2. [ ] if( $x=A[m]$ )  return $m$
+             else if( $x<A[m]$ )  return insertionRank(x,A,l,m)
+             else if( $x>A[m]$ )  return insertionRank(x,A,m,r)
+	     endif
+      3. [ ] if( $x=A[m]$ )  return $m$
+             else if( $x<A[m]$ )  return insertionRank(x,A,l,m)
+             else return insertionRank(x,A,m,r)
+	     endif
+      4. [ ] if( $x<A[m]$ )  return insertionRank(x,A,l,m)
+             else return insertionRank(x,A,m,r)
+	     endif
+      5. [ ] performan iguales todos en el peor caso.
+	     
+***** DONE Cota inferior por busqueda ordenada $n=1024$.
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-17 Thu 13:32]
+      :END:
+      :SOLUTION:
+      $1+\log 1024=11$
+      :END:
+      :PROOF:
+      - Cada comparacion permite de reducir el tamano del domanio por dos.
+      - $1024=2^10$ es divido 10 veses por $10$ antes de ser reducido a $1$
+      - como NO sabemos si $x$ partenece a $A$, necesitamos una comparacion mas.
+      :END:
+      Dado un arreglo ordenado $A$ de $1024$ enteros y un entero $x$,
+      cuanto comparaciones con elementos del arreglo son necesarias
+      para decidir si $x$ pertenece a $A$ (en el peor caso)?
+      1. [ ] 9
+      2. [ ] 10
+      3. [ ] 11
+      4. [ ] 1024
+      5. [ ] otra
+
+***** NEXT Cota inferior por busqueda ordenada general $n$.
+      :SOLUTION:
+      :END:
+      :PROOF:
+      :END:
+      Dado un arreglo ordenado $A$ de $n$ enteros y un entero $x$,
+      cuanto comparaciones con elementos del arreglo son necesarias
+      para decidir si $x$ pertenece a $A$ (en el peor caso)?
+      2. [ ] $\lceil\lg n\rceil$
+      2. [ ] $1+\lceil\lg n\rceil$
+      3. [ ] $n-1$
+      4. [ ] $n$
+      5. [ ] otra
+
+***** TODO Definicion del modelo de comparacion
+      :LOGBOOK:
+      - State "TODO"       from "NEXT"       [2011-03-22 Tue 12:28]
+      :END:
+      :SOLUTION:
+      :END:
+      :PROOF:
+      :END:
+      Cuales de estos algoritmos simples son en el modelo de
+      comparacion?
+      1. [ ] c=0; for(int i=1; i<n; i++) { if(A[i]>A[i+1]) c++;}
+      2. [ ] for(int i=1; i<n; i++) { if(A[i]>A[i+1]) print i;}
+      ; 3. [ ] for(int i=1; i<n; i++) { if(A[i]>A[i+1]) print i;}
+      ; 4. [ ] for(int i=1; i<n; i++) { if(A[i]>A[i+1]) print i;}
+      5. [ ] ningunos
+
+***** NEXT [#A] Relacion entre codificacion y busqueda
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-17 Thu 12:01]
+      :END:
+      En el modelo de comparacion:
+      1. [ ] A cada algoritmo de busqueda corresponde una codificacion
+             de enteros.
+      2. [X] A cada codificacion de enteros corresponde un algoritmo
+             de busqueda.
+      3. [X] A algunos algoritmos de busqueda corresponde una
+             codificacion de enteros
+      4. [X] A algunas codificaciones de enteros corresponde un
+             algoritmo de busqueda.
+      5. [ ] otra
+***** DONE Busqueda Doblada
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-22 Tue 12:58]
+      - State "NEXT"       from ""           [2011-03-22 Tue 11:47]
+      :END:
+      Dado una valor $x$ y un arreglo ordenado $A$ de $n$ valores,
+      existe un algoritmo calculando la posicion de insercion $p$ de
+      $x$ en $A$ en 
+      1. [X] $\lg(1+n)$ comparaciones
+      2. [X] $p+1$ comparaciones
+      3. [X] $2\lg p$ comparaciones
+      4. [X] $2\lg(n-p)$ comparaciones
+      5. [X] $\lg^* p + \sum_{i=1}^{\lg^* p} \lg^{(i)}(p) + \lg p$ comparaciones
+      6. [ ] ningunas o mas que dos.
+***** DONE Compression de enteros
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-22 Tue 12:59]
+      - State "NEXT"       from ""           [2011-03-22 Tue 11:48]
+      :END:
+      Dado un entero $x\in[1..n]$, existe un esquema de
+      codificacion representando $x$ con 
+      1. [ ] $\lg n$ bits,
+      2. [ ] $2\lg p$ bits,
+      3. [ ] $p$ bits,
+      4. [ ] $2\lg(n-p)$ bits,
+      5. [ ] $\lg^* p + \sum_{i=1}^{\lg^* p} \lg^{(i)}(p) + \lg p$ bits,
+      6. [ ] ningunas o mas que dos.
+***** NEXT Cota inferior ordenamiento (en el modelo de comparacion)
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-17 Thu 11:53]
+      :END:
+      :SOLUTION:
+      :END:
+      :PROOF:
+      :END:
+      Decir que "Ordenar es en $\Omega(n\lg n)$ (en el modelo de
+      comparacion) significa que
+      1. [ ] no se puede ordenar en $o(n\lg n)$  comparaciones
+      2. [ ] ninguno algoritmo conocido (del modelo de comparacion)
+             ordena en $o(n\lg n)$ comparaciones
+      3. [ ] no se puede ordenar en tiempo $o(n\lg n)$ 
+      4. [ ] ninguno algoritmo conocido (del modelo de comparacion)
+             ordena en tiempo $o(n\lg n)$
+      5. [ ] otra respuesta
+
+***** NEXT Complejidad en promedio de un algoritmo
+      :SOLUTION:
+      Ningunas. Falta una distribucion $(p_i)_{i\in[1..2^n]}$ sobre
+      las instancias legales por $A$ de tamaño $n$
+      :END:
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-22 Tue 11:55]
+      - State "NEXT"       from ""           [2011-03-22 Tue 11:48]
+      :END:
+      Dado un entero fijado $n$, un algoritmo deterministico $A$. Cual
+      de estas definiciones corresponde a la complejidad en promedio
+      de $A$?
+      1. [ ] $\sum_{x,|x|=n} C(A,x)/n$
+      2. [ ] $\sum_{x,|x|=n} C(A,x)/2^n$
+      3. [ ] $\sum_{x,|x|=n} C(A,x) / \#\{x, |x|=n\}$
+      4. [ ] El promedio de su complejidad sobre cada instancia.
+      5. [ ] ningunas o mas de dos.
+***** NEXT Complejidad en promedio de un problema
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-22 Tue 11:54]
+      - State "NEXT"       from ""           [2011-03-22 Tue 11:48]
+      :END:
+      Dado un problema $Pb$, un entero fijado $n$, un conjunto
+      $X_n=(x_i)_{i\in[1..2^n]}$ de instancias legales por $Pb$ y una
+      distribucion $(p_i)_{i\in[1..2^n]}$ sobre $X_n$. La complejidad
+      en promedio de $Pb$ es
+      1. [ ] $\max_A \sum_i p_i C(A,x_i)$
+      2. [ ] $\min_A \sum_i p_i C(A,x_i)$
+      3. [ ] $\sum_i p_i \max_A C(A,x_i)$
+      4. [ ] $\sum_i p_i \min_A C(A,x_i)$
+      5. [ ] ningunas
+***** NEXT Complejidad aleatorizada
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-22 Tue 11:48]
+      :END:
+      1. [ ] 
+
+***** DONE Tecnicas de cotas inferiores
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-22 Tue 13:19]
+      :END:
+      Cual(es) de las tecnicas siguentes permitten de mostrar cotas
+      inferiores para la complejidad en promedio?
+	1. [ ] lemma del ave
+	2. [ ] Estrategia de Adversario
+	3. [ ] Arbol Binario de Decision
+	4. [ ] lemma del minimax
+	5. [ ] ningunas o mas de dos.
+***** NEXT Relacion entre Complejidad en Promedio y en el peor caso
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-17 Thu 10:30]
+      :END:
+      * Nota
+	- $C(A,I)$ la complejidad de un algoritmo $A$ sobre la
+          instancia $I$, y
+	- $E_I(C(A,I))$ la complejidad en el peor caso sobre las
+          instancias de tamano $n$, y
+	- $E_I(C(A,I))$ la complejidad en promedio por la distribucion
+          uniforme sobre las instancias de tamano $n$.
+      * Cuales de estas relaciones son verdad?
+	1. [ ] $E_I(C(A,I)) \leq \max_I C(A,I)$
+	2. [ ] $E_I(C(A,I)) < \max_I C(A,I)$
+	3. [ ] La complejidad en el peor caso (de un algoritmo) es siempre peor que la complejidad en promedio
+	4. [ ] La complejidad en promedio (de un algoritmo) nunca es peor que la complejidad en el peor caso
+	5. [ ] ningunas
+*** 1.4 Metodologia de experimentacion
+**** PREREQUISITOS
+     - de las apuntes de CC3001:
+       - Nociones básicas de programación http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Programacion/
+	 (sin estudiarlas)
+     - de las apuntes de CC4102:
+       - 1.4 Metodologia de experimentacion
+     - en la red (y en ingles)
+       - Research Design: Qualitative, Quantitative, and Mixed Methods Approaches 
+	 John W. Creswell
+	 http://www.amazon.com/Research-Design-Qualitative-Quantitative-Approaches/
 **** Al inicio, Ciencias de la computacion fue solamente experimentacion.
 ***** Turing y el codigo Enigma
       - el importante estaba de solucionar la instancia del dia
-	romper la llave del dia, basado en los messages de
-	meteo, para decryptar los messages mas importantes
+	(romper la llave del dia, basado en los messages de
+	meteo, para decryptar los messages mas importantes)
 	 - no mucho focus en el problema, aunque Turing si escribio
 	   la definicion de la Maquina universal.
 ***** Experimentacion basica 
@@ -350,55 +1081,52 @@
      - Research Design: Qualitative, Quantitative, and Mixed Methods Approaches 
        John W. Creswell
        http://www.amazon.com/Research-Design-Qualitative-Quantitative-Approaches/
-*** Resumen de la Section
-**** Controles y Tareas
-
-     - TAREA 1: Busqueda Binaria vs others  
- - TAREA 2: static cache-oblivious tree 
- - TAREA 3: Interpolation vs others     
- - CONTROL 1                            
- - TAREA 4: Hashing
- - TAREA 5: Paginamiento                              
- - TAREA 6: Vertex Cover                             
- - CONTROL 2                            
- - EXAMEN                              
-
-   Las tareas se hacen en dos semanas.
-
-**** Recurrencias y Introduccion a la programacion dinamica 
+*** 1.5 Recurrencias y Introduccion a la programacion dinamica 
+**** PREREQUISITOS
+     - de las apuntes de CC3001:
+       - Torre de Hanoi y recursion en  http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Programacion/#6 
+     - de las apuntes de CC4102:
+       - 1.5 Recurrencias y Introduccion a la programacion dinamica 
+     - en la red (y en ingles)
+       - http://en.wikipedia.org/wiki/Master_theorem
+       - http://www.csanimated.com/animation.php?t=Master_theorem
+**** Recurencias Lineales
      - $X_n = X_{n-1} + a_n$
      - Torre de Hanoi
-     - Fibonacci 
-     - Subsecuencia de suma maximal
-     - Subsecuencia commun mas larga
-       + solucion ingenua
-       + Solucion en tiempo polynomial (pero espacio $O(n^2)$)
-       + Solucion en espacio lineal (y tiempo $O(n^2)$)
-       + (BONUS) Solucion de Hirshberg en tiempo $O(nm)$ y espacio $\min(n,m)$
-**** Resumen de la Section
-     1. Conceptos Basicos
-	- $O(), o(), \Omega(), \omega(), \Theta(), \theta()$
-	- Complejidad en el peor caso, en promedio
-	- Modelos computacionales:
-	  - modelo de comparaciones
-	  - modelo de memoria externa
-     2. Tecnicas de Cotas Inferiores
-	- lema del ave (reduccion)
-	- strategia de adversario
-	- teoria de la informacion (arbol de decision binario)
-	- Analisis fine
-     3. Metodologia de experimentacion
-	- Porque?
-	- Como hacer la experimentacion
-	- Como analizar y presentar los resultados
-     4. Casos de Estudios
-	- Torre de Hanoi
-	- "Disk Pile problem"
-	- Busqueda y Codificacion de Enteros (busqueda doblada)
-	- Busqueda binaria en $\Theta(1+\lg n)$ (mejor que $2\lg n$)
-	- Algoritmo en $2n/3 + O(1)$ comparaciones para min max
+**** Recurrencias mas complejas
+    - Fibonacci 
+**** Formulas practicas
+    - Subsecuencia de suma maximal
+**** Programacion Dinamica
+    - Subsecuencia commun mas larga
+      + solucion ingenua
+      + Solucion en tiempo polynomial (pero espacio $O(n^2)$)
+      + Solucion en espacio lineal (y tiempo $O(n^2)$)
+      + (BONUS) Solucion de Hirshberg en tiempo $O(nm)$ y espacio $\min(n,m)$
+*** RESUMEN de la Unidad
+    1. Conceptos Basicos
+       - $O(), o(), \Omega(), \omega(), \Theta(), \theta()$
+       - Complejidad en el peor caso, en promedio
+       - Modelos computacionales:
+	 - modelo de comparaciones
+	 - modelo de memoria externa
+    2. Tecnicas de Cotas Inferiores
+       - lema del ave (reduccion)
+       - strategia de adversario
+       - teoria de la informacion (arbol de decision binario)
+       - Analisis fine
+    3. Metodologia de experimentacion
+       - Porque?
+       - Como hacer la experimentacion
+       - Como analizar y presentar los resultados
+    4. Casos de Estudios
+       - Torre de Hanoi
+       - "Disk Pile problem"
+       - Busqueda y Codificacion de Enteros (busqueda doblada)
+       - Busqueda binaria en $\Theta(1+\lg n)$ (mejor que $2\lg n$)
+       - Algoritmo en $2n/3 + O(1)$ comparaciones para min max
 ** 2. Algoritmos y Estructuras de Datos para Memoria Secundaria (3 semanas = 6 charlas)
-*** Modelo de computacion en memoria secundaria. Accesos secuenciales y aleatorios
+*** 2.1 Modelo de computacion en memoria secundaria. Accesos secuenciales y aleatorios
     1. Arquitectura de un computador: la memoria
        1) Muchos niveles de memoria
 	  - Procesador
@@ -424,8 +1152,10 @@
 	  - Jerarquia con k niveles, de paginas de tamanos $B_1,...,B_k$
 	  - "Cache oblivious"
 	  - Otros... mas practicas, mas dificil a analizar.
-*** Diccionarios en Memoria Externa
-    1. B-arbol
+*** 2.2 Diccionarios en Memoria Externa
+    1. Preliminary Reading
+       - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/
+    2. B-arbol
        1) $(2,3)$ Arbol: un arbol de busqueda donde
 	  - cada nodo tiene 1 o 2 llaves, que corresponde a 2 o 3
 	    hijos, con la excepcion de la raiz;
@@ -454,7 +1184,7 @@
 	    - http://en.wikipedia.org/wiki/B*-tree
 	  - $B^+$ arbol
 	    - the leaf nodes of the tree are chained together in the form of a linked list. 
-    2. Van Emde Boas arbol (vEB)
+    3. Van Emde Boas arbol (vEB)
        http://en.wikipedia.org/wiki/Van\_Emde\_Boas\_tree
        1) Historia:
 	  - Originalemente (1977) un estructura de datos normal, que
@@ -479,12 +1209,15 @@
 	    del nivel considerado
 	  - Insercion
 	  - Delecion
-    3. Finger Search Tree: la busqueda doblada de los arboles de busqueda
+    4. Finger Search Tree: la busqueda doblada de los arboles de busqueda
        1) Estructura de datos
        2) algorimo de busqueda
        3) analisis: busqueda en $O(\lg p)$ 
-*** Colas de prioridad en memoria secundaria. Cotas inferiores.
-    1) Colas de Prioridades tradicional: 
+*** 2.3 Colas de prioridad en memoria secundaria. Cotas inferiores.
+    1) Preliminary Reading
+       - Colas de Prioridades http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/TDA/#4
+
+    2) Colas de Prioridades tradicional: 
        - que se necesita?
 	 * Operadores 
 	   - /insert(key,item)/
@@ -527,38 +1260,46 @@
 	   called the bottom queues, and one more priority queue of
 	   array indexes of the bottom queues."
 
-	  - rendimiento en memoria secundaria de "binary heap": muy malo?
+	   - rendimiento en memoria secundaria de "binary heap": muy malo?
 
     3) Colas de Prioridades en Memoria Secundaria: diseno  
        * Reference: 
 	 + http://www.dcc.uchile.cl/~gnavarro/algoritmos/tesisRapa.pdf
 	   - paginas 9 hasta 16
 	 + Otras referencias en http://www.leekillough.com/heaps/
-       - El equivalente de B-Arbol
-       - Muchas alternativas en practica
-	  - Buffer trees
-	  - M/B-ary heaps
-	  - array heaps
-	  - R-Heaps
-	  - Array Heaps
-	  - sequence heaps
-	  - Mas en "An experimental study of priority queues in external memory"
-	    http://portal.acm.org/citation.cfm?id=351827.384259
+       * El equivalente de B-Arbol
+       * Muchas alternativas en practica
+	 - Buffer trees
+	 - M/B-ary heaps
+	 - array heaps
+	 - R-Heaps
+	 - Array Heaps
+	 - sequence heaps
+	 - Mas en "An experimental study of priority queues in external memory"
+	   http://portal.acm.org/citation.cfm?id=351827.384259
 
-     3) Colas de Prioridades en Memoria Secundaria: cota inferior?
-	- Cota inferior para dictionaries es una cota inferior por
-	  colas de prioridades o no?
-	  - No. La reduccion es en la otra direccion.
-	- Cual es la cota inferior mas simple que se puede imaginar?
-	  - $\Omega(n/B)$
+    4) Colas de Prioridades en Memoria Secundaria: cota inferior?
+       - Cota inferior para dictionaries es una cota inferior por
+	 colas de prioridades o no?
+	 - No. La reduccion es en la otra direccion.
+       - Cual es la cota inferior mas simple que se puede imaginar?
+	 - $\Omega(n/B)$
 
-    4) /REFERENCES/
+    5) /REFERENCES/
        - [[http://en.wikipedia.org/wiki/Priority\_queue]]
        - [[http://en.wikipedia.org/wiki/Heap\_data\_structure]]
        - "An experimental Study of Priority Queues in External Memories" by Brengel, Crauser, Ferragina and Meyer
 
-*** Ordenamiento en memoria secundaria: Mergesort. Cota inferior.
-    1. Un modelo mas fino
+*** 2.4 Ordenamiento en memoria secundaria: Mergesort. *Cota inferior*.
+    1. Preliminary Reading 
+       - Algoritmos de Ordenamiento en Apuntes de CC3001 http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/
+	 - [ ] Quicksort
+	 - [ ] Heapsort
+	 - [ ] Bucketsort
+	 - [ ] Mergesort
+	 - [ ] Ordenamiento Externo
+
+    2. Un modelo mas fino
 
        1) Cuantos paginas quedan en memoria local?
 	  - no tan importante para busqueda
@@ -589,7 +1330,7 @@
 
 	  * Eso es optimo o no?
 
-    2. Cotas Inferiores en Memoria Secundaria 
+    3. Cotas Inferiores en Memoria Secundaria 
        * para buscar en un diccionario?
 	 - en modelo RAM? (de comparaciones)
 	   - $\lg N$
@@ -610,53 +1351,53 @@
 
        * para Ordenar
 	 (corrige y adapte la prueba de http://www.daimi.au.dk/~large/ioS06/Alower.pdf )
-	    - en modelo RAM de comparaciones 
-	      - $N \lg N$
-	    - en modelo Memoria Externa con $n/B$ paginas de tamano B
-	      * $\Omega( N/B \frac{ \lg(N/B) }{ \lg(M/B) }  )$
-	      * que se puede notar mas simplamente $\Omega( n\lg_m n )$
-	    - Prueba:
+	 - en modelo RAM de comparaciones 
+	   - $N \lg N$
+	 - en modelo Memoria Externa con $n/B$ paginas de tamano B
+	   * $\Omega( N/B \frac{ \lg(N/B) }{ \lg(M/B) }  )$
+	   * que se puede notar mas simplamente $\Omega( n\lg_m n )$
+	 - Prueba:
 
-	      * en vez de considerar el problema de ordenamiento,
-		supponga que el arregla sea una permutacion y
-		considera el problema (equivalente en ese caso) de
-		identificar cual permutacion sea.
+	   * en vez de considerar el problema de ordenamiento,
+	     supponga que el arregla sea una permutacion y
+	     considera el problema (equivalente en ese caso) de
+	     identificar cual permutacion sea.
 
-	      * inicialemente, pueden ser $N!$ permutaciones.
-		- supponga que cada bloque de $B$ elementos sea ya
-		  ordenado (impliqua un costo de al maximo $n=N/B$
-		  accessos a la memoria externa).
-		- queda $N! / ( (B!)^n )$ permutaciones posibles.
+	   * inicialemente, pueden ser $N!$ permutaciones.
+	     - supponga que cada bloque de $B$ elementos sea ya
+	       ordenado (impliqua un costo de al maximo $n=N/B$
+	       accessos a la memoria externa).
+	     - queda $N! / ( (B!)^n )$ permutaciones posibles.
 
-	      * para cada accesso a una pagina de memoria externo,
-		cuantos permutaciones potenciales podemos eliminar?
-		- con $M$ entradas en memoria primaria
-		- $B$ nuevas entradas se pueden quedar de ${M \choose B}
-		  = \frac{M!}{B!(M-B)!}$ maneras distintas
-		- calcular la union de los $M+B$ elementos reduce la
-		  cuantidad de permtuaciones por un factor de
-		  $1 / {M \choose B}$
-		- despues de t accessos (distintos) a la memoria
-		  externa, se reduci la cuantidad de permutaciones a
-		  $N! / (  (B!)^n  {M \choose B}^t  )$
+	   * para cada accesso a una pagina de memoria externo,
+	     cuantos permutaciones potenciales podemos eliminar?
+	     - con $M$ entradas en memoria primaria
+	     - $B$ nuevas entradas se pueden quedar de ${M \choose B}
+	       = \frac{M!}{B!(M-B)!}$ maneras distintas
+	     - calcular la union de los $M+B$ elementos reduce la
+	       cuantidad de permtuaciones por un factor de
+	       $1 / {M \choose B}$
+	     - despues de t accessos (distintos) a la memoria
+	       externa, se reduci la cuantidad de permutaciones a
+	       $N! / (  (B!)^n  {M \choose B}^t  )$
 
-	      * cuanto accessos a la memoria sean necesarios para que
-		queda al maximo una permutacion?
-		- $N! / (  (B!)^n  {M \choose B}^t )$ debe ser al maximo uno.
-		- usamos las formulas siguientes:
-		  - $\log(x!) \approx x\log x$
-		  - $\log {M \choose B} \approx B \lg \frac{M}{B}$
+	   * cuanto accessos a la memoria sean necesarios para que
+	     queda al maximo una permutacion?
+	     - $N! / (  (B!)^n  {M \choose B}^t )$ debe ser al maximo uno.
+	     - usamos las formulas siguientes:
+	       - $\log(x!) \approx x\log x$
+	       - $\log {M \choose B} \approx B \lg \frac{M}{B}$
 
-                    |-----------+--------+---------------------------------------------|
-                    | $N!$      | $\leq$ | $(B!)^n {M \choose B}^t$                    |
-                    |-----------+--------+---------------------------------------------|
-                    | $N \lg N$ | $\leq$ | $n B \lg B + t B \lg \frac{M}{B}$           |
-                    |-----------+--------+---------------------------------------------|
-                    | $t$       | $\geq$ | $\frac { N\lg N - nB \lg B }{ B \lg(M/B) }$ |
-                    |           | $\geq$ | $\frac { N \lg(N/B) }{ B \lg(M/B) }$        |
-                    |           | $\geq$ | $\frac { n \lg n }{ \lg m }$          |
-                    |           | $\geq$ | $n \log_m n$                                |
-                    |-----------+--------+---------------------------------------------|
+                 |-----------+--------+---------------------------------------------|
+                 | $N!$      | $\leq$ | $(B!)^n {M \choose B}^t$                    |
+                 |-----------+--------+---------------------------------------------|
+                 | $N \lg N$ | $\leq$ | $n B \lg B + t B \lg \frac{M}{B}$           |
+                 |-----------+--------+---------------------------------------------|
+                 | $t$       | $\geq$ | $\frac { N\lg N - nB \lg B }{ B \lg(M/B) }$ |
+                 |           | $\geq$ | $\frac { N \lg(N/B) }{ B \lg(M/B) }$        |
+                 |           | $\geq$ | $\frac { n \lg n }{ \lg m }$          |
+                 |           | $\geq$ | $n \log_m n$                                |
+                 |-----------+--------+---------------------------------------------|
 
 
 
@@ -723,7 +1464,7 @@
      3) Algoritmos en linea 
 	- "ski renting" problema
 	- analisis competitiva ("Competitive Analysis")
-*** Uso de *dominios discretos y finitos* en el diseno de algoritmos y estructuras de datos
+*** 3.1 Uso de *dominios discretos y finitos* en el diseno de algoritmos y estructuras de datos
 **** Algorimos de Busqueda (Interpolation Search, Extrapolation Search)
 
      1) Interpolacion
@@ -1234,7 +1975,7 @@
    - En el peor caso, la complejidad corresponde a la suma de
      las superficias de los bloques, aka $O(n)$.
 
-*** *Analisi amortizado* de algoritmos y estructuras de datos
+*** 3.2 *Analisi amortizado* de algoritmos y estructuras de datos
 **** Analisis amortizada   
 
      * Costo Amortizado:
@@ -1543,7 +2284,7 @@
 	 - $O(n \lg n)$ con cualquiera de estas variantes.
 
 
-*** *Analisi adaptativa* de algoritmos y estructuras de datos
+*** 3.3 *Analisi adaptativa* de algoritmos y estructuras de datos
 **** Analisi en el peor caso: a dentro de que?
      - peor caso a dentro de las instancias de tamano fijo
        - el tamano puede ser multidimensional (e.g. grafos)
@@ -1566,7 +2307,7 @@
 
 
 
-*** *Algoritmos en linea*. Competividad. Adaptividad.
+*** 3.4 *Algoritmos en linea*. Competividad. Adaptividad.
 **** List Accessing
 
      REFERENCIA: Capitulo 1 en "Online Computation and Competitive
@@ -1938,7 +2679,7 @@
      - ordenamiento paralelo
      - paralel prefix
 
-*** *Aleatorizacion* (1 semana = 2 charlas)
+*** 4.1 *Aleatorizacion* (1 semana = 2 charlas)
       :LOGBOOK:
       - State "DONE"       from "ACTF"       [2010-10-18 Mon 19:45]
       - State "ACTF"       from "PAUS"       [2010-10-18 Mon 15:36]
@@ -2662,7 +3403,7 @@
 
 
 
-*** Algoritmos tipo Monte Carlo y Las Vegas
+*** 4.2 Algoritmos tipo Monte Carlo y Las Vegas
 
     * Formalizacion
 
@@ -2705,7 +3446,7 @@
        - Si se puede verificar el resultado en tiempo razonable,
 	 Monte Carlos iterado hasta correcto => Las Vegas
 
-*** Primalidad
+*** 4.3 Primalidad
      * REFERENCIAS: 
        - Primalidad: Capitulo 14.6 en "Randomized Algorithms", de Rajeev Motwani and Prabhakar Raghavan.
        - http://en.wikipedia.org/wiki/Primality_test#Complexity
@@ -2763,7 +3504,7 @@
        PRIMES is not known to be P-complete, and it is not known
        whether it lies in classes lying inside P such as NC or L.
 
-*** Clases de complejidad aleatorizada				      :BONUS:
+*** 4.4 Clases de complejidad aleatorizada 			      :BONUS:
 
 **** RP
 
@@ -2819,7 +3560,7 @@
      $BPP = coBPP$
 
 
-*** Nociones de *aproximabilidad* (2 semanas = 4 charlas)
+*** 4.5 Nociones de *aproximabilidad* (2 semanas = 4 charlas)
     :LOGBOOK:
     - State "DONE"       from ""           [2010-10-07 Thu 10:50]
     :END:
@@ -3157,7 +3898,7 @@
 	  - Las $n$ iteraciones en total toman 
 	    - $O(n^2 \lg t /\epsilon)$ operaciones
 
-*** Algoritmos *paralelos* y distribuidos (2 semanas = 4 charlas)
+*** 4.6 Algoritmos *paralelos* y distribuidos (2 semanas = 4 charlas)
     - Medidas de complejidad
     - Tecnicas de diseno
 
@@ -3690,3 +4431,4 @@
 	    
 	    
 	    
+   
