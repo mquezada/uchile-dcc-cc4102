@@ -2,8 +2,9 @@
 #+DRAWERS: PROPERTIES LOGBOOK CLOCK PROOF SOLUTION
 #+OPTIONS: LaTeX:dvipng H:5 num:t
 #+LATEX_HEADER: \usepackage{babel}
+
 #+TITLE: CC4102/CC40A/CC53A - Dise\~no y An\'alisis de Algoritmos
-#+AUTHOR: J\'er\'emy Barbay, Mauricio
+#+AUTHOR: J\'er\'emy Barbay
 
 * Lecture Notes CC4102
 ** Presentacion y Evaluacion
