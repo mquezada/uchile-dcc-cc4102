@@ -21,32 +21,30 @@
   :END:
 ** Presentación y Evaluación (1 charla)
 *** Presentaciones
-**** Quien somos
- - franco-ingles-castellano
- - curso interactivo?
- - dos auxiliares
+**** Quien somos?
+     - franco-ingles-castellano
 **** Quien son? 
      * Quien
-	 - tomo el curso CC40A o CC4102 en los ultimos semestres?
+	 - tomo el curso CC40A o CC4102 en los últimos semestres?
 	 - toma CC53A?
        * Quien
-	 - piensa seguir en la universidad despues de magister?
+	 - piensa seguir en la universidad después de magíster?
 **** El curso
-  * =Tematicas= 
-    1. Conceptos basicos y complejidad (3 semanas = 6 charlas)
-    2. Algoritmos y Estructras de Datos para Memoria Secundaria (3 semanas = 6 charlas)
-    3. Tecnicas avanzadas de diseno y analisis de algoritmos (4 semanas = 8 charlas)
+  * =Temáticas= 
+    1. Conceptos básicos y complejidad (3 semanas = 6 charlas)
+    2. Algoritmos y Estructuras de Datos para Memoria Secundaria (3 semanas = 6 charlas)
+    3. Técnicas avanzadas de diseño y análisis de algoritmos (4 semanas = 8 charlas)
     4. Algoritmos no convencionales  (5 semanas = 10 charlas)
   * =Modo=
-   - *Clases expositivas* del profesor de catera
-     - buscando la participacion de los alumnos en pequenos
-       problemas que se van proponiendo durante la exposicion.
+   - *Clases expositivas* del profesor de cátedra
+     - buscando la participación de los alumnos en pequeños
+       problemas que se van proponiendo durante la exposición.
    - *Clases auxiliares* dedicadas a explicar ejemplos mas
-     extensos, resolver ejercicios propuestos, y preparacion pre y
+     extensos, resolver ejercicios propuestos, y preparación pre y
      post controles.
-   - *Exposicion* de las mejores tareas de los alumnos, como casos
-     de estudio de implementacion y experimentacion.
-  * =Evaluacion=
+   - *Exposición* de las mejores tareas de los alumnos, como casos
+     de estudio de implementación y experimentación.
+  * =Evaluación=
     * 2010 con 6 tareas y 2 controles
 	 - [2/9] Examen (todas unidades)
 	 - [4/9] Controles
@@ -74,15 +72,15 @@
       - [2/9] Examen (todas unidades)
   * =Nota Final=      
     - controles se promedian a partes iguales
-    - el examen reemplaca el peor control si la nota del examen es
+    - el examen reemplaza el peor control si la nota del examen es
       mayor.
     - tareas se promedian a partes iguales
-*** Preguntas sobre la Programacion				       :TALK:
+*** Preguntas sobre la Programación				       :TALK:
    - Cuanto memoria hay en un computador? Como se maneja?
-   - Cual es la diferencia entre el disque duro y la memoria?
+   - Cual es la diferencia entre el disco duro y la memoria?
    - Cuanto procesadores hay en un computador? Como se programan?
    - Cual algoritmo elegir a implementar para un problema dicho?
-   - Cual es la diferencia entre programacion imperativa y funcional?
+   - Cual es la diferencia entre programación imperativa y funcional?
 *** Introduciendo "Concept questions": "Hanoi Tower" y "Disk Pile"
     :LOGBOOK:
     - State "DONE"       from "NEXT"       [2011-03-03 Thu 10:17]
@@ -171,13 +169,13 @@
      - Complejidad en promedio
      - Otros modelos computacionales?
 **** Complejidad Computacional
-     - Cual Algoritmos conocen? Cual son sus complejidad?
+     - Cual Algoritmos conocen? Cual son sus complejidades?
        - para buscar en un arreglo (ordenado? no ordenado?)
        - para ordenar un arreglo (en el modelo de comparaciones o no?)
-     - Cual cotas inferiores conocen?
+     - Cuales cotas inferiores conocen para...
        - buscar?
        - ordenar?
-     - Cual problemas dificiles conocen?
+     - Que problemas dificiles conocen?
        - elegir sus cursos
        - assignar salas y horarios a los cursos
        - assignar infermeros a hospitales
@@ -268,7 +266,7 @@
      - A cuales algoritmos de busqueda ordenada corresponden codigos?
      - A cuales codigos corresponden algoritmos de busqueda?
 
-** 1. Conceptos basicos y complejidad (3 semanas = 6 charlas)
+** Conceptos basicos y complejidad (3 semanas = 6 charlas)
 *** DESCRIPCION de la Unidad:
 **** Resultados de Aprendisajes de la Unidad
      - Comprender el concepto de complejidad de un problema como cota inferior
@@ -276,13 +274,13 @@
      - Conocer algunos casos de estudio relevantes
      - Adquirir nociones basicas de experimentacion en algoritmos. 
 **** Principales casos de estudio 
-     - cota inferior para minimo y maximo de un arreglo
-     - caso promedio del quicksort
-     - cota inferior para busqueda en un arreglo con distintas probabilidades de acceso
+     - Cota inferior para minimo y maximo de un arreglo
+     - Caso promedio del quicksort
+     - Cota inferior para busqueda en un arreglo con distintas probabilidades de acceso
 *** PREREQUISITOS DE UNIDAD 
 **** Lista de themas en apuntes de CC3001 			    :READING:
     http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
-*** 1.1 Repaso del proceso de diseno y analisis de un algoritmo.
+*** Repaso del proceso de diseño y analisis de un algoritmo.
 **** PREREQUISITOS
 ***** "Bases de la programacion" en apuntes de CC3001		    :READING:
       - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
@@ -296,17 +294,17 @@
 ***** AVL en  apuntes de CC3001					    :READING:
       - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/#3
 **** Problema de la Torre de Hanoi				       :TALK:
-     - definition
-     - cota superior
-     - cota inferior
+     - Definicion
+     - Cota superior
+     - Cota inferior
 **** Variantes de la Torre de Hanoi				       :TALK:
     - pesos distintos?
     - Disk Pile Problem ($n$ discos pero $h<n$ tamanos)
-      - cota inferior en funcion de $n$, en funcion de $n,h$ 
-      - cota superior en funcion de $n$, en funcion de $n,h$
+      - Cota inferior en funcion de $n$, en funcion de $n,h$ 
+      - Cota superior en funcion de $n$, en funcion de $n,h$
     - Precise Disk Pile Problem ($n$ discos con $n_i$ de tamaño $i$, $\forall i\in[1..h]$)
-      - cota inferior en funcion de $n$, en funcion de $h,n_1,...,n_h$ 
-      - cota superior en funcion de $n$, en funcion de $h,n_1,...,n_h$
+      - cota inferior en función de $n$, en función de $h,n_1,...,n_h$ 
+      - cota superior en función de $n$, en función de $h,n_1,...,n_h$
 **** CONCEPT QUESTIONS [7/7] 						 :CQ:
 ***** DONE [#A] Asymptotics						 :CP:
        :LOGBOOK:
@@ -361,7 +359,7 @@
       :END:
       La característica que permite que un heap se pueda almacenar
       sin punteros es que, si se utiliza la numeración por niveles
-      indicada, entonces la(s) relación(es) entre padres e hijos es
+      indicada, entoncés la(s) relación(es) entre padres e hijos es
       (son):
       1. [ ] Hijos del nodo j = {2*j, 2*j+1}
       2. [ ] Padre del nodo k = floor(k/2) 
@@ -411,15 +409,15 @@
       4. [ ] $2^h-1$
       5. [ ] otra respuesta
 
-*** 1.2 Minimo Maximo de un  arreglo
+*** Minimo Maximo de un  arreglo
 **** PREREQUISITOS
 ***** Cotas Inferiores en apuntes de CC3001			    :READING:
    - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#1
 **** Minimo (resp. maximo) de un arreglo
-   - cota superior
-   - cota inferior
+   - Cota superior
+   - Cota inferior
 **** Calcular el Minimo y el Maximo de un Arreglo en una sola computacion
-   - cota superior?
+   - Cota superior?
      - cota superior para max + cota superior para min
    - cota inferior?
      - cota inferior para min + cota superior para max?
@@ -458,12 +456,9 @@
 **** Cota inferior para el problema de minmax
      * Sean las variables siguentes:
        - $O$ los $o$ elementos todavia no comparados;
-       - $G$ los $g$ elementos que ``ganaron'' todas su
-	 comparaciones hasta ahora;
-       - $P$ los $p$ elementos que ``perdieron'' todas su
-	 comparaciones hasta ahora;
-       - $E$ las $e$ valores eliminadas (que perdieron al menos
-	 una comparacion, y ganaron al menos una comparacion);
+       - $G$ los $g$ elementos que ``ganaron'' todas sus comparaciones hasta ahora;
+       - $P$ los $p$ elementos que ``perdieron'' todas sus comparaciones hasta ahora;
+       - $E$ las $e$ valores eliminadas (que perdieron al menos una comparacion, y ganaron al menos una comparacion);
      -  $(o,g,p,e)$ describe el estado de cualquier algoritmo:
        -  siempre $o+g+p+e=n$;
        -  al inicio, $g=p=e=0$ y $o=n$;
@@ -487,10 +482,8 @@
        	b\in E &               &                      &                      & o,g,p,e
        	\end{array}
        	$$
-     -  En algunas configuraciones, el cambio del vector estado
-       	depende del resultado de la comparacion: un adversario puede
-       	maximisar la complejidad del algoritmo eligando el resultado
-       	de cada comparacion. El arreglo siguente contiene en graso las
+     -  En algunas configuraciones, el cambio del vector estado depende del resultado de la comparacion: un adversario puede
+       	maximizar la complejidad del algoritmo eligando el resultado de cada comparacion. El arreglo siguente contiene en graso las
        	opciones que maximizan la complejidad del algoritmo:
        	$$
        	\begin{array}{c|c|c|c|c}
@@ -511,7 +504,7 @@
      -  Con estas opciones, hay
        -  $\lceil n/2\rceil$ transiciones de $O$ a $G\cup P$, y
        -  $n-2$ transiciones de $G\cup P$ a $E$.
-     -  Eso resulta en una complejidad en el peor case de $\lceil
+     -  Eso resulta en una complejidad en el peor caso de $\lceil
        	3n/2 \rceil-2 \in 3n/2 +O(1)$ comparaciones.
 
 
@@ -608,7 +601,7 @@
       
 
 
-*** 1.3 Tecnicas para demostrar cotas inferiores: 
+*** Tecnicas para demostrar cotas inferiores: 
     adversario, teoria de la informacion, reduccion
 **** PREREQUISITOS
      - de las apuntes de CC3001:
@@ -965,7 +958,7 @@
 	3. [ ] La complejidad en el peor caso (de un algoritmo) es siempre peor que la complejidad en promedio
 	4. [ ] La complejidad en promedio (de un algoritmo) nunca es peor que la complejidad en el peor caso
 	5. [ ] ningunas
-*** 1.4 Metodologia de experimentacion
+*** Metodologia de experimentacion
 **** PREREQUISITOS
      - de las apuntes de CC3001:
        - Nociones básicas de programación http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Programacion/
@@ -1090,7 +1083,7 @@
      - Research Design: Qualitative, Quantitative, and Mixed Methods Approaches 
        John W. Creswell
        http://www.amazon.com/Research-Design-Qualitative-Quantitative-Approaches/
-*** 1.5 Recurrencias y Introduccion a la programacion dinamica 
+*** Recurrencias y Introduccion a la programacion dinamica 
 **** PREREQUISITOS
      - de las apuntes de CC3001:
        - Torre de Hanoi y recursion en  http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Programacion/#6 
@@ -1134,10 +1127,10 @@
        - Busqueda y Codificacion de Enteros (busqueda doblada)
        - Busqueda binaria en $\Theta(1+\lg n)$ (mejor que $2\lg n$)
        - Algoritmo en $2n/3 + O(1)$ comparaciones para min max
-** 2. Algoritmos y Estructuras de Datos para Memoria Secundaria (3 semanas = 6 charlas)
+** Algoritmos y Estructuras de Datos para Memoria Secundaria (3 semanas = 6 charlas)
 *** PREREQUISITOS DE UNIDAD 
-*** 2.1 Modelo de computacion en memoria secundaria. Accesos secuenciales y aleatorios
-    1. Arquitectura de un computador: la memoria
+*** Modelo de computacion en memoria secundaria. Accesos secuenciales y aleatorios
+    Arquitectura de un computador: la memoria
        1) Muchos niveles de memoria
 	  - Procesador
 	  - registros
@@ -1162,7 +1155,7 @@
 	  - Jerarquia con k niveles, de paginas de tamanos $B_1,...,B_k$
 	  - "Cache oblivious"
 	  - Otros... mas practicas, mas dificil a analizar.
-*** 2.2 Diccionarios en Memoria Externa
+*** Diccionarios en Memoria Externa
     1. Preliminary Reading
        - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/
     2. B-arbol
@@ -1223,7 +1216,7 @@
        1) Estructura de datos
        2) algorimo de busqueda
        3) analisis: busqueda en $O(\lg p)$ 
-*** 2.3 Colas de prioridad en memoria secundaria. Cotas inferiores.
+*** Colas de prioridad en memoria secundaria. Cotas inferiores.
     1) Preliminary Reading
        - Colas de Prioridades http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/TDA/#4
 
@@ -1286,7 +1279,7 @@
 	 - Array Heaps
 	 - sequence heaps
 	 - Mas en "An experimental study of priority queues in external memory"
-	   http://portal.acm.org/citation.cfm?id=351827.384259
+	   - http://portal.acm.org/citation.cfm?id=351827.384259
 
     4) Colas de Prioridades en Memoria Secundaria: cota inferior?
        - Cota inferior para dictionaries es una cota inferior por
@@ -1300,9 +1293,10 @@
        - [[http://en.wikipedia.org/wiki/Heap\_data\_structure]]
        - "An experimental Study of Priority Queues in External Memories" by Brengel, Crauser, Ferragina and Meyer
 
-*** 2.4 Ordenamiento en memoria secundaria: Mergesort. *Cota inferior*.
+*** Ordenamiento en memoria secundaria: Mergesort. *Cota inferior*.
     1. Preliminary Reading 
-       - Algoritmos de Ordenamiento en Apuntes de CC3001 http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/
+       - Algoritmos de Ordenamiento en Apuntes de CC3001
+	 - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/
 	 - [ ] Quicksort
 	 - [ ] Heapsort
 	 - [ ] Bucketsort
@@ -1420,6 +1414,7 @@
 	   - $K_2$ es la cuantidad de caldenas mas largas que $B$
 
     3. Ordenar en Memoria Externa N elementos (en $n=N/B$ paginas)
+
        http://en.wikipedia.org/wiki/External_sorting
 
        * Usando dictionarios o colas de prioridades en memoria externa
@@ -1460,7 +1455,7 @@
     - Conocer algoritmos y estructuras de datos basicos que son eficientes en memoria secundaria, 
     - y el analisis de su desempeno.
 
-** 3. Tecnicas avanzadas de diseno y analisis de algoritmos (4 semanas = 8 charlas)
+** Tecnicas avanzadas de diseno y analisis de algoritmos (4 semanas = 8 charlas)
 *** Presentacion de la Unidad 3 
     1) Dominios discretos y finitos 
 	- Interpolacion
@@ -1474,436 +1469,437 @@
      3) Algoritmos en linea 
 	- "ski renting" problema
 	- analisis competitiva ("Competitive Analysis")
-*** 3.1 Uso de *dominios discretos y finitos* en el diseno de algoritmos y estructuras de datos
-**** Algorimos de Busqueda (Interpolation Search, Extrapolation Search)
+*** Uso de *dominios discretos y finitos* en el diseno de algoritmos y estructuras de datos
+**** Busqueda en domanios discretos
+***** Algorimos de Busqueda (Interpolation Search, Extrapolation Search)
 
-     1) Interpolacion
+      1) Interpolacion
 
-	1. Introduccion:	     
-	   - Hagaria busqueda binaria en un anuario telefonico para
-	     el nombre "Barbay"? En un diccionario para la ciudad
-	     "Zanzibar"?
-	   - ojala que no: se puede provechar de la informacion
-	     que da la primera letra de cada palabra
+	 1. Introduccion:	     
+	    - Hagaria busqueda binaria en un anuario telefonico para
+	      el nombre "Barbay"? En un diccionario para la ciudad
+	      "Zanzibar"?
+	    - ojala que no: se puede provechar de la informacion
+	      que da la primera letra de cada palabra
 
-	2. Algoritmo
+	 2. Algoritmo
 
-	   - Interaccion
+	    - Interaccion
 
-	3. Analisis
-	   * La analisis *en promedio* es complicada: conversamos
-	     solamente la intuicion matematica (para mas ver la
-	     publicacion cientifica de SODA04, Demaine Jones y
-	     Patrascu):
-	     - si las llaves son *distribuidas uniformamente*, la
-	       distancia en promedio de la posicion calculada por
-	       interpolacion *lineal* hasta la posicion real es de
-	       $\sqrt{r-l}$.
-	     - entonces, se puede reducir el tamano del subarreglo
-	       de $n$ a $\sqrt{n}$ cada (dos) comparaciones
-	     - la busqueda por interpolacion 
-	       - en promedio, 
-	       - si las llaves son *distribuidas uniformamente*,
-	       - toma $O(\lg \lg n)$ comparaciones
-
-	   * La analisis *en el peor caso*
-
-	     - Interaccion.
-
-	4. Variantas
-
-	   1. Interpolacion non-lineal
-
-	      - en un anuario telefonico o en un diccionario, las
-		frecuencias de las letras *no* son uniformes
-
-	   2. Busqueda por Interpolacion Mixta con Binaria
-
-	      - Se puede buscar en tiempo 
-		- $O(\lg n)$ en el peor caso Y
-		- $O(\lg \lg n)$ en el caso promedio?
-
-	      - Solucion facil
-
-	      - Solucion mas compleja
-
-	   3. Busqueda por Extrapolacion
-	      
-	      - Tarea 3
-
-	   4. Busqueda por Extrapolacion Mixta con Doblada
-
-	      - Tarea 3
-
-     3) Discussion:
-
-	- Porque todavia estudiar la complejidad en el modelo de comparaciones? 
-
-	  - Cuando el peor caso es importante
-
-	  - Cuando la distribucion no es uniforme o no es conocida
-
-	  - cuando el costo de la evaluacion es mas costo que una
-	    simple comparacion (en particular para la interpolacion
-	    non lineal)
-
-
-
-**** Estructuras de Datos de Busqueda
-***** From Tries to Suffix Arrays
-****** Tries o Arboles Digitales
-       Ordenamos usualmente como pre-computacion para buscar despues. En el
-       caso donde n es demasiado grande, ordenar puede ser demasiado
-       carro. Consideramos alternativas para buscar.
-
-       1. Ejemplo de trie
-
-       - Insertar los nodos siguiente en un trie
-	 - hola
-	 - holistico
-	 - holograme
-	 - hologramas
-	 - ola
-	 - ole
-
-       - .
-	 - h
-	   - o
-	     - l
-		- a \rightarrow hola
-		- i \rightarrow holistica
-		- o 
-		  - g
-		    - r
-		      - a
-			- m
-			  - a
-			    - $ \rightarrow holograma
-			    - s \rightarrow hologramas
-	 - o
-	   - l
-	     - a \rightarrow ola
-	     - e \rightarrow ole
-
-    2. Busqueda
-
-       - con arreglos de tamano \sigma en cada nodo: 
-	 - O(l) tiempo, pero O(L\sigma) espacio
-       - con arreglos de tamano variables en cada nodo:
-	 - O(l \lg sigma) tiempo (busqueda binaria),  O(L) espacio
-	   (optima).
-       - con hashing
-	 - O(l) tiempo en promedio, O(L) espacio.
-
-    3. Insercion
-
-       - Insertar "hora" en el arbol precedente
-	 - .
-	   - h
-	     - o
-	       - l
-		  - a \rightarrow hola
-		  - i \rightarrow holistica
-		  - o 
-		    - g
-		      - r
-			- a
-			  - m
-			    - a
-			      - $ \rightarrow holograma
-			      - s \rightarrow hologramas
-	       - r
-		 - a \rightarrow *hora*
-	   - o
-	     - l
-	       - a \rightarrow ola
-	       - e \rightarrow ole
-
-       - Insertar "holistico" en el arbol precedente
-	 - .
-	   - h
-	     - o
-	       - l
-		  - a \rightarrow hola
-		  - i
-		    - s
-		      - t
-			- i
-			  - c
-			    - a \rightarrow holistica
-			    - o \rightarrow holistico
-		  - o 
-		    - g
-		      - r
-			- a
-			  - m
-			    - a
-			      - $ \rightarrow holograma
-			      - s \rightarrow hologramas
-	       - r
-		 - a \rightarrow *hora*
-	   - o
-	     - l
-	       - a \rightarrow ola
-	       - e \rightarrow ole
-
-       - Borrar "hola" y "holistica"
-	 - (TAREA)
-	 - Tiene de "limpiar", pero no costo mas que un factor
-	   constante de la busqueda.
-
-
-
-    4. BONUS: PAT Trie
-
-       - Comprime las ramas de nodos de grado uno en una sola arista.
-       - La caldena ("string") etiquetando la arista se guarda en el
-	 nodo hijo de la arista.
-       - Superio tan en tiempo que en espacio en practica.
-
-****** Arboles y Arreglos de Sufijos
-
-       1) Arbol de Sufijos 
-
-      - Espacio $O(n)$
-
-      - Construccion $O(n)$
-
-      - Busqueda $O(m)$
-
-      - expresion regular O(n^\lambda) donde $0\leq \lambda \leq 1$
-
-   2) Arreglo de Sufijos
-
-      - Lista de sufijos ordenados
-      - busqueda de patrones = dos busquedas binarias, donde cada
-	comparacion costa \leq m, resultando en una complejidad de
-	$O(m \lg n)$
-
-
-   3) BONUS: Rank en Bitmaps
-
-      - $\mathtt{rank}(B,i)$ = cantidad de unos en $B[1,i]$
-      - consideramos 
-	- $B$ estatico
-	- se puede almacenar $\lg n$ bits.
-
-      - Solucion de Munro, Raman y Raman:
-
-	- $b= 1/2 \lg n$   y    $s = \lg^2  n$
-
-	- Dividimos el index de $B$ en 
-
-	  - $s$ Superbloques de tamano $n/s \lg n$ bits
-
-	  - $b$ Mini bloques de tamano $n/b \lg s$ bits
-	    $${n \over 1/2 \lg n} \lg(\lg^2 n) = \frac{4n \llg n}{\lg n} \in o(n)$$
-
-	  - un diccionario con todos los bit vectores de tamano
-	    $$\sqrt{n} \lg n /2 \llg n  \in o(n)$$
-
-***** Hashing
-****** Introduccion
-       * Motivaciones	 
-       - Mejor tiempo *en promedio*
-       - Uso de todos la herramientas que tenemos
-	 - dominio de las valores
-	 - distribuciones de probabilidades de las valores
-     * Terminologia 
-       - Tabla de Hash
-	 - Arreglo de tamano $N$ 
-	 - que contiene $n$ elementos a dentro de un universo [1..U]
-       - Funccion de Hash $h(K)$
-	 - $h:[1..U] \rightarrow [0..N-1]$
-	 - se calcula rapidamente
-	 - distribue uniformemente (mas o menos) las llaves en la tabla
-	   en el caso ideal, $P[h(K)=i] = 1/N, \, \forall K,i$
-       - Collision 
-	 - cuando $h(K_{1))= h(K_{2})$
-	 - la probabilidad es alta: "Paradoxe del cumpleanos"
-
-	 - Cual es la probabilidad que en una pieca de $n$ personas,
-	   dos tiene la misma fecha de cumpleanos (a dentro de $365$
-	   dias)?
-
-	   - probabilidad que cada cumpleanos es unico:
-	     $$ 364! \over {(365 - n)! \times 365^{n-1} }$$
-
-	   - Probabilidad que hay al menos un cumpleanos compartido:
-	     $$ 1 - 364! \over {(365 - n)! \times 365^{n-1} }$$
-
-	     |   n |    Proba |
-	     |-----+----------|
-	     |  10 |      .12 |
-	     |  23 |       .5 |
-	     |  50 |      .97 |
-	     | 100 | .9999996 |
-
-****** Hashing Abierto
-
-       1) Idea principal:
-	  - resolver las colisions con caldenas
-
-       2) Ejemplo:  (muy irealistico)
-	  - $h(K) = K \mod 10$
-	  - Secuencia de insercion $52,18,70,22,44,38,62$
-	    - Insertando al final (si hay que probar por repeticiones)
-	      | 0 |       70 |
-	      | 1 |          |
-	      | 2 | 52,22,62 |
-	      | 3 |          |
-	      | 4 |       44 |
-	      | 5 |          |
-	      | 6 |          |
-	      | 7 |          |
-	      | 8 |    18,38 |
-	      | 9 |          |
-	    - Insertando al final (si no hay que probar por repeticiones)
-	      | 0 |       70 |
-	      | 1 |          |
-	      | 2 | 62,22,52 |
-	      | 3 |          |
-	      | 4 |       44 |
-	      | 5 |          |
-	      | 6 |          |
-	      | 7 |          |
-	      | 8 |    38,18 |
-	      | 9 |          |
-	      
-       3) Analisis:
-
-	  - factor de carga es $\lambda= {n \over N}$
-	  - Rendimiento en el peor caso: $O(n)$
-
-
-****** Hashing Cerrado
+	 3. Analisis
+	    * La analisis *en promedio* es complicada: conversamos
+	      solamente la intuicion matematica (para mas ver la
+	      publicacion cientifica de SODA04, Demaine Jones y
+	      Patrascu):
+	      - si las llaves son *distribuidas uniformamente*, la
+	       	distancia en promedio de la posicion calculada por
+	       	interpolacion *lineal* hasta la posicion real es de
+	       	$\sqrt{r-l}$.
+	      - entonces, se puede reducir el tamano del subarreglo
+	       	de $n$ a $\sqrt{n}$ cada (dos) comparaciones
+	      - la busqueda por interpolacion 
+	       	- en promedio, 
+	       	- si las llaves son *distribuidas uniformamente*,
+	       	- toma $O(\lg \lg n)$ comparaciones
+
+	    * La analisis *en el peor caso*
+
+	      - Interaccion.
+
+	 4. Variantas
+
+	    1. Interpolacion non-lineal
+
+	       - en un anuario telefonico o en un diccionario, las
+		 frecuencias de las letras *no* son uniformes
+
+	    2. Busqueda por Interpolacion Mixta con Binaria
+
+	       - Se puede buscar en tiempo 
+		 - $O(\lg n)$ en el peor caso Y
+		 - $O(\lg \lg n)$ en el caso promedio?
+
+	       - Solucion facil
+
+	       - Solucion mas compleja
+
+	    3. Busqueda por Extrapolacion
+	       
+	       - Tarea 3
+
+	    4. Busqueda por Extrapolacion Mixta con Doblada
+
+	       - Tarea 3
+
+      3) Discussion:
+
+	 - Porque todavia estudiar la complejidad en el modelo de comparaciones? 
+
+	   - Cuando el peor caso es importante
+
+	   - Cuando la distribucion no es uniforme o no es conocida
+
+	   - cuando el costo de la evaluacion es mas costo que una
+	     simple comparacion (en particular para la interpolacion
+	     non lineal)
+
+
+
+***** Estructuras de Datos de Busqueda
+****** From Tries to Suffix Arrays
+******* Tries o Arboles Digitales
+       	Ordenamos usualmente como pre-computacion para buscar despues. En el
+       	caso donde n es demasiado grande, ordenar puede ser demasiado
+       	carro. Consideramos alternativas para buscar.
+
+       	1. Ejemplo de trie
+
+       	- Insertar los nodos siguiente en un trie
+	  - hola
+	  - holistico
+	  - holograme
+	  - hologramas
+	  - ola
+	  - ole
+
+       	- .
+	  - h
+	    - o
+	      - l
+		 - a \rightarrow hola
+		 - i \rightarrow holistica
+		 - o 
+		   - g
+		     - r
+		       - a
+			 - m
+			   - a
+			     - $ \rightarrow holograma
+			     - s \rightarrow hologramas
+	  - o
+	    - l
+	      - a \rightarrow ola
+	      - e \rightarrow ole
+
+     2. Busqueda
+
+       	- con arreglos de tamano \sigma en cada nodo: 
+	  - O(l) tiempo, pero O(L\sigma) espacio
+       	- con arreglos de tamano variables en cada nodo:
+	  - O(l \lg sigma) tiempo (busqueda binaria),  O(L) espacio
+	    (optima).
+       	- con hashing
+	  - O(l) tiempo en promedio, O(L) espacio.
+
+     3. Insercion
+
+       	- Insertar "hora" en el arbol precedente
+	  - .
+	    - h
+	      - o
+	       	- l
+		   - a \rightarrow hola
+		   - i \rightarrow holistica
+		   - o 
+		     - g
+		       - r
+			 - a
+			   - m
+			     - a
+			       - $ \rightarrow holograma
+			       - s \rightarrow hologramas
+	       	- r
+		  - a \rightarrow *hora*
+	    - o
+	      - l
+	       	- a \rightarrow ola
+	       	- e \rightarrow ole
+
+       	- Insertar "holistico" en el arbol precedente
+	  - .
+	    - h
+	      - o
+	       	- l
+		   - a \rightarrow hola
+		   - i
+		     - s
+		       - t
+			 - i
+			   - c
+			     - a \rightarrow holistica
+			     - o \rightarrow holistico
+		   - o 
+		     - g
+		       - r
+			 - a
+			   - m
+			     - a
+			       - $ \rightarrow holograma
+			       - s \rightarrow hologramas
+	       	- r
+		  - a \rightarrow *hora*
+	    - o
+	      - l
+	       	- a \rightarrow ola
+	       	- e \rightarrow ole
+
+       	- Borrar "hola" y "holistica"
+	  - (TAREA)
+	  - Tiene de "limpiar", pero no costo mas que un factor
+	    constante de la busqueda.
+
+
+
+     4. BONUS: PAT Trie
+
+       	- Comprime las ramas de nodos de grado uno en una sola arista.
+       	- La caldena ("string") etiquetando la arista se guarda en el
+	  nodo hijo de la arista.
+       	- Superio tan en tiempo que en espacio en practica.
+
+******* Arboles y Arreglos de Sufijos
+
+       	1) Arbol de Sufijos 
+
+       - Espacio $O(n)$
+
+       - Construccion $O(n)$
+
+       - Busqueda $O(m)$
+
+       - expresion regular O(n^\lambda) donde $0\leq \lambda \leq 1$
+
+    2) Arreglo de Sufijos
+
+       - Lista de sufijos ordenados
+       - busqueda de patrones = dos busquedas binarias, donde cada
+	 comparacion costa \leq m, resultando en una complejidad de
+	 $O(m \lg n)$
+
+
+    3) BONUS: Rank en Bitmaps
+
+       - $\mathtt{rank}(B,i)$ = cantidad de unos en $B[1,i]$
+       - consideramos 
+	 - $B$ estatico
+	 - se puede almacenar $\lg n$ bits.
+
+       - Solucion de Munro, Raman y Raman:
+
+	 - $b= 1/2 \lg n$   y    $s = \lg^2  n$
+
+	 - Dividimos el index de $B$ en 
+
+	   - $s$ Superbloques de tamano $n/s \lg n$ bits
+
+	   - $b$ Mini bloques de tamano $n/b \lg s$ bits
+	     $${n \over 1/2 \lg n} \lg(\lg^2 n) = \frac{4n \llg n}{\lg n} \in o(n)$$
+
+	   - un diccionario con todos los bit vectores de tamano
+	     $$\sqrt{n} \lg n /2 \llg n  \in o(n)$$
+
+****** Hashing
+******* Introduccion
+       	* Motivaciones	 
+       	- Mejor tiempo *en promedio*
+       	- Uso de todos la herramientas que tenemos
+	  - dominio de las valores
+	  - distribuciones de probabilidades de las valores
+      * Terminologia 
+       	- Tabla de Hash
+	  - Arreglo de tamano $N$ 
+	  - que contiene $n$ elementos a dentro de un universo [1..U]
+       	- Funccion de Hash $h(K)$
+	  - $h:[1..U] \rightarrow [0..N-1]$
+	  - se calcula rapidamente
+	  - distribue uniformemente (mas o menos) las llaves en la tabla
+	    en el caso ideal, $P[h(K)=i] = 1/N, \, \forall K,i$
+       	- Collision 
+	  - cuando $h(K_{1))= h(K_{2})$
+	  - la probabilidad es alta: "Paradoxe del cumpleanos"
+
+	  - Cual es la probabilidad que en una pieca de $n$ personas,
+	    dos tiene la misma fecha de cumpleanos (a dentro de $365$
+	    dias)?
+
+	    - probabilidad que cada cumpleanos es unico:
+	      $$ 364! \over {(365 - n)! \times 365^{n-1} }$$
+
+	    - Probabilidad que hay al menos un cumpleanos compartido:
+	      $$ 1 - 364! \over {(365 - n)! \times 365^{n-1} }$$
+
+	      |   n |    Proba |
+	      |-----+----------|
+	      |  10 |      .12 |
+	      |  23 |       .5 |
+	      |  50 |      .97 |
+	      | 100 | .9999996 |
+
+******* Hashing Abierto
+
+       	1) Idea principal:
+	   - resolver las colisions con caldenas
+
+       	2) Ejemplo:  (muy irealistico)
+	   - $h(K) = K \mod 10$
+	   - Secuencia de insercion $52,18,70,22,44,38,62$
+	     - Insertando al final (si hay que probar por repeticiones)
+	       | 0 |       70 |
+	       | 1 |          |
+	       | 2 | 52,22,62 |
+	       | 3 |          |
+	       | 4 |       44 |
+	       | 5 |          |
+	       | 6 |          |
+	       | 7 |          |
+	       | 8 |    18,38 |
+	       | 9 |          |
+	     - Insertando al final (si no hay que probar por repeticiones)
+	       | 0 |       70 |
+	       | 1 |          |
+	       | 2 | 62,22,52 |
+	       | 3 |          |
+	       | 4 |       44 |
+	       | 5 |          |
+	       | 6 |          |
+	       | 7 |          |
+	       | 8 |    38,18 |
+	       | 9 |          |
+	       
+       	3) Analisis:
+
+	   - factor de carga es $\lambda= {n \over N}$
+	   - Rendimiento en el peor caso: $O(n)$
+
+
+******* Hashing Cerrado
+       	
+       	1) Idea principal:
+	   - resolver las colisiones con busqueda, i.e. 
+	     - $( h(K)+f(i) ) \mod N$
+	   - differentes tipos de busqueda:
+	     - lineal  $f(i) = i$
+	       - primary "clustering" (formacion de secuencias largas)		
+	     - cuadratica $f(i) = i^2$
+	       - secundario "clustering" (si $h(K_1)=h(K_2)$, la
+		 secuencias son las mismas.
+	     - doble hashing $f(i) = i . h'(K)$
+	       - $h'(K)$ debe ser prima con N
+
+       	2) Ideal Hashing
+
+	   - Imagina una funcion de hash que genera una secuencia que
+	     parece aleatoria.
+
+	   - cada posicion tiene la misma probabilidad de ser la
+	     proxima
+	      - Probabilidad $\lambda$ de elegir una posicion ocupada
+	      - Probabilidad $1-\lambda$ de elegir une posicion libre
+	      - la secuencia de prueba puede tocar la misma posicion
+               	mas que una vez.
+	      - llaves identicas todavia siguen la misma secuencia.
+	   - Cual es el costo promedio $u_j$ de una busqueda negativa
+	     con $j$ llaves en la tabla?
+
+	     - $\lambda= \frac{j}{N}$
+
+	     - $u_j = 1 (1-\lambda) + 2\lambda(1-\lambda)+r\lambda^2(1-\lambda)+\ldots$
+
+	     - $= 1 + \lambda + \lambda^2 + \ldots$
+
+	     - $= \frac{1}{1-\lambda}$
+
+	     - $= \frac{1}{1-j/N}$
+
+	     - $= \frac{N}{N-j} \in[1..N]$
+
+	   - Cual es el costo promedio de una busqueda positiva $s_i$
+	     para el $i$-th elemento insertado?
+	     
+	     - $s_i = \frac{1}{1- i/N} = \frac{N}{N-i}$
+
+	     - $s_n = 1/n \sum \frac{N}{N-i}$
+
+	     - $= \frac{N}{n} \sum_{i=0}^{n-1} \frac{1}{N-i}$
+
+	     - $= \frac{1}{\alpha} \sum_{i=0}^{n-1} \frac{1}{N-i}$
+	       con $\alpha = \frac{n}{N}$
+
+	     - $< \frac{1}{\alpha} \integral_{N-n}^{N} 1/x dx$
+
+	     - $= 1/\alpha \ln\frac{N}{N-n}$
+
+	     - $= 1/\alpha \ln\frac{1}{\alpha}$
+
+	   - Para $\alpha = 1/2$, el costo promedio es $1.387$
+
+	   - Para $\alpha = 0.9$, el costo promedio es $2.559$
+
+******* Universal Hashing
+
+       	- $h(K) = ( (aK+b) \mod p) \mod N$
+       	- $a \in [1..p-1]$ elegido al azar
+       	- $b \in [0..p-1]$ elegido al azar
+       	- $p$ es primo y mas grande que $N$ 
+       	- $N$ no es necesaramente primo
+
+******* Hashing en memoria externa
+
+       	1) Que pasa si la tabla de hashing no queda en memoria?
+
+       - IDEA: Simula un B-arbol de altura dos
+	 - organiza el dato con valores de hash
+	 - guarda un index en el nodo raiz
+	 - usa solamente *una parte* de la valor de hash para elegir
+	   el sobre-arbol
+	 - extiende el index cuando mas dato es agregado
+
+    2) Descripcion
        
-       1) Idea principal:
-	  - resolver las colisiones con busqueda, i.e. 
-	    - $( h(K)+f(i) ) \mod N$
-	  - differentes tipos de busqueda:
-	    - lineal  $f(i) = i$
-	      - primary "clustering" (formacion de secuencias largas)		
-	    - cuadratica $f(i) = i^2$
-	      - secundario "clustering" (si $h(K_1)=h(K_2)$, la
-		secuencias son las mismas.
-	    - doble hashing $f(i) = i . h'(K)$
-	      - $h'(K)$ debe ser prima con N
+       - $B$ - cantidad de elementos en una pagina
+       - $h$ - funcion de hash \rightarrow $[0..2^k-1]$
+       - $D$ - *profundidad general*, con $D\leq k$
+	 - la raiz tiene $2^D$ punteros a las paginas horas
+	 - la raiz es indexada con los $D$ primeros bits de cada
+	   valor de hash.
+       - $d_l$ - *profundidad local* de cada hora $l$
+	 - Las valores de hash en $l$ tienen en comun los primeros
+	   $d_l$ bits.
+	 - Hay $2^{D-d_l}$ punteros a la hora $l$
+	 - Siempre, $d_l\leq D$
 
-       2) Ideal Hashing
+    3) Ejemplo
 
-	  - Imagina una funcion de hash que genera una secuencia que
-	    parece aleatoria.
+       - $B=4, k=6, D=2$
 
-	  - cada posicion tiene la misma probabilidad de ser la
-	    proxima
-	     - Probabilidad $\lambda$ de elegir una posicion ocupada
-	     - Probabilidad $1-\lambda$ de elegir une posicion libre
-	     - la secuencia de prueba puede tocar la misma posicion
-               mas que una vez.
-	     - llaves identicas todavia siguen la misma secuencia.
-	  - Cual es el costo promedio $u_j$ de una busqueda negativa
-	    con $j$ llaves en la tabla?
+	 | $d_l=2$ | 000100 |
+	 |         | 001000 |
+	 |         | 001011 |
+	 |         | 001100 |
 
-	    - $\lambda= \frac{j}{N}$
+	 | $d_l=2$ | 010101 |
+	 |         | 011100 |
+	 |         |        |
+	 |         |        |
 
-	    - $u_j = 1 (1-\lambda) + 2\lambda(1-\lambda)+r\lambda^2(1-\lambda)+\ldots$
+	 | $d_l=1$ | 100100 |
+	 |         | 101101 |
+	 |         | 110001 |
+	 |         | 111100 |
 
-	    - $= 1 + \lambda + \lambda^2 + \ldots$
+    4) Algoritmos
 
-	    - $= \frac{1}{1-\lambda}$
+       - Buscar
+       - Insertar
+       - Remover
 
-	    - $= \frac{1}{1-j/N}$
+    5) Analisis
 
-	    - $= \frac{N}{N-j} \in[1..N]$
-
-	  - Cual es el costo promedio de una busqueda positiva $s_i$
-	    para el $i$-th elemento insertado?
-	    
-	    - $s_i = \frac{1}{1- i/N} = \frac{N}{N-i}$
-
-	    - $s_n = 1/n \sum \frac{N}{N-i}$
-
-	    - $= \frac{N}{n} \sum_{i=0}^{n-1} \frac{1}{N-i}$
-
-	    - $= \frac{1}{\alpha} \sum_{i=0}^{n-1} \frac{1}{N-i}$
-	      con $\alpha = \frac{n}{N}$
-
-	    - $< \frac{1}{\alpha} \integral_{N-n}^{N} 1/x dx$
-
-	    - $= 1/\alpha \ln\frac{N}{N-n}$
-
-	    - $= 1/\alpha \ln\frac{1}{\alpha}$
-
-	  - Para $\alpha = 1/2$, el costo promedio es $1.387$
-
-	  - Para $\alpha = 0.9$, el costo promedio es $2.559$
-
-****** Universal Hashing
-
-       - $h(K) = ( (aK+b) \mod p) \mod N$
-       - $a \in [1..p-1]$ elegido al azar
-       - $b \in [0..p-1]$ elegido al azar
-       - $p$ es primo y mas grande que $N$ 
-       - $N$ no es necesaramente primo
-
-****** Hashing en memoria externa
-
-       1) Que pasa si la tabla de hashing no queda en memoria?
-
-      - IDEA: Simula un B-arbol de altura dos
-	- organiza el dato con valores de hash
-	- guarda un index en el nodo raiz
-	- usa solamente *una parte* de la valor de hash para elegir
-	  el sobre-arbol
-	- extiende el index cuando mas dato es agregado
-
-   2) Descripcion
-      
-      - $B$ - cantidad de elementos en una pagina
-      - $h$ - funcion de hash \rightarrow $[0..2^k-1]$
-      - $D$ - *profundidad general*, con $D\leq k$
-	- la raiz tiene $2^D$ punteros a las paginas horas
-	- la raiz es indexada con los $D$ primeros bits de cada
-	  valor de hash.
-      - $d_l$ - *profundidad local* de cada hora $l$
-	- Las valores de hash en $l$ tienen en comun los primeros
-	  $d_l$ bits.
-	- Hay $2^{D-d_l}$ punteros a la hora $l$
-	- Siempre, $d_l\leq D$
-
-   3) Ejemplo
-
-      - $B=4, k=6, D=2$
-
-	| $d_l=2$ | 000100 |
-	|         | 001000 |
-	|         | 001011 |
-	|         | 001100 |
-
-	| $d_l=2$ | 010101 |
-	|         | 011100 |
-	|         |        |
-	|         |        |
-
-	| $d_l=1$ | 100100 |
-	|         | 101101 |
-	|         | 110001 |
-	|         | 111100 |
-
-   4) Algoritmos
-
-      - Buscar
-      - Insertar
-      - Remover
-
-   5) Analisis
-
-      - Buscar, insertar remover
-	- 1 acceso a la memoria secundariaa si el index se queda
-      - cantidad Promedio de paginas para tener $n$ llaves
-	- $\frac{n}{B\lg 2}\approx 1.44 \frac{n}{B}$
-	- paginas son llenas a $69\%$ mas o menos.
+       - Buscar, insertar remover
+	 - 1 acceso a la memoria secundariaa si el index se queda
+       - cantidad Promedio de paginas para tener $n$ llaves
+	 - $\frac{n}{B\lg 2}\approx 1.44 \frac{n}{B}$
+	 - paginas son llenas a $69\%$ mas o menos.
 
 
 
@@ -1985,7 +1981,7 @@
    - En el peor caso, la complejidad corresponde a la suma de
      las superficias de los bloques, aka $O(n)$.
 
-*** 3.2 *Analisi amortizado* de algoritmos y estructuras de datos
+*** *Analisi amortizado* de algoritmos y estructuras de datos
 **** Analisis amortizada   
 
      * Costo Amortizado:
@@ -2279,22 +2275,20 @@
 	 (copy de http://en.wikipedia.org/wiki/Fibonacci_heap)
 
 
-         |             | Linked List | Binary Tree   | (Min-)Heap    | Fibonacci Heap | Brodal Queue [1] |
-         |-------------+-------------+---------------+---------------+----------------+------------------|
-         | insert      | $O(1)$        | $O(\lg n)$      | $O(\lg n)$      | $O(1)$           | $O(1)$             |
-         | accessmin   | $O(n)$        | $O(1)$          | $O(1)$          | $O(1)$           | $O(1)$             |
-         | deletemin   | $O(n)$        | $O(\lg n)$      | $O(\lg n)$      | $O(\lg n)^*$     | $O(\lg n)$         |
-         | decreasekey | $O(1)$        | $O(\lg n)$      | $O(\lg n)$      | $O(1)^*$         | $O(1)$             |
-         | delete      | $O(n)$        | $O(n)$          | $O(\lg n)$      | $O(\lg n)^*$     | $O(\lg n)$         |
-         | merge       | $O(1)$        | $O(m log(n+m))$ | $O(m log(n+m))$ | $O(1)$           | $O(1)$             |
+     |             | Linked List | Binary Tree   | (Min-)Heap    | Fibonacci Heap | Brodal Queue [1] |
+     |-------------+-------------+---------------+---------------+----------------+------------------|
+     | insert      | $O(1)$        | $O(\lg n)$      | $O(\lg n)$      | $O(1)$           | $O(1)$             |
+     | accessmin   | $O(n)$        | $O(1)$          | $O(1)$          | $O(1)$           | $O(1)$             |
+     | deletemin   | $O(n)$        | $O(\lg n)$      | $O(\lg n)$      | $O(\lg n)^*$     | $O(\lg n)$         |
+     | decreasekey | $O(1)$        | $O(\lg n)$      | $O(\lg n)$      | $O(1)^*$         | $O(1)$             |
+     | delete      | $O(n)$        | $O(n)$          | $O(\lg n)$      | $O(\lg n)^*$     | $O(\lg n)$         |
+     | merge       | $O(1)$        | $O(m log(n+m))$ | $O(m log(n+m))$ | $O(1)$           | $O(1)$             |
 
       6) BONUS Heapsort
 
 	 - in place
 	 - $O(n \lg n)$ con cualquiera de estas variantes.
-
-
-*** 3.3 *Analisi adaptativa* de algoritmos y estructuras de datos
+*** *Analisi adaptativa* de algoritmos y estructuras de datos
 **** Analisi en el peor caso: a dentro de que?
      - peor caso a dentro de las instancias de tamano fijo
        - el tamano puede ser multidimensional (e.g. grafos)
@@ -2314,10 +2308,13 @@
        adicionales (usando la segunda variante de la búsqueda
        binaria),
      - por un total de   $1+2\lceil\lg p\rceil$ comparaciones
-
-
-
-*** 3.4 *Algoritmos en linea*. Competividad. Adaptividad.
+**** Algoritmo de Ordenamiento adaptivos basicos
+***** Merge Sort Adaptivo: Runs
+***** Local Insertion Sort: Inv
+***** Another Insertion Sort: REM
+**** Computacion de la Union
+**** Computacion de la Interseccion
+*** *Algoritmos en linea*. Competividad. Adaptividad.
 **** List Accessing
 
      REFERENCIA: Capitulo 1 en "Online Computation and Competitive
@@ -2440,7 +2437,7 @@
 		- $C_{OPT}=\sum_{j=1}^{n} jp_j$
 		- $C_{MTF}=\sum_{j=1}^{n} p_j(\mbox{ cost of finding } k_j)$
 		- $C_{MTF}=\sum_{j=1}^{n} p_j(1+\mbox{number of keys before } k_j)$
-		
+		  
 		- To compute the average number of keys before $k_j$:
 		  $$\begin{eqnarray*}
 		  \Pr[\mbox{ $k_i$ before $k_j$}] &=& \frac{p_i}{p_i+p_j} \\
@@ -2652,7 +2649,7 @@
 	 - tecnica de los cuatro rusos,
 	 - paginamiento
 	 - busqueda no acotada (unbounded search, doubling search)
-** 4. Algoritmos no convencionales (5 semanas = 10 charlas) 
+** Algoritmos no convencionales (5 semanas = 10 charlas) 
    :LOGBOOK:
    - State "PAUS"       from "TODO"       [2010-10-07 Thu 13:44]
    - State "TODO"       from ""           [2010-10-07 Thu 13:43]
@@ -2689,7 +2686,7 @@
      - ordenamiento paralelo
      - paralel prefix
 
-*** 4.1 *Aleatorizacion* (1 semana = 2 charlas)
+*** *Aleatorizacion* (1 semana = 2 charlas)
       :LOGBOOK:
       - State "DONE"       from "ACTF"       [2010-10-18 Mon 19:45]
       - State "ACTF"       from "PAUS"       [2010-10-18 Mon 15:36]
@@ -2723,7 +2720,46 @@
 	   - los dos.
 	 - veamos que son nociones equivalentes.
 
-**** El poder de un algoritmo aleatorizado
+       - Formalizacion
+	     |------------------------+---------------|
+	     | Algoritmos clasicos    | Non clasicos  |
+	     |------------------------+---------------|
+	     | Siempre hacen lo mismo | aleatorizados |
+	     | Nunca se equivocan     | Monte Carlo   |
+	     | Siempre terminan       | Las Vegas     |
+	     |------------------------+---------------|
+
+       - Clasificacion de los algoritmos *de decision* aleatorizados
+
+	 1. Probabilistico: Monte Carlo
+	    - $P(error) < \epsilon$
+	    - Ejemplo:
+	      - deteccion de cliquas
+	    - Se puede considerar tambien variantes mas fines:
+	      - two-sided error ( => clase de complejidad $BPP$)
+	       	- $P(accept | negative) < \epsilon$
+	       	- $P(refuse | negative) > 1-\epsilon$
+	       	- $P(accept | positive) > 1-\epsilon$
+	       	- $P(refuse | positive) < epsilon$
+	      - One-sided error
+	       	- $P(accept | negative) < epsilon$
+	       	- $P(refuse | negative) > 1 -\epsilon $
+	       	- $P(accept | positive) = 1$
+	       	- $P(refuse | positive) = 0$
+
+	 2. Probabilistico: Las Vegas
+	    - Tiempo es una variable aleatoria
+	    - Ejemplos: 
+	      - determinar primalidad [Miller Robin]
+	      - busqueda en arreglo desordenado 
+	      - interseccion de arreglos ordenados
+	      - etc...
+
+       - Relacion
+	 - Si se puede verificar el resultado en tiempo razonable,
+	   Monte Carlos iterado hasta correcto => Las Vegas
+
+**** El poder de un algoritmo aleatorizado: Ejemplos
      Nota: Trae los juguetes/cajas de colores, con un tesoro a esconder a dentro.
      Ejemplos de algoritmos o estructuras de datos aleatorizados
 
@@ -3409,173 +3445,128 @@
 
 	   C((A_r)_r) = \max_I C((A_r)_r,I) =  \max_I  E_r( C(A_r,I) )
 
+**** Primalidad
+      * REFERENCIAS: 
+       	- Primalidad: Capitulo 14.6 en "Randomized Algorithms", de Rajeev Motwani and Prabhakar Raghavan.
+       	- http://en.wikipedia.org/wiki/Primality_test#Complexity
+
+      * Algoritmo "Random Walks" para SAT
+       	1. eliga cualquieras valores $x_1,\ldots,x_n$
+       	2. si todas las  clausilas son  satisfechas,
+	   - accepta
+       	3. sino
+	   - eliga una clausula non satisfecha (deterministicamente
+	     o no)
+	   - eliga una de las variables de esta closula.
+       	4. Repite es $r$ veces.
+
+      * PRIMES is in coNP
+
+       	si $x\in coNP$, eliga non-deterministicamente una
+       	decomposicion de $x$ y verificalo.
+
+      * PRIMES is in NP (hence in NP\cap coNP)
+
+       	In 1975, Vaughan Pratt showed that there existed a
+       	certificate for primality that was checkable in polynomial
+       	time, and thus that PRIMES was in NP, and therefore in NP Á
+       	coNP.
 
 
+      * PRIMES in coRP
+
+       	The subsequent discovery of the Solovay-Strassen and
+       	Miller-Rabin algorithms put PRIMES in coRP. 
+
+      * PRIMES in $ZPP = RP \cap coRP$
+
+       	In 1992, the Adleman-Huang algorithm reduced the complexity
+       	to $ZPP = RP \cap coRP$, which superseded Pratt's result.
+
+      * PRIMES in QP
+
+       	The cyclotomy test of Adleman, Pomerance, and Rumely from
+       	1983 put PRIMES in QP (quasi-polynomial time), which is not
+       	known to be comparable with the classes mentioned above.
+
+      * PRIMES in P
+
+       	Because of its tractability in practice, polynomial-time
+       	algorithms assuming the Riemann hypothesis, and other
+       	similar evidence, it was long suspected but not proven that
+       	primality could be solved in polynomial time. The existence
+       	of the AKS primality test finally settled this long-standing
+       	question and placed PRIMES in P. 
+
+      * $PRIMES \in NC$? $PRIMES \in L$?
+
+       	PRIMES is not known to be P-complete, and it is not known
+       	whether it lies in classes lying inside P such as NC or L.
+
+**** Clases de complejidad aleatorizada 			      :BONUS:
+
+***** RP
+
+      - "A *precise* polynomial-time bounded nondeterministic Turing
+       	Machine", aka "maquina de Turing non-deterministica acotadada
+       	polinomialemente *precisa*", es una maquina tal que su
+       	ejecucion sobre las entradas de tamano n toman tiempo p(n)
+       	*todas*.
+
+      - "A *polynomial Monte-Carlo Turing machine*", aka una
+       	"*maquina de Turing de Monte-Carlo* polynomial" para el
+       	idioma $L$, es una tal maquina tal que
+       	- si $x\in L$, al menos la mitad de los $2^{p(|x|)}$ caminos
+	  acceptan $x$
+       	- si $x\not\in L$, *todas* los caminos rechazan $x$.
+
+      - La definicion corresponde exactamente a la definicion de
+       	algoritmos de Monte-Carlo. La classe de idiomas reconocidos
+       	por una *maquina de Turing de Monte-Carlo* polynomial es
+       	$RP$.
+
+      - $P \subset BP \subset NP$:
+       	- un algoritmo en $P$ accepta con todos sus caminos cuando
+	  una palabra $x$ es en $L$, que es "al menos" la mitad.
+       	- un algoritmo en $NP$ accepta con al menos un camino: un
+	  algoritmo en $RP$ accepta con al menos la mitad de sus
+	  caminos.
+
+      
+
+***** ZPP
+
+      - $ZPP = RP \cap coRP$
+      - $Primes \in ZPP$
+
+***** PP
+
+      - Maquina que, si $x\in L$, accepta en la mayoridad de sus
+       	entradas.
+      - PP probablemente no en NP
+      - PP probablemente no en RP
+
+***** BPP
+
+      $$BPP = \left\{ L, \forall x, \left\{
+      \begin{array}{l}
+         x\in L \Rightarrow 3/4 \mbox{ de los caminos acceptan $x$} \\
+	 x\not\in L \Rightarrow 3/4 \mbox{ de los caminos rechazan $x$ } \\
+      \end{array}\right.\right\}$$
+      
+      $RP \subset BPP \subset PP$
+
+      $BPP = coBPP$
 
 
-*** 4.2 Algoritmos tipo Monte Carlo y Las Vegas
-
-    * Formalizacion
-
-	  |------------------------+---------------|
-	  | Algoritmos clasicos    | Non clasicos  |
-	  |------------------------+---------------|
-	  | Siempre hacen lo mismo | aleatorizados |
-	  | Nunca se equivocan     | Monte Carlo   |
-	  | Siempre terminan       | Las Vegas     |
-	  |------------------------+---------------|
-
-
-    * Clasificacion de los algoritmos *de decision* aleatorizados
-
-	1. Probabilistico: Monte Carlo
-	   - $P(error) < \epsilon$
-	   - Ejemplo:
-	     - deteccion de cliquas
-	   - Se puede considerar tambien variantes mas fines:
-	     - two-sided error ( => clase de complejidad $BPP$)
-	       - $P(accept | negative) < \epsilon$
-	       - $P(refuse | negative) > 1-\epsilon$
-	       - $P(accept | positive) > 1-\epsilon$
-	       - $P(refuse | positive) < epsilon$
-	     - One-sided error
-	       - $P(accept | negative) < epsilon$
-	       - $P(refuse | negative) > 1 -\epsilon $
-	       - $P(accept | positive) = 1$
-	       - $P(refuse | positive) = 0$
-
-	2. Probabilistico: Las Vegas
-	   - Tiempo es una variable aleatoria
-	   - Ejemplos: 
-	     - determinar primalidad [Miller Robin]
-	     - busqueda en arreglo desordenado 
-	     - interseccion de arreglos ordenados
-	     - etc...
-
-     * Relacion
-       - Si se puede verificar el resultado en tiempo razonable,
-	 Monte Carlos iterado hasta correcto => Las Vegas
-
-*** 4.3 Primalidad
-     * REFERENCIAS: 
-       - Primalidad: Capitulo 14.6 en "Randomized Algorithms", de Rajeev Motwani and Prabhakar Raghavan.
-       - http://en.wikipedia.org/wiki/Primality_test#Complexity
-
-     * Algoritmo "Random Walks" para SAT
-       1. eliga cualquieras valores $x_1,\ldots,x_n$
-       2. si todas las  clausilas son  satisfechas,
-	  - accepta
-       3. sino
-	  - eliga una clausula non satisfecha (deterministicamente
-	    o no)
-	  - eliga una de las variables de esta closula.
-       4. Repite es $r$ veces.
-
-     * PRIMES is in coNP
-
-       si $x\in coNP$, eliga non-deterministicamente una
-       decomposicion de $x$ y verificalo.
-
-     * PRIMES is in NP (hence in NP\cap coNP)
-
-       In 1975, Vaughan Pratt showed that there existed a
-       certificate for primality that was checkable in polynomial
-       time, and thus that PRIMES was in NP, and therefore in NP Á
-       coNP.
-
-
-     * PRIMES in coRP
-
-       The subsequent discovery of the Solovay-Strassen and
-       Miller-Rabin algorithms put PRIMES in coRP. 
-
-     * PRIMES in $ZPP = RP \cap coRP$
-
-       In 1992, the Adleman-Huang algorithm reduced the complexity
-       to $ZPP = RP \cap coRP$, which superseded Pratt's result.
-
-     * PRIMES in QP
-
-       The cyclotomy test of Adleman, Pomerance, and Rumely from
-       1983 put PRIMES in QP (quasi-polynomial time), which is not
-       known to be comparable with the classes mentioned above.
-
-     * PRIMES in P
-
-       Because of its tractability in practice, polynomial-time
-       algorithms assuming the Riemann hypothesis, and other
-       similar evidence, it was long suspected but not proven that
-       primality could be solved in polynomial time. The existence
-       of the AKS primality test finally settled this long-standing
-       question and placed PRIMES in P. 
-
-     * $PRIMES \in NC$? $PRIMES \in L$?
-
-       PRIMES is not known to be P-complete, and it is not known
-       whether it lies in classes lying inside P such as NC or L.
-
-*** 4.4 Clases de complejidad aleatorizada 			      :BONUS:
-
-**** RP
-
-     - "A *precise* polynomial-time bounded nondeterministic Turing
-       Machine", aka "maquina de Turing non-deterministica acotadada
-       polinomialemente *precisa*", es una maquina tal que su
-       ejecucion sobre las entradas de tamano n toman tiempo p(n)
-       *todas*.
-
-     - "A *polynomial Monte-Carlo Turing machine*", aka una
-       "*maquina de Turing de Monte-Carlo* polynomial" para el
-       idioma $L$, es una tal maquina tal que
-       - si $x\in L$, al menos la mitad de los $2^{p(|x|)}$ caminos
-	 acceptan $x$
-       - si $x\not\in L$, *todas* los caminos rechazan $x$.
-
-     - La definicion corresponde exactamente a la definicion de
-       algoritmos de Monte-Carlo. La classe de idiomas reconocidos
-       por una *maquina de Turing de Monte-Carlo* polynomial es
-       $RP$.
-
-     - $P \subset BP \subset NP$:
-       - un algoritmo en $P$ accepta con todos sus caminos cuando
-	 una palabra $x$ es en $L$, que es "al menos" la mitad.
-       - un algoritmo en $NP$ accepta con al menos un camino: un
-	 algoritmo en $RP$ accepta con al menos la mitad de sus
-	 caminos.
-
-     
-
-**** ZPP
-
-     - $ZPP = RP \cap coRP$
-     - $Primes \in ZPP$
-
-**** PP
-
-     - Maquina que, si $x\in L$, accepta en la mayoridad de sus
-       entradas.
-     - PP probablemente no en NP
-     - PP probablemente no en RP
-
-**** BPP
-
-     $$BPP = \left\{ L, \forall x, \left\{
-     \begin{array}{l}
-        x\in L \Rightarrow 3/4 \mbox{ de los caminos acceptan $x$} \\
-	x\not\in L \Rightarrow 3/4 \mbox{ de los caminos rechazan $x$ } \\
-     \end{array}\right.\right\}$$
-     
-     $RP \subset BPP \subset PP$
-
-     $BPP = coBPP$
-
-
-*** 4.5 Nociones de *aproximabilidad* (2 semanas = 4 charlas)
+*** Nociones de *aproximabilidad* (2 semanas = 4 charlas)
     :LOGBOOK:
     - State "DONE"       from ""           [2010-10-07 Thu 10:50]
     :END:
     - problemas que son o no aproximables
-**** Intro: Aproximacion de problemas de optimizacion NP-dificiles
+**** (Motivacion) 
+
+     Aproximacion de problemas de optimizacion NP-dificiles
 
     - Que problemas NP dificiles conocen?
       - colorisacion de grafos
@@ -3592,224 +3583,227 @@
 	generalmente de optimizacion.  Si se necesita una soluciono
 	en tiempo polinomial, se puede considerar una aproximacion.
 
-**** *$p(n)$-aproximacion*:  Definicion
+**** 4.2.1 *$p(n)$-aproximacion*
 
-     * Dado un problema de minimizacion, un algoritmo $A$ es un
-       *$p(n)$-aproximacion* si
-       $\forall n \max \frac{ C_A(x) }{ C_{OPT}(x) } \leq p(n)$
+***** Definicion
 
-     * Dado un problema de maximizacion, un algoritmo $A$ es un
-       *$p(n)$-aproximacion* si
-       $\forall n \max \frac{ C_{OPT}(x) }{ C_A(x) } \leq p(n)$
+      * Dado un problema de minimizacion, un algoritmo $A$ es un
+       	*$p(n)$-aproximacion* si
+       	$\forall n \max \frac{ C_A(x) }{ C_{OPT}(x) } \leq p(n)$
 
-      - Notas: 
-	1) Aqui consideramos la cualidad de la solucion, NO la
-	   complejidad del algoritmo. Usualmente el problema es
-	   NP-dificil, y el algoritmo de aproximacion es de
-	   complejidad polinomial.
-	2) Las razones estas $\geq 1$ (elijamos las definiciones para
-	   eso)
-	3) A veces consideramos tambien $C_A(x)-C_{OPT}(x)$
-	   (minimizacion) y $C_{OPT}(x)-C_A(x)$: eso se llama un
-	   "esquema de aproximacion polinomial" y vamos a verlo mas
-	   tarde.
+      * Dado un problema de maximizacion, un algoritmo $A$ es un
+       	*$p(n)$-aproximacion* si
+       	$\forall n \max \frac{ C_{OPT}(x) }{ C_A(x) } \leq p(n)$
 
-**** Ejemplo: Bin Packing (un problema que es 2-aproximable)
+       - Notas: 
+	 1) Aqui consideramos la cualidad de la solucion, NO la
+	    complejidad del algoritmo. Usualmente el problema es
+	    NP-dificil, y el algoritmo de aproximacion es de
+	    complejidad polinomial.
+	 2) Las razones estas $\geq 1$ (elijamos las definiciones para
+	    eso)
+	 3) A veces consideramos tambien $C_A(x)-C_{OPT}(x)$
+	    (minimizacion) y $C_{OPT}(x)-C_A(x)$: eso se llama un
+	    "esquema de aproximacion polinomial" y vamos a verlo mas
+	    tarde.
 
-    - DEFINICION
+***** Ejemplo: Bin Packing (un problema que es 2-aproximable)
 
-       Dado $n$ valores $x_1, \ldots, x_n$, $0\leq x_i\leq 1/2$,
-       cual es la menor cantidad de cajas de tamano 1 necesarias
-       para empaquetarlas?
+     - DEFINICION
 
-    - Algoritmo "Greedy"
-      - Considerando los $x_i$ en orden,
-      - llenar la caja actual todo lo posible,
-      - pasar ala siguiente caja.
+       	Dado $n$ valores $x_1, \ldots, x_n$, $0\leq x_i\leq 1/2$,
+       	cual es la menor cantidad de cajas de tamano 1 necesarias
+       	para empaquetarlas?
 
-    - Analisis
-      - Este algoritmo tiene complejidad lineal $O(n)$.
-      - Greedy da una 2-aproximacion.
-      - (se puede mostrar facilamente en las instancias donde el
-	algoritmo optima llene completamente todas las cajas.)
+     - Algoritmo "Greedy"
+       - Considerando los $x_i$ en orden,
+       - llenar la caja actual todo lo posible,
+       - pasar ala siguiente caja.
 
-    - Ademas, hay mejores aproximaciones, 
-      1. Best-fit tiene performance ratio de 1.7 en el peor caso
-      2. [Best-Fit Bin-Packing with Random Order (1997), Kenyon]
+     - Analisis
+       - Este algoritmo tiene complejidad lineal $O(n)$.
+       - Greedy da una 2-aproximacion.
+       - (se puede mostrar facilamente en las instancias donde el
+	 algoritmo optima llene completamente todas las cajas.)
 
-	 Best-fit is the best known algorithm for on-line
-	 binpacking, in the sense that no algorithm is known to
-	 behave better both in the worst case (when Best-fit has
-	 performance ratio 1.7) and in the average uniform case,
-	 with items drawn uniformly in the interval [0; 1] (then
-	 Best-fit has expected wasted space O(n 1=2 (log n) 3=4
-	 )). In practical applications, Best-fit appears to perform
-	 within a few percent of optimal. In this paper, in the
-	 spirit of previous work in computational geometry, we study
-	 the expected performance ratio, taking the worst-case
-	 multiset of items L, and assuming that the elements of L
-	 are inserted in random order, with all permutations equally
-	 likely. We show a lower bound of 1:08 : : : and an upper
-	 bound of 1:5 on the random order performance ratio of
-	 Best-fit. The upper bound contrasts with the result that in
-	 the worst case, any (deterministic or randomized) on-line
-	 bin-packing algorithm has performance ratio at least
-	 1:54 : : :. 1
+     - Ademas, hay mejores aproximaciones, 
+       1. Best-fit tiene performance ratio de 1.7 en el peor caso
+       2. [Best-Fit Bin-Packing with Random Order (1997), Kenyon]
 
-      3. Un otro paper donde particionan los $x_i$ en tres classes,
-	 placeando los $x_i$ mas grande primero, buscando el
-	 placamiento optimal de los $x_i$ promedio, y usando un
-	 algoritmo greedy para los $x_i$ pequenos. [Karpinski?]
+	  Best-fit is the best known algorithm for on-line
+	  binpacking, in the sense that no algorithm is known to
+	  behave better both in the worst case (when Best-fit has
+	  performance ratio 1.7) and in the average uniform case,
+	  with items drawn uniformly in the interval [0; 1] (then
+	  Best-fit has expected wasted space O(n 1=2 (log n) 3=4
+	  )). In practical applications, Best-fit appears to perform
+	  within a few percent of optimal. In this paper, in the
+	  spirit of previous work in computational geometry, we study
+	  the expected performance ratio, taking the worst-case
+	  multiset of items L, and assuming that the elements of L
+	  are inserted in random order, with all permutations equally
+	  likely. We show a lower bound of 1:08 : : : and an upper
+	  bound of 1:5 on the random order performance ratio of
+	  Best-fit. The upper bound contrasts with the result that in
+	  the worst case, any (deterministic or randomized) on-line
+	  bin-packing algorithm has performance ratio at least
+	  1:54 : : :. 1
 
-      4. la distribucion de los tamanos de las cajas hacen la
-	 instancia dificil o facil.
+       3. Un otro paper donde particionan los $x_i$ en tres classes,
+	  placeando los $x_i$ mas grande primero, buscando el
+	  placamiento optimal de los $x_i$ promedio, y usando un
+	  algoritmo greedy para los $x_i$ pequenos. [Karpinski?]
 
-
-**** Ejemplo: Recubrimiento de Vertices (Vertex Cover)
-
-    - DEFINICION:
-
-      Dado un grafo $G=(V,E)$, cual es el menor $V'\subseteq V$ tal
-      que $V'$ sea un vertex cover de $G$.
-      (o sea $V'$ mas pequeno tq $\forall e=(u,v)\in E, u\in V'o v\in V')
-
-    - Algoritmo de aproximacion:
-
-      - $V'\leftarrow \emptyset$
-      - while $E\neq \emptyset$
-	- sea $(u,v) \in E$
-	- $V'\leftarrow V'\cup {u,v}$
-	- $E \leftarrow E \ {(x,y), x=u o x=v o y=u o y=v }$
-      - return V
-
-    - Discusion: es una 2-aproximacion o no?
-
-    - LEMA: El algoritmo es una 2-aproximacion.
-
-      - PRUEBA:
-	+ Cada par $u,v$ que la aproximacion elige esta conectada,
-	  entonces $u$ o $v$ estas en cualquier soluciono optima de
-	  Vertex Cover.
-	+ Como se eliminan las aristas incidentes en $u$ y $v$, los
-	  siguientes pares que se eligen no tienen interseccion con
-	  el actual, entonces cada 2 nodos que el algoritmo elige,
-	  uno pertenece a la solucion optima.
-	+ quod erat demonstrandum, (QED).
+       4. la distribucion de los tamanos de las cajas hacen la
+	  instancia dificil o facil.
 
 
+***** Ejemplo: Recubrimiento de Vertices (Vertex Cover)
 
-**** Ejemplo: Vendedor viajero (Traveling Salesman)
+     - DEFINICION:
 
-    - DEFINICION:
+       Dado un grafo $G=(V,E)$, cual es el menor $V'\subseteq V$ tal
+       que $V'$ sea un vertex cover de $G$.
+       (o sea $V'$ mas pequeno tq $\forall e=(u,v)\in E, u\in V'o v\in V')
 
-      Dado $G=(V,E)$ dirigido y $C:E\rightarrow R^+$ una funcion de
-      costos, encontrar un recorrido que toque cada ciudad una vez, y
-      minimice la suma de los costos de las aristas recorridas.
+     - Algoritmo de aproximacion:
 
-    - LEMA: 	Si $c$ satisface la desigualdad triangular
-      $\forall x,y,z   c(x,y)+x(y,z) \geq c(x,z)$,
-      hay una 2-aproximacion.
+       - $V'\leftarrow \emptyset$
+       - while $E\neq \emptyset$
+	 - sea $(u,v) \in E$
+	 - $V'\leftarrow V'\cup {u,v}$
+	 - $E \leftarrow E \ {(x,y), x=u o x=v o y=u o y=v }$
+       - return V
 
-      - PROOF: 
-	- Algoritmo de Aproximacion (con desigualdad triangular)
-	  - construir un arbol cobertor minimo (MST)
-	    - se puede hacer en tiempo polinomial, con programacion lineal.
-	    - C_{MST} \leq C_{OPT}
-	  - producimos un recorrido en profundidad DFS del MST:
-	    - C_{DFS} = 2C_{MST} \leq 2 C_{OPT}
-	    - (factor dos porque el camino de vuelta puede ser al
-	      maximo de tamano igual al tamano del camino de ida)
-	  - eliminamos los nodos repetidos del camino, que no crece
-	    el costo
-	    - $C_A\leq 2 C_{OPT}$
-	- quod erat demonstradndum, QED.
+     - Discusion: es una 2-aproximacion o no?
 
-    - LEMA: Si $c$ no satisface la desigualdad triangular, el
-      problema de vendedor viajero no es aproximables en tiempo
-      polinomial (a menos que P=NP$).
+     - LEMA: El algoritmo es una 2-aproximacion.
 
-      - PROOF:   
-	- Supongamos que existe una p(n)-aproximacion de tiempo
-	  polinomial.
-	- Dado un grafo G=(V,E)
-	- Construimos un grafo G'=(V,E') tal que 
-	  - E'=V^2 (grafo completo), y
-	  - c(u,v) =  1 si (u,v)\in E
-		      n p(n) sino
-	- Si no hay un Ciclo Hamiltonian en E,
-	  - todas las soluciones usan al menos una arista que no es
-	    en E
-	  - entonces todas las soluciones tienen costo mas que
-	    $np(n)$
-	- Si hay un Ciclo Hamiltonian en E
-	  - tenemos una aproximacion de una soluciono de costo menos
-	    que $(n-1)p(n)$                 QED
-
-**** Ejemplo: Vertex Cover con pesos
+       - PRUEBA:
+	 + Cada par $u,v$ que la aproximacion elige esta conectada,
+	   entonces $u$ o $v$ estas en cualquier soluciono optima de
+	   Vertex Cover.
+	 + Como se eliminan las aristas incidentes en $u$ y $v$, los
+	   siguientes pares que se eligen no tienen interseccion con
+	   el actual, entonces cada 2 nodos que el algoritmo elige,
+	   uno pertenece a la solucion optima.
+	 + quod erat demonstrandum, (QED).
 
 
-    - DEFINICION
 
-      Dado G=(V,E) y c:V\rightarrowR^+, se quiere un V^*\subseteq V que cubra
-      E y que minimice \sum_{v\in V^*} c(v).
+***** Ejemplo: Vendedor viajero (Traveling Salesman)
 
-    - Este problema es NP Completo.
+     - DEFINICION:
 
-    - LEMA: Vertex Cover con pesos es 2-aproximable
-    - PROOF:
-      1. Sea variables $x(v)\in {0,1}$, $\forall v\in V$
-	  - el costo de $V^*$ sera $\sum x(v) c(v)$ 
-	  - objetivo: $\min \sum_{v\in V} x(v) c(v)$
-	    donde $0\leq x(v) \leq 1 \forall v\in V$
-	  - $x(u)+x(v)\geq 1 \forall u,v \in E$
-      2. $x(v) \in Z$ sere programacion entera, que es NP Completa
-	 $x(v) \in R$ sere programacion lineal, que es polinomial
-	 el valor $\sum x(v) c(v)$ que produce el programo lineal
-	 es inferior a la mejor solucion al problema de VC.
-      3. Algoritmo
-	 - resolver el problema de programacion lineal
-	   - nos da $x(v_1),\ldots,x(v_n)$
-	 - $V^* \leftarrow\emptyset$
-	 - for $v\in V$
-	   - si $x(v)\geq 1/2$
-	     - $V^* \leftarrow V^* \cup {v}$
-	 - return $V^*$
-      4. Propiedades
-	 - $V^*$ es un vertex cover:
-	   - si $\forall(u,v)\in E, x(u)+x(v)\geq 1$
-	   - entonces, $x(u)\geq 1/2 o x(v)/geq 1/2$
-	   - entonces, $u\in V^* o v\in V^*$
-	 - $V^*$ es una 2-aproximacion:
-	   - $c(V^*) = \sum_v y(v) c(v)$
-	     donde $y(v) = 1 si x(v) \geq 1/2$, y $0$ sino
-	   - entonces $y(v) \leq 2 x(v)$
-	   - $\sum y(v) c(v) \leq \sum 2 x(v) c(v) \leq 2 OPT$
-	   - $C(V^*)         \leq 2 OPT$
-      5. QED
+       Dado $G=(V,E)$ dirigido y $C:E\rightarrow R^+$ una funcion de
+       costos, encontrar un recorrido que toque cada ciudad una vez, y
+       minimice la suma de los costos de las aristas recorridas.
+
+     - LEMA: 	Si $c$ satisface la desigualdad triangular
+       $\forall x,y,z   c(x,y)+x(y,z) \geq c(x,z)$,
+       hay una 2-aproximacion.
+
+       - PROOF: 
+	 - Algoritmo de Aproximacion (con desigualdad triangular)
+	   - construir un arbol cobertor minimo (MST)
+	     - se puede hacer en tiempo polinomial, con programacion lineal.
+	     - C_{MST} \leq C_{OPT}
+	   - producimos un recorrido en profundidad DFS del MST:
+	     - C_{DFS} = 2C_{MST} \leq 2 C_{OPT}
+	     - (factor dos porque el camino de vuelta puede ser al
+	       maximo de tamano igual al tamano del camino de ida)
+	   - eliminamos los nodos repetidos del camino, que no crece
+	     el costo
+	     - $C_A\leq 2 C_{OPT}$
+	 - quod erat demonstradndum, QED.
+
+     - LEMA: Si $c$ no satisface la desigualdad triangular, el
+       problema de vendedor viajero no es aproximables en tiempo
+       polinomial (a menos que P=NP$).
+
+       - PROOF:   
+	 - Supongamos que existe una p(n)-aproximacion de tiempo
+	   polinomial.
+	 - Dado un grafo G=(V,E)
+	 - Construimos un grafo G'=(V,E') tal que 
+	   - E'=V^2 (grafo completo), y
+	   - c(u,v) =  1 si (u,v)\in E
+		       n p(n) sino
+	 - Si no hay un Ciclo Hamiltonian en E,
+	   - todas las soluciones usan al menos una arista que no es
+	     en E
+	   - entonces todas las soluciones tienen costo mas que
+	     $np(n)$
+	 - Si hay un Ciclo Hamiltonian en E
+	   - tenemos una aproximacion de una soluciono de costo menos
+	     que $(n-1)p(n)$                 QED
+
+***** Ejemplo: Vertex Cover con pesos
 
 
-**** PTAS y FPTAS: Definiciones
+     - DEFINICION
 
-    * Esquema de aproximacion poliniomial *PTAS*
-      Un *esquema de aproximacion polinomial* para un problema es un
-      algoritmo $A$ que recibe como input una instancia del problema
-      y un para-metro $\varepsilon>0$ y produce una $(1+\varepsilon)$
-      aproximacion. Para todo $\varepsilon$ fijo, el tiempo de $A$
-      debe ser polinomial en $n$, el tamano de la instancia.
+       Dado G=(V,E) y c:V\rightarrowR^+, se quiere un V^*\subseteq V que cubra
+       E y que minimice \sum_{v\in V^*} c(v).
 
-    * Ejemplos de complejidades: Cuales tienen sentidos?
-      - [ ] $O(n^{2/3})$
-      - [ ] $O(\frac{1}{\varepsilon^2} n^2)$
-      - [ ] $O(2^\varepsilon n)$
-      - [ ] $O(2^{1/\varepsilon} n)$
-	    
-    * Esquema de aproximacion completamente polinomial *FPTAS*
+     - Este problema es NP Completo.
 
-      Un *esquema de aproximacion completamente polinomial* es un
-      PTAS donde el tiempo del algoritmo es polinomial en $n$ *y en
-      $1/\varepsilon$*.
+     - LEMA: Vertex Cover con pesos es 2-aproximable
+     - PROOF:
+       1. Sea variables $x(v)\in {0,1}$, $\forall v\in V$
+	   - el costo de $V^*$ sera $\sum x(v) c(v)$ 
+	   - objetivo: $\min \sum_{v\in V} x(v) c(v)$
+	     donde $0\leq x(v) \leq 1 \forall v\in V$
+	   - $x(u)+x(v)\geq 1 \forall u,v \in E$
+       2. $x(v) \in Z$ sere programacion entera, que es NP Completa
+	  $x(v) \in R$ sere programacion lineal, que es polinomial
+	  el valor $\sum x(v) c(v)$ que produce el programo lineal
+	  es inferior a la mejor solucion al problema de VC.
+       3. Algoritmo
+	  - resolver el problema de programacion lineal
+	    - nos da $x(v_1),\ldots,x(v_n)$
+	  - $V^* \leftarrow\emptyset$
+	  - for $v\in V$
+	    - si $x(v)\geq 1/2$
+	      - $V^* \leftarrow V^* \cup {v}$
+	  - return $V^*$
+       4. Propiedades
+	  - $V^*$ es un vertex cover:
+	    - si $\forall(u,v)\in E, x(u)+x(v)\geq 1$
+	    - entonces, $x(u)\geq 1/2 o x(v)/geq 1/2$
+	    - entonces, $u\in V^* o v\in V^*$
+	  - $V^*$ es una 2-aproximacion:
+	    - $c(V^*) = \sum_v y(v) c(v)$
+	      donde $y(v) = 1 si x(v) \geq 1/2$, y $0$ sino
+	    - entonces $y(v) \leq 2 x(v)$
+	    - $\sum y(v) c(v) \leq \sum 2 x(v) c(v) \leq 2 OPT$
+	    - $C(V^*)         \leq 2 OPT$
+       5. QED
 
-**** Ejemplo: Problema de la Mochila    
+
+**** 4.2.2 PTAS y FPTAS
+***** Definiciones
+
+     * Esquema de aproximacion poliniomial *PTAS*
+       Un *esquema de aproximacion polinomial* para un problema es un
+       algoritmo $A$ que recibe como input una instancia del problema
+       y un para-metro $\varepsilon>0$ y produce una $(1+\varepsilon)$
+       aproximacion. Para todo $\varepsilon$ fijo, el tiempo de $A$
+       debe ser polinomial en $n$, el tamano de la instancia.
+
+     * Ejemplos de complejidades: Cuales tienen sentidos?
+       - [ ] $O(n^{2/3})$
+       - [ ] $O(\frac{1}{\varepsilon^2} n^2)$
+       - [ ] $O(2^\varepsilon n)$
+       - [ ] $O(2^{1/\varepsilon} n)$
+	     
+     * Esquema de aproximacion completamente polinomial *FPTAS*
+
+       Un *esquema de aproximacion completamente polinomial* es un
+       PTAS donde el tiempo del algoritmo es polinomial en $n$ *y en
+       $1/\varepsilon$*.
+
+***** Ejemplo: Problema de la Mochila    
 + Definicion
   + Dado 	  
     - $n$ pesos $p_1,\ldots,p_n\geq 0$,
@@ -3908,16 +3902,14 @@
 	  - Las $n$ iteraciones en total toman 
 	    - $O(n^2 \lg t /\epsilon)$ operaciones
 
-*** 4.6 Algoritmos *paralelos* y distribuidos (2 semanas = 4 charlas)
+*** Algoritmos *paralelos* y distribuidos (2 semanas = 4 charlas)
     - Medidas de complejidad
     - Tecnicas de diseno
-
- REFERENCIA: Chap 12 of "Introduction to Algorithms, A Creative Approach",
- Udi Manber, p. 375
-
- REFERENCIA: http://www.catonmat.net/blog/mit-introduction-to-algorithms-part-thirteen/
-
-**** Modelos de paralelismo
+**** PREREQUISITOS
+     - Chap 12 of "Introduction to Algorithms, A Creative Approach",
+       Udi Manber, p. 375
+     - http://www.catonmat.net/blog/mit-introduction-to-algorithms-part-thirteen/
+**** Modelos de paralelismo y modelo PRAM
 
     * Instrucciones
       - SIMD: Single Instruccion, Multiple Data
@@ -3940,159 +3932,152 @@
 
     * En este curso consideramos en particular el modelo PRAM
 
-**** Modelo PRAM
+***** Modelo PRAM
 
-   * Mucha unidad de CPU, una sola memoria RAM
+    * Mucha unidad de CPU, una sola memoria RAM
 
-     cada procesador tiene un identificador unico, y puede utilizarlo
-     en el programa
+      cada procesador tiene un identificador unico, y puede utilizarlo
+      en el programa
 
-   * Ejemplo:
-     
-     + if p mod 2 = 0 then
-       + A[p] += A[p-1]
-     + else
-       + A[p] += A[p+1]
-     + b \leftarrow A[p];
-     + A[p]\leftarrow b;
+    * Ejemplo:
+      
+      + if p mod 2 = 0 then
+       	+ A[p] += A[p-1]
+      + else
+       	+ A[p] += A[p+1]
+      + b \leftarrow A[p];
+      + A[p]\leftarrow b;
 
-   * Problema: el resultado no es bien definido, puede tener
-     *conflictos* si los procesadores estan asinchronos. Las soluciones a
-     este problemas dan varios submodelos del modelo PRAM:
+    * Problema: el resultado no es bien definido, puede tener
+      *conflictos* si los procesadores estan asinchronos. Las soluciones a
+      este problemas dan varios submodelos del modelo PRAM:
 
-     1. EREW Exclusive Read. Exclusive Write
+      1. EREW Exclusive Read. Exclusive Write
 
-     2. CREW Concurrent Read, Exclusive Write
+      2. CREW Concurrent Read, Exclusive Write
 
-     3. CRCW Concurrent Read, Concurent Write
-	En este caso hay variantes tambien:
-	- todos deben escribir lo mismo
-	- arbitrario resultado
-	- priorizado
-	- alguna f() de lo que se escribe
-
-
-**** Como medir el "trade-off" entre recursos (cantidad de procesadores) y tiempo?
-
-    * DEFINICION:
-
-      - $T^*(n)$ es el *Tiempo secuencial* del mejor algoritmo no
-	paralelo en una entrada de tamano $n$ (i.e. usando $1$
-	procesador).
-
-      - $T_A(n,p)$ es el *Tiempo paralelo* del algoritmo paralelo
-	$A$ en una entrada de tamano $n$ usando $p$ procesadores.
-
-      - El *Speedup* del algoritmo $A$ es definido por
-
-	$S_A(n,p) = \frac{ T^*(n) }{ T_A(n,p) } \leq p$ 
-
-	Un algoritmo es mas efectivo cuando $S(p)=p$, que se llama
-	*speedup perfecto*.
-
-      - La *Eficiencia* del algoritmo $A$ es definida por
-
-	$E_A(n,p) = \frac{ S_A(n,p) }{ p }=\frac{T^*(n)}{pT_A(n,p)}$ 
-
-	El caso optima es cuando $E_A(n,p)=1$, cuando el algoritmo
-	paralelo hace la misma cantidad de trabajo que el algoritmo
-	secuencial. El objetivo es de *maximizar la eficiencia*.
-
-	(Nota estas definiciones en la pisara, vamos a usarlas despues.)
-
-**** PROBLEMA: Calcular Max(A[1,...,N])
-
-    1. Solucion Secuencial
-
-       * Algoritmo:
-	 - $m \leftarrow 1$
-	 - for $i\leftarrow 2$ to $n$
-	   - if $A[i]>A[m]$ then $m\leftarrow i$
-	 - return $A[m]$
-
-       * Se puede ver como un arbol de evaluacion con una sola rama
-	 de largo $n$ y $n$ hojas.
-
-       * Complejidad: 
-	 - tiempo $O(n)$, con $1$ procesador, entonces:
-	 - $T^*(n)=n$.
-
-    2. Solucion Parallela con $n$ procesadores
-
-       * Algoritmo:
-	 - $M[p] \leftarrow A[p]$
-	 - for $l\leftarrow 0$ to $\lceil \lg p \rceil -1$
-	   - if $p \mod 2^{l+1}=0$ y $ p+2^l<n$
-	     - $M[p]\leftarrow \max( M[p],M[p+2^l])$
-	 - if $p=0$
-	   - $max \leftarrow M[0]$
-
-       * Se puede ver como un arbol balanceado de altura $\lg n$ con
-	 $n$ hojas.
-
-       * Complejidad: 
-
-	 - tiempo $O(\lg n)$ con $n$ procesador, i.e. en nuestra notaciones:
-	 - $T(n,n) = \lg n$
-	 - $S(n,n) = \frac{n}{\lg n} $
-	 - $E(n,n) = \frac{n}{n\lg n} = {1\over\lg n} $
-
-       * Nota: no se puede hacer mas rapido, pero hay mucho
-	 procesadores poco usados: quizas se puede calcular el max
-	 en el mismo tiempo, pero usando menos procesadores?
-
-    3. Solucion general con $p$ procesadores
-
-       * Idea:
-
-	 - reduce la cantidad de procesadores, y hace "load
-	   balancing" sobre $n/\lg n$ procesadores.
-	 - Divida el input en $n/\lg n$ grupos, 
-	 - asigna cada grupo de $\lg n$ elementos a un procesador.
-	 - En la primera fase, cada procesador encontra el max de su grupo
-	 - En la segunda fase, utiliza el algoritmo precedente.
-
-       * Complejidad: 
-
-	 - tiempo $O(\lg n)$ con $n$ procesador, i.e. en nuestra notaciones:
-	   - $T(n, {n\over\lg n} ) = 2 \lg n \in O(\lg n)$
-	     - $T(n,p)= {n\over p} + \lg p$
-	   - $S(n,p) = \frac{n}{{n\over p} + \lg p} 
-	     = p ( 1 - \frac {p\lg p}{n+p\lg p})
-	     \rightarrow p$ si $n\rightarrow \infty$ y p
-	   - $E(n,p) = \frac{n}{{n\over\lg n}\lg n} = 1/2 $
-
-       * Discusion:
-	 
-	 - El parametro de $\lg n$ procesadores es optima?
-
-	   - Para que? Que significa ser optima? 
-	     - en energia
-	     - en el contexto donde los procesadores libres pueden
-	       ser usados para otras tareas.
-	   - Si, es optimo para la eficiencia, se puede ver
-	     estudiando el grafo en funcion de $p$.
-
-	 - Eso es un algoritmo EREW, CREW, o CRCW?
-
-	   - EREW (Exclusive Read. Exclusive Write): no dos
-	     procesadores lean o escriben en la misma cedula al
-	     mismo tiempo.
-
-	 - Nota: 
-
-	   - Hay un algoritmo CRCW que puede calcular el max en $O(1)$
-	     tiempo en paralelo, ilustrando el poder del modelo
-	     CRCW (y el costo de las restricciones del modelo EREW)
-	     [ REFERENCIA: Section 12.3.2 of "Introduction to Algorithms, A
-	     Creative Approach", Udi Manber, p. 382]]
+      3. CRCW Concurrent Read, Concurent Write
+	 En este caso hay variantes tambien:
+	 - todos deben escribir lo mismo
+	 - arbitrario resultado
+	 - priorizado
+	 - alguna f() de lo que se escribe
 
 	   
+***** Como medir el "trade-off" entre recursos (cantidad de procesadores) y tiempo?
 
+     * DEFINICION:
 
+       - $T^*(n)$ es el *Tiempo secuencial* del mejor algoritmo no
+	 paralelo en una entrada de tamano $n$ (i.e. usando $1$
+	 procesador).
 
+       - $T_A(n,p)$ es el *Tiempo paralelo* del algoritmo paralelo
+	 $A$ en una entrada de tamano $n$ usando $p$ procesadores.
 
+       - El *Speedup* del algoritmo $A$ es definido por
+
+	 $S_A(n,p) = \frac{ T^*(n) }{ T_A(n,p) } \leq p$ 
+
+	 Un algoritmo es mas efectivo cuando $S(p)=p$, que se llama
+	 *speedup perfecto*.
+
+       - La *Eficiencia* del algoritmo $A$ es definida por
+
+	 $E_A(n,p) = \frac{ S_A(n,p) }{ p }=\frac{T^*(n)}{pT_A(n,p)}$ 
+
+	 El caso optima es cuando $E_A(n,p)=1$, cuando el algoritmo
+	 paralelo hace la misma cantidad de trabajo que el algoritmo
+	 secuencial. El objetivo es de *maximizar la eficiencia*.
+
+	 (Nota estas definiciones en la pisara, vamos a usarlas despues.)
 **** LEMMA de Brent, Trabajo y Consecuencias
+***** PROBLEMA: Calcular Max(A[1,...,N])
+
+     1. Solucion Secuencial
+
+       	* Algoritmo:
+	  - $m \leftarrow 1$
+	  - for $i\leftarrow 2$ to $n$
+	    - if $A[i]>A[m]$ then $m\leftarrow i$
+	  - return $A[m]$
+
+       	* Se puede ver como un arbol de evaluacion con una sola rama
+	  de largo $n$ y $n$ hojas.
+
+       	* Complejidad: 
+	  - tiempo $O(n)$, con $1$ procesador, entonces:
+	  - $T^*(n)=n$.
+
+     2. Solucion Parallela con $n$ procesadores
+
+       	* Algoritmo:
+	  - $M[p] \leftarrow A[p]$
+	  - for $l\leftarrow 0$ to $\lceil \lg p \rceil -1$
+	    - if $p \mod 2^{l+1}=0$ y $ p+2^l<n$
+	      - $M[p]\leftarrow \max( M[p],M[p+2^l])$
+	  - if $p=0$
+	    - $max \leftarrow M[0]$
+
+       	* Se puede ver como un arbol balanceado de altura $\lg n$ con
+	  $n$ hojas.
+
+       	* Complejidad: 
+
+	  - tiempo $O(\lg n)$ con $n$ procesador, i.e. en nuestra notaciones:
+	  - $T(n,n) = \lg n$
+	  - $S(n,n) = \frac{n}{\lg n} $
+	  - $E(n,n) = \frac{n}{n\lg n} = {1\over\lg n} $
+
+       	* Nota: no se puede hacer mas rapido, pero hay mucho
+	  procesadores poco usados: quizas se puede calcular el max
+	  en el mismo tiempo, pero usando menos procesadores?
+
+     3. Solucion general con $p$ procesadores
+
+       	* Idea:
+
+	  - reduce la cantidad de procesadores, y hace "load
+	    balancing" sobre $n/\lg n$ procesadores.
+	  - Divida el input en $n/\lg n$ grupos, 
+	  - asigna cada grupo de $\lg n$ elementos a un procesador.
+	  - En la primera fase, cada procesador encontra el max de su grupo
+	  - En la segunda fase, utiliza el algoritmo precedente.
+
+       	* Complejidad: 
+
+	  - tiempo $O(\lg n)$ con $n$ procesador, i.e. en nuestra notaciones:
+	    - $T(n, {n\over\lg n} ) = 2 \lg n \in O(\lg n)$
+	      - $T(n,p)= {n\over p} + \lg p$
+	    - $S(n,p) = \frac{n}{{n\over p} + \lg p} 
+	      = p ( 1 - \frac {p\lg p}{n+p\lg p})
+	      \rightarrow p$ si $n\rightarrow \infty$ y p
+	    - $E(n,p) = \frac{n}{{n\over\lg n}\lg n} = 1/2 $
+
+       	* Discusion:
+	  
+	  - El parametro de $\lg n$ procesadores es optima?
+
+	    - Para que? Que significa ser optima? 
+	      - en energia
+	      - en el contexto donde los procesadores libres pueden
+	       	ser usados para otras tareas.
+	    - Si, es optimo para la eficiencia, se puede ver
+	      estudiando el grafo en funcion de $p$.
+
+	  - Eso es un algoritmo EREW, CREW, o CRCW?
+
+	    - EREW (Exclusive Read. Exclusive Write): no dos
+	      procesadores lean o escriben en la misma cedula al
+	      mismo tiempo.
+
+	  - Nota: 
+
+	    - Hay un algoritmo CRCW que puede calcular el max en $O(1)$
+	      tiempo en paralelo, ilustrando el poder del modelo
+	      CRCW (y el costo de las restricciones del modelo EREW)
+	      [ REFERENCIA: Section 12.3.2 of "Introduction to Algorithms, A
+	      Creative Approach", Udi Manber, p. 382]]
 ***** LEMA de Brent
 
      El algoritmo previo illustra un principo mas general, llamado el
@@ -4355,7 +4340,7 @@
 	- $E_2(n,p^*) = { T^*(n) \over p^* T(n)+ W(n)}  \in O(1)$
      
 	 
-**** Conclusion del Parallelismo:
+**** Moralidad del Parallelismo:
 
      1. Cual es la consecuencia del Lemma de Brent?
 
