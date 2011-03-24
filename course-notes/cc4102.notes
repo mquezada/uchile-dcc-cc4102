@@ -266,7 +266,7 @@
      - A cuales algoritmos de busqueda ordenada corresponden codigos?
      - A cuales codigos corresponden algoritmos de busqueda?
 
-** 1. Conceptos basicos y complejidad (3 semanas = 6 charlas)
+** Conceptos basicos y complejidad (3 semanas = 6 charlas)
 *** DESCRIPCION de la Unidad:
 **** Resultados de Aprendisajes de la Unidad
      - Comprender el concepto de complejidad de un problema como cota inferior
@@ -280,7 +280,7 @@
 *** PREREQUISITOS DE UNIDAD 
 **** Lista de themas en apuntes de CC3001 			    :READING:
     http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
-*** 1.1 Repaso del proceso de diseño y analisis de un algoritmo.
+*** Repaso del proceso de diseño y analisis de un algoritmo.
 **** PREREQUISITOS
 ***** "Bases de la programacion" en apuntes de CC3001		    :READING:
       - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
@@ -409,7 +409,7 @@
       4. [ ] $2^h-1$
       5. [ ] otra respuesta
 
-*** 1.2 Minimo Maximo de un  arreglo
+*** Minimo Maximo de un  arreglo
 **** PREREQUISITOS
 ***** Cotas Inferiores en apuntes de CC3001			    :READING:
    - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#1
@@ -601,7 +601,7 @@
       
 
 
-*** 1.3 Tecnicas para demostrar cotas inferiores: 
+*** Tecnicas para demostrar cotas inferiores: 
     adversario, teoria de la informacion, reduccion
 **** PREREQUISITOS
      - de las apuntes de CC3001:
@@ -958,7 +958,7 @@
 	3. [ ] La complejidad en el peor caso (de un algoritmo) es siempre peor que la complejidad en promedio
 	4. [ ] La complejidad en promedio (de un algoritmo) nunca es peor que la complejidad en el peor caso
 	5. [ ] ningunas
-*** 1.4 Metodologia de experimentacion
+*** Metodologia de experimentacion
 **** PREREQUISITOS
      - de las apuntes de CC3001:
        - Nociones básicas de programación http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Programacion/
@@ -1083,7 +1083,7 @@
      - Research Design: Qualitative, Quantitative, and Mixed Methods Approaches 
        John W. Creswell
        http://www.amazon.com/Research-Design-Qualitative-Quantitative-Approaches/
-*** 1.5 Recurrencias y Introduccion a la programacion dinamica 
+*** Recurrencias y Introduccion a la programacion dinamica 
 **** PREREQUISITOS
      - de las apuntes de CC3001:
        - Torre de Hanoi y recursion en  http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Programacion/#6 
@@ -1127,10 +1127,10 @@
        - Busqueda y Codificacion de Enteros (busqueda doblada)
        - Busqueda binaria en $\Theta(1+\lg n)$ (mejor que $2\lg n$)
        - Algoritmo en $2n/3 + O(1)$ comparaciones para min max
-** 2. Algoritmos y Estructuras de Datos para Memoria Secundaria (3 semanas = 6 charlas)
+** Algoritmos y Estructuras de Datos para Memoria Secundaria (3 semanas = 6 charlas)
 *** PREREQUISITOS DE UNIDAD 
-*** 2.1 Modelo de computacion en memoria secundaria. Accesos secuenciales y aleatorios
-    1. Arquitectura de un computador: la memoria
+*** Modelo de computacion en memoria secundaria. Accesos secuenciales y aleatorios
+    Arquitectura de un computador: la memoria
        1) Muchos niveles de memoria
 	  - Procesador
 	  - registros
@@ -1155,7 +1155,7 @@
 	  - Jerarquia con k niveles, de paginas de tamanos $B_1,...,B_k$
 	  - "Cache oblivious"
 	  - Otros... mas practicas, mas dificil a analizar.
-*** 2.2 Diccionarios en Memoria Externa
+*** Diccionarios en Memoria Externa
     1. Preliminary Reading
        - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/
     2. B-arbol
@@ -1216,7 +1216,7 @@
        1) Estructura de datos
        2) algorimo de busqueda
        3) analisis: busqueda en $O(\lg p)$ 
-*** 2.3 Colas de prioridad en memoria secundaria. Cotas inferiores.
+*** Colas de prioridad en memoria secundaria. Cotas inferiores.
     1) Preliminary Reading
        - Colas de Prioridades http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/TDA/#4
 
@@ -1279,7 +1279,7 @@
 	 - Array Heaps
 	 - sequence heaps
 	 - Mas en "An experimental study of priority queues in external memory"
-	   http://portal.acm.org/citation.cfm?id=351827.384259
+	   - http://portal.acm.org/citation.cfm?id=351827.384259
 
     4) Colas de Prioridades en Memoria Secundaria: cota inferior?
        - Cota inferior para dictionaries es una cota inferior por
@@ -1293,9 +1293,10 @@
        - [[http://en.wikipedia.org/wiki/Heap\_data\_structure]]
        - "An experimental Study of Priority Queues in External Memories" by Brengel, Crauser, Ferragina and Meyer
 
-*** 2.4 Ordenamiento en memoria secundaria: Mergesort. *Cota inferior*.
+*** Ordenamiento en memoria secundaria: Mergesort. *Cota inferior*.
     1. Preliminary Reading 
-       - Algoritmos de Ordenamiento en Apuntes de CC3001 http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/
+       - Algoritmos de Ordenamiento en Apuntes de CC3001
+	 - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/
 	 - [ ] Quicksort
 	 - [ ] Heapsort
 	 - [ ] Bucketsort
@@ -1413,6 +1414,7 @@
 	   - $K_2$ es la cuantidad de caldenas mas largas que $B$
 
     3. Ordenar en Memoria Externa N elementos (en $n=N/B$ paginas)
+
        http://en.wikipedia.org/wiki/External_sorting
 
        * Usando dictionarios o colas de prioridades en memoria externa
@@ -1453,7 +1455,7 @@
     - Conocer algoritmos y estructuras de datos basicos que son eficientes en memoria secundaria, 
     - y el analisis de su desempeno.
 
-** 3. Tecnicas avanzadas de diseno y analisis de algoritmos (4 semanas = 8 charlas)
+** Tecnicas avanzadas de diseno y analisis de algoritmos (4 semanas = 8 charlas)
 *** Presentacion de la Unidad 3 
     1) Dominios discretos y finitos 
 	- Interpolacion
@@ -1467,7 +1469,7 @@
      3) Algoritmos en linea 
 	- "ski renting" problema
 	- analisis competitiva ("Competitive Analysis")
-*** 3.1 Uso de *dominios discretos y finitos* en el diseno de algoritmos y estructuras de datos
+*** Uso de *dominios discretos y finitos* en el diseno de algoritmos y estructuras de datos
 **** Busqueda en domanios discretos
 ***** Algorimos de Busqueda (Interpolation Search, Extrapolation Search)
 
@@ -1979,7 +1981,7 @@
    - En el peor caso, la complejidad corresponde a la suma de
      las superficias de los bloques, aka $O(n)$.
 
-*** 3.2 *Analisi amortizado* de algoritmos y estructuras de datos
+*** *Analisi amortizado* de algoritmos y estructuras de datos
 **** Analisis amortizada   
 
      * Costo Amortizado:
@@ -2286,7 +2288,7 @@
 
 	 - in place
 	 - $O(n \lg n)$ con cualquiera de estas variantes.
-*** 3.3 *Analisi adaptativa* de algoritmos y estructuras de datos
+*** *Analisi adaptativa* de algoritmos y estructuras de datos
 **** Analisi en el peor caso: a dentro de que?
      - peor caso a dentro de las instancias de tamano fijo
        - el tamano puede ser multidimensional (e.g. grafos)
@@ -2312,7 +2314,7 @@
 ***** Another Insertion Sort: REM
 **** Computacion de la Union
 **** Computacion de la Interseccion
-*** 3.4 *Algoritmos en linea*. Competividad. Adaptividad.
+*** *Algoritmos en linea*. Competividad. Adaptividad.
 **** List Accessing
 
      REFERENCIA: Capitulo 1 en "Online Computation and Competitive
@@ -2647,7 +2649,7 @@
 	 - tecnica de los cuatro rusos,
 	 - paginamiento
 	 - busqueda no acotada (unbounded search, doubling search)
-** 4. Algoritmos no convencionales (5 semanas = 10 charlas) 
+** Algoritmos no convencionales (5 semanas = 10 charlas) 
    :LOGBOOK:
    - State "PAUS"       from "TODO"       [2010-10-07 Thu 13:44]
    - State "TODO"       from ""           [2010-10-07 Thu 13:43]
@@ -2684,7 +2686,7 @@
      - ordenamiento paralelo
      - paralel prefix
 
-*** 4.1 *Aleatorizacion* (1 semana = 2 charlas)
+*** *Aleatorizacion* (1 semana = 2 charlas)
       :LOGBOOK:
       - State "DONE"       from "ACTF"       [2010-10-18 Mon 19:45]
       - State "ACTF"       from "PAUS"       [2010-10-18 Mon 15:36]
@@ -3557,7 +3559,7 @@
       $BPP = coBPP$
 
 
-*** 4.2 Nociones de *aproximabilidad* (2 semanas = 4 charlas)
+*** Nociones de *aproximabilidad* (2 semanas = 4 charlas)
     :LOGBOOK:
     - State "DONE"       from ""           [2010-10-07 Thu 10:50]
     :END:
@@ -3900,7 +3902,7 @@
 	  - Las $n$ iteraciones en total toman 
 	    - $O(n^2 \lg t /\epsilon)$ operaciones
 
-*** 4.3 Algoritmos *paralelos* y distribuidos (2 semanas = 4 charlas)
+*** Algoritmos *paralelos* y distribuidos (2 semanas = 4 charlas)
     - Medidas de complejidad
     - Tecnicas de diseno
 **** PREREQUISITOS
