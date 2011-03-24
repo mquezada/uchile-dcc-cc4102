@@ -3,7 +3,7 @@
 #+OPTIONS: LaTeX:dvipng 
 #+LATEX_HEADER:  \usepackage{fullpage}
 
-# THose options seem to cause problem when using C-c C-x C-l to 
+# Those options seem to cause problem when using C-c C-x C-l to 
 # preview LaTeX fragments (org-preview-latex-fragment) in class:
 # Disabled untill I see why  -- Jeremy
   #+OPTIONS: LaTeX:dvipng H:5 num:t
@@ -25,26 +25,26 @@
      - franco-ingles-castellano
 **** Quien son? 
      * Quien
-	 - tomo el curso CC40A o CC4102 en los ultimos semestres?
+	 - tomo el curso CC40A o CC4102 en los últimos semestres?
 	 - toma CC53A?
        * Quien
-	 - piensa seguir en la universidad despues de magister?
+	 - piensa seguir en la universidad después de magíster?
 **** El curso
-  * =Tematicas= 
-    1. Conceptos basicos y complejidad (3 semanas = 6 charlas)
-    2. Algoritmos y Estructras de Datos para Memoria Secundaria (3 semanas = 6 charlas)
-    3. Tecnicas avanzadas de diseno y analisis de algoritmos (4 semanas = 8 charlas)
+  * =Temáticas= 
+    1. Conceptos básicos y complejidad (3 semanas = 6 charlas)
+    2. Algoritmos y Estructuras de Datos para Memoria Secundaria (3 semanas = 6 charlas)
+    3. Técnicas avanzadas de diseño y análisis de algoritmos (4 semanas = 8 charlas)
     4. Algoritmos no convencionales  (5 semanas = 10 charlas)
   * =Modo=
-   - *Clases expositivas* del profesor de catera
-     - buscando la participacion de los alumnos en pequenos
-       problemas que se van proponiendo durante la exposicion.
+   - *Clases expositivas* del profesor de cátedra
+     - buscando la participación de los alumnos en pequeños
+       problemas que se van proponiendo durante la exposición.
    - *Clases auxiliares* dedicadas a explicar ejemplos mas
-     extensos, resolver ejercicios propuestos, y preparacion pre y
+     extensos, resolver ejercicios propuestos, y preparación pre y
      post controles.
-   - *Exposicion* de las mejores tareas de los alumnos, como casos
-     de estudio de implementacion y experimentacion.
-  * =Evaluacion=
+   - *Exposición* de las mejores tareas de los alumnos, como casos
+     de estudio de implementación y experimentación.
+  * =Evaluación=
     * 2010 con 6 tareas y 2 controles
 	 - [2/9] Examen (todas unidades)
 	 - [4/9] Controles
@@ -72,15 +72,15 @@
       - [2/9] Examen (todas unidades)
   * =Nota Final=      
     - controles se promedian a partes iguales
-    - el examen reemplaca el peor control si la nota del examen es
+    - el examen reemplaza el peor control si la nota del examen es
       mayor.
     - tareas se promedian a partes iguales
-*** Preguntas sobre la Programacion				       :TALK:
+*** Preguntas sobre la Programación				       :TALK:
    - Cuanto memoria hay en un computador? Como se maneja?
-   - Cual es la diferencia entre el disque duro y la memoria?
+   - Cual es la diferencia entre el disco duro y la memoria?
    - Cuanto procesadores hay en un computador? Como se programan?
    - Cual algoritmo elegir a implementar para un problema dicho?
-   - Cual es la diferencia entre programacion imperativa y funcional?
+   - Cual es la diferencia entre programación imperativa y funcional?
 *** Introduciendo "Concept questions": "Hanoi Tower" y "Disk Pile"
     :LOGBOOK:
     - State "DONE"       from "NEXT"       [2011-03-03 Thu 10:17]
