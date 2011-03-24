@@ -21,10 +21,8 @@
   :END:
 ** Presentación y Evaluación (1 charla)
 *** Presentaciones
-**** Quien somos
- - franco-ingles-castellano
- - curso interactivo?
- - dos auxiliares
+**** Quien somos?
+     - franco-ingles-castellano
 **** Quien son? 
      * Quien
 	 - tomo el curso CC40A o CC4102 en los ultimos semestres?
@@ -171,13 +169,13 @@
      - Complejidad en promedio
      - Otros modelos computacionales?
 **** Complejidad Computacional
-     - Cual Algoritmos conocen? Cual son sus complejidad?
+     - Cual Algoritmos conocen? Cual son sus complejidades?
        - para buscar en un arreglo (ordenado? no ordenado?)
        - para ordenar un arreglo (en el modelo de comparaciones o no?)
-     - Cual cotas inferiores conocen?
+     - Cuales cotas inferiores conocen para...
        - buscar?
        - ordenar?
-     - Cual problemas dificiles conocen?
+     - Que problemas dificiles conocen?
        - elegir sus cursos
        - assignar salas y horarios a los cursos
        - assignar infermeros a hospitales
@@ -276,13 +274,13 @@
      - Conocer algunos casos de estudio relevantes
      - Adquirir nociones basicas de experimentacion en algoritmos. 
 **** Principales casos de estudio 
-     - cota inferior para minimo y maximo de un arreglo
-     - caso promedio del quicksort
-     - cota inferior para busqueda en un arreglo con distintas probabilidades de acceso
+     - Cota inferior para minimo y maximo de un arreglo
+     - Caso promedio del quicksort
+     - Cota inferior para busqueda en un arreglo con distintas probabilidades de acceso
 *** PREREQUISITOS DE UNIDAD 
 **** Lista de themas en apuntes de CC3001 			    :READING:
     http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
-*** 1.1 Repaso del proceso de diseno y analisis de un algoritmo.
+*** 1.1 Repaso del proceso de diseño y analisis de un algoritmo.
 **** PREREQUISITOS
 ***** "Bases de la programacion" en apuntes de CC3001		    :READING:
       - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
@@ -296,17 +294,17 @@
 ***** AVL en  apuntes de CC3001					    :READING:
       - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/#3
 **** Problema de la Torre de Hanoi				       :TALK:
-     - definition
-     - cota superior
-     - cota inferior
+     - Definicion
+     - Cota superior
+     - Cota inferior
 **** Variantes de la Torre de Hanoi				       :TALK:
     - pesos distintos?
     - Disk Pile Problem ($n$ discos pero $h<n$ tamanos)
-      - cota inferior en funcion de $n$, en funcion de $n,h$ 
-      - cota superior en funcion de $n$, en funcion de $n,h$
+      - Cota inferior en funcion de $n$, en funcion de $n,h$ 
+      - Cota superior en funcion de $n$, en funcion de $n,h$
     - Precise Disk Pile Problem ($n$ discos con $n_i$ de tamaño $i$, $\forall i\in[1..h]$)
-      - cota inferior en funcion de $n$, en funcion de $h,n_1,...,n_h$ 
-      - cota superior en funcion de $n$, en funcion de $h,n_1,...,n_h$
+      - cota inferior en función de $n$, en función de $h,n_1,...,n_h$ 
+      - cota superior en función de $n$, en función de $h,n_1,...,n_h$
 **** CONCEPT QUESTIONS [7/7] 						 :CQ:
 ***** DONE [#A] Asymptotics						 :CP:
        :LOGBOOK:
@@ -361,7 +359,7 @@
       :END:
       La característica que permite que un heap se pueda almacenar
       sin punteros es que, si se utiliza la numeración por niveles
-      indicada, entonces la(s) relación(es) entre padres e hijos es
+      indicada, entoncés la(s) relación(es) entre padres e hijos es
       (son):
       1. [ ] Hijos del nodo j = {2*j, 2*j+1}
       2. [ ] Padre del nodo k = floor(k/2) 
@@ -416,10 +414,10 @@
 ***** Cotas Inferiores en apuntes de CC3001			    :READING:
    - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#1
 **** Minimo (resp. maximo) de un arreglo
-   - cota superior
-   - cota inferior
+   - Cota superior
+   - Cota inferior
 **** Calcular el Minimo y el Maximo de un Arreglo en una sola computacion
-   - cota superior?
+   - Cota superior?
      - cota superior para max + cota superior para min
    - cota inferior?
      - cota inferior para min + cota superior para max?
@@ -458,12 +456,9 @@
 **** Cota inferior para el problema de minmax
      * Sean las variables siguentes:
        - $O$ los $o$ elementos todavia no comparados;
-       - $G$ los $g$ elementos que ``ganaron'' todas su
-	 comparaciones hasta ahora;
-       - $P$ los $p$ elementos que ``perdieron'' todas su
-	 comparaciones hasta ahora;
-       - $E$ las $e$ valores eliminadas (que perdieron al menos
-	 una comparacion, y ganaron al menos una comparacion);
+       - $G$ los $g$ elementos que ``ganaron'' todas sus comparaciones hasta ahora;
+       - $P$ los $p$ elementos que ``perdieron'' todas sus comparaciones hasta ahora;
+       - $E$ las $e$ valores eliminadas (que perdieron al menos una comparacion, y ganaron al menos una comparacion);
      -  $(o,g,p,e)$ describe el estado de cualquier algoritmo:
        -  siempre $o+g+p+e=n$;
        -  al inicio, $g=p=e=0$ y $o=n$;
@@ -487,10 +482,8 @@
        	b\in E &               &                      &                      & o,g,p,e
        	\end{array}
        	$$
-     -  En algunas configuraciones, el cambio del vector estado
-       	depende del resultado de la comparacion: un adversario puede
-       	maximisar la complejidad del algoritmo eligando el resultado
-       	de cada comparacion. El arreglo siguente contiene en graso las
+     -  En algunas configuraciones, el cambio del vector estado depende del resultado de la comparacion: un adversario puede
+       	maximizar la complejidad del algoritmo eligando el resultado de cada comparacion. El arreglo siguente contiene en graso las
        	opciones que maximizan la complejidad del algoritmo:
        	$$
        	\begin{array}{c|c|c|c|c}
@@ -511,7 +504,7 @@
      -  Con estas opciones, hay
        -  $\lceil n/2\rceil$ transiciones de $O$ a $G\cup P$, y
        -  $n-2$ transiciones de $G\cup P$ a $E$.
-     -  Eso resulta en una complejidad en el peor case de $\lceil
+     -  Eso resulta en una complejidad en el peor caso de $\lceil
        	3n/2 \rceil-2 \in 3n/2 +O(1)$ comparaciones.
 
 
