@@ -1,13 +1,13 @@
 #+TAGS: CQ(C) READING(R) TALK(T)
 #+DRAWERS: PROPERTIES LOGBOOK CLOCK PROOF SOLUTION
-#+OPTIONS: LaTeX:dvipng 
 #+LATEX_HEADER:  \usepackage{fullpage}
 
-# THose options seem to cause problem when using C-c C-x C-l to 
+# Those options seem to cause problem when using C-c C-x C-l to 
 # preview LaTeX fragments (org-preview-latex-fragment) in class:
 # Disabled untill I see why  -- Jeremy
   #+OPTIONS: LaTeX:dvipng H:5 num:t
   #+LATEX_HEADER: \usepackage[spanish]{babel}
+  #+OPTIONS: LaTeX:dvipng 
 
 #+TITLE: CC4102/CC40A/CC53A - Dise\~no y An\'alisis de Algoritmos
 #+AUTHOR: J\'er\'emy Barbay
