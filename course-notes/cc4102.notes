@@ -1129,8 +1129,23 @@
        - Algoritmo en $2n/3 + O(1)$ comparaciones para min max
 ** Algoritmos y Estructuras de Datos para Memoria Secundaria (3 semanas = 6 charlas)
 *** PREREQUISITOS DE UNIDAD 
+    * Apuntes de CC3001:
+      - Arboles 2-3
+	- http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/#4
+      - Arboles B
+	- http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/#5
+    * Mergesort y Ordenamiento Externo
+      - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#5
+    * Colas de Prioridades
+      - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/TDA/#4
 *** Modelo de computacion en memoria secundaria. Accesos secuenciales y aleatorios
-    Arquitectura de un computador: la memoria
+**** MATERIAL A LEER
+     - Memory hierarchy
+       - http://en.wikipedia.org/wiki/Memory_hierarchy
+       - En castellano, mas corto,
+         http://es.wikipedia.org/wiki/Jerarqu%C3%ADa_de_memoria
+**** APUNTES
+     Arquitectura de un computador: la memoria
        1) Muchos niveles de memoria
 	  - Procesador
 	  - registros
@@ -1156,9 +1171,21 @@
 	  - "Cache oblivious"
 	  - Otros... mas practicas, mas dificil a analizar.
 *** Diccionarios en Memoria Externa
-    1. Preliminary Reading
-       - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/
-    2. B-arbol
+**** MATERIAL A LEER
+     - B-Arboles:
+       - Arboles B  en apuntes de CC3001
+	 - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/#5
+       - Árbol-B
+	 - http://es.wikipedia.org/wiki/%C3%81rbol-B
+       - Árbol-B+ (corto)
+	 - http://es.wikipedia.org/wiki/%C3%81rbol-B%2B
+       - Árbol-B* (corto)
+	 - http://es.wikipedia.org/wiki/%C3%81rbol-B*
+	 - (en ingles http://en.wikipedia.org/wiki/B*-tree )
+     - Descripcion de van Emde Boas arboles
+       - http://en.wikipedia.org/wiki/Van\_Emde\_Boas\_tree
+**** APUNTES
+    1. B-arbol
        1) $(2,3)$ Arbol: un arbol de busqueda donde
 	  - cada nodo tiene 1 o 2 llaves, que corresponde a 2 o 3
 	    hijos, con la excepcion de la raiz;
@@ -1187,12 +1214,11 @@
 	    - http://en.wikipedia.org/wiki/B*-tree
 	  - $B^+$ arbol
 	    - the leaf nodes of the tree are chained together in the form of a linked list. 
-    3. Van Emde Boas arbol (vEB)
-       http://en.wikipedia.org/wiki/Van\_Emde\_Boas\_tree
+    2. Van Emde Boas arbol (vEB)
        1) Historia:
 	  - Originalemente (1977) un estructura de datos normal, que
-            suporta todas las operaciones en $O(\lg\lg n)$, inventada
-            por el equipo de Peter van Emde Boas.
+	    suporta todas las operaciones en $O(\lg\lg n)$, inventada
+	    por el equipo de Peter van Emde Boas.
 	  - No considerado utiles en practica para "pequenos"
 	    arboles.
 	  - Applicacion a "Cache-Oblivious" algoritmos  y estructuras de datos
@@ -1212,15 +1238,18 @@
 	    del nivel considerado
 	  - Insercion
 	  - Delecion
-    4. Finger Search Tree: la busqueda doblada de los arboles de busqueda
-       1) Estructura de datos
-       2) algorimo de busqueda
-       3) analisis: busqueda en $O(\lg p)$ 
 *** Colas de prioridad en memoria secundaria. Cotas inferiores.
-    1) Preliminary Reading
-       - Colas de Prioridades http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/TDA/#4
-
-    2) Colas de Prioridades tradicional: 
+**** MATERIAL a LEER
+     - Apuntes CC3001
+       - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/TDA/#4
+     - Colas de Prioridad
+       - http://en.wikipedia.org/wiki/Priority\_queue]]
+     - Heaps
+       - http://en.wikipedia.org/wiki/Heap\_data\_structure]]
+     - van Emde Boas Queues
+       - http://www.itl.nist.gov/div897/sqg/dads/HTML/vanemdeboas.html
+**** APUNTES
+    1) Colas de Prioridades tradicional: 
        - que se necesita?
 	 * Operadores 
 	   - /insert(key,item)/
@@ -1249,8 +1278,6 @@
 	 - /van Emde Boas queues/
 
        - *van Emde Boas queues*
-	 http://www.itl.nist.gov/div897/sqg/dads/HTML/vanemdeboas.html
-
 	 - Definicion: 
 
 	   "An efficient implementation of priority queues where
@@ -1265,11 +1292,7 @@
 
 	   - rendimiento en memoria secundaria de "binary heap": muy malo?
 
-    3) Colas de Prioridades en Memoria Secundaria: diseno  
-       * Reference: 
-	 + http://www.dcc.uchile.cl/~gnavarro/algoritmos/tesisRapa.pdf
-	   - paginas 9 hasta 16
-	 + Otras referencias en http://www.leekillough.com/heaps/
+    2) Colas de Prioridades en Memoria Secundaria: diseno  
        * El equivalente de B-Arbol
        * Muchas alternativas en practica
 	 - Buffer trees
@@ -1278,23 +1301,23 @@
 	 - R-Heaps
 	 - Array Heaps
 	 - sequence heaps
-	 - Mas en "An experimental study of priority queues in external memory"
-	   - http://portal.acm.org/citation.cfm?id=351827.384259
 
-    4) Colas de Prioridades en Memoria Secundaria: cota inferior?
+    3) Colas de Prioridades en Memoria Secundaria: cota inferior?
        - Cota inferior para dictionaries es una cota inferior por
 	 colas de prioridades o no?
 	 - No. La reduccion es en la otra direccion.
        - Cual es la cota inferior mas simple que se puede imaginar?
 	 - $\Omega(n/B)$
 
-    5) /REFERENCES/
-       - [[http://en.wikipedia.org/wiki/Priority\_queue]]
-       - [[http://en.wikipedia.org/wiki/Heap\_data\_structure]]
-       - "An experimental Study of Priority Queues in External Memories" by Brengel, Crauser, Ferragina and Meyer
+**** REFERENCIAS ADICIONALES
+     + http://www.dcc.uchile.cl/~gnavarro/algoritmos/tesisRapa.pdf
+       - paginas 9 hasta 16
+     + Otras referencias en http://www.leekillough.com/heaps/
+     + "An experimental Study of Priority Queues in External Memories" by Brengel, Crauser, Ferragina and Meyer
+       - http://portal.acm.org/citation.cfm?id=351827.384259
 
 *** Ordenamiento en memoria secundaria: Mergesort. *Cota inferior*.
-    1. Preliminary Reading 
+**** MATERIAL A LEER
        - Algoritmos de Ordenamiento en Apuntes de CC3001
 	 - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/
 	 - [ ] Quicksort
@@ -1302,8 +1325,12 @@
 	 - [ ] Bucketsort
 	 - [ ] Mergesort
 	 - [ ] Ordenamiento Externo
-
-    2. Un modelo mas fino
+       - Ordenamiento en Memoria externa en Wikipedia:
+	 - http://en.wikipedia.org/wiki/External_sorting
+       - Cota Inferior Ordenamiento en Memoria externa
+	 - http://www.daimi.au.dk/~large/ioS06/Alower.pdf 
+**** APUNTES
+    1. Un modelo mas fino
 
        1) Cuantos paginas quedan en memoria local?
 	  - no tan importante para busqueda
@@ -1324,17 +1351,17 @@
 
        3) En estas notaciones, usando resultos previos:
 
-	  * Insertion Sort (en un B-Arbol) 
+	  * =Insertion Sort= (en un B-Arbol) 
 	    - usa dictionarios en memoria externa
 	    - $N \lg N / \lg B = N \log_B N$
 
-	  * Heap Sort 
+	  * =Heap Sort= 
 	    - usa colas de prioridades en memoria externa
 	    - $N \lg N / \lg B = N \log_B N$
 
 	  * Eso es optimo o no?
 
-    3. Cotas Inferiores en Memoria Secundaria 
+    2. Cotas Inferiores en Memoria Secundaria 
        * para buscar en un diccionario?
 	 - en modelo RAM? (de comparaciones)
 	   - $\lg N$
@@ -1354,7 +1381,7 @@
 	   - $N/B = n$ (si $M > kB$)
 
        * para Ordenar
-	 (corrige y adapte la prueba de http://www.daimi.au.dk/~large/ioS06/Alower.pdf )
+	 - (corrige y adapte la prueba de http://www.daimi.au.dk/~large/ioS06/Alower.pdf )
 	 - en modelo RAM de comparaciones 
 	   - $N \lg N$
 	 - en modelo Memoria Externa con $n/B$ paginas de tamano B
@@ -1407,7 +1434,7 @@
 
        * BONUS: Para ordenar strings, un caso particular (donde la
 	 comparacion de dos elementos tiene un costo variable):
-	 http://www.brics.dk/~large/Papers/stringsstoc97.pdf
+	 - http://www.brics.dk/~large/Papers/stringsstoc97.pdf
 	 - $\Omega( N_1/B \log_{M/B}(N_1/B) + K_2 \lg_{M/B} K_2 + N/B )$
 	 - donde
 	   - $N_1$ es la suma de los tamanos de las caldenas mas cortas que $B$
@@ -1415,7 +1442,7 @@
 
     3. Ordenar en Memoria Externa N elementos (en $n=N/B$ paginas)
 
-       http://en.wikipedia.org/wiki/External_sorting
+       * http://en.wikipedia.org/wiki/External_sorting
 
        * Usando dictionarios o colas de prioridades en memoria externa
 	 - $N \lg N / \lg B = N \log_B N$
@@ -1451,7 +1478,7 @@
        - entonces????
 
 *** Resultados de Aprendisajes de la Unidad Dos
-    - Comprender el modelo de costo de memoria secundario
+    - Comprender el modelo de costo de memoria secundaria
     - Conocer algoritmos y estructuras de datos basicos que son eficientes en memoria secundaria, 
     - y el analisis de su desempeno.
 
@@ -2308,6 +2335,20 @@
        adicionales (usando la segunda variante de la búsqueda
        binaria),
      - por un total de   $1+2\lceil\lg p\rceil$ comparaciones
+**** Finger Search Tree: la busqueda doblada de los arboles de busqueda
+***** MATERIAL A LEER
+       	- Árbol 2-3 http://es.wikipedia.org/wiki/%C3%81rbol_2-3
+       	- Finger tree http://en.wikipedia.org/wiki/Finger_tree
+***** APUNTES
+       - Estructura de datos
+       - algorimo de busqueda
+       - analisis: busqueda en $O(\lg p)$ 
+**** Árbol biselado ("Splay Tree")
+***** MATERIAL A LEER
+      - Árbol biselado http://es.wikipedia.org/wiki/%C3%81rbol_biselado
+      - 
+***** APUNTES
+
 **** Algoritmo de Ordenamiento adaptivos basicos
 ***** Merge Sort Adaptivo: Runs
 ***** Local Insertion Sort: Inv
