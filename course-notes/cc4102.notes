@@ -10,6 +10,31 @@
   #+OPTIONS: LaTeX:dvipng H:5 num:t
   #+LATEX_HEADER: \usepackage[spanish]{babel}
 
+* Example of Structure of Concept Question subsection 				 
+**** CONCEPT QUESTIONS 							 :CQ:
+***** 
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      
+      1. [ ] 
+      2. [ ] 
+      3. [ ] 
+      4. [ ] 
+      5. [ ] otra respuesta
+***** Title of the question
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      Text of the question
+      1. [ ] Answer 1
+      2. [ ] Answer 2
+      3. [ ] Answer 3
+      4. [ ] Answer 4
+      5. [ ] none of the above
+
 
 * Lecture Notes CC4102
   :CLOCK:
@@ -136,9 +161,14 @@
      :SOLUTION: 
      8   
      :END:
+     :SOLUTION: 
+     $8$
+     :END:
      :PROOF: 
-     The "minimum" can refer not only to the optimality of the solution, but also to the choice of the instance. 
-     The easiest instance of moving a disk pile is when all the disks have the same size, and hence can be moved in linear time.
+     The "minimum" can refer not only to the optimality of the
+     solution, but also to the choice of the instance.  The easiest
+     instance of moving a disk pile is when all the disks have the
+     same size, and hence can be moved in linear time.
      :END:
      What is the minimum number of moves required to move a disk pile
      of height $8$?
@@ -150,6 +180,8 @@
 
 **** Disk Pile of height 8 with 2 disk sizes				 :CQ:
      :PROPERTIES:
+     :SOLUTION:     
+     :END:
      :PROOF: 
      :END:
      What is the minimum number of moves required to move a disk pile
@@ -183,43 +215,51 @@
        :LOGBOOK:
        - State "TODO"       from ""           [2011-03-10 Thu 11:55]
        :END:
+
 | $f(n)$            | $g(n)$          | $f(n)\in O(g(n)$ | $f(n)\in \Omega(g(n)$ | $f(n)\in Theta(g(n)$ |
 |-------------------+-----------------+------------------+-----------------------+----------------------|
 | $3n+6$            | $100n-50$       |                  |                       |                      |
 | $n^{\frac{1}{2}}$ | $n^\frac{2}{3}$ |                  |                       |                      |
-***** TODO ¿Cuántos árboles binarios distintos se pueden construir con 3 nodos internos?
+
+***** TODO Cantidad de arboles binarios distintos con 3 nodos internos.
       :LOGBOOK:
       - State "TODO"       from ""           [2011-03-10 Thu 11:55]
       :END:
+      ¿Cuántos árboles binarios distintos se pueden construir con 3 nodos internos?
+
       1. [ ] 1
       2. [ ] 3
       3. [ ] 4
       4. [ ] 6
       5. [ ] otra
+
 ***** TODO Arboles Binarios, nodos internos externos
-      Si se define i = número de nodos internos, e = número de nodos
-      externos, entonces se tiene que:
+      Si se define 
+      - $i =$ número de nodos internos,
+      - $e =$ número de nodos externos, 
+      entonces se tiene que:
       :LOGBOOK:
       - State "TODO"       from ""           [2011-03-10 Thu 11:55]
       :END:
-      1. [ ] i = e
-      2. [ ] e = i+1
-      3. [ ] i = e+1
-      4. [ ] e = 2^i
+      1. [ ] $i = e$
+      2. [ ] $e = i+1$
+      3. [ ] $i = e+1$
+      4. [ ] $e = 2^i$
       5. [ ] sin relacion
-***** TODO Sea n = número de nodos internos. Se define:
+***** TODO Sumas de largos de caminos en arboles.
       :LOGBOOK:
       - State "TODO"       from ""           [2011-03-10 Thu 11:55]
       :END:
-   * In = suma del largo de los caminos desde la raíz a cada nodo
-     interno (largo de caminos internos).
-   * En = suma del largo de los caminos desde la raíz a cada nodo
-     externo (largo de caminos externos).
-     Se tiene que:
-     1. [ ] En = In
-     2. [ ] En = In+1
-     3. [ ] En = In+n
-     4. [ ] En = In+2n
+Sea $n =$ número de nodos internos. Se define:
+ * $I_n =$ suma del largo de los caminos desde la raíz a cada nodo
+   interno (largo de caminos internos).
+ * $E_n =$ suma del largo de los caminos desde la raíz a cada nodo
+   externo (largo de caminos externos).
+Se tiene que:
+     1. [ ] $E_n = I_n$
+     2. [ ] $E_n = I_n+1$
+     3. [ ] $E_n = I_n+n$
+     4. [ ] $E_n = I_n+2n$
      5. [ ] sin relacion
 ***** TODO Heap
       :LOGBOOK:
@@ -235,12 +275,19 @@
       3. [ ] Hijos del nodo $j = \{2*j-1, 2*j\}$
       4. [ ] Padre del nodo $k = \lfloor k/2 \rfloor+1$ 
       5. [ ] ningunos
-***** TODO AVL
+***** TODO altura de un AVL
+   :SOLUTION:     
+   en $\Theta(\lg n)$
+   :END:
+   :PROOF: 
+   cf apuntes de CC3001. Se muestra por inducion, construiando los
+   arboles AVL de altura fijada con un minimo/maximo de nodes.
+   :END:
       La altura de un AVL con $n$ elementos es  
       1. [ ] $\log_\phi(n+1)+\Theta(1)$
       2. [ ] en $O(\lg n)$
       3. [ ] en $\Omega(\lg n)$
-      4. [X] en $\Theta(\lg n)$
+      4. [ ] en $\Theta(\lg n)$
       5. [ ] ningunos o mas que dos
 ***** TODO AVL h-> n
       para una altura $h$ dada, cuantos nodos tiene un árbol AVL con
@@ -580,15 +627,27 @@
       :LOGBOOK:
       - State "DONE"       from "NEXT"       [2011-03-15 Tue 13:39]
       :END:
+   :SOLUTION:     
+   $3n/2-2$ si $n$ es par, $3n/2 + 1/2$ si $n$ es impar.
+   :END:
+   :PROOF: 
+   cf apuntes
+   :END:
       Dado un arreglo de $n$ enteros, en cuanto comparaciones
       (cantidad exacta, no asimptotica) entre los elementos del
       arreglo pueden calcular su valor maximal y minimal?
       1. [ ] $n-1$
-      2. [X] $3n/2-2$ si $n$ es par, $3n/2 + 1/2$ si $n$ es impar.
+      2. [ ] $3n/2-2$ si $n$ es par, $3n/2 + 1/2$ si $n$ es impar.
       3. [ ] $(n-1)+(n-2)$
       4. [ ] $2(n-1)$
       5. [ ] otra respuesta
 ***** NEXT Cota *inferior* de (la complejidad de) Min Max
+   :SOLUTION:     
+   $\lceil 3n/2 \rceil-2$
+   :END:
+   :PROOF: 
+   cf apuntes
+   :END:
       Dado un arreglo de $n$ enteros, cuanto comparaciones (cantidad
       exacta, no asimptotica) entre los elementos del arreglo se
       necessitan para calcular su valor maximal y minimal?
@@ -652,7 +711,7 @@
        - complejidad en promedio de un algoritmo deterministico
        - complejidad en el peor caso de un algoritmo aleatorizado
          (promedio sobre su aleatoria)
-**** CONCEPT QUESTIONS [12/19] 						 :CQ:
+**** CONCEPT QUESTIONS [13/19] 						 :CQ:
 ***** DONE Juego de las preguntas, $n=4$
       :LOGBOOK:
       - State "DONE"       from "NEXT"       [2011-03-17 Thu 13:32]
@@ -833,18 +892,38 @@
       ; 4. [ ] for(int i=1; i<n; i++) { if(A[i]>A[i+1]) print i;}
       5. [ ] ningunos
 
-***** NEXT [#A] Relacion entre codificacion y busqueda
+***** DONE [#A] Relacion entre codificacion y busqueda
       :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-26 Sat 17:51]
       - State "NEXT"       from ""           [2011-03-17 Thu 12:01]
       :END:
-      En el modelo de comparacion:
+   :SOLUTION:     
+   A cada algoritmo de busqueda corresponde una codificacion de enteros.
+   :END:
+   :PROOF: 
+      1. [X] A cada algoritmo de busqueda corresponde una codificacion
+             de enteros. -> Considera el algoritmo de interpolacion:
+             no le corresponde una codificacion de entero, al menos no
+             con la reduccion vista en curso.
+      2. [ ] A cada codificacion de enteros corresponde un algoritmo
+             de busqueda. -> El algoritmo de decodificacion es un
+             algoritmo de busqueda, preguntando a cada bit alguna
+             informacion.
+      3. [ ] A algunos algoritmos de busqueda corresponde una
+             codificacion de enteros -> busqueda binaria y codigo
+             binario es un ejemplo.
+      4. [ ] A algunas codificaciones de enteros corresponde un
+             algoritmo de busqueda -> codigo binario y busqueda
+             binarya.
+   :END:
+      Cual de estas aserciones es falsa en el modelo de comparacion?
       1. [ ] A cada algoritmo de busqueda corresponde una codificacion
              de enteros.
-      2. [X] A cada codificacion de enteros corresponde un algoritmo
+      2. [ ] A cada codificacion de enteros corresponde un algoritmo
              de busqueda.
-      3. [X] A algunos algoritmos de busqueda corresponde una
+      3. [ ] A algunos algoritmos de busqueda corresponde una
              codificacion de enteros
-      4. [X] A algunas codificaciones de enteros corresponde un
+      4. [ ] A algunas codificaciones de enteros corresponde un
              algoritmo de busqueda.
       5. [ ] otra
 ***** DONE Busqueda Doblada
@@ -852,15 +931,24 @@
       - State "DONE"       from "NEXT"       [2011-03-22 Tue 12:58]
       - State "NEXT"       from ""           [2011-03-22 Tue 11:47]
       :END:
+   :SOLUTION:     
+   ningunas
+   :END:
+   :PROOF: 
+      1. [ ] $\lg(1+n)$ comparaciones -> Busqueda binaria
+      2. [ ] $p+1$ comparaciones -> Busqueda secuencial
+      3. [ ] $2\lg p$ comparaciones -> Busqueda dublada
+      3. [ ] $2\lg(n-p)$ comparaciones -> Busqueda dublada, iniciando a la derecha
+  :END:
+      Cual de las asercions siguentes son falsas?
       Dado una valor $x$ y un arreglo ordenado $A$ de $n$ valores,
-      existe un algoritmo calculando la posicion de insercion $p$ de
+      existe un algoritmo calculando la posicion de inserción $p$ de
       $x$ en $A$ en 
-      1. [X] $\lg(1+n)$ comparaciones
-      2. [X] $p+1$ comparaciones
-      3. [X] $2\lg p$ comparaciones
-      4. [X] $2\lg(n-p)$ comparaciones
-      5. [X] $\lg^* p + \sum_{i=1}^{\lg^* p} \lg^{(i)}(p) + \lg p$ comparaciones
-      6. [ ] ningunas o mas que dos.
+      1. [ ] $\lg(1+n)$ comparaciones
+      2. [ ] $p+1$ comparaciones
+      3. [ ] $2\lg p$ comparaciones
+      3. [ ] $2\lg(n-p)$ comparaciones
+      5. [ ] ningunas o mas que dos.
 ***** DONE Compression de enteros
       :LOGBOOK:
       - State "DONE"       from "NEXT"       [2011-03-22 Tue 12:59]
@@ -872,7 +960,6 @@
       2. [ ] $2\lg p$ bits,
       3. [ ] $p$ bits,
       4. [ ] $2\lg(n-p)$ bits,
-      5. [ ] $\lg^* p + \sum_{i=1}^{\lg^* p} \lg^{(i)}(p) + \lg p$ bits,
       6. [ ] ningunas o mas que dos.
 ***** DONE Cota inferior ordenamiento (en el modelo de comparacion)
       :LOGBOOK:
@@ -928,18 +1015,6 @@
       - State "NEXT"       from ""           [2011-03-22 Tue 11:48]
       :END:
       1. [ ] 
-
-***** DONE Tecnicas de cotas inferiores
-      :LOGBOOK:
-      - State "DONE"       from "NEXT"       [2011-03-22 Tue 13:19]
-      :END:
-      Cual(es) de las tecnicas siguentes permitten de mostrar cotas
-      inferiores para la complejidad en promedio?
-	1. [ ] lemma del ave
-	2. [ ] Estrategia de Adversario
-	3. [ ] Arbol Binario de Decision
-	4. [ ] lemma del minimax
-	5. [ ] ningunas o mas de dos.
 ***** NEXT Relacion entre Complejidad en Promedio y en el peor caso
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-17 Thu 10:30]
@@ -957,6 +1032,18 @@
 	3. [ ] La complejidad en el peor caso (de un algoritmo) es siempre peor que la complejidad en promedio
 	4. [ ] La complejidad en promedio (de un algoritmo) nunca es peor que la complejidad en el peor caso
 	5. [ ] ningunas
+
+***** DONE Tecnicas de cotas inferiores
+      :LOGBOOK:
+      - State "DONE"       from "NEXT"       [2011-03-22 Tue 13:19]
+      :END:
+      Cual(es) de las tecnicas siguentes permitten de mostrar cotas
+      inferiores para la complejidad en promedio?
+	1. [ ] lemma del ave
+	2. [ ] Estrategia de Adversario
+	3. [ ] Arbol Binario de Decision
+	4. [ ] lemma del minimax
+	5. [ ] ningunas o mas de dos.
 *** Metodologia de experimentacion
 **** PREREQUISITOS
      - de las apuntes de CC3001:
@@ -1113,7 +1200,7 @@
       + Solucion en tiempo polynomial (pero espacio $O(n^2)$)
       + Solucion en espacio lineal (y tiempo $O(n^2)$)
       + (BONUS) Solucion de Hirshberg en tiempo $O(nm)$ y espacio $\min(n,m)$
-*** RESUMEN de la Unidad
+*** RESUMEN de la Unidad 1
     1. Conceptos Basicos
        - $O(), o(), \Omega(), \omega(), \Theta(), \theta()$
        - Complejidad en el peor caso, en promedio
@@ -1135,7 +1222,7 @@
        - Busqueda y Codificacion de Enteros (busqueda doblada)
        - Busqueda binaria en $\Theta(1+\lg n)$ (mejor que $2\lg n$)
        - Algoritmo en $2n/3 + O(1)$ comparaciones para min max
-** Algoritmos y Estructuras de Datos para Memoria Secundaria (3 semanas = 6 charlas)
+** Memoria Secundaria [Algoritmos y Estructuras de Datos para] (3 semanas = 6 charlas)
 *** PREREQUISITOS DE UNIDAD 
     * Apuntes de CC3001:
       - Arboles 2-3
@@ -1178,6 +1265,138 @@
 	  - Jerarquia con k niveles, de paginas de tamanos $B_1,...,B_k$
 	  - "Cache oblivious"
 	  - Otros... mas practicas, mas dificil a analizar.
+**** CONCEPT QUESTIONS 							 :CQ:
+***** NEXT Camino de accesso a valores
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-29 Tue 10:51]
+      :END:
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      - Registro mas =frecuente= si sistema bien hecho
+      - =probable= no bien definido, pero en todo caso un aceso a
+        cualquier nivel mas bajo que Registro resulta tambien en un
+        acceso a todos los niveles mas cercano del CPU, asi que
+        deberia ser =otra respuesta=.
+      :END:
+      Cuando a programa hace un acceso a dos elementos de un arreglo,
+      cual es el camino de accesso a estas valores el mas \{frecuente
+      / probable \}?
+      1. [ ] Registros
+      2. [ ] Caches (1,2 o 3)
+      3. [ ] RAM (principal)
+      4. [ ] Disco Duro
+      5. [ ] otra respuesta
+***** NEXT Nivel a 25ns
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-29 Tue 10:54]
+      :END:
+      :SOLUTION:     
+      RAM
+      :END:
+      :PROOF: 
+      100 ciclos = 100 * .25ns = 25 ns  => RAM
+      |        | Registro | L1         | L2       | L3       | RAM        | Disco         | Red           | Static   |
+      |--------+----------+------------+----------+----------+------------+---------------+---------------+----------|
+      | tiempo | 1 ciclo  | O(1) ciclo | L1*2,*10 | >L2      | 100 ciclos | $10^6$ ciclos | O(1) Segundas | sin cota |
+      |        |          |            |          |          |            |               |               |          |
+      | tamaño | 100 b    | 10 Kb      | >512 Kb  | >2048 Kb | O(1) Gb    | 200 Gb        | creciendo     | sin cota |
+      :END:
+      Cual de los niveles siguentes parece el mas cerca de un tiempo de acceso de 25 ns, por un computador funcionando a 4 GHz?
+      1. [ ] Registro
+      2. [ ] Cache (L1, L2 o L3)
+      3. [ ] RAM
+      4. [ ] Disco duro
+      5. [ ] otra respuesta
+***** NEXT Nivel a 1ns
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-29 Tue 10:54]
+      :END:
+      :SOLUTION:     
+      Cache (*L1*, L2 o L3)
+      :END:
+      :PROOF: 
+      O(1) ciclos ~ 1ns
+      |             | Registro | L1         | L2       | L3       | RAM        | Disco         | Red           | Static   |
+      |-------------+----------+------------+----------+----------+------------+---------------+---------------+----------|
+      | tiempo      | 1 ciclo  | O(1) ciclo | L1*2,*10 | >L2      | 100 ciclos | $10^6$ ciclos | O(1) segundas | sin cota |
+      | orden en ns | .25 ns   | 1ns        | 5ns      | 10ns     | 25ns       | 250.000 ns    | 10^9 ns       | sin cota |
+      | tamaño      | 100 b    | 10 Kb      | >512 Kb  | >2048 Kb | O(1) Gb    | 200 Gb        | creciendo     | sin cota |
+      :END:
+      Cual de los niveles siguentes parece el mas cerca de un tiempo de acceso de 1 ns, por un computador funcionando a 4 GHz?
+      1. [ ] Registro
+      2. [ ] Cache (L1, L2 o L3)
+      3. [ ] RAM
+      4. [ ] Disco duro
+      5. [ ] otra respuesta
+***** NEXT Cuantas segundas vale 1ns?
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-29 Tue 10:49]
+      :END:
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      | 1 nano  | $10^{-9}$ |
+      | 1 micro | $10^{-6}$ |
+      | 1 mili  | $10^{-3}$ |
+      | 1 centi | $10^{-2}$ |
+      |         |           |      
+      :END:
+      Cuantas segundas vale un nano segunda?
+      1. [ ] $10^{-12}$ segundas
+      2. [ ] $10^{-9}$ segundas
+      3. [ ] $10^{-6}$ segundas
+      4. [ ] $10^{-3}$ segundas
+      5. [ ] otra respuesta
+***** NEXT Cuanto se demora una instruccion?
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-29 Tue 10:59]
+      :END:
+      :SOLUTION:     
+      1 ns (.25 para un ciclo, pero algunas isntrucciones usan O(1)
+      ciclos)
+      :END:
+      :PROOF: 
+      Intel Pentiums and higher, also all modern AMD processors (x86)
+      support the "rdtsc" instruction (you can call this from inline
+      assembly) which returns a 64-bit count of the number of CPU
+      clock cycles since powerup. The clock referred to is the CPU
+      code execution cycle, e.g. *a CPU running at 1 GHz runs through
+      one billion cycles per second*. (...)
+      If your clock is running at 4 GHz then rdtsc measures intervals
+      down to 0.25 ns. http://www.velocityreviews.com/forums/t281979-re-how-many-cpu-cycles-does-an-instruction-take.html
+      :END:
+      Un CPU funciona a 4 GHz: cuanto se demora una instruccion? (elija el valor mas cercano).
+      1. [ ] 1 nano segunda
+      2. [ ] 1 micro segunda
+      3. [ ] 1 mili segunda
+      4. [ ] 1 centi segunda
+      5. [ ] otra respuesta
+***** NEXT Cual es la significacion de GHz?
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-29 Tue 11:01]
+      :END:
+      :SOLUTION:     
+      $4.10^9$ ciclos per segundas, i.e. un poco menos que $4.10^9$
+      instrucciones per segundas.
+      :END:
+      :PROOF: 
+      The hertz is equivalent to cycles per second. (... ) commonly
+      used multiples are kHz (kilohertz, $10^3$ Hz), MHz (megahertz,
+      $10^6$ Hz), GHz (gigahertz, $10^9$ Hz) and THz (terahertz,
+      $10^12$ Hz). (...) For home-based personal computers, the CPU
+      has ranged from approximately 1 megahertz in the late 1970s
+      (Atari, Commodore, Apple computers) to up to 6 GHz in the
+      present (IBM POWER
+      processors). http://en.wikipedia.org/wiki/Hertz
+      :END:
+      Que significa que un procesador funciona a 4 GHz?
+      1. [ ] $4$ instrucciones per segunda
+      2. [ ] $4*10^3$ instrucciones per segunda
+      3. [ ] $4*10^6$ instrucciones per segunda
+      4. [ ] $4*10^9$ instrucciones per segunda
+      5. [ ] otra respuesta
+***** TODO Cuesto (en plata) de la memoria
 *** Diccionarios en Memoria Externa
 **** MATERIAL A LEER
      - B-Arboles:
@@ -1246,6 +1465,150 @@
 	    del nivel considerado
 	  - Insercion
 	  - Delecion
+**** CONCEPT QUESTIONS 							 :CQ:
+***** NEXT $(2,3)$ arboles
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      Cual es \{la altura, el tiempo de busqueda, el tiempo de
+      insercion, el tiempo de delecion\} de un $(2,3)$ arbol con
+      $n=\{8,9,256\}$ valores?
+      1. [ ] menos que $\log_3 n +O(1)$
+      2. [ ] $\log_3 n +O(1)$
+      3. [ ] entre  $\log_3 n$ y  $\log_2 n$
+      4. [ ] $\log_2 n +O(1)$
+      5. [ ] otra respuesta
+***** NEXT $B$ arboles
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      Cual es \{la altura, el tiempo de busqueda, el tiempo de
+      insercion, el tiempo de delecion\} de un $B$ arbol con
+      $n=\{8,9,256\}$ valores?
+      1. [ ] menos que $\log_3 n +O(1)$
+      2. [ ] $\log_3 n +O(1)$
+      3. [ ] entre  $\log_3 n$ y  $\log_2 n$
+      4. [ ] $\log_2 n +O(1)$
+      5. [ ] otra respuesta
+***** NEXT $B^*$ arboles
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      Un $B^* arbol llena sus nodos hasta $2/3$, en vez de $1/2$ por
+      los $B$ arboles. Cual es la consecuencia (el objetivo)
+      principal?
+      1. [ ] Reducir el tiempo de busqueda?
+      2. [ ] Reducir la cantidad de accesos al cache en busqueda?
+      3. [ ] Reducir la complejidad espacial?
+      4. [ ] Reducir la frecuencia de "Split/Merge"?
+      5. [ ] Practical [e.g. Optimizacion para data-set (de injeniero)]
+      6. [ ] otra respuesta
+***** NEXT $B^+$ arboles
+      :SOLUTION:     
+      Suportar otro tipos de consultas/busquedas?
+      :END:
+      :PROOF: 
+      Suportar otro tipos de consultas/busquedas, tal que busqueda de
+      valores en un interval: se busca para el valor minimal y
+      maximal, y se returna el interval en la caldena.
+      :END:
+      En $B^+$ arboles, las hojas tienen punteros adicionales formando
+      una caldena de todas las hojas. Cual es la consecuencia (el
+      objetivo) principal?
+      1. [ ] Optimizar la Busqueda Secuencial (adaptiva)?
+      2. [ ] Suportar otro tipos de consultas/busquedas?
+      3. [ ] Suportar la exportacion de las valors en tiempo razonable?
+      4. [ ] Practical (e.g. facilitar el back-up de base de datos)?
+      5. [ ] otra respuesta
+***** NEXT vEB arboles
+      :SOLUTION:     
+      $\lg m$, que es al maximo $\lg\lg n$.
+      :END:
+      :PROOF: 
+      :END:
+      en cual clase asimptotica es \{ el tiempo de busqueda, de
+      insercion, de delecion, la altura\} de un vEB con $n$ valors
+      codificadas en $m$ bits?
+      1. [ ] $O(\lg n)$
+      2. [ ] $O(\lg m)$
+      3. [ ] $O(\lg\lg n)$
+      4. [ ] $O(\lg\lg m)$
+      5. [ ] otra respuesta
+***** vEB children
+      :SOLUTION:     
+      $x \over 2^{m/2}$
+      :END:
+      :PROOF: 
+      :END:
+      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol sobre $[0..M-1]$ tiene
+      una raiz con 
+      - $\sqrt{M}$ punteros a sus ninos $C[0..\sqrt{M}-1]$,
+      - dos valores $min$ y $max$
+      - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
+     El valor $x\in]min,max[$ se encuentra en el nino $C[i]$ donde $i=$
+      1. [ ] $2^{m/2} (max - x) \over (max - min) $ 
+      1. [ ] $2^{m-2} (max - x) \over (max - min) $ 
+      2. [ ] $x \over 2^{m/2}$
+      2. [ ] $x \over 2^{m-2}$
+      5. [ ] otra respuesta
+***** vEB aux
+      :SOLUTION:     
+      Find Next
+      :END:
+      :PROOF: 
+      :END:
+      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol sobre $[0..M-1]$ tiene
+      una raiz con 
+      - $\sqrt{M}$ punteros a sus ninos $C[0..\sqrt{M}-1]$,
+      - dos valores $min$ y $max$
+      - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
+	El role de $aux$ es de memorisar cuales ninos son vacillos.
+	$j\in aux$ si y solamente si $T.C[j]$ es non vacillo.
+	Cual es el principal objetivo?
+      1. [ ] Optimizar Find
+      2. [ ] Optimizar Insert
+      3. [ ] Optimizar LookUp
+      4. [ ] Optimizar FindNext
+      5. [ ] otra respuesta
+***** vEB Find Previous
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol sobre $[0..M-1]$ tiene
+      una raiz con 
+      - $\sqrt{M}$ punteros a sus ninos $C[0..\sqrt{M}-1]$,
+      - dos valores $min$ y $max$
+      - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
+      La complejidade de Find Previous es en 
+      1. [ ] $O(k)$
+      2. [ ] $O(2^k=m)$
+      3. [ ] $O(2^{2^{k-1}})=\sqrt{M}$
+      3. [ ] $O(2^{2^k})=M$
+      5. [ ] otra respuesta
+***** vEB Insercion
+      :SOLUTION:     
+      Genera un error
+      :END:
+      :PROOF: 
+      Genera un error: entrada doblada, $x$ tiene que ser a dentro del
+      arbol si el es lleno.
+      :END:
+      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol sobre $[0..M-1]$ tiene
+      una raiz con 
+      - $\sqrt{M}$ punteros a sus ninos $C[0..\sqrt{M}-1]$,
+      - dos valores $min$ y $max$
+      - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
+      Si un nino $C[i]$ es lleno antes de agregar un elemento $x$ a dentro.
+      1. [ ] Split $C[i]$ en dos
+      2. [ ] Mudal algunos elementos de $C[i]$ a sus vecinos, y si no
+             se puede a su padre, recursivamente
+      3. [ ] Crea un nuevo sobre arbol con una hoja.
+      4. [ ] Genera un error
+      5. [ ] otra respuesta
 *** Colas de prioridad en memoria secundaria. Cotas inferiores.
 **** MATERIAL a LEER
      - Apuntes CC3001
@@ -1485,7 +1848,7 @@
        - hay una cota inferior para ordernar de $n \log_m n$
        - entonces????
 
-*** Resultados de Aprendisajes de la Unidad Dos
+*** RESUMEN de la Unidad 2
     - Comprender el modelo de costo de memoria secundaria
     - Conocer algoritmos y estructuras de datos basicos que son eficientes en memoria secundaria, 
     - y el analisis de su desempeno.
