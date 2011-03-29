@@ -1266,74 +1266,12 @@ Se tiene que:
 	  - "Cache oblivious"
 	  - Otros... mas practicas, mas dificil a analizar.
 **** CONCEPT QUESTIONS 							 :CQ:
-***** NEXT Camino de accesso a valores
-      :LOGBOOK:
-      - State "NEXT"       from ""           [2011-03-29 Tue 10:51]
-      :END:
-      :SOLUTION:     
-      :END:
-      :PROOF: 
-      - Registro mas =frecuente= si sistema bien hecho
-      - =probable= no bien definido, pero en todo caso un aceso a
-        cualquier nivel mas bajo que Registro resulta tambien en un
-        acceso a todos los niveles mas cercano del CPU, asi que
-        deberia ser =otra respuesta=.
-      :END:
-      Cuando a programa hace un acceso a dos elementos de un arreglo,
-      cual es el camino de accesso a estas valores el mas \{frecuente
-      / probable \}?
-      1. [ ] Registros
-      2. [ ] Caches (1,2 o 3)
-      3. [ ] RAM (principal)
-      4. [ ] Disco Duro
-      5. [ ] otra respuesta
-***** NEXT Nivel a 25ns
-      :LOGBOOK:
-      - State "NEXT"       from ""           [2011-03-29 Tue 10:54]
-      :END:
-      :SOLUTION:     
-      RAM
-      :END:
-      :PROOF: 
-      100 ciclos = 100 * .25ns = 25 ns  => RAM
-      |        | Registro | L1         | L2       | L3       | RAM        | Disco         | Red           | Static   |
-      |--------+----------+------------+----------+----------+------------+---------------+---------------+----------|
-      | tiempo | 1 ciclo  | O(1) ciclo | L1*2,*10 | >L2      | 100 ciclos | $10^6$ ciclos | O(1) Segundas | sin cota |
-      |        |          |            |          |          |            |               |               |          |
-      | tamaño | 100 b    | 10 Kb      | >512 Kb  | >2048 Kb | O(1) Gb    | 200 Gb        | creciendo     | sin cota |
-      :END:
-      Cual de los niveles siguentes parece el mas cerca de un tiempo de acceso de 25 ns, por un computador funcionando a 4 GHz?
-      1. [ ] Registro
-      2. [ ] Cache (L1, L2 o L3)
-      3. [ ] RAM
-      4. [ ] Disco duro
-      5. [ ] otra respuesta
-***** NEXT Nivel a 1ns
-      :LOGBOOK:
-      - State "NEXT"       from ""           [2011-03-29 Tue 10:54]
-      :END:
-      :SOLUTION:     
-      Cache (*L1*, L2 o L3)
-      :END:
-      :PROOF: 
-      O(1) ciclos ~ 1ns
-      |             | Registro | L1         | L2       | L3       | RAM        | Disco         | Red           | Static   |
-      |-------------+----------+------------+----------+----------+------------+---------------+---------------+----------|
-      | tiempo      | 1 ciclo  | O(1) ciclo | L1*2,*10 | >L2      | 100 ciclos | $10^6$ ciclos | O(1) segundas | sin cota |
-      | orden en ns | .25 ns   | 1ns        | 5ns      | 10ns     | 25ns       | 250.000 ns    | 10^9 ns       | sin cota |
-      | tamaño      | 100 b    | 10 Kb      | >512 Kb  | >2048 Kb | O(1) Gb    | 200 Gb        | creciendo     | sin cota |
-      :END:
-      Cual de los niveles siguentes parece el mas cerca de un tiempo de acceso de 1 ns, por un computador funcionando a 4 GHz?
-      1. [ ] Registro
-      2. [ ] Cache (L1, L2 o L3)
-      3. [ ] RAM
-      4. [ ] Disco duro
-      5. [ ] otra respuesta
-***** NEXT Cuantas segundas vale 1ns?
+***** DONE Cuantas segundas vale 1ns?
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-29 Tue 10:49]
       :END:
       :SOLUTION:     
+      | 1 nano  | $10^{-9}$ |
       :END:
       :PROOF: 
       | 1 nano  | $10^{-9}$ |
@@ -1348,30 +1286,30 @@ Se tiene que:
       3. [ ] $10^{-6}$ segundas
       4. [ ] $10^{-3}$ segundas
       5. [ ] otra respuesta
-***** NEXT Cuanto se demora una instruccion?
+***** DONE Camino de accesso a valores
       :LOGBOOK:
-      - State "NEXT"       from ""           [2011-03-29 Tue 10:59]
+      - State "NEXT"       from ""           [2011-03-29 Tue 10:51]
       :END:
       :SOLUTION:     
-      1 ns (.25 para un ciclo, pero algunas isntrucciones usan O(1)
-      ciclos)
       :END:
       :PROOF: 
-      Intel Pentiums and higher, also all modern AMD processors (x86)
-      support the "rdtsc" instruction (you can call this from inline
-      assembly) which returns a 64-bit count of the number of CPU
-      clock cycles since powerup. The clock referred to is the CPU
-      code execution cycle, e.g. *a CPU running at 1 GHz runs through
-      one billion cycles per second*. (...)
-      If your clock is running at 4 GHz then rdtsc measures intervals
-      down to 0.25 ns. http://www.velocityreviews.com/forums/t281979-re-how-many-cpu-cycles-does-an-instruction-take.html
+      - Registro mas =frecuente= si sistema bien hecho
+      - =probable= no bien definido, pero en todo caso un aceso a
+        cualquier nivel mas bajo que Registro resulta tambien en un
+        acceso a todos los niveles mas cercano del CPU, asi que
+        deberia ser =otra respuesta=.
       :END:
-      Un CPU funciona a 4 GHz: cuanto se demora una instruccion? (elija el valor mas cercano).
-      1. [ ] 1 nano segunda
-      2. [ ] 1 micro segunda
-      3. [ ] 1 mili segunda
-      4. [ ] 1 centi segunda
+      Cuando un programa hace un acceso a dos elementos de un arreglo,
+      cual es el camino de accesso a estas valores el mas \{frecuente
+      / probable \}?
+      1. [ ] Registros
+      2. [ ] Caches (1,2 o 3)
+      3. [ ] RAM (principal)
+      4. [ ] Disco Duro
       5. [ ] otra respuesta
+      6. [ ] Cache + RAM + Disco Duro
+      7. [ ] Cache + Disco Duro
+      8. [ ] RAM + Disco Duro
 ***** NEXT Cual es la significacion de GHz?
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-29 Tue 11:01]
@@ -1395,6 +1333,74 @@ Se tiene que:
       2. [ ] $4*10^3$ instrucciones per segunda
       3. [ ] $4*10^6$ instrucciones per segunda
       4. [ ] $4*10^9$ instrucciones per segunda
+      5. [ ] otra respuesta
+***** DONE Nivel a 25ns
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-29 Tue 10:54]
+      :END:
+      :SOLUTION:     
+      RAM
+      :END:
+      :PROOF: 
+      100 ciclos = 100 * .25ns = 25 ns  => RAM
+|        | Registro | L1         | L2       | L3       | RAM        | Disco         | Red           | Static   |
+|--------+----------+------------+----------+----------+------------+---------------+---------------+----------|
+| tiempo | 1 ciclo  | O(1) ciclo | L1*2,*10 | >L2      | 100 ciclos | $10^6$ ciclos | O(1) Segundas | sin cota |
+| tamaño | 100  B   | 10 KB      | >512 KB  | >2048 KB | O(1) GB    | 200 GB        | creciendo     | sin cota |
+      :END:
+      Cual de los niveles siguentes parece el mas cerca de un tiempo
+      de acceso de 25 ns, por un computador funcionando a 4 GHz?
+      1. [ ] Registro
+      2. [ ] Cache (L1, L2 o L3)
+      3. [ ] RAM
+      4. [ ] Disco duro
+      5. [ ] otra respuesta
+***** DONE Nivel a 1ns
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-29 Tue 10:54]
+      :END:
+      :SOLUTION:     
+      Cache (*L1*, L2 o L3)
+      :END:
+      :PROOF: 
+      O(1) ciclos ~ 1ns
+|             | Registro | L1         | L2       | L3       | RAM        | Disco         | Red           | Static   |
+|-------------+----------+------------+----------+----------+------------+---------------+---------------+----------|
+| tiempo      | 1 ciclo  | O(1) ciclo | L1*2,*10 | >L2      | 100 ciclos | $10^6$ ciclos | O(1) segundas | sin cota |
+| orden en ns | .25 ns   | 1ns        | 5ns      | 10ns     | 25ns       | 250.000 ns    | 10^9 ns       | sin cota |
+| tamaño      | 100 b    | 10 Kb      | >512 Kb  | >2048 Kb | O(1) Gb    | 200 Gb        | creciendo     | sin cota |
+      :END:
+      Cual de los niveles siguentes parece el mas cerca de un tiempo
+      de acceso de 1 ns, por un computador funcionando a 4 GHz?
+      1. [ ] Registro
+      2. [ ] Cache (L1, L2 o L3)
+      3. [ ] RAM
+      4. [ ] Disco duro
+      5. [ ] otra respuesta
+***** DONE Cuanto se demora una instruccion?
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-29 Tue 10:59]
+      :END:
+      :SOLUTION:     
+      1 ns (.25 para un ciclo, pero algunas isntrucciones usan O(1)
+      ciclos)
+      :END:
+      :PROOF: 
+      Intel Pentiums and higher, also all modern AMD processors (x86)
+      support the "rdtsc" instruction (you can call this from inline
+      assembly) which returns a 64-bit count of the number of CPU
+      clock cycles since powerup. The clock referred to is the CPU
+      code execution cycle, e.g. *a CPU running at 1 GHz runs through
+      one billion cycles per second*. (...)
+      If your clock is running at 4 GHz then rdtsc measures intervals
+      down to 0.25 ns. http://www.velocityreviews.com/forums/t281979-re-how-many-cpu-cycles-does-an-instruction-take.html
+      :END:
+      Un CPU funciona a 4 GHz: cuanto se demora una instruccion?
+      (elija el valor mas cercano).
+      1. [ ] 1 nano segunda
+      2. [ ] 1 micro segunda
+      3. [ ] 1 mili segunda
+      4. [ ] 1 centi segunda
       5. [ ] otra respuesta
 ***** TODO Cuesto (en plata) de la memoria
 *** Diccionarios en Memoria Externa
@@ -1466,7 +1472,9 @@ Se tiene que:
 	  - Insercion
 	  - Delecion
 **** CONCEPT QUESTIONS 							 :CQ:
-***** NEXT $(2,3)$ arboles
+***** DONE $(2,3)$ arboles
+      :LOGBOOK:
+      :END:
       :SOLUTION:     
       :END:
       :PROOF: 
@@ -1479,7 +1487,9 @@ Se tiene que:
       3. [ ] entre  $\log_3 n$ y  $\log_2 n$
       4. [ ] $\log_2 n +O(1)$
       5. [ ] otra respuesta
-***** NEXT $B$ arboles
+***** DONE $B$ arboles
+      :LOGBOOK:
+      :END:
       :SOLUTION:     
       :END:
       :PROOF: 
