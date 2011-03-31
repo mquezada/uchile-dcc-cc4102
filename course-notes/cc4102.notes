@@ -6,6 +6,21 @@
 #+AUTHOR: J\'er\'emy Barbay
 
 * Examples
+** Example of time planification
+   :PROPERTIES:
+   :COLUMNS:  %80ITEM(TASK)  %5Effort(TIME){:} %5CLOCKSUM
+   :Effort_ALL: 30 45 60 90 2*90 3*90 4*90
+   :END:
+   Use C-c C-x C-c to switch to column mode, and "q" while in a column to quit.
+*** A unit
+**** a topic for 1/2 talk (45mn)
+     :PROPERTIES:
+     :Effort:   45
+     :END:
+**** a topic of 3 talks
+     :PROPERTIES:
+     :Effort:   3*90
+     :END: 
 ** Example of Mathematical formulas seen with C-c C-x C-l 
 *** Basic formulas
     $\log_2 n$
@@ -49,6 +64,8 @@
   :END:
   :PROPERTIES:
   :ID:       8083f75f-15d1-4cf8-a992-8b787d182c26
+  :COLUMNS:  %80ITEM(TASK)  %5Effort(TIME){:} %5CLOCKSUM
+  :Effort_ALL: 10 20 30 45 60 90 2*90 3*90 4*90
   :END:
 ** Presentación y Evaluación (1 charla)
 *** Presentaciones
@@ -333,7 +350,7 @@ Se tiene que:
 *** PREREQUISITOS DE UNIDAD 
 **** Lista de themas en apuntes de CC3001 			    :READING:
     http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
-*** Repaso del proceso de diseño y analisis de un algoritmo.
+*** Repaso 
 **** PREREQUISITOS
 ***** "Bases de la programacion" en apuntes de CC3001		    :READING:
       - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
@@ -460,108 +477,284 @@ Se tiene que:
       2. [ ] $2h$
       3. [ ] $2^h$
       4. [ ] $2^h-1$
-      5. [ ] otra respuesta
-
-*** Minimo Maximo de un  arreglo
+      5. [ ] otra respuest
+*** Metodologia de experimentacion
 **** PREREQUISITOS
-***** Cotas Inferiores en apuntes de CC3001			    :READING:
-   - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#1
-**** Minimo (resp. maximo) de un arreglo
-   - Cota superior
-   - Cota inferior
-**** Calcular el Minimo y el Maximo de un Arreglo en una sola computacion
-   - Cota superior?
-     - cota superior para max + cota superior para min
-   - cota inferior?
-     - cota inferior para min + cota superior para max?
-     - min(cota inferior para min , cota superior para max?)
+     - de las apuntes de CC3001:
+       - Nociones básicas de programación http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Programacion/
+	 (sin estudiarlas)
+     - de las apuntes de CC4102:
+       - 1.4 Metodologia de experimentacion
+     - en la red (y en ingles)
+       - Research Design: Qualitative, Quantitative, and Mixed Methods Approaches 
+	 John W. Creswell
+	 http://www.amazon.com/Research-Design-Qualitative-Quantitative-Approaches/
+**** Al inicio, Ciencias de la computacion fue solamente experimentacion.
+***** Turing y el codigo Enigma
+      - el importante estaba de solucionar la instancia del dia
+	(romper la llave del dia, basado en los messages de
+	meteo, para decryptar los messages mas importantes)
+	 - no mucho focus en el problema, aunque Turing si escribio
+	   la definicion de la Maquina universal.
+***** Experimentacion basica 
+      - correga hasta que fonciona (o parece foncionar)
+	- correga hasta que entrega resultados correctos (o que parecen correctos)
+	- mejora hasta que fonciona en tiempo razonable (en las instancias que tenemos)
+***** Problemas:
+      - Demasiado "Ah Hoc"
+       - falta de rigor, de reproducibilidad
+       - desde el inicio, no "test bed" estandard, cada uno tiene sus tests.
+       - mas tarde, no estandard de maquinas 
+***** Respuestas: Knuth et al. 
+      - complejidad asymptotica: independancia de la maquina
+      - complejidad en el peor caso y promedio: independancia del "test bed"
+      - todavia es necesario de completar las estudias teoricas
+	con programacion y experimentacion: el modelo teorico es
+	solamente una simplificacion.
+***** Theoreticos desarollaron un lado "mathematico" de ciencias
+      de la computacion, con resultados importantes tal que
+      - NP-hardness
+     - "Polynomial Hierarchy" (http://en.wikipedia.org/wiki/Polynomial\_hierarchy)
+***** Theoria y Practica se completen, pero hay conflictos en ambos lados:
+      - demasiado theorias sin implementaciones (resultado del
+	ambiante social tambien).
+    - todavia hay estudios experimentales "no reproducibles"
+**** Sobre la "buena" manera de experimentar
+     ("A Theoretician's Guide to the Experimental Analysis of Algorithms", David S. Johnson, 2001)
+***** Fija una hipothesis *antes* de programar.
+      - aunque el objetivo sea de programar un software
+	completo, solamente es necesario de implementar de
+	manera eficiente la partes relevantes. El resto se puede
+	implementar de manera "brutal". (E.g. "Intersection Problem")
+***** "Incremental Programming"
+      - busca en la red "Agile Programming", "Software Engineering".
+	 - una experimentacion es tambien un proyecto de software, y
+	   las tecnicas de ingeniera de software se aplican tambien.
+	 - Construe un simulador en etapas, donde a cada etapa
+	   fonctiona el simulador entero.	   
+***** "Modular Programming"
+      - Experimentacion es Investigacion, nunca se sabe por
+	seguro que se va a medir despues.
+	 - Hay que programar de manera modular por salgar tiempo en
+	   el futuro.
 
-**** Cota superior para el problema de minmax
+**** Sobre la "buena" manera de presentar sus resultados experimentales.
+     ("Presenting Data from Experiments in Algorithmics", Peter Sanders, 2002)
+***** El proceso:
+      * Experimentacion tiene un ciclo:
+	  1. "Experimental Design" (inclue la eleccion de la hypothesis)
+	  2. "Description of Measurement"
+	  3. "Interpretation"
+	  4. vuelve al paso 1.
+	* La presentacion sigue la misma estructura, pero solamente
+	  exceptionalemente describe mas que una iteracion (la
+	  mejor, no necesaramiente la ultima) del ciclo.
 
-     * Calcular el minimo con el algoritmo previo, y el maximo
-       con un algoritmo simetrico, da una complejidad de $2n-2$
-       comparaciones, que es demasiado.
-     * El algoritmo siguente calcula el max y el min en
-       $\frac{3n}{2}-2$ comparaciones:
-      1. Dividir $A$ en $\lfloor n/2 \rfloor$ pares (y
-	 eventualemente un elemento mas, $x$).
-      2. Comparar los dos elementos de cada par.
-      3. Ponga los elementos superiores en el grupo $S$, y los
-	 elementos inferiores en el grupo $I$.
-      4. Calcula el minima $m$ del grupo $I$ con el algorimo de la
-	 pregunta previa, que performa $\lfloor n/2 \rfloor-1$ comparaciones
-      5. Calcula el maxima $M$ del grupo $I$ con un algoritmo
-	 simetrico, con la misma complejidad.
-      6. Si $n$ es par,
-       	+ $m$ y $M$ son respectivamente el minimo y el maximo de $A$.
-      7. Sino, si $x<m$, 
-	 + $x$ y $M$ son respectivamente el minimo y el maximo de $A$.
-      8. Sino, si $x>M$, 
-	 + $m$ y $x$ son respectivamente el minimo y el maximo de $A$.
-      9. Sino
-	 + $m$ y $M$ son respectivamente el minimo y el maximo de $A$.
-     * La complejidad total del algoritmo es
-      -  $n/2+2(n/2-1)=3n/2-2\in 3n/2 + O(1)$ si $n$ es par
-      -  $(n-1)/2 + 2(n-1)/2 +2 = 3n/2 + 1/2\in 3n/2 + O(1)$ si
-	 $n$ es impar.
-      -  en la clase $3n/2 + O(1)$ en ambos casos.
+***** Eliges que quieres comunicar.
+      - el mismo dato se presenta diferamente en funcion de la
+	emfasis del reporte.
+       - pero, siempre la descripcion debe permitir la
+	 *reproducibilidad* de la experimentacion.
 
-**** Cota inferior para el problema de minmax
-     * Sean las variables siguentes:
-       - $O$ los $o$ elementos todavia no comparados;
-       - $G$ los $g$ elementos que ``ganaron'' todas sus comparaciones hasta ahora;
-       - $P$ los $p$ elementos que ``perdieron'' todas sus comparaciones hasta ahora;
-       - $E$ las $e$ valores eliminadas (que perdieron al menos una comparacion, y ganaron al menos una comparacion);
-     -  $(o,g,p,e)$ describe el estado de cualquier algoritmo:
-       -  siempre $o+g+p+e=n$;
-       -  al inicio, $g=p=e=0$ y $o=n$;
-       -  al final, $o=0$, $g=p=1$, y $e=n-2$.
-     -  Despues una comparacion $a?b$ en cualquier algoritmo del
-       	modelo de comparacion, $(o,g,p,e)$ cambia en funcion del
-       	resultado de la comparacion de la manera siguente:
-       	$$
-       	\begin{array}{c|c|c|c|c}
-       	& a\in O        & a\in G               & a\in P               & a\in E      \\ 
-       	\hline %--------------------------------------
-       	b\in O & o-2,g+1,p+1,e & o-1,p,e+1            & o-1,g,p,e+1          & o-1,g+1,p,e \\
-       	&               & o-1,g,p+1,e          & o-1,g+1,p,e          & o-1,g,p+1,e \\
-       	\hline %--------------------------------------
-       	b\in G &               & o,g-1,p,e+1          & o,g,p,e              & o,g,p,e     \\ 
-       	&               &                      & o,g-1,p-1,e+2        & o,g-1,p,e+1 \\ 
-       	\hline %--------------------------------------
-       	b\in P &               &                      & o,g,p-1,e+1          & o,g,p,e     \\ 
-       	&               &                      &                      & o,g,p-1,e+1 \\ 
-       	\hline %--------------------------------------
-       	b\in E &               &                      &                      & o,g,p,e
-       	\end{array}
-       	$$
-     -  En algunas configuraciones, el cambio del vector estado depende del resultado de la comparacion: un adversario puede
-       	maximizar la complejidad del algoritmo eligando el resultado de cada comparacion. El arreglo siguente contiene en graso las
-       	opciones que maximizan la complejidad del algoritmo:
-       	$$
-       	\begin{array}{c|c|c|c|c}
-       	& a\in O        & a\in G               & a\in P               & a\in E           \\ 
-       	\hline %--------------------------------------
-       	b\in O & o-2,g+1,p+1,e & o-1,p,e+1            & o-1,g,p,e+1          & o-1,g+1,p,e      \\
-       	&               & \mathbf{o-1,g,p+1,e} & \mathbf{o-1,g+1,p,e} & o-1,g,p+1,e      \\
-       	\hline %--------------------------------------
-       	b\in G &               & o,g-1,p,e+1          & \mathbf{o,g,p,e}     & \mathbf{o,g,p,e} \\ 
-       	&               &                      & o,g-1,p-1,e+2        & o,g-1,p,e+1      \\ 
-       	\hline %--------------------------------------
-       	b\in P &               &                      & o,g,p-1,e+1          & \mathbf{o,g,p,e} \\ 
-       	&               &                      &                      & o,g,p-1,e+1      \\ 
-       	\hline %--------------------------------------
-       	b\in E &               &                      &                      & o,g,p,e
-       	\end{array}
-       	$$
-     -  Con estas opciones, hay
-       -  $\lceil n/2\rceil$ transiciones de $O$ a $G\cup P$, y
-       -  $n-2$ transiciones de $G\cup P$ a $E$.
-     -  Eso resulta en una complejidad en el peor caso de $\lceil
-       	3n/2 \rceil-2 \in 3n/2 +O(1)$ comparaciones.
+***** Tables vs 2d vs 3d plot
+      * tables 
+	  - son faciles, y buenas para menos de 20 valores
+	  - son sobre-usadas
+	* Grafes 3d
+	  - mas modernos, impresionantes, pero
+	  - en impresion no son tan informativos
+	  - tiene un futuro con interactive media donde el usuario
+	    puede cambiar el punto de vista, leer las valores
+	    precisas, activar o no las surfacas.
+	* Grafes 2d
+	  - en general preferables, pero de manera inteligente!
+	  - cosas a considerar:
+	    - log scale en x y/o y
+	    - rango de valores en x y/o y.
+	    - regla de "banking to 45 deg":
+	      - "The weighted average of the slants of the line
+		segments in the figure should be about 45"
+	      - se puede aproximar on un grafo en "paysage"
+		siguiendo el ratio de oro.
+	    - factor out la informacion ya conocida 
+	* Maximiza el Data-Ink ratio.
+
+	  ``Toward an Experimental method for algorithm simulation,'' INFORMS Journal on 
+	  Computing, Vol 8, No 1  Winter 1995.
+
+	  ``Analyzing Algorithms by simulation:  Variance Reduction Techniques and 
+	  Simulation Speedups,'' ACM Computing Surveys, June 1992.
+
+	  3.  For a good book on introductory statistics with computer science
+	      examples, I recommend 
+    - Cohen: Empirical Methods for Artificial Intelligence
+    - Thomas Bartz-Beielstein et al, on Empirical Methods for the
+      Analysis of OPtimization Algorithms 
+    - Catherine McGeoch, A Guide to Experimental Algorithmics, (January 2011)
 
 
-**** CONCEPT QUESTIONS [6/8] 						 :CQ:
+**** Sobre la "buena" manera de describir una investigacion en general:
+     http://www.amazon.com/Making-Sense-Students-Engineering-Technical/dp/019542591X
+     Making sense; a student's guide to research and writing;
+     engineering and the technical sciences, 2d ed.  Northey, Margot
+     and Judi Jewinski.  Oxford U. Press 2007 252 pages $32.50
+     Paperback
+**** Otras referencias:
+     - Research Design: Qualitative, Quantitative, and Mixed Methods Approaches 
+       John W. Creswell
+       http://www.amazon.com/Research-Design-Qualitative-Quantitative-Approaches/
+*** Complejidad Computacional Deterministica: cotas inferiores
+    adversario, teoria de la informacion, reduccion
+**** PREREQUISITOS
+     - de las apuntes de CC3001:
+       - Ordenacion / Cotas inferiores http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#1
+       - Ordenacion / Merge sort http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#5
+     - de las apuntes de CC4102:
+       - min max
+**** Minimo Maximo de un  arreglo
+***** PREREQUISITOS
+****** Cotas Inferiores en apuntes de CC3001			    :READING:
+    - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#1
+***** Minimo (resp. maximo) de un arreglo
+    - Cota superior
+    - Cota inferior
+***** Calcular el Minimo y el Maximo de un Arreglo en una sola computacion
+    - Cota superior?
+      - cota superior para max + cota superior para min
+    - cota inferior?
+      - cota inferior para min + cota superior para max?
+      - min(cota inferior para min , cota superior para max?)
+
+***** Cota superior para el problema de minmax
+
+      * Calcular el minimo con el algoritmo previo, y el maximo
+       	con un algoritmo simetrico, da una complejidad de $2n-2$
+       	comparaciones, que es demasiado.
+      * El algoritmo siguente calcula el max y el min en
+       	$\frac{3n}{2}-2$ comparaciones:
+       1. Dividir $A$ en $\lfloor n/2 \rfloor$ pares (y
+	  eventualemente un elemento mas, $x$).
+       2. Comparar los dos elementos de cada par.
+       3. Ponga los elementos superiores en el grupo $S$, y los
+	  elementos inferiores en el grupo $I$.
+       4. Calcula el minima $m$ del grupo $I$ con el algorimo de la
+	  pregunta previa, que performa $\lfloor n/2 \rfloor-1$ comparaciones
+       5. Calcula el maxima $M$ del grupo $I$ con un algoritmo
+	  simetrico, con la misma complejidad.
+       6. Si $n$ es par,
+       	 + $m$ y $M$ son respectivamente el minimo y el maximo de $A$.
+       7. Sino, si $x<m$, 
+	  + $x$ y $M$ son respectivamente el minimo y el maximo de $A$.
+       8. Sino, si $x>M$, 
+	  + $m$ y $x$ son respectivamente el minimo y el maximo de $A$.
+       9. Sino
+	  + $m$ y $M$ son respectivamente el minimo y el maximo de $A$.
+      * La complejidad total del algoritmo es
+       -  $n/2+2(n/2-1)=3n/2-2\in 3n/2 + O(1)$ si $n$ es par
+       -  $(n-1)/2 + 2(n-1)/2 +2 = 3n/2 + 1/2\in 3n/2 + O(1)$ si
+	  $n$ es impar.
+       -  en la clase $3n/2 + O(1)$ en ambos casos.
+
+***** Cota inferior para el problema de minmax
+      * Sean las variables siguentes:
+       	- $O$ los $o$ elementos todavia no comparados;
+       	- $G$ los $g$ elementos que ``ganaron'' todas sus comparaciones hasta ahora;
+       	- $P$ los $p$ elementos que ``perdieron'' todas sus comparaciones hasta ahora;
+       	- $E$ las $e$ valores eliminadas (que perdieron al menos una comparacion, y ganaron al menos una comparacion);
+      -  $(o,g,p,e)$ describe el estado de cualquier algoritmo:
+       	-  siempre $o+g+p+e=n$;
+       	-  al inicio, $g=p=e=0$ y $o=n$;
+       	-  al final, $o=0$, $g=p=1$, y $e=n-2$.
+      -  Despues una comparacion $a?b$ en cualquier algoritmo del
+       	 modelo de comparacion, $(o,g,p,e)$ cambia en funcion del
+       	 resultado de la comparacion de la manera siguente:
+       	 $$
+       	 \begin{array}{c|c|c|c|c}
+       	 & a\in O        & a\in G               & a\in P               & a\in E      \\ 
+       	 \hline %--------------------------------------
+       	 b\in O & o-2,g+1,p+1,e & o-1,p,e+1            & o-1,g,p,e+1          & o-1,g+1,p,e \\
+       	 &               & o-1,g,p+1,e          & o-1,g+1,p,e          & o-1,g,p+1,e \\
+       	 \hline %--------------------------------------
+       	 b\in G &               & o,g-1,p,e+1          & o,g,p,e              & o,g,p,e     \\ 
+       	 &               &                      & o,g-1,p-1,e+2        & o,g-1,p,e+1 \\ 
+       	 \hline %--------------------------------------
+       	 b\in P &               &                      & o,g,p-1,e+1          & o,g,p,e     \\ 
+       	 &               &                      &                      & o,g,p-1,e+1 \\ 
+       	 \hline %--------------------------------------
+       	 b\in E &               &                      &                      & o,g,p,e
+       	 \end{array}
+       	 $$
+      -  En algunas configuraciones, el cambio del vector estado depende del resultado de la comparacion: un adversario puede
+       	 maximizar la complejidad del algoritmo eligando el resultado de cada comparacion. El arreglo siguente contiene en graso las
+       	 opciones que maximizan la complejidad del algoritmo:
+       	 $$
+       	 \begin{array}{c|c|c|c|c}
+       	 & a\in O        & a\in G               & a\in P               & a\in E           \\ 
+       	 \hline %--------------------------------------
+       	 b\in O & o-2,g+1,p+1,e & o-1,p,e+1            & o-1,g,p,e+1          & o-1,g+1,p,e      \\
+       	 &               & \mathbf{o-1,g,p+1,e} & \mathbf{o-1,g+1,p,e} & o-1,g,p+1,e      \\
+       	 \hline %--------------------------------------
+       	 b\in G &               & o,g-1,p,e+1          & \mathbf{o,g,p,e}     & \mathbf{o,g,p,e} \\ 
+       	 &               &                      & o,g-1,p-1,e+2        & o,g-1,p,e+1      \\ 
+       	 \hline %--------------------------------------
+       	 b\in P &               &                      & o,g,p-1,e+1          & \mathbf{o,g,p,e} \\ 
+       	 &               &                      &                      & o,g,p-1,e+1      \\ 
+       	 \hline %--------------------------------------
+       	 b\in E &               &                      &                      & o,g,p,e
+       	 \end{array}
+       	 $$
+      -  Con estas opciones, hay
+       	-  $\lceil n/2\rceil$ transiciones de $O$ a $G\cup P$, y
+       	-  $n-2$ transiciones de $G\cup P$ a $E$.
+      -  Eso resulta en una complejidad en el peor caso de $\lceil
+       	 3n/2 \rceil-2 \in 3n/2 +O(1)$ comparaciones.
+**** Busqueda Ordenada (en el modelo de comparaciones)
+       	1. Cota superior: $2\lg n$ vs $1+\lg n$
+       	2. Cota inferior en el peor caso: Strategia de Adversario
+	   cota inferior en el peor caso de  $1+\lg n$
+       	3. Cota inferior en el caso promedio uniforme
+	   - Teoria de la Informacion
+	   - = Arbol de Decision
+	   - cota inferior de $\lg(2n+1)$, i.e. de $1+\lceil\lg(n+1/2)\rceil$
+       	4. La complejidad del problema
+	   - en el peor caso es $\Theta(\lg n)$
+	   - en el caso promedio es $\Theta(\lg n)$
+       	5. Pregunta: en este problema las cotas inferiores en el peor
+	   caso y en el mejor caso son del mismo orden. Siempre es verdad?
+**** Busqueda desordenada
+       1. Complejidad en el peor caso es $\Theta(n)$
+       2. Complejidad en el caso promedio?
+	  - cota superior
+	    - Move To Front
+	    - ?BONUS? Transpose
+	  - cota inferior
+	    - algoritmo offline, lemma del ave
+	  - A VER EN CASA O TUTORIAL: Huffman?
+**** Ordenamiento (en el modelo de comparaciones)
+      - cota superior $O(n\lg n)$
+      - cota inferior en el peor caso
+	- cual tecnica?
+	  - lema del ave?
+	  - Strategia de Adversario?
+	  - Arbol Binario de Decision
+	- Resultado:
+	  - $\Omega(n \lg n)$
+      - cota inferior en el caso promedio
+	- $\Omega(n \lg n)$
+**** Lista de tecnicas para mostrar cotas inferiores
+    1. lema del ave
+    2. Strategia de Adversario
+    3. Arbol Binario de Decision
+    4. Lemma del Minimax (para complejidad en promedio y complejidad
+       de algoritmos aleatroizados)
+**** BONUS: complejidad en promedio y aleatorizada
+     - La relacion entre 
+       - complejidad en promedio de un algoritmo deterministico
+       - complejidad en el peor caso de un algoritmo aleatorizado
+         (promedio sobre su aleatoria)
+
+
+**** CONCEPT QUESTIONS [6/8]						 :CQ:
 ***** DONE Cota superior de (la complejidad de) Max ord
       :LOGBOOK:
       - State "DONE"       from "NEXT"       [2011-03-15 Tue 12:20]
@@ -663,62 +856,6 @@ Se tiene que:
       3. [ ] $(n-1)+(n-2)$
       4. [ ] $2(n-1)$
       5. [ ] otra respuesta
-      
-
-
-*** Tecnicas para demostrar cotas inferiores: 
-    adversario, teoria de la informacion, reduccion
-**** PREREQUISITOS
-     - de las apuntes de CC3001:
-       - Ordenacion / Cotas inferiores http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#1
-       - Ordenacion / Merge sort http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#5
-     - de las apuntes de CC4102:
-       - min max
-**** Busqueda Ordenada (en el modelo de comparaciones)
-       	1. Cota superior: $2\lg n$ vs $1+\lg n$
-       	2. Cota inferior en el peor caso: Strategia de Adversario
-	   cota inferior en el peor caso de  $1+\lg n$
-       	3. Cota inferior en el caso promedio uniforme
-	   - Teoria de la Informacion
-	   - = Arbol de Decision
-	   - cota inferior de $\lg(2n+1)$, i.e. de $1+\lceil\lg(n+1/2)\rceil$
-       	4. La complejidad del problema
-	   - en el peor caso es $\Theta(\lg n)$
-	   - en el caso promedio es $\Theta(\lg n)$
-       	5. Pregunta: en este problema las cotas inferiores en el peor
-	   caso y en el mejor caso son del mismo orden. Siempre es verdad?
-**** Busqueda desordenada
-       1. Complejidad en el peor caso es $\Theta(n)$
-       2. Complejidad en el caso promedio?
-	  - cota superior
-	    - Move To Front
-	    - ?BONUS? Transpose
-	  - cota inferior
-	    - algoritmo offline, lemma del ave
-	  - A VER EN CASA O TUTORIAL: Huffman?
-**** Ordenamiento (en el modelo de comparaciones)
-      - cota superior $O(n\lg n)$
-      - cota inferior en el peor caso
-	- cual tecnica?
-	  - lema del ave?
-	  - Strategia de Adversario?
-	  - Arbol Binario de Decision
-	- Resultado:
-	  - $\Omega(n \lg n)$
-      - cota inferior en el caso promedio
-	- $\Omega(n \lg n)$
-**** Lista de tecnicas para mostrar cotas inferiores
-    1. lema del ave
-    2. Strategia de Adversario
-    3. Arbol Binario de Decision
-    4. Lemma del Minimax (para complejidad en promedio y complejidad
-       de algoritmos aleatroizados)
-**** BONUS: complejidad en promedio y aleatorizada
-     - La relacion entre 
-       - complejidad en promedio de un algoritmo deterministico
-       - complejidad en el peor caso de un algoritmo aleatorizado
-         (promedio sobre su aleatoria)
-**** CONCEPT QUESTIONS [13/19] 						 :CQ:
 ***** DONE Juego de las preguntas, $n=4$
       :LOGBOOK:
       - State "DONE"       from "NEXT"       [2011-03-17 Thu 13:32]
@@ -1051,131 +1188,10 @@ Se tiene que:
 	3. [ ] Arbol Binario de Decision
 	4. [ ] lemma del minimax
 	5. [ ] ningunas o mas de dos.
-*** Metodologia de experimentacion
-**** PREREQUISITOS
-     - de las apuntes de CC3001:
-       - Nociones básicas de programación http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Programacion/
-	 (sin estudiarlas)
-     - de las apuntes de CC4102:
-       - 1.4 Metodologia de experimentacion
-     - en la red (y en ingles)
-       - Research Design: Qualitative, Quantitative, and Mixed Methods Approaches 
-	 John W. Creswell
-	 http://www.amazon.com/Research-Design-Qualitative-Quantitative-Approaches/
-**** Al inicio, Ciencias de la computacion fue solamente experimentacion.
-***** Turing y el codigo Enigma
-      - el importante estaba de solucionar la instancia del dia
-	(romper la llave del dia, basado en los messages de
-	meteo, para decryptar los messages mas importantes)
-	 - no mucho focus en el problema, aunque Turing si escribio
-	   la definicion de la Maquina universal.
-***** Experimentacion basica 
-      - correga hasta que fonciona (o parece foncionar)
-	- correga hasta que entrega resultados correctos (o que parecen correctos)
-	- mejora hasta que fonciona en tiempo razonable (en las instancias que tenemos)
-***** Problemas:
-      - Demasiado "Ah Hoc"
-       - falta de rigor, de reproducibilidad
-       - desde el inicio, no "test bed" estandard, cada uno tiene sus tests.
-       - mas tarde, no estandard de maquinas 
-***** Respuestas: Knuth et al. 
-      - complejidad asymptotica: independancia de la maquina
-      - complejidad en el peor caso y promedio: independancia del "test bed"
-      - todavia es necesario de completar las estudias teoricas
-	con programacion y experimentacion: el modelo teorico es
-	solamente una simplificacion.
-***** Theoreticos desarollaron un lado "mathematico" de ciencias
-      de la computacion, con resultados importantes tal que
-      - NP-hardness
-     - "Polynomial Hierarchy" (http://en.wikipedia.org/wiki/Polynomial\_hierarchy)
-***** Theoria y Practica se completen, pero hay conflictos en ambos lados:
-      - demasiado theorias sin implementaciones (resultado del
-	ambiante social tambien).
-    - todavia hay estudios experimentales "no reproducibles"
-**** Sobre la "buena" manera de experimentar
-     ("A Theoretician's Guide to the Experimental Analysis of Algorithms", David S. Johnson, 2001)
-***** Fija una hipothesis *antes* de programar.
-      - aunque el objetivo sea de programar un software
-	completo, solamente es necesario de implementar de
-	manera eficiente la partes relevantes. El resto se puede
-	implementar de manera "brutal". (E.g. "Intersection Problem")
-***** "Incremental Programming"
-      - busca en la red "Agile Programming", "Software Engineering".
-	 - una experimentacion es tambien un proyecto de software, y
-	   las tecnicas de ingeniera de software se aplican tambien.
-	 - Construe un simulador en etapas, donde a cada etapa
-	   fonctiona el simulador entero.	   
-***** "Modular Programming"
-      - Experimentacion es Investigacion, nunca se sabe por
-	seguro que se va a medir despues.
-	 - Hay que programar de manera modular por salgar tiempo en
-	   el futuro.
-
-**** Sobre la "buena" manera de presentar sus resultados experimentales.
-     ("Presenting Data from Experiments in Algorithmics", Peter Sanders, 2002)
-***** El proceso:
-      * Experimentacion tiene un ciclo:
-	  1. "Experimental Design" (inclue la eleccion de la hypothesis)
-	  2. "Description of Measurement"
-	  3. "Interpretation"
-	  4. vuelve al paso 1.
-	* La presentacion sigue la misma estructura, pero solamente
-	  exceptionalemente describe mas que una iteracion (la
-	  mejor, no necesaramiente la ultima) del ciclo.
-
-***** Eliges que quieres comunicar.
-      - el mismo dato se presenta diferamente en funcion de la
-	emfasis del reporte.
-       - pero, siempre la descripcion debe permitir la
-	 *reproducibilidad* de la experimentacion.
-
-***** Tables vs 2d vs 3d plot
-      * tables 
-	  - son faciles, y buenas para menos de 20 valores
-	  - son sobre-usadas
-	* Grafes 3d
-	  - mas modernos, impresionantes, pero
-	  - en impresion no son tan informativos
-	  - tiene un futuro con interactive media donde el usuario
-	    puede cambiar el punto de vista, leer las valores
-	    precisas, activar o no las surfacas.
-	* Grafes 2d
-	  - en general preferables, pero de manera inteligente!
-	  - cosas a considerar:
-	    - log scale en x y/o y
-	    - rango de valores en x y/o y.
-	    - regla de "banking to 45 deg":
-	      - "The weighted average of the slants of the line
-		segments in the figure should be about 45"
-	      - se puede aproximar on un grafo en "paysage"
-		siguiendo el ratio de oro.
-	    - factor out la informacion ya conocida 
-	* Maximiza el Data-Ink ratio.
-
-	  ``Toward an Experimental method for algorithm simulation,'' INFORMS Journal on 
-	  Computing, Vol 8, No 1  Winter 1995.
-
-	  ``Analyzing Algorithms by simulation:  Variance Reduction Techniques and 
-	  Simulation Speedups,'' ACM Computing Surveys, June 1992.
-
-	  3.  For a good book on introductory statistics with computer science
-	      examples, I recommend 
-    - Cohen: Empirical Methods for Artificial Intelligence
-    - Thomas Bartz-Beielstein et al, on Empirical Methods for the
-      Analysis of OPtimization Algorithms 
-    - Catherine McGeoch, A Guide to Experimental Algorithmics, (January 2011)
-
-
-**** Sobre la "buena" manera de describir una investigacion en general:
-     http://www.amazon.com/Making-Sense-Students-Engineering-Technical/dp/019542591X
-     Making sense; a student's guide to research and writing;
-     engineering and the technical sciences, 2d ed.  Northey, Margot
-     and Judi Jewinski.  Oxford U. Press 2007 252 pages $32.50
-     Paperback
-**** Otras referencias:
-     - Research Design: Qualitative, Quantitative, and Mixed Methods Approaches 
-       John W. Creswell
-       http://www.amazon.com/Research-Design-Qualitative-Quantitative-Approaches/
+*** TODO Complejidad Computacional en Promedio: cotas inferiores
+    :LOGBOOK:
+    - State "TODO"       from ""           [2011-03-31 Thu 11:37]
+    :END:
 *** Recurrencias y Introduccion a la programacion dinamica 
 **** PREREQUISITOS
      - de las apuntes de CC3001:
