@@ -1,11 +1,9 @@
-#+TAGS: CQ(C) READING(R) TALK(T)
 #+DRAWERS: PROPERTIES LOGBOOK CLOCK PROOF SOLUTION CONTEXT
-#+LATEX_HEADER:  \usepackage{fullpage}
-#+LATEX_HEADER: \usepackage[spanish]{babel}
+#+TAGS: CQ(C) READING(R) TALK(T)
+#+LATEX_HEADER:  \usepackage{fullpage} \usepackage[spanish]{babel}
 #+OPTIONS: LaTeX:dvipng H:5 num:t
 #+TITLE: CC4102/CC40A/CC53A - Dise\~no y An\'alisis de Algoritmos
 #+AUTHOR: J\'er\'emy Barbay
-
 
 * Examples
 ** Example of Mathematical formulas seen with C-c C-x C-l 
