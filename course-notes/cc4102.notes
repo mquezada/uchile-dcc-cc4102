@@ -1,21 +1,30 @@
 #+TAGS: CQ(C) READING(R) TALK(T)
-#+DRAWERS: PROPERTIES LOGBOOK CLOCK PROOF SOLUTION
+#+DRAWERS: PROPERTIES LOGBOOK CLOCK PROOF SOLUTION CONTEXT
 #+LATEX_HEADER:  \usepackage{fullpage}
+#+LATEX_HEADER: \usepackage[spanish]{babel}
+#+OPTIONS: LaTeX:dvipng H:5 num:t
 #+TITLE: CC4102/CC40A/CC53A - Dise\~no y An\'alisis de Algoritmos
 #+AUTHOR: J\'er\'emy Barbay
 
-# Those options seem to cause problem when using C-c C-x C-l to 
-# preview LaTeX fragments (org-preview-latex-fragment) in class:
-# Disabled untill I see why  -- Jeremy
-  #+OPTIONS: LaTeX:dvipng H:5 num:t
-  #+LATEX_HEADER: \usepackage[spanish]{babel}
 
-* Example of Structure of Concept Question subsection 				 
-**** CONCEPT QUESTIONS 							 :CQ:
+* Examples
+** Example of Mathematical formulas seen with C-c C-x C-l 
+*** Basic formulas
+    $\log_2 n$
+    $\frac{n}{\lg n}$
+**** NEXT Find a command to put in latex header to make latex math larger
+*** Formulas in array (note the misalignments :( )
+    | $n$                   | $n^2$    | $\lfloor n/2 \rfloor$ |
+    | $\lfloor n/2 \rfloor$ | $n\lg n$ | $n$                   |
+
+** Example of Structure of Concept Question subsection 				 
+**** CONCEPT QUESTIONS [0/0]						 :CQ:
 ***** 
       :SOLUTION:     
       :END:
       :PROOF: 
+      :END:
+      :CONTEXT:
       :END:
       
       1. [ ] 
@@ -1265,7 +1274,7 @@ Se tiene que:
 	  - Jerarquia con k niveles, de paginas de tamanos $B_1,...,B_k$
 	  - "Cache oblivious"
 	  - Otros... mas practicas, mas dificil a analizar.
-**** CONCEPT QUESTIONS 							 :CQ:
+**** CONCEPT QUESTIONS [6/7] 						 :CQ:
 ***** DONE Cuantas segundas vale 1ns?
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-29 Tue 10:49]
@@ -1310,7 +1319,7 @@ Se tiene que:
       6. [ ] Cache + RAM + Disco Duro
       7. [ ] Cache + Disco Duro
       8. [ ] RAM + Disco Duro
-***** NEXT Cual es la significacion de GHz?
+***** CANC Cual es la significacion de GHz?			       :CANC:
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-29 Tue 11:01]
       :END:
@@ -1471,28 +1480,67 @@ Se tiene que:
 	    del nivel considerado
 	  - Insercion
 	  - Delecion
-**** CONCEPT QUESTIONS 							 :CQ:
+**** CONCEPT QUESTIONS [3/16] 						 :CQ:
+***** [#A] Cola de Prioridad: operaciones
+      :SOLUTION:     
+      Todas se pueden implementar facilamente en un dicionario, pero
+      findMind() y extractMin() no son tradicionalemente consideradas
+      para un diccionario, mas para una cola de prioridad.
+      :END:
+      :PROOF: 
+      :END:
+      Cuales (no) son operaciones de un diccionario?
+      1. [ ] insert(key,item)
+      2. [ ] search(key)
+      3. [ ] delete(key)
+      4. [ ] findNext(key)
+      5. [ ] findPrevious(key)
+      6. [ ] findMind()
+      7. [ ] extractMin()
 ***** DONE $(2,3)$ arboles
       :LOGBOOK:
       :END:
       :SOLUTION:     
+      \{la altura, el tiempo de busqueda, el tiempo de insercion, el
+      tiempo de delecion\} son en un orden entre $\log_3 n$ y $\log_2
+      n$ (ignorando los problemas de constantes).
       :END:
       :PROOF: 
+      un arbol binario tiene una altura de $\log_2 n$ y un arbol
+      ternario tiene una altura de $\log_3 n$. Un arbol $(2,3)$ tiene
+      una altura entre los dos.
       :END:
-      Cual es \{la altura, el tiempo de busqueda, el tiempo de
-      insercion, el tiempo de delecion\} de un $(2,3)$ arbol con
-      $n=\{8,9,256\}$ valores?
+      Cual es el orden de \{la altura, el tiempo de busqueda, el
+      tiempo de insercion, el tiempo de delecion\} de un $(2,3)$ arbol
+      con $n$ valores?
       1. [ ] menos que $\log_3 n +O(1)$
       2. [ ] $\log_3 n +O(1)$
       3. [ ] entre  $\log_3 n$ y  $\log_2 n$
       4. [ ] $\log_2 n +O(1)$
       5. [ ] otra respuesta
-***** DONE $B$ arboles
+***** CANC $(2,3)$ arboles con $n\in\{8,9,256\}$ elementos 	       :CANC:
       :LOGBOOK:
       :END:
       :SOLUTION:     
+      \{la altura, el tiempo de busqueda, el tiempo de insercion, el
+      tiempo de delecion\} son en 
       :END:
       :PROOF: 
+      :END:
+      Cual es \{la altura, el tiempo de busqueda, el tiempo de
+      insercion, el tiempo de delecion\} de un $(2,3)$ arbol con
+      $n\in\{8,9,256\}$ valores?
+      1. [ ] menos que $\log_3 n +O(1)$
+      2. [ ] $\log_3 n +O(1)$
+      3. [ ] entre  $\log_3 n$ y  $\log_2 n$
+      4. [ ] $\log_2 n +O(1)$
+      5. [ ] otra respuesta
+***** DONE $B$ arboles vs $(2,3)$ arboles
+      :LOGBOOK:
+      :END:
+      :SOLUTION:     
+      Menos que $\log_3 n +O(1)$, por $B>3$, que es verdad en todas
+      aplicaciones.
       :END:
       Cual es \{la altura, el tiempo de busqueda, el tiempo de
       insercion, el tiempo de delecion\} de un $B$ arbol con
@@ -1502,14 +1550,98 @@ Se tiene que:
       3. [ ] entre  $\log_3 n$ y  $\log_2 n$
       4. [ ] $\log_2 n +O(1)$
       5. [ ] otra respuesta
+***** NEXT Altura de $B$ arboles
+      :LOGBOOK:
+      - State "NEXT"       from "DONE"       [2011-03-30 Wed 22:09]
+      :END:
+      :SOLUTION:     
+      Menos que $\log_3 n +O(1)$, por $B>3$, que es verdad en todas
+      aplicaciones.
+      :END:
+      Cual es \{la altura, el tiempo de busqueda, el tiempo de
+      insercion, el tiempo de delecion\} de un $B$ arbol sobre
+      $n=\{8,9,256\}$ valores, si cada nodo contiene $B$ valores?
+      1. [ ] $n/B$
+      2. [ ] $\lg n / \lg B$
+      3. [ ] $\log_B n$
+      4. [ ] $\log_n B$
+      5. [ ] otra respuesta
+***** NEXT [#C] Relacion hijos/llaves en la raiz de un $B$ arboles
+      Si un nodo de un $B$ arbol tiene $d$ llaves, cuantos hijos
+      tienes?
+      1. [ ] $d-1$
+      2. [ ] $d$
+      3. [ ] $d+1$
+      4. [ ] $2d+1$
+      5. [ ] otra respuesta
+***** NEXT Cantidad de llaves en un nodo de $B$ arbol (Part 1) 
+      :SOLUTION:
+      $d \in [0,B]$
+      :END:
+      :PROOF:
+      el nodo puede ser la raiz, que puede tener menos que $B/2$
+      elementos.
+      :END:
+      :CONTEXT:
+      Una pagina de la memoria secundaria puede tener $B$ valores
+      juntas con $B+1$ punteros.  
+      :END:
+      Un nodo en un $B$ arbol sobre $n>>B$ elementos tiene $d$
+      hijos. Cual es el domanio de valores posibles por $d$?
+      1. [ ] $d \in [0,B/2]$
+      2. [ ] $d \in [1,B/2]$
+      3. [ ] $d \in [0,B]$
+      4. [ ] $d \in [1,B]$
+      5. [ ] $d \in [B/2,B]$
+      6. [ ] otra respuesta
+***** NEXT Cantidad de llaves en un nodo de $B$ arbol (Part 2) 
+      :SOLUTION:
+      $d \in [0,B]$
+      :END:
+      :CONTEXT:
+      Una pagina de la memoria secundaria puede tener $B$ valores
+      juntas con $B+1$ punteros.  
+      :END:
+      Una pagina de la memoria secundaria puede tener $B$ valores
+      juntas con $B+1$ punteros.  La raiz de un $B$ arbol sobre $n>>B$
+      elementos tiene $d$ hijos. Cual es el domanio de valores
+      posibles por $d$?
+      1. [ ] $d \in [0,B/2]$
+      2. [ ] $d \in [1,B/2]$
+      3. [ ] $d \in [0,B]$
+      4. [ ] $d \in [1,B]$
+      5. [ ] $d \in [B/2,B]$
+      6. [ ] otra respuesta
+***** NEXT Cantidad de llaves en un nodo de $B$ arbol (Part 3)
+      :SOLUTION:
+      $d \in [B/2,B]$
+      :END:
+      :PROOF:
+      si el nodo no esta la raiz, el debe tener entre $B/2$ y $B$
+      valores.
+      :END:
+      :CONTEXT:
+      Una pagina de la memoria secundaria puede tener $B$ valores
+      juntas con $B+1$ punteros.  
+      :END:
+      Un nodo (otro que la raiz) en un $B$ arbol sobre $n>>B$ elementos tiene $d$
+      hijos. Cual es el domanio de valores posibles por $d$?
+      1. [ ] $d \in [0,B/2]$
+      2. [ ] $d \in [1,B/2]$
+      3. [ ] $d \in [0,B]$
+      4. [ ] $d \in [1,B]$
+      5. [ ] $d \in [B/2,B]$
+      6. [ ] otra respuesta
 ***** NEXT $B^*$ arboles
       :SOLUTION:     
       :END:
       :PROOF: 
       :END:
+      :CONTEXT:
       Un $B^* arbol llena sus nodos hasta $2/3$, en vez de $1/2$ por
-      los $B$ arboles. Cual es la consecuencia (el objetivo)
-      principal?
+      los $B$ arboles.
+      :END:
+      Cual es el objetivo de un $B^*$ arbol (en comparacion con un $B$ arbol)? 
       1. [ ] Reducir el tiempo de busqueda?
       2. [ ] Reducir la cantidad de accesos al cache en busqueda?
       3. [ ] Reducir la complejidad espacial?
@@ -1525,81 +1657,126 @@ Se tiene que:
       valores en un interval: se busca para el valor minimal y
       maximal, y se returna el interval en la caldena.
       :END:
+      :CONTEXT:
       En $B^+$ arboles, las hojas tienen punteros adicionales formando
-      una caldena de todas las hojas. Cual es la consecuencia (el
-      objetivo) principal?
+      una caldena de todas las hojas. 
+      :END:
+      Cual es el objetivo de un $B^+$ arbol (en comparacion con un $B$ arbol)? 
       1. [ ] Optimizar la Busqueda Secuencial (adaptiva)?
       2. [ ] Suportar otro tipos de consultas/busquedas?
       3. [ ] Suportar la exportacion de las valors en tiempo razonable?
       4. [ ] Practical (e.g. facilitar el back-up de base de datos)?
       5. [ ] otra respuesta
-***** NEXT vEB arboles
+***** NEXT vEB arboles vs AVL arboles, $(2,3)$ arboles y AVL Arboles
+      :CONTEXT:
+      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol de $n$ elementos sobre
+      $[0..M-1]$ tiene una raiz con
+      - $\sqrt{M}$ punteros a sus ninos $C[0..\sqrt{M}-1]$,
+      - dos valores $min$ y $max$
+      - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
+      :END: 
+      Que distingue los vEB arboles de las otras estructuras de
+      arboles para el ADT diccionario?
+      1. [ ]
+      2. [ ] 
+      3. [ ] 
+      4. [ ] 
+      5. [ ] 
+
+	     (las respuestas estan volontaramente vacillas.)
+
+***** NEXT Altura de un vEB arbol
       :SOLUTION:     
       $\lg m$, que es al maximo $\lg\lg n$.
       :END:
       :PROOF: 
       :END:
-      en cual clase asimptotica es \{ el tiempo de busqueda, de
-      insercion, de delecion, la altura\} de un vEB con $n$ valors
+      :CONTEXT:
+      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol de $n$ elementos sobre
+      $[0..M-1]$ tiene una raiz con
+      - $\sqrt{M}$ punteros a sus ninos $C[0..\sqrt{M}-1]$,
+      - dos valores $min$ y $max$
+      - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
+      :END: 
+      En cual clase asimptotica es \{ el tiempo de busqueda, de
+      insercion, de delecion, la altura\} de un vEB con $n$ valores
       codificadas en $m$ bits?
       1. [ ] $O(\lg n)$
       2. [ ] $O(\lg m)$
       3. [ ] $O(\lg\lg n)$
       4. [ ] $O(\lg\lg m)$
       5. [ ] otra respuesta
-***** vEB children
+***** NEXT vEB children
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 21:55]
+      :END:
       :SOLUTION:     
       $x \over 2^{m/2}$
       :END:
       :PROOF: 
       :END:
-      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol sobre $[0..M-1]$ tiene
-      una raiz con 
+      :CONTEXT:
+      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol de $n$ elementos sobre
+      $[0..M-1]$ tiene una raiz con
       - $\sqrt{M}$ punteros a sus ninos $C[0..\sqrt{M}-1]$,
       - dos valores $min$ y $max$
       - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
-     El valor $x\in]min,max[$ se encuentra en el nino $C[i]$ donde $i=$
+      :END: 
+      El valor $x\in]min,max[$ se encuentra en el nino $C[i]$ donde $i=$
       1. [ ] $2^{m/2} (max - x) \over (max - min) $ 
       1. [ ] $2^{m-2} (max - x) \over (max - min) $ 
       2. [ ] $x \over 2^{m/2}$
       2. [ ] $x \over 2^{m-2}$
       5. [ ] otra respuesta
-***** vEB aux
+***** NEXT vEB aux
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 21:55]
+      :END:
       :SOLUTION:     
       Find Next
       :END:
       :PROOF: 
       :END:
-      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol sobre $[0..M-1]$ tiene
-      una raiz con 
+      :CONTEXT:
+      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol de $n$ elementos sobre
+      $[0..M-1]$ tiene una raiz con
       - $\sqrt{M}$ punteros a sus ninos $C[0..\sqrt{M}-1]$,
       - dos valores $min$ y $max$
       - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
-	El role de $aux$ es de memorisar cuales ninos son vacillos.
-	$j\in aux$ si y solamente si $T.C[j]$ es non vacillo.
-	Cual es el principal objetivo?
+      :END: 
+      El role de $aux$ es de memorisar cuales ninos son vacillos.
+      $j\in aux$ si y solamente si $T.C[j]$ es non vacillo.  Cual es
+      el principal objetivo?
       1. [ ] Optimizar Find
       2. [ ] Optimizar Insert
       3. [ ] Optimizar LookUp
       4. [ ] Optimizar FindNext
       5. [ ] otra respuesta
-***** vEB Find Previous
+***** NEXT vEB Find Previous
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 21:55]
+      :END:
       :SOLUTION:     
       :END:
       :PROOF: 
       :END:
-      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol sobre $[0..M-1]$ tiene
-      una raiz con 
+      :CONTEXT:
+      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol de $n$ elementos sobre
+      $[0..M-1]$ tiene una raiz con
       - $\sqrt{M}$ punteros a sus ninos $C[0..\sqrt{M}-1]$,
       - dos valores $min$ y $max$
       - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
+      :END: 
       La complejidade de Find Previous es en 
       1. [ ] $O(k)$
       2. [ ] $O(2^k=m)$
       3. [ ] $O(2^{2^{k-1}})=\sqrt{M}$
       3. [ ] $O(2^{2^k})=M$
       5. [ ] otra respuesta
-***** vEB Insercion
+***** NEXT vEB Insercion
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 21:55]
+      :END:
       :SOLUTION:     
       Genera un error
       :END:
@@ -1607,11 +1784,13 @@ Se tiene que:
       Genera un error: entrada doblada, $x$ tiene que ser a dentro del
       arbol si el es lleno.
       :END:
-      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol sobre $[0..M-1]$ tiene
-      una raiz con 
+      :CONTEXT:
+      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol de $n$ elementos sobre
+      $[0..M-1]$ tiene una raiz con
       - $\sqrt{M}$ punteros a sus ninos $C[0..\sqrt{M}-1]$,
       - dos valores $min$ y $max$
       - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
+      :END: 
       Si un nino $C[i]$ es lleno antes de agregar un elemento $x$ a dentro.
       1. [ ] Split $C[i]$ en dos
       2. [ ] Mudal algunos elementos de $C[i]$ a sus vecinos, y si no
@@ -1633,7 +1812,7 @@ Se tiene que:
     1) Colas de Prioridades tradicional: 
        - que se necesita?
 	 * Operadores 
-	   - /insert(key,item)/
+ 	   - /insert(key,item)/
 	   - /findMind()/
 	   - /extractMin()/
 	 * Operadores opcionales
@@ -1684,11 +1863,253 @@ Se tiene que:
 	 - sequence heaps
 
     3) Colas de Prioridades en Memoria Secundaria: cota inferior?
-       - Cota inferior para dictionaries es una cota inferior por
+       - Cota inferior para dictionarios es una cota inferior por
 	 colas de prioridades o no?
 	 - No. La reduccion es en la otra direccion.
        - Cual es la cota inferior mas simple que se puede imaginar?
 	 - $\Omega(n/B)$
+
+**** CONCEPT QUESTIONS [0/13] 						 :CQ:
+***** NEXT Colas de Prioridades vs Diccionarios
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
+      :END:
+      :SOLUTION:     
+      No son verdades las proposiciones siguentes:
+      - $C$ toma menos espacio que $D$
+      - $D$ es asimptoticamente mas rapido que $C$
+      :END:
+      :PROOF: 
+      Porque no se sabe nada de las complejidad de $C$ y $D$.
+      :END:
+      Dado estruturas de datos $C$ y $D$, respectivamente
+      implementando los ADT "cola de prioridad" y "diccionario". 
+      Cual(es) de estas proposiciones tiene(n) problemas?
+      1. [ ] $C$ implementa el ADT "diccionario" tambien.
+      2. [ ] $D$ implementa el ADT "cola de prioridad" tambien.
+      3. [ ] $C$ toma menos espacio que $D$
+      4. [ ] $D$ es asimptoticamente mas rapido que $C$ (en los
+         operadores que tienen en comun)
+      5. [ ] ninguna
+***** NEXT Colas de Prioridades vs Diccionarios
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
+      :END:
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      Considera las estruturas de datos Heap y AVL-arbol,
+      respectivamente implementando los ADT "cola de prioridad" y
+      "diccionario".  Cual(es) de estas proposiciones tiene(n)
+      problemas?
+      1. [ ] $C$ implementa el ADT "diccionario" tambien, pero en malo tiempo.
+      2. [ ] $D$ implementa el ADT "cola de prioridad" tambien, pero en malo tiempo.
+      3. [ ] $C$ implementa el ADT "diccionario" tambien, pero en malo espacio.
+      4. [ ] $D$ implementa el ADT "cola de prioridad" tambien, pero en malo espacio.
+      5. [ ] $C$ implementa el ADT "diccionario" tambien, pero en malo tiempo y espacio.
+      6. [ ] $D$ implementa el ADT "cola de prioridad" tambien, pero en malo tiempo y espacio.
+      7. [ ] otra respuesta
+***** NEXT Cola de Prioridad: operaciones
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
+      :END:
+      :SOLUTION:     
+      1. [ ] insert(key,item)
+      2. [X] search(key)
+      3. [X] delete(key)
+      4. [X] findNext(key)
+      5. [X] findPrevious(key)
+      6. [ ] findMind()
+      7. [ ] extractMin()      
+      :END:
+      :PROOF: 
+      search(key) delete(key) findNext(key) findPrevious(key) no son
+      en el ADT de colas de prioridades.
+      :END:
+      Cuales (no) son operaciones de una (min) cola de prioridad?
+      1. [ ] insert(key,item)
+      2. [ ] search(key)
+      3. [ ] delete(key)
+      4. [ ] findNext(key)
+      5. [ ] findPrevious(key)
+      6. [ ] findMind()
+      7. [ ] extractMin()
+***** NEXT Cola de Prioridad: Heapify
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
+      :END:
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      El operador "Heapify" 
+      1. [ ] es parte del ADT "colas de Prioridad"
+      2. [ ] es parte de la estructura de datos "Heap"
+      3. [ ] tiene complejidad $O(\lg n)$
+      3. [ ] tiene complejidad $O(n)$
+      3. [ ] tiene complejidad $O(n\lg n)$
+      5. [ ] otra respuesta
+***** NEXT Estructuras de datos "Cola de Prioridad"
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 22:50]
+      :END:
+       Cuales estructuras de datos "Cola de Prioridad" conocen?
+         1. [ ] *binary heap*
+	 2. [ ] sequence-heaps
+	 3. [ ] /binomial queues/
+	 4. [ ] /Fibonacci heaps/
+	 5. [ ] leftist heaps
+	 6. [ ] min-max heaps
+	 7. [ ] pairing heaps
+	 8. [ ] skew heaps
+	 9. [ ] /van Emde Boas queues/
+***** NEXT Heaps en Memoria Segundaria: Find Min
+      :CONTEXT:
+      Considera un modelo de memoria segundaria con paginas de tamaño
+      para contener $B$ elementos, y un "heap" de $n$ elementos
+      ($n>>B$).  
+      :END:
+      A cuantos accessos a la memoria segundaria corresponde un
+      llamado a "FindMin" en un "heap"?
+      1. [ ] $1$ accesso
+      2. [ ] $\log_B n$ accessos
+      3. [ ] $\log n / \log B$ accessos
+      4. [ ] $n/B$ accessos
+      5. [ ] $n$ accessos
+***** NEXT Heaps en Memoria Segundaria: Delete Min
+      :CONTEXT:
+      Considera un modelo de memoria segundaria con paginas de tamaño
+      para contener $B$ elementos, y un "heap" de $n$ elementos
+      ($n>>B$).  
+      :END:
+      A cuantos accessos a la memoria segundaria corresponde un
+      llamado a "DeleteMin" en un "heap"?
+      1. [ ] $\log_B n$ accessos
+      2. [ ] $(n-B)/B+1$ accessos
+      3. [ ] $n/B$ accessos
+      4. [ ] $n-B$ accessos
+      5. [ ] $n$ accessos
+***** NEXT vEB queues: Delete Min
+      :CONTEXT:
+      Considera un modelo de memoria segundaria con paginas de tamaño
+      para contener $B$ elementos, y un "heap" de $n$ elementos
+      ($n>>B$).  
+      :END:
+      A cuantos accessos a la memoria segundaria corresponde un
+      llamado a "DeleteMin" en un vEB?
+      1. [ ] $\log_B n$ accessos
+      2. [ ] $(n-B)/B+1$ accessos
+      3. [ ] $n/B$ accessos
+      4. [ ] $n-B$ accessos
+      5. [ ] otra respuesta
+***** NEXT vEB queues: altura
+      :CONTEXT:
+      Considera un modelo de memoria segundaria con paginas de tamaño
+      para contener $B$ elementos, y un "vEB queue" de $n$ elementos
+      ($n>>B$).  
+      :END:
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 23:04]
+      :END:
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      Cual es la altura de un vEB queue?
+      1. [ ] $\log_B\log_B n$
+      1. [ ] $\log_2\log_2 n$
+      1. [ ] $\log_B n$
+      1. [ ] $\log_2 n$
+      5. [ ] otra respuesta
+
+***** NEXT vEB queues: cantidad de hijos
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 23:10]
+      :END:
+      :CONTEXT:
+      Considera un modelo de memoria segundaria con paginas de tamaño
+      para contener $B$ elementos, y un "vEB queue" de $n$ elementos
+      ($n>>B$).
+      :END:
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+
+      Cuanto hijos tiene la raiz de un vEB?
+      1. [ ] $2$
+      2. [ ] $B$
+      3. [ ] $B+1$
+      4. [ ] $\sqrt{B}$
+      4. [ ] $\sqrt{n}$
+      5. [ ] otra respuesta
+
+***** NEXT vEB queues: tiempo de busqueda
+      :CONTEXT:
+      Considera un modelo de memoria segundaria con paginas de tamaño
+      para contener $B$ elementos, y un "vEB queue" de $n$ elementos
+      ($n>>B$).  
+      :END:
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 23:04]
+      :END:
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+
+      Cual es el tiempo de busqueda ("findKey(k)") un vEB queue?
+      1. [ ] $\log_B\log_B n$
+      1. [ ] $\log_2\log_2 n$
+      1. [ ] $\log_B n$
+      1. [ ] $\log_2 n$
+      5. [ ] otra respuesta
+
+***** TODO vEB queues: tiempo de "deleteMin"
+      :CONTEXT:
+      Considera un modelo de memoria segundaria con paginas de tamaño
+      para contener $B$ elementos, y un "vEB queue" de $n$ elementos
+      ($n>>B$).  
+      :END:
+      :LOGBOOK:
+      - State "TODO"       from "NEXT"       [2011-03-30 Wed 23:07]
+      - State "NEXT"       from ""           [2011-03-30 Wed 23:04]
+      :END:
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+
+      Cual es el tiempo de "deleteMin" en un vEB queue?
+      1. [ ] $\log_B\log_B n$
+      1. [ ] $\log_2\log_2 n$
+      1. [ ] $\log_B n$
+      1. [ ] $\log_2 n$
+      5. [ ] otra respuesta
+
+***** TODO vEB queues: espacio
+      :CONTEXT:
+      Considera un modelo de memoria segundaria con paginas de tamaño
+      para contener $B$ elementos, y un "vEB queue" de $n$ elementos
+      ($n>>B$).  
+      :END:
+      :LOGBOOK:
+      - State "TODO"       from ""           [2011-03-30 Wed 23:11]
+      :END:
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+
+      Cuanto espacio toma este "vEB queue"?
+      
+      1. [ ] $n$
+      2. [ ] $k=\lg m$
+      3. [ ] $m$
+      4. [ ] $M=2^m$
+      5. [ ] otra respuesta
+
 
 **** REFERENCIAS ADICIONALES
      + http://www.dcc.uchile.cl/~gnavarro/algoritmos/tesisRapa.pdf
