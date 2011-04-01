@@ -1,4 +1,5 @@
 #+DRAWERS: PROPERTIES LOGBOOK CLOCK PROOF SOLUTION CONTEXT
+#+TODO: NEXT(n) MAYB(m) TODO(t) ACTF(a) PAUS(p) WAIT(w) | DONE(d) CANC(c)
 #+TAGS: CQ(C) READING(R) TALK(T)
 #+LATEX_HEADER:  \usepackage{fullpage} \usepackage[spanish]{babel}
 #+OPTIONS: LaTeX:dvipng H:5 num:t
@@ -6,6 +7,14 @@
 #+AUTHOR: J\'er\'emy Barbay
 
 * Examples
+** Example of Mathematical formulas seen with C-c C-x C-l 
+*** Basic formulas
+    $$\log_2 n$$
+    $$\frac{n}{\lg n}$$
+**** NEXT Find a command to put in latex header to make latex math larger
+*** Formulas in array (note the misalignments :( )
+    | $n$                   | $n^2$    | $\lfloor n/2 \rfloor$ |
+    | $\lfloor n/2 \rfloor$ | $n\lg n$ | $n$                   |
 ** Example of time planification
    :PROPERTIES:
    :COLUMNS:  %80ITEM(TASK)  %5Effort(TIME){:} %5CLOCKSUM
@@ -21,14 +30,6 @@
      :PROPERTIES:
      :Effort:   3*90
      :END: 
-** Example of Mathematical formulas seen with C-c C-x C-l 
-*** Basic formulas
-    $\log_2 n$
-    $\frac{n}{\lg n}$
-**** NEXT Find a command to put in latex header to make latex math larger
-*** Formulas in array (note the misalignments :( )
-    | $n$                   | $n^2$    | $\lfloor n/2 \rfloor$ |
-    | $\lfloor n/2 \rfloor$ | $n\lg n$ | $n$                   |
 
 ** Example of Structure of Concept Question subsection 				 
 **** CONCEPT QUESTIONS [0/0]						 :CQ:
@@ -1494,7 +1495,7 @@ Se tiene que:
 	    del nivel considerado
 	  - Insercion
 	  - Delecion
-**** CONCEPT QUESTIONS [3/16] 						 :CQ:
+**** CONCEPT QUESTIONS [10/16] 						 :CQ:
 ***** [#A] Cola de Prioridad: operaciones
       :SOLUTION:     
       Todas se pueden implementar facilamente en un dicionario, pero
@@ -1564,7 +1565,7 @@ Se tiene que:
       3. [ ] entre  $\log_3 n$ y  $\log_2 n$
       4. [ ] $\log_2 n +O(1)$
       5. [ ] otra respuesta
-***** NEXT Altura de $B$ arboles
+***** DONE Altura de $B$ arboles
       :LOGBOOK:
       - State "NEXT"       from "DONE"       [2011-03-30 Wed 22:09]
       :END:
@@ -1580,7 +1581,9 @@ Se tiene que:
       3. [ ] $\log_B n$
       4. [ ] $\log_n B$
       5. [ ] otra respuesta
-***** NEXT [#C] Relacion hijos/llaves en la raiz de un $B$ arboles
+***** DONE [#C] Relacion hijos/llaves en la raiz de un $B$ arboles
+      :LOGBOOK:
+      :END:
       Si un nodo de un $B$ arbol tiene $d$ llaves, cuantos hijos
       tienes?
       1. [ ] $d-1$
@@ -1588,9 +1591,12 @@ Se tiene que:
       3. [ ] $d+1$
       4. [ ] $2d+1$
       5. [ ] otra respuesta
-***** NEXT Cantidad de llaves en un nodo de $B$ arbol (Part 1) 
+***** DONE [#A] Cantidad de llaves en un nodo de $B$ arbol (Part 1)
+      :LOGBOOK:
+      :END:
       :SOLUTION:
-      $d \in [0,B]$
+      $d \in [1,B]$ si ignoramos el arbol vacillo (y contando las
+      hojas vacillas como hijos pero no como nodos)
       :END:
       :PROOF:
       el nodo puede ser la raiz, que puede tener menos que $B/2$
@@ -1600,15 +1606,17 @@ Se tiene que:
       Una pagina de la memoria secundaria puede tener $B$ valores
       juntas con $B+1$ punteros.  
       :END:
-      Un nodo en un $B$ arbol sobre $n>>B$ elementos tiene $d$
-      hijos. Cual es el domanio de valores posibles por $d$?
+      Cuantos hijos ($d$) puede tener un $B$ arbol sobre $n>>B$
+      elementos?
       1. [ ] $d \in [0,B/2]$
       2. [ ] $d \in [1,B/2]$
       3. [ ] $d \in [0,B]$
       4. [ ] $d \in [1,B]$
       5. [ ] $d \in [B/2,B]$
       6. [ ] otra respuesta
-***** NEXT Cantidad de llaves en un nodo de $B$ arbol (Part 2) 
+***** DONE Cantidad de llaves en un nodo de $B$ arbol (Part 2)
+      :LOGBOOK:
+      :END:
       :SOLUTION:
       $d \in [0,B]$
       :END:
@@ -1617,16 +1625,18 @@ Se tiene que:
       juntas con $B+1$ punteros.  
       :END:
       Una pagina de la memoria secundaria puede tener $B$ valores
-      juntas con $B+1$ punteros.  La raiz de un $B$ arbol sobre $n>>B$
+      juntas con $B+1$ punteros.  La *raiz* de un $B$ arbol sobre $n>>B$
       elementos tiene $d$ hijos. Cual es el domanio de valores
       posibles por $d$?
       1. [ ] $d \in [0,B/2]$
       2. [ ] $d \in [1,B/2]$
       3. [ ] $d \in [0,B]$
-      4. [ ] $d \in [1,B]$
+      4. [X] $d \in [1,B]$
       5. [ ] $d \in [B/2,B]$
       6. [ ] otra respuesta
-***** NEXT Cantidad de llaves en un nodo de $B$ arbol (Part 3)
+***** DONE Cantidad de llaves en un nodo de $B$ arbol (Part 3)
+      :LOGBOOK:
+      :END:
       :SOLUTION:
       $d \in [B/2,B]$
       :END:
@@ -1638,15 +1648,17 @@ Se tiene que:
       Una pagina de la memoria secundaria puede tener $B$ valores
       juntas con $B+1$ punteros.  
       :END:
-      Un nodo (otro que la raiz) en un $B$ arbol sobre $n>>B$ elementos tiene $d$
+      Un nodo (*otro que la raiz*) en un $B$ arbol sobre $n>>B$ elementos tiene $d$
       hijos. Cual es el domanio de valores posibles por $d$?
       1. [ ] $d \in [0,B/2]$
       2. [ ] $d \in [1,B/2]$
       3. [ ] $d \in [0,B]$
       4. [ ] $d \in [1,B]$
-      5. [ ] $d \in [B/2,B]$
+      5. [X] $d \in [B/2,B]$
       6. [ ] otra respuesta
-***** NEXT $B^*$ arboles
+***** CANC $B^*$ arboles					       :CANC:
+      :LOGBOOK:
+      :END:
       :SOLUTION:     
       :END:
       :PROOF: 
@@ -1662,7 +1674,7 @@ Se tiene que:
       4. [ ] Reducir la frecuencia de "Split/Merge"?
       5. [ ] Practical [e.g. Optimizacion para data-set (de injeniero)]
       6. [ ] otra respuesta
-***** NEXT $B^+$ arboles
+***** CANC $B^+$ arboles					       :CANC:
       :SOLUTION:     
       Suportar otro tipos de consultas/busquedas?
       :END:
@@ -1691,7 +1703,7 @@ Se tiene que:
       :END: 
       Que distingue los vEB arboles de las otras estructuras de
       arboles para el ADT diccionario?
-      1. [ ]
+      1. [ ] usa el dominio de las valores
       2. [ ] 
       3. [ ] 
       4. [ ] 
@@ -1713,7 +1725,7 @@ Se tiene que:
       - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
       :END: 
       En cual clase asimptotica es \{ el tiempo de busqueda, de
-      insercion, de delecion, la altura\} de un vEB con $n$ valores
+      insercion, de delecion, la altura \} de un vEB con $n$ valores
       codificadas en $m$ bits?
       1. [ ] $O(\lg n)$
       2. [ ] $O(\lg m)$
@@ -5284,3 +5296,4 @@ Se tiene que:
 	    
 	    
    
+	    
