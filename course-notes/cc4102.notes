@@ -658,7 +658,6 @@ Se tiene que:
       5. [ ] otra respuesta
       
 
-
 *** Tecnicas para demostrar cotas inferiores: 
     adversario, teoria de la informacion, reduccion
 **** PREREQUISITOS
@@ -1867,6 +1866,8 @@ Se tiene que:
      3) Algoritmos en linea 
 	- "ski renting" problema
 	- analisis competitiva ("Competitive Analysis")
+*** PREREQUISITOS DE UNIDAD
+    - http://www.wimp.com/justcoincidence/ Birthday Paradox, in English.
 *** Uso de *dominios discretos y finitos* en el diseno de algoritmos y estructuras de datos
 **** Busqueda en domanios discretos
 ***** Algorimos de Busqueda (Interpolation Search, Extrapolation Search)
@@ -2115,7 +2116,7 @@ Se tiene que:
        	- Collision 
 	  - cuando $h(K_{1))= h(K_{2})$
 	  - la probabilidad es alta: "Paradoxe del cumpleanos"
-
+	    ( http://www.wimp.com/justcoincidence/ )
 	  - Cual es la probabilidad que en una pieca de $n$ personas,
 	    dos tiene la misma fecha de cumpleanos (a dentro de $365$
 	    dias)?
@@ -2168,7 +2169,6 @@ Se tiene que:
 
 	   - factor de carga es $\lambda= {n \over N}$
 	   - Rendimiento en el peor caso: $O(n)$
-
 
 ******* Hashing Cerrado
        	
