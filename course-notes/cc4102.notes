@@ -1,21 +1,44 @@
+#+DRAWERS: PROPERTIES LOGBOOK CLOCK PROOF SOLUTION CONTEXT
+#+TODO: NEXT(n) MAYB(m) TODO(t) ACTF(a) PAUS(p) WAIT(w) | DONE(d) CANC(c)
 #+TAGS: CQ(C) READING(R) TALK(T)
-#+DRAWERS: PROPERTIES LOGBOOK CLOCK PROOF SOLUTION
-#+LATEX_HEADER:  \usepackage{fullpage}
+#+LATEX_HEADER:  \usepackage{fullpage} \usepackage[spanish]{babel}
+#+OPTIONS: LaTeX:dvipng H:5 num:t
 #+TITLE: CC4102/CC40A/CC53A - Dise\~no y An\'alisis de Algoritmos
 #+AUTHOR: J\'er\'emy Barbay
 
-# Those options seem to cause problem when using C-c C-x C-l to 
-# preview LaTeX fragments (org-preview-latex-fragment) in class:
-# Disabled untill I see why  -- Jeremy
-  #+OPTIONS: LaTeX:dvipng H:5 num:t
-  #+LATEX_HEADER: \usepackage[spanish]{babel}
+* Examples
+** Example of Mathematical formulas seen with C-c C-x C-l 
+*** Basic formulas
+    $$\log_2 n$$
+    $$\frac{n}{\lg n}$$
+**** NEXT Find a command to put in latex header to make latex math larger
+*** Formulas in array (note the misalignments :( )
+    | $n$                   | $n^2$    | $\lfloor n/2 \rfloor$ |
+    | $\lfloor n/2 \rfloor$ | $n\lg n$ | $n$                   |
+** Example of time planification
+   :PROPERTIES:
+   :COLUMNS:  %80ITEM(TASK)  %5Effort(TIME){:} %5CLOCKSUM
+   :Effort_ALL: 30 45 60 90 2*90 3*90 4*90
+   :END:
+   Use C-c C-x C-c to switch to column mode, and "q" while in a column to quit.
+*** A unit
+**** a topic for 1/2 talk (45mn)
+     :PROPERTIES:
+     :Effort:   45
+     :END:
+**** a topic of 3 talks
+     :PROPERTIES:
+     :Effort:   3*90
+     :END: 
 
-* Example of Structure of Concept Question subsection 				 
-**** CONCEPT QUESTIONS 							 :CQ:
+** Example of Structure of Concept Question subsection 				 
+**** CONCEPT QUESTIONS [0/0]						 :CQ:
 ***** 
       :SOLUTION:     
       :END:
       :PROOF: 
+      :END:
+      :CONTEXT:
       :END:
       
       1. [ ] 
@@ -42,6 +65,8 @@
   :END:
   :PROPERTIES:
   :ID:       8083f75f-15d1-4cf8-a992-8b787d182c26
+  :COLUMNS:  %80ITEM(TASK)  %5Effort(TIME){:} %5CLOCKSUM
+  :Effort_ALL: 10 20 30 45 60 90 2*90 3*90 4*90
   :END:
 ** Presentación y Evaluación (1 charla)
 *** Presentaciones
@@ -326,7 +351,7 @@ Se tiene que:
 *** PREREQUISITOS DE UNIDAD 
 **** Lista de themas en apuntes de CC3001 			    :READING:
     http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
-*** Repaso del proceso de diseño y analisis de un algoritmo.
+*** Repaso 
 **** PREREQUISITOS
 ***** "Bases de la programacion" en apuntes de CC3001		    :READING:
       - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
@@ -453,108 +478,284 @@ Se tiene que:
       2. [ ] $2h$
       3. [ ] $2^h$
       4. [ ] $2^h-1$
-      5. [ ] otra respuesta
-
-*** Minimo Maximo de un  arreglo
+      5. [ ] otra respuest
+*** Metodologia de experimentacion
 **** PREREQUISITOS
-***** Cotas Inferiores en apuntes de CC3001			    :READING:
-   - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#1
-**** Minimo (resp. maximo) de un arreglo
-   - Cota superior
-   - Cota inferior
-**** Calcular el Minimo y el Maximo de un Arreglo en una sola computacion
-   - Cota superior?
-     - cota superior para max + cota superior para min
-   - cota inferior?
-     - cota inferior para min + cota superior para max?
-     - min(cota inferior para min , cota superior para max?)
+     - de las apuntes de CC3001:
+       - Nociones básicas de programación http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Programacion/
+	 (sin estudiarlas)
+     - de las apuntes de CC4102:
+       - 1.4 Metodologia de experimentacion
+     - en la red (y en ingles)
+       - Research Design: Qualitative, Quantitative, and Mixed Methods Approaches 
+	 John W. Creswell
+	 http://www.amazon.com/Research-Design-Qualitative-Quantitative-Approaches/
+**** Al inicio, Ciencias de la computacion fue solamente experimentacion.
+***** Turing y el codigo Enigma
+      - el importante estaba de solucionar la instancia del dia
+	(romper la llave del dia, basado en los messages de
+	meteo, para decryptar los messages mas importantes)
+	 - no mucho focus en el problema, aunque Turing si escribio
+	   la definicion de la Maquina universal.
+***** Experimentacion basica 
+      - correga hasta que fonciona (o parece foncionar)
+	- correga hasta que entrega resultados correctos (o que parecen correctos)
+	- mejora hasta que fonciona en tiempo razonable (en las instancias que tenemos)
+***** Problemas:
+      - Demasiado "Ah Hoc"
+       - falta de rigor, de reproducibilidad
+       - desde el inicio, no "test bed" estandard, cada uno tiene sus tests.
+       - mas tarde, no estandard de maquinas 
+***** Respuestas: Knuth et al. 
+      - complejidad asymptotica: independancia de la maquina
+      - complejidad en el peor caso y promedio: independancia del "test bed"
+      - todavia es necesario de completar las estudias teoricas
+	con programacion y experimentacion: el modelo teorico es
+	solamente una simplificacion.
+***** Theoreticos desarollaron un lado "mathematico" de ciencias
+      de la computacion, con resultados importantes tal que
+      - NP-hardness
+     - "Polynomial Hierarchy" (http://en.wikipedia.org/wiki/Polynomial\_hierarchy)
+***** Theoria y Practica se completen, pero hay conflictos en ambos lados:
+      - demasiado theorias sin implementaciones (resultado del
+	ambiante social tambien).
+    - todavia hay estudios experimentales "no reproducibles"
+**** Sobre la "buena" manera de experimentar
+     ("A Theoretician's Guide to the Experimental Analysis of Algorithms", David S. Johnson, 2001)
+***** Fija una hipothesis *antes* de programar.
+      - aunque el objetivo sea de programar un software
+	completo, solamente es necesario de implementar de
+	manera eficiente la partes relevantes. El resto se puede
+	implementar de manera "brutal". (E.g. "Intersection Problem")
+***** "Incremental Programming"
+      - busca en la red "Agile Programming", "Software Engineering".
+	 - una experimentacion es tambien un proyecto de software, y
+	   las tecnicas de ingeniera de software se aplican tambien.
+	 - Construe un simulador en etapas, donde a cada etapa
+	   fonctiona el simulador entero.	   
+***** "Modular Programming"
+      - Experimentacion es Investigacion, nunca se sabe por
+	seguro que se va a medir despues.
+	 - Hay que programar de manera modular por salgar tiempo en
+	   el futuro.
 
-**** Cota superior para el problema de minmax
+**** Sobre la "buena" manera de presentar sus resultados experimentales.
+     ("Presenting Data from Experiments in Algorithmics", Peter Sanders, 2002)
+***** El proceso:
+      * Experimentacion tiene un ciclo:
+	  1. "Experimental Design" (inclue la eleccion de la hypothesis)
+	  2. "Description of Measurement"
+	  3. "Interpretation"
+	  4. vuelve al paso 1.
+	* La presentacion sigue la misma estructura, pero solamente
+	  exceptionalemente describe mas que una iteracion (la
+	  mejor, no necesaramiente la ultima) del ciclo.
 
-     * Calcular el minimo con el algoritmo previo, y el maximo
-       con un algoritmo simetrico, da una complejidad de $2n-2$
-       comparaciones, que es demasiado.
-     * El algoritmo siguente calcula el max y el min en
-       $\frac{3n}{2}-2$ comparaciones:
-      1. Dividir $A$ en $\lfloor n/2 \rfloor$ pares (y
-	 eventualemente un elemento mas, $x$).
-      2. Comparar los dos elementos de cada par.
-      3. Ponga los elementos superiores en el grupo $S$, y los
-	 elementos inferiores en el grupo $I$.
-      4. Calcula el minima $m$ del grupo $I$ con el algorimo de la
-	 pregunta previa, que performa $\lfloor n/2 \rfloor-1$ comparaciones
-      5. Calcula el maxima $M$ del grupo $I$ con un algoritmo
-	 simetrico, con la misma complejidad.
-      6. Si $n$ es par,
-       	+ $m$ y $M$ son respectivamente el minimo y el maximo de $A$.
-      7. Sino, si $x<m$, 
-	 + $x$ y $M$ son respectivamente el minimo y el maximo de $A$.
-      8. Sino, si $x>M$, 
-	 + $m$ y $x$ son respectivamente el minimo y el maximo de $A$.
-      9. Sino
-	 + $m$ y $M$ son respectivamente el minimo y el maximo de $A$.
-     * La complejidad total del algoritmo es
-      -  $n/2+2(n/2-1)=3n/2-2\in 3n/2 + O(1)$ si $n$ es par
-      -  $(n-1)/2 + 2(n-1)/2 +2 = 3n/2 + 1/2\in 3n/2 + O(1)$ si
-	 $n$ es impar.
-      -  en la clase $3n/2 + O(1)$ en ambos casos.
+***** Eliges que quieres comunicar.
+      - el mismo dato se presenta diferamente en funcion de la
+	emfasis del reporte.
+       - pero, siempre la descripcion debe permitir la
+	 *reproducibilidad* de la experimentacion.
 
-**** Cota inferior para el problema de minmax
-     * Sean las variables siguentes:
-       - $O$ los $o$ elementos todavia no comparados;
-       - $G$ los $g$ elementos que ``ganaron'' todas sus comparaciones hasta ahora;
-       - $P$ los $p$ elementos que ``perdieron'' todas sus comparaciones hasta ahora;
-       - $E$ las $e$ valores eliminadas (que perdieron al menos una comparacion, y ganaron al menos una comparacion);
-     -  $(o,g,p,e)$ describe el estado de cualquier algoritmo:
-       -  siempre $o+g+p+e=n$;
-       -  al inicio, $g=p=e=0$ y $o=n$;
-       -  al final, $o=0$, $g=p=1$, y $e=n-2$.
-     -  Despues una comparacion $a?b$ en cualquier algoritmo del
-       	modelo de comparacion, $(o,g,p,e)$ cambia en funcion del
-       	resultado de la comparacion de la manera siguente:
-       	$$
-       	\begin{array}{c|c|c|c|c}
-       	& a\in O        & a\in G               & a\in P               & a\in E      \\ 
-       	\hline %--------------------------------------
-       	b\in O & o-2,g+1,p+1,e & o-1,p,e+1            & o-1,g,p,e+1          & o-1,g+1,p,e \\
-       	&               & o-1,g,p+1,e          & o-1,g+1,p,e          & o-1,g,p+1,e \\
-       	\hline %--------------------------------------
-       	b\in G &               & o,g-1,p,e+1          & o,g,p,e              & o,g,p,e     \\ 
-       	&               &                      & o,g-1,p-1,e+2        & o,g-1,p,e+1 \\ 
-       	\hline %--------------------------------------
-       	b\in P &               &                      & o,g,p-1,e+1          & o,g,p,e     \\ 
-       	&               &                      &                      & o,g,p-1,e+1 \\ 
-       	\hline %--------------------------------------
-       	b\in E &               &                      &                      & o,g,p,e
-       	\end{array}
-       	$$
-     -  En algunas configuraciones, el cambio del vector estado depende del resultado de la comparacion: un adversario puede
-       	maximizar la complejidad del algoritmo eligando el resultado de cada comparacion. El arreglo siguente contiene en graso las
-       	opciones que maximizan la complejidad del algoritmo:
-       	$$
-       	\begin{array}{c|c|c|c|c}
-       	& a\in O        & a\in G               & a\in P               & a\in E           \\ 
-       	\hline %--------------------------------------
-       	b\in O & o-2,g+1,p+1,e & o-1,p,e+1            & o-1,g,p,e+1          & o-1,g+1,p,e      \\
-       	&               & \mathbf{o-1,g,p+1,e} & \mathbf{o-1,g+1,p,e} & o-1,g,p+1,e      \\
-       	\hline %--------------------------------------
-       	b\in G &               & o,g-1,p,e+1          & \mathbf{o,g,p,e}     & \mathbf{o,g,p,e} \\ 
-       	&               &                      & o,g-1,p-1,e+2        & o,g-1,p,e+1      \\ 
-       	\hline %--------------------------------------
-       	b\in P &               &                      & o,g,p-1,e+1          & \mathbf{o,g,p,e} \\ 
-       	&               &                      &                      & o,g,p-1,e+1      \\ 
-       	\hline %--------------------------------------
-       	b\in E &               &                      &                      & o,g,p,e
-       	\end{array}
-       	$$
-     -  Con estas opciones, hay
-       -  $\lceil n/2\rceil$ transiciones de $O$ a $G\cup P$, y
-       -  $n-2$ transiciones de $G\cup P$ a $E$.
-     -  Eso resulta en una complejidad en el peor caso de $\lceil
-       	3n/2 \rceil-2 \in 3n/2 +O(1)$ comparaciones.
+***** Tables vs 2d vs 3d plot
+      * tables 
+	  - son faciles, y buenas para menos de 20 valores
+	  - son sobre-usadas
+	* Grafes 3d
+	  - mas modernos, impresionantes, pero
+	  - en impresion no son tan informativos
+	  - tiene un futuro con interactive media donde el usuario
+	    puede cambiar el punto de vista, leer las valores
+	    precisas, activar o no las surfacas.
+	* Grafes 2d
+	  - en general preferables, pero de manera inteligente!
+	  - cosas a considerar:
+	    - log scale en x y/o y
+	    - rango de valores en x y/o y.
+	    - regla de "banking to 45 deg":
+	      - "The weighted average of the slants of the line
+		segments in the figure should be about 45"
+	      - se puede aproximar on un grafo en "paysage"
+		siguiendo el ratio de oro.
+	    - factor out la informacion ya conocida 
+	* Maximiza el Data-Ink ratio.
+
+	  ``Toward an Experimental method for algorithm simulation,'' INFORMS Journal on 
+	  Computing, Vol 8, No 1  Winter 1995.
+
+	  ``Analyzing Algorithms by simulation:  Variance Reduction Techniques and 
+	  Simulation Speedups,'' ACM Computing Surveys, June 1992.
+
+	  3.  For a good book on introductory statistics with computer science
+	      examples, I recommend 
+    - Cohen: Empirical Methods for Artificial Intelligence
+    - Thomas Bartz-Beielstein et al, on Empirical Methods for the
+      Analysis of OPtimization Algorithms 
+    - Catherine McGeoch, A Guide to Experimental Algorithmics, (January 2011)
 
 
-**** CONCEPT QUESTIONS [6/8] 						 :CQ:
+**** Sobre la "buena" manera de describir una investigacion en general:
+     http://www.amazon.com/Making-Sense-Students-Engineering-Technical/dp/019542591X
+     Making sense; a student's guide to research and writing;
+     engineering and the technical sciences, 2d ed.  Northey, Margot
+     and Judi Jewinski.  Oxford U. Press 2007 252 pages $32.50
+     Paperback
+**** Otras referencias:
+     - Research Design: Qualitative, Quantitative, and Mixed Methods Approaches 
+       John W. Creswell
+       http://www.amazon.com/Research-Design-Qualitative-Quantitative-Approaches/
+*** Complejidad Computacional Deterministica: cotas inferiores
+    adversario, teoria de la informacion, reduccion
+**** PREREQUISITOS
+     - de las apuntes de CC3001:
+       - Ordenacion / Cotas inferiores http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#1
+       - Ordenacion / Merge sort http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#5
+     - de las apuntes de CC4102:
+       - min max
+**** Minimo Maximo de un  arreglo
+***** PREREQUISITOS
+****** Cotas Inferiores en apuntes de CC3001			    :READING:
+    - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#1
+***** Minimo (resp. maximo) de un arreglo
+    - Cota superior
+    - Cota inferior
+***** Calcular el Minimo y el Maximo de un Arreglo en una sola computacion
+    - Cota superior?
+      - cota superior para max + cota superior para min
+    - cota inferior?
+      - cota inferior para min + cota superior para max?
+      - min(cota inferior para min , cota superior para max?)
+
+***** Cota superior para el problema de minmax
+
+      * Calcular el minimo con el algoritmo previo, y el maximo
+       	con un algoritmo simetrico, da una complejidad de $2n-2$
+       	comparaciones, que es demasiado.
+      * El algoritmo siguente calcula el max y el min en
+       	$\frac{3n}{2}-2$ comparaciones:
+       1. Dividir $A$ en $\lfloor n/2 \rfloor$ pares (y
+	  eventualemente un elemento mas, $x$).
+       2. Comparar los dos elementos de cada par.
+       3. Ponga los elementos superiores en el grupo $S$, y los
+	  elementos inferiores en el grupo $I$.
+       4. Calcula el minima $m$ del grupo $I$ con el algorimo de la
+	  pregunta previa, que performa $\lfloor n/2 \rfloor-1$ comparaciones
+       5. Calcula el maxima $M$ del grupo $I$ con un algoritmo
+	  simetrico, con la misma complejidad.
+       6. Si $n$ es par,
+       	 + $m$ y $M$ son respectivamente el minimo y el maximo de $A$.
+       7. Sino, si $x<m$, 
+	  + $x$ y $M$ son respectivamente el minimo y el maximo de $A$.
+       8. Sino, si $x>M$, 
+	  + $m$ y $x$ son respectivamente el minimo y el maximo de $A$.
+       9. Sino
+	  + $m$ y $M$ son respectivamente el minimo y el maximo de $A$.
+      * La complejidad total del algoritmo es
+       -  $n/2+2(n/2-1)=3n/2-2\in 3n/2 + O(1)$ si $n$ es par
+       -  $(n-1)/2 + 2(n-1)/2 +2 = 3n/2 + 1/2\in 3n/2 + O(1)$ si
+	  $n$ es impar.
+       -  en la clase $3n/2 + O(1)$ en ambos casos.
+
+***** Cota inferior para el problema de minmax
+      * Sean las variables siguentes:
+       	- $O$ los $o$ elementos todavia no comparados;
+       	- $G$ los $g$ elementos que ``ganaron'' todas sus comparaciones hasta ahora;
+       	- $P$ los $p$ elementos que ``perdieron'' todas sus comparaciones hasta ahora;
+       	- $E$ las $e$ valores eliminadas (que perdieron al menos una comparacion, y ganaron al menos una comparacion);
+      -  $(o,g,p,e)$ describe el estado de cualquier algoritmo:
+       	-  siempre $o+g+p+e=n$;
+       	-  al inicio, $g=p=e=0$ y $o=n$;
+       	-  al final, $o=0$, $g=p=1$, y $e=n-2$.
+      -  Despues una comparacion $a?b$ en cualquier algoritmo del
+       	 modelo de comparacion, $(o,g,p,e)$ cambia en funcion del
+       	 resultado de la comparacion de la manera siguente:
+       	 $$
+       	 \begin{array}{c|c|c|c|c}
+       	 & a\in O        & a\in G               & a\in P               & a\in E      \\ 
+       	 \hline %--------------------------------------
+       	 b\in O & o-2,g+1,p+1,e & o-1,p,e+1            & o-1,g,p,e+1          & o-1,g+1,p,e \\
+       	 &               & o-1,g,p+1,e          & o-1,g+1,p,e          & o-1,g,p+1,e \\
+       	 \hline %--------------------------------------
+       	 b\in G &               & o,g-1,p,e+1          & o,g,p,e              & o,g,p,e     \\ 
+       	 &               &                      & o,g-1,p-1,e+2        & o,g-1,p,e+1 \\ 
+       	 \hline %--------------------------------------
+       	 b\in P &               &                      & o,g,p-1,e+1          & o,g,p,e     \\ 
+       	 &               &                      &                      & o,g,p-1,e+1 \\ 
+       	 \hline %--------------------------------------
+       	 b\in E &               &                      &                      & o,g,p,e
+       	 \end{array}
+       	 $$
+      -  En algunas configuraciones, el cambio del vector estado depende del resultado de la comparacion: un adversario puede
+       	 maximizar la complejidad del algoritmo eligando el resultado de cada comparacion. El arreglo siguente contiene en graso las
+       	 opciones que maximizan la complejidad del algoritmo:
+       	 $$
+       	 \begin{array}{c|c|c|c|c}
+       	 & a\in O        & a\in G               & a\in P               & a\in E           \\ 
+       	 \hline %--------------------------------------
+       	 b\in O & o-2,g+1,p+1,e & o-1,p,e+1            & o-1,g,p,e+1          & o-1,g+1,p,e      \\
+       	 &               & \mathbf{o-1,g,p+1,e} & \mathbf{o-1,g+1,p,e} & o-1,g,p+1,e      \\
+       	 \hline %--------------------------------------
+       	 b\in G &               & o,g-1,p,e+1          & \mathbf{o,g,p,e}     & \mathbf{o,g,p,e} \\ 
+       	 &               &                      & o,g-1,p-1,e+2        & o,g-1,p,e+1      \\ 
+       	 \hline %--------------------------------------
+       	 b\in P &               &                      & o,g,p-1,e+1          & \mathbf{o,g,p,e} \\ 
+       	 &               &                      &                      & o,g,p-1,e+1      \\ 
+       	 \hline %--------------------------------------
+       	 b\in E &               &                      &                      & o,g,p,e
+       	 \end{array}
+       	 $$
+      -  Con estas opciones, hay
+       	-  $\lceil n/2\rceil$ transiciones de $O$ a $G\cup P$, y
+       	-  $n-2$ transiciones de $G\cup P$ a $E$.
+      -  Eso resulta en una complejidad en el peor caso de $\lceil
+       	 3n/2 \rceil-2 \in 3n/2 +O(1)$ comparaciones.
+**** Busqueda Ordenada (en el modelo de comparaciones)
+       	1. Cota superior: $2\lg n$ vs $1+\lg n$
+       	2. Cota inferior en el peor caso: Strategia de Adversario
+	   cota inferior en el peor caso de  $1+\lg n$
+       	3. Cota inferior en el caso promedio uniforme
+	   - Teoria de la Informacion
+	   - = Arbol de Decision
+	   - cota inferior de $\lg(2n+1)$, i.e. de $1+\lceil\lg(n+1/2)\rceil$
+       	4. La complejidad del problema
+	   - en el peor caso es $\Theta(\lg n)$
+	   - en el caso promedio es $\Theta(\lg n)$
+       	5. Pregunta: en este problema las cotas inferiores en el peor
+	   caso y en el mejor caso son del mismo orden. Siempre es verdad?
+**** Busqueda desordenada
+       1. Complejidad en el peor caso es $\Theta(n)$
+       2. Complejidad en el caso promedio?
+	  - cota superior
+	    - Move To Front
+	    - ?BONUS? Transpose
+	  - cota inferior
+	    - algoritmo offline, lemma del ave
+	  - A VER EN CASA O TUTORIAL: Huffman?
+**** Ordenamiento (en el modelo de comparaciones)
+      - cota superior $O(n\lg n)$
+      - cota inferior en el peor caso
+	- cual tecnica?
+	  - lema del ave?
+	  - Strategia de Adversario?
+	  - Arbol Binario de Decision
+	- Resultado:
+	  - $\Omega(n \lg n)$
+      - cota inferior en el caso promedio
+	- $\Omega(n \lg n)$
+**** Lista de tecnicas para mostrar cotas inferiores
+    1. lema del ave
+    2. Strategia de Adversario
+    3. Arbol Binario de Decision
+    4. Lemma del Minimax (para complejidad en promedio y complejidad
+       de algoritmos aleatroizados)
+**** BONUS: complejidad en promedio y aleatorizada
+     - La relacion entre 
+       - complejidad en promedio de un algoritmo deterministico
+       - complejidad en el peor caso de un algoritmo aleatorizado
+         (promedio sobre su aleatoria)
+
+
+**** CONCEPT QUESTIONS [6/8]						 :CQ:
 ***** DONE Cota superior de (la complejidad de) Max ord
       :LOGBOOK:
       - State "DONE"       from "NEXT"       [2011-03-15 Tue 12:20]
@@ -656,61 +857,6 @@ Se tiene que:
       3. [ ] $(n-1)+(n-2)$
       4. [ ] $2(n-1)$
       5. [ ] otra respuesta
-      
-
-*** Tecnicas para demostrar cotas inferiores: 
-    adversario, teoria de la informacion, reduccion
-**** PREREQUISITOS
-     - de las apuntes de CC3001:
-       - Ordenacion / Cotas inferiores http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#1
-       - Ordenacion / Merge sort http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Ordenacion/#5
-     - de las apuntes de CC4102:
-       - min max
-**** Busqueda Ordenada (en el modelo de comparaciones)
-       	1. Cota superior: $2\lg n$ vs $1+\lg n$
-       	2. Cota inferior en el peor caso: Strategia de Adversario
-	   cota inferior en el peor caso de  $1+\lg n$
-       	3. Cota inferior en el caso promedio uniforme
-	   - Teoria de la Informacion
-	   - = Arbol de Decision
-	   - cota inferior de $\lg(2n+1)$, i.e. de $1+\lceil\lg(n+1/2)\rceil$
-       	4. La complejidad del problema
-	   - en el peor caso es $\Theta(\lg n)$
-	   - en el caso promedio es $\Theta(\lg n)$
-       	5. Pregunta: en este problema las cotas inferiores en el peor
-	   caso y en el mejor caso son del mismo orden. Siempre es verdad?
-**** Busqueda desordenada
-       1. Complejidad en el peor caso es $\Theta(n)$
-       2. Complejidad en el caso promedio?
-	  - cota superior
-	    - Move To Front
-	    - ?BONUS? Transpose
-	  - cota inferior
-	    - algoritmo offline, lemma del ave
-	  - A VER EN CASA O TUTORIAL: Huffman?
-**** Ordenamiento (en el modelo de comparaciones)
-      - cota superior $O(n\lg n)$
-      - cota inferior en el peor caso
-	- cual tecnica?
-	  - lema del ave?
-	  - Strategia de Adversario?
-	  - Arbol Binario de Decision
-	- Resultado:
-	  - $\Omega(n \lg n)$
-      - cota inferior en el caso promedio
-	- $\Omega(n \lg n)$
-**** Lista de tecnicas para mostrar cotas inferiores
-    1. lema del ave
-    2. Strategia de Adversario
-    3. Arbol Binario de Decision
-    4. Lemma del Minimax (para complejidad en promedio y complejidad
-       de algoritmos aleatroizados)
-**** BONUS: complejidad en promedio y aleatorizada
-     - La relacion entre 
-       - complejidad en promedio de un algoritmo deterministico
-       - complejidad en el peor caso de un algoritmo aleatorizado
-         (promedio sobre su aleatoria)
-**** CONCEPT QUESTIONS [13/19] 						 :CQ:
 ***** DONE Juego de las preguntas, $n=4$
       :LOGBOOK:
       - State "DONE"       from "NEXT"       [2011-03-17 Thu 13:32]
@@ -1043,131 +1189,10 @@ Se tiene que:
 	3. [ ] Arbol Binario de Decision
 	4. [ ] lemma del minimax
 	5. [ ] ningunas o mas de dos.
-*** Metodologia de experimentacion
-**** PREREQUISITOS
-     - de las apuntes de CC3001:
-       - Nociones básicas de programación http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Programacion/
-	 (sin estudiarlas)
-     - de las apuntes de CC4102:
-       - 1.4 Metodologia de experimentacion
-     - en la red (y en ingles)
-       - Research Design: Qualitative, Quantitative, and Mixed Methods Approaches 
-	 John W. Creswell
-	 http://www.amazon.com/Research-Design-Qualitative-Quantitative-Approaches/
-**** Al inicio, Ciencias de la computacion fue solamente experimentacion.
-***** Turing y el codigo Enigma
-      - el importante estaba de solucionar la instancia del dia
-	(romper la llave del dia, basado en los messages de
-	meteo, para decryptar los messages mas importantes)
-	 - no mucho focus en el problema, aunque Turing si escribio
-	   la definicion de la Maquina universal.
-***** Experimentacion basica 
-      - correga hasta que fonciona (o parece foncionar)
-	- correga hasta que entrega resultados correctos (o que parecen correctos)
-	- mejora hasta que fonciona en tiempo razonable (en las instancias que tenemos)
-***** Problemas:
-      - Demasiado "Ah Hoc"
-       - falta de rigor, de reproducibilidad
-       - desde el inicio, no "test bed" estandard, cada uno tiene sus tests.
-       - mas tarde, no estandard de maquinas 
-***** Respuestas: Knuth et al. 
-      - complejidad asymptotica: independancia de la maquina
-      - complejidad en el peor caso y promedio: independancia del "test bed"
-      - todavia es necesario de completar las estudias teoricas
-	con programacion y experimentacion: el modelo teorico es
-	solamente una simplificacion.
-***** Theoreticos desarollaron un lado "mathematico" de ciencias
-      de la computacion, con resultados importantes tal que
-      - NP-hardness
-     - "Polynomial Hierarchy" (http://en.wikipedia.org/wiki/Polynomial\_hierarchy)
-***** Theoria y Practica se completen, pero hay conflictos en ambos lados:
-      - demasiado theorias sin implementaciones (resultado del
-	ambiante social tambien).
-    - todavia hay estudios experimentales "no reproducibles"
-**** Sobre la "buena" manera de experimentar
-     ("A Theoretician's Guide to the Experimental Analysis of Algorithms", David S. Johnson, 2001)
-***** Fija una hipothesis *antes* de programar.
-      - aunque el objetivo sea de programar un software
-	completo, solamente es necesario de implementar de
-	manera eficiente la partes relevantes. El resto se puede
-	implementar de manera "brutal". (E.g. "Intersection Problem")
-***** "Incremental Programming"
-      - busca en la red "Agile Programming", "Software Engineering".
-	 - una experimentacion es tambien un proyecto de software, y
-	   las tecnicas de ingeniera de software se aplican tambien.
-	 - Construe un simulador en etapas, donde a cada etapa
-	   fonctiona el simulador entero.	   
-***** "Modular Programming"
-      - Experimentacion es Investigacion, nunca se sabe por
-	seguro que se va a medir despues.
-	 - Hay que programar de manera modular por salgar tiempo en
-	   el futuro.
-
-**** Sobre la "buena" manera de presentar sus resultados experimentales.
-     ("Presenting Data from Experiments in Algorithmics", Peter Sanders, 2002)
-***** El proceso:
-      * Experimentacion tiene un ciclo:
-	  1. "Experimental Design" (inclue la eleccion de la hypothesis)
-	  2. "Description of Measurement"
-	  3. "Interpretation"
-	  4. vuelve al paso 1.
-	* La presentacion sigue la misma estructura, pero solamente
-	  exceptionalemente describe mas que una iteracion (la
-	  mejor, no necesaramiente la ultima) del ciclo.
-
-***** Eliges que quieres comunicar.
-      - el mismo dato se presenta diferamente en funcion de la
-	emfasis del reporte.
-       - pero, siempre la descripcion debe permitir la
-	 *reproducibilidad* de la experimentacion.
-
-***** Tables vs 2d vs 3d plot
-      * tables 
-	  - son faciles, y buenas para menos de 20 valores
-	  - son sobre-usadas
-	* Grafes 3d
-	  - mas modernos, impresionantes, pero
-	  - en impresion no son tan informativos
-	  - tiene un futuro con interactive media donde el usuario
-	    puede cambiar el punto de vista, leer las valores
-	    precisas, activar o no las surfacas.
-	* Grafes 2d
-	  - en general preferables, pero de manera inteligente!
-	  - cosas a considerar:
-	    - log scale en x y/o y
-	    - rango de valores en x y/o y.
-	    - regla de "banking to 45 deg":
-	      - "The weighted average of the slants of the line
-		segments in the figure should be about 45"
-	      - se puede aproximar on un grafo en "paysage"
-		siguiendo el ratio de oro.
-	    - factor out la informacion ya conocida 
-	* Maximiza el Data-Ink ratio.
-
-	  ``Toward an Experimental method for algorithm simulation,'' INFORMS Journal on 
-	  Computing, Vol 8, No 1  Winter 1995.
-
-	  ``Analyzing Algorithms by simulation:  Variance Reduction Techniques and 
-	  Simulation Speedups,'' ACM Computing Surveys, June 1992.
-
-	  3.  For a good book on introductory statistics with computer science
-	      examples, I recommend 
-    - Cohen: Empirical Methods for Artificial Intelligence
-    - Thomas Bartz-Beielstein et al, on Empirical Methods for the
-      Analysis of OPtimization Algorithms 
-    - Catherine McGeoch, A Guide to Experimental Algorithmics, (January 2011)
-
-
-**** Sobre la "buena" manera de describir una investigacion en general:
-     http://www.amazon.com/Making-Sense-Students-Engineering-Technical/dp/019542591X
-     Making sense; a student's guide to research and writing;
-     engineering and the technical sciences, 2d ed.  Northey, Margot
-     and Judi Jewinski.  Oxford U. Press 2007 252 pages $32.50
-     Paperback
-**** Otras referencias:
-     - Research Design: Qualitative, Quantitative, and Mixed Methods Approaches 
-       John W. Creswell
-       http://www.amazon.com/Research-Design-Qualitative-Quantitative-Approaches/
+*** TODO Complejidad Computacional en Promedio: cotas inferiores
+    :LOGBOOK:
+    - State "TODO"       from ""           [2011-03-31 Thu 11:37]
+    :END:
 *** Recurrencias y Introduccion a la programacion dinamica 
 **** PREREQUISITOS
      - de las apuntes de CC3001:
@@ -1221,6 +1246,7 @@ Se tiene que:
        - Busqueda y Codificacion de Enteros (busqueda doblada)
        - Busqueda binaria en $\Theta(1+\lg n)$ (mejor que $2\lg n$)
        - Algoritmo en $2n/3 + O(1)$ comparaciones para min max
+
 ** Memoria Secundaria [Algoritmos y Estructuras de Datos para] (3 semanas = 6 charlas)
 *** PREREQUISITOS DE UNIDAD 
     * Apuntes de CC3001:
@@ -1264,75 +1290,13 @@ Se tiene que:
 	  - Jerarquia con k niveles, de paginas de tamanos $B_1,...,B_k$
 	  - "Cache oblivious"
 	  - Otros... mas practicas, mas dificil a analizar.
-**** CONCEPT QUESTIONS 							 :CQ:
-***** NEXT Camino de accesso a valores
-      :LOGBOOK:
-      - State "NEXT"       from ""           [2011-03-29 Tue 10:51]
-      :END:
-      :SOLUTION:     
-      :END:
-      :PROOF: 
-      - Registro mas =frecuente= si sistema bien hecho
-      - =probable= no bien definido, pero en todo caso un aceso a
-        cualquier nivel mas bajo que Registro resulta tambien en un
-        acceso a todos los niveles mas cercano del CPU, asi que
-        deberia ser =otra respuesta=.
-      :END:
-      Cuando a programa hace un acceso a dos elementos de un arreglo,
-      cual es el camino de accesso a estas valores el mas \{frecuente
-      / probable \}?
-      1. [ ] Registros
-      2. [ ] Caches (1,2 o 3)
-      3. [ ] RAM (principal)
-      4. [ ] Disco Duro
-      5. [ ] otra respuesta
-***** NEXT Nivel a 25ns
-      :LOGBOOK:
-      - State "NEXT"       from ""           [2011-03-29 Tue 10:54]
-      :END:
-      :SOLUTION:     
-      RAM
-      :END:
-      :PROOF: 
-      100 ciclos = 100 * .25ns = 25 ns  => RAM
-      |        | Registro | L1         | L2       | L3       | RAM        | Disco         | Red           | Static   |
-      |--------+----------+------------+----------+----------+------------+---------------+---------------+----------|
-      | tiempo | 1 ciclo  | O(1) ciclo | L1*2,*10 | >L2      | 100 ciclos | $10^6$ ciclos | O(1) Segundas | sin cota |
-      |        |          |            |          |          |            |               |               |          |
-      | tamaño | 100 b    | 10 Kb      | >512 Kb  | >2048 Kb | O(1) Gb    | 200 Gb        | creciendo     | sin cota |
-      :END:
-      Cual de los niveles siguentes parece el mas cerca de un tiempo de acceso de 25 ns, por un computador funcionando a 4 GHz?
-      1. [ ] Registro
-      2. [ ] Cache (L1, L2 o L3)
-      3. [ ] RAM
-      4. [ ] Disco duro
-      5. [ ] otra respuesta
-***** NEXT Nivel a 1ns
-      :LOGBOOK:
-      - State "NEXT"       from ""           [2011-03-29 Tue 10:54]
-      :END:
-      :SOLUTION:     
-      Cache (*L1*, L2 o L3)
-      :END:
-      :PROOF: 
-      O(1) ciclos ~ 1ns
-      |             | Registro | L1         | L2       | L3       | RAM        | Disco         | Red           | Static   |
-      |-------------+----------+------------+----------+----------+------------+---------------+---------------+----------|
-      | tiempo      | 1 ciclo  | O(1) ciclo | L1*2,*10 | >L2      | 100 ciclos | $10^6$ ciclos | O(1) segundas | sin cota |
-      | orden en ns | .25 ns   | 1ns        | 5ns      | 10ns     | 25ns       | 250.000 ns    | 10^9 ns       | sin cota |
-      | tamaño      | 100 b    | 10 Kb      | >512 Kb  | >2048 Kb | O(1) Gb    | 200 Gb        | creciendo     | sin cota |
-      :END:
-      Cual de los niveles siguentes parece el mas cerca de un tiempo de acceso de 1 ns, por un computador funcionando a 4 GHz?
-      1. [ ] Registro
-      2. [ ] Cache (L1, L2 o L3)
-      3. [ ] RAM
-      4. [ ] Disco duro
-      5. [ ] otra respuesta
-***** NEXT Cuantas segundas vale 1ns?
+**** CONCEPT QUESTIONS [6/7] 						 :CQ:
+***** DONE Cuantas segundas vale 1ns?
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-29 Tue 10:49]
       :END:
       :SOLUTION:     
+      | 1 nano  | $10^{-9}$ |
       :END:
       :PROOF: 
       | 1 nano  | $10^{-9}$ |
@@ -1347,31 +1311,31 @@ Se tiene que:
       3. [ ] $10^{-6}$ segundas
       4. [ ] $10^{-3}$ segundas
       5. [ ] otra respuesta
-***** NEXT Cuanto se demora una instruccion?
+***** DONE Camino de accesso a valores
       :LOGBOOK:
-      - State "NEXT"       from ""           [2011-03-29 Tue 10:59]
+      - State "NEXT"       from ""           [2011-03-29 Tue 10:51]
       :END:
       :SOLUTION:     
-      1 ns (.25 para un ciclo, pero algunas isntrucciones usan O(1)
-      ciclos)
       :END:
       :PROOF: 
-      Intel Pentiums and higher, also all modern AMD processors (x86)
-      support the "rdtsc" instruction (you can call this from inline
-      assembly) which returns a 64-bit count of the number of CPU
-      clock cycles since powerup. The clock referred to is the CPU
-      code execution cycle, e.g. *a CPU running at 1 GHz runs through
-      one billion cycles per second*. (...)
-      If your clock is running at 4 GHz then rdtsc measures intervals
-      down to 0.25 ns. http://www.velocityreviews.com/forums/t281979-re-how-many-cpu-cycles-does-an-instruction-take.html
+      - Registro mas =frecuente= si sistema bien hecho
+      - =probable= no bien definido, pero en todo caso un aceso a
+        cualquier nivel mas bajo que Registro resulta tambien en un
+        acceso a todos los niveles mas cercano del CPU, asi que
+        deberia ser =otra respuesta=.
       :END:
-      Un CPU funciona a 4 GHz: cuanto se demora una instruccion? (elija el valor mas cercano).
-      1. [ ] 1 nano segunda
-      2. [ ] 1 micro segunda
-      3. [ ] 1 mili segunda
-      4. [ ] 1 centi segunda
+      Cuando un programa hace un acceso a dos elementos de un arreglo,
+      cual es el camino de accesso a estas valores el mas \{frecuente
+      / probable \}?
+      1. [ ] Registros
+      2. [ ] Caches (1,2 o 3)
+      3. [ ] RAM (principal)
+      4. [ ] Disco Duro
       5. [ ] otra respuesta
-***** NEXT Cual es la significacion de GHz?
+      6. [ ] Cache + RAM + Disco Duro
+      7. [ ] Cache + Disco Duro
+      8. [ ] RAM + Disco Duro
+***** CANC Cual es la significacion de GHz?			       :CANC:
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-29 Tue 11:01]
       :END:
@@ -1394,6 +1358,74 @@ Se tiene que:
       2. [ ] $4*10^3$ instrucciones per segunda
       3. [ ] $4*10^6$ instrucciones per segunda
       4. [ ] $4*10^9$ instrucciones per segunda
+      5. [ ] otra respuesta
+***** DONE Nivel a 25ns
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-29 Tue 10:54]
+      :END:
+      :SOLUTION:     
+      RAM
+      :END:
+      :PROOF: 
+      100 ciclos = 100 * .25ns = 25 ns  => RAM
+|        | Registro | L1         | L2       | L3       | RAM        | Disco         | Red           | Static   |
+|--------+----------+------------+----------+----------+------------+---------------+---------------+----------|
+| tiempo | 1 ciclo  | O(1) ciclo | L1*2,*10 | >L2      | 100 ciclos | $10^6$ ciclos | O(1) Segundas | sin cota |
+| tamaño | 100  B   | 10 KB      | >512 KB  | >2048 KB | O(1) GB    | 200 GB        | creciendo     | sin cota |
+      :END:
+      Cual de los niveles siguentes parece el mas cerca de un tiempo
+      de acceso de 25 ns, por un computador funcionando a 4 GHz?
+      1. [ ] Registro
+      2. [ ] Cache (L1, L2 o L3)
+      3. [ ] RAM
+      4. [ ] Disco duro
+      5. [ ] otra respuesta
+***** DONE Nivel a 1ns
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-29 Tue 10:54]
+      :END:
+      :SOLUTION:     
+      Cache (*L1*, L2 o L3)
+      :END:
+      :PROOF: 
+      O(1) ciclos ~ 1ns
+|             | Registro | L1         | L2       | L3       | RAM        | Disco         | Red           | Static   |
+|-------------+----------+------------+----------+----------+------------+---------------+---------------+----------|
+| tiempo      | 1 ciclo  | O(1) ciclo | L1*2,*10 | >L2      | 100 ciclos | $10^6$ ciclos | O(1) segundas | sin cota |
+| orden en ns | .25 ns   | 1ns        | 5ns      | 10ns     | 25ns       | 250.000 ns    | 10^9 ns       | sin cota |
+| tamaño      | 100 b    | 10 Kb      | >512 Kb  | >2048 Kb | O(1) Gb    | 200 Gb        | creciendo     | sin cota |
+      :END:
+      Cual de los niveles siguentes parece el mas cerca de un tiempo
+      de acceso de 1 ns, por un computador funcionando a 4 GHz?
+      1. [ ] Registro
+      2. [ ] Cache (L1, L2 o L3)
+      3. [ ] RAM
+      4. [ ] Disco duro
+      5. [ ] otra respuesta
+***** DONE Cuanto se demora una instruccion?
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-29 Tue 10:59]
+      :END:
+      :SOLUTION:     
+      1 ns (.25 para un ciclo, pero algunas isntrucciones usan O(1)
+      ciclos)
+      :END:
+      :PROOF: 
+      Intel Pentiums and higher, also all modern AMD processors (x86)
+      support the "rdtsc" instruction (you can call this from inline
+      assembly) which returns a 64-bit count of the number of CPU
+      clock cycles since powerup. The clock referred to is the CPU
+      code execution cycle, e.g. *a CPU running at 1 GHz runs through
+      one billion cycles per second*. (...)
+      If your clock is running at 4 GHz then rdtsc measures intervals
+      down to 0.25 ns. http://www.velocityreviews.com/forums/t281979-re-how-many-cpu-cycles-does-an-instruction-take.html
+      :END:
+      Un CPU funciona a 4 GHz: cuanto se demora una instruccion?
+      (elija el valor mas cercano).
+      1. [ ] 1 nano segunda
+      2. [ ] 1 micro segunda
+      3. [ ] 1 mili segunda
+      4. [ ] 1 centi segunda
       5. [ ] otra respuesta
 ***** TODO Cuesto (en plata) de la memoria
 *** Diccionarios en Memoria Externa
@@ -1464,24 +1496,67 @@ Se tiene que:
 	    del nivel considerado
 	  - Insercion
 	  - Delecion
-**** CONCEPT QUESTIONS 							 :CQ:
-***** NEXT $(2,3)$ arboles
+**** CONCEPT QUESTIONS [12/16] 						 :CQ:
+***** [#A] Cola de Prioridad: operaciones
       :SOLUTION:     
+      Todas se pueden implementar facilamente en un dicionario, pero
+      findMind() y extractMin() no son tradicionalemente consideradas
+      para un diccionario, mas para una cola de prioridad.
       :END:
       :PROOF: 
       :END:
-      Cual es \{la altura, el tiempo de busqueda, el tiempo de
-      insercion, el tiempo de delecion\} de un $(2,3)$ arbol con
-      $n=\{8,9,256\}$ valores?
+      Cuales (no) son operaciones de un diccionario?
+      1. [ ] insert(key,item)
+      2. [ ] search(key)
+      3. [ ] delete(key)
+      4. [ ] findNext(key)
+      5. [ ] findPrevious(key)
+      6. [ ] findMind()
+      7. [ ] extractMin()
+***** DONE $(2,3)$ arboles
+      :LOGBOOK:
+      :END:
+      :SOLUTION:     
+      \{la altura, el tiempo de busqueda, el tiempo de insercion, el
+      tiempo de delecion\} son en un orden entre $\log_3 n$ y $\log_2
+      n$ (ignorando los problemas de constantes).
+      :END:
+      :PROOF: 
+      un arbol binario tiene una altura de $\log_2 n$ y un arbol
+      ternario tiene una altura de $\log_3 n$. Un arbol $(2,3)$ tiene
+      una altura entre los dos.
+      :END:
+      Cual es el orden de \{la altura, el tiempo de busqueda, el
+      tiempo de insercion, el tiempo de delecion\} de un $(2,3)$ arbol
+      con $n$ valores?
       1. [ ] menos que $\log_3 n +O(1)$
       2. [ ] $\log_3 n +O(1)$
       3. [ ] entre  $\log_3 n$ y  $\log_2 n$
       4. [ ] $\log_2 n +O(1)$
       5. [ ] otra respuesta
-***** NEXT $B$ arboles
+***** CANC $(2,3)$ arboles con $n\in\{8,9,256\}$ elementos 	       :CANC:
+      :LOGBOOK:
+      :END:
       :SOLUTION:     
+      \{la altura, el tiempo de busqueda, el tiempo de insercion, el
+      tiempo de delecion\} son en 
       :END:
       :PROOF: 
+      :END:
+      Cual es \{la altura, el tiempo de busqueda, el tiempo de
+      insercion, el tiempo de delecion\} de un $(2,3)$ arbol con
+      $n\in\{8,9,256\}$ valores?
+      1. [ ] menos que $\log_3 n +O(1)$
+      2. [ ] $\log_3 n +O(1)$
+      3. [ ] entre  $\log_3 n$ y  $\log_2 n$
+      4. [ ] $\log_2 n +O(1)$
+      5. [ ] otra respuesta
+***** DONE $B$ arboles vs $(2,3)$ arboles
+      :LOGBOOK:
+      :END:
+      :SOLUTION:     
+      Menos que $\log_3 n +O(1)$, por $B>3$, que es verdad en todas
+      aplicaciones.
       :END:
       Cual es \{la altura, el tiempo de busqueda, el tiempo de
       insercion, el tiempo de delecion\} de un $B$ arbol con
@@ -1491,21 +1566,116 @@ Se tiene que:
       3. [ ] entre  $\log_3 n$ y  $\log_2 n$
       4. [ ] $\log_2 n +O(1)$
       5. [ ] otra respuesta
-***** NEXT $B^*$ arboles
+***** DONE Altura de $B$ arboles
+      :LOGBOOK:
+      - State "NEXT"       from "DONE"       [2011-03-30 Wed 22:09]
+      :END:
+      :SOLUTION:     
+      Menos que $\log_3 n +O(1)$, por $B>3$, que es verdad en todas
+      aplicaciones.
+      :END:
+      Cual es \{la altura, el tiempo de busqueda, el tiempo de
+      insercion, el tiempo de delecion\} de un $B$ arbol sobre
+      $n=\{8,9,256\}$ valores, si cada nodo contiene $B$ valores?
+      1. [ ] $n/B$
+      2. [ ] $\lg n / \lg B$
+      3. [ ] $\log_B n$
+      4. [ ] $\log_n B$
+      5. [ ] otra respuesta
+***** DONE [#C] Relacion hijos/llaves en la raiz de un $B$ arboles
+      :LOGBOOK:
+      :END:
+      Si un nodo de un $B$ arbol tiene $d$ llaves, cuantos hijos
+      tienes?
+      1. [ ] $d-1$
+      2. [ ] $d$
+      3. [ ] $d+1$
+      4. [ ] $2d+1$
+      5. [ ] otra respuesta
+***** DONE [#A] Cantidad de llaves en un nodo de $B$ arbol (Part 1)
+      :LOGBOOK:
+      :END:
+      :SOLUTION:
+      $d \in [1,B]$ si ignoramos el arbol vacillo (y contando las
+      hojas vacillas como hijos pero no como nodos)
+      :END:
+      :PROOF:
+      el nodo puede ser la raiz, que puede tener menos que $B/2$
+      elementos.
+      :END:
+      :CONTEXT:
+      Una pagina de la memoria secundaria puede tener $B$ valores
+      juntas con $B+1$ punteros.  
+      :END:
+      Cuantos hijos ($d$) puede tener un $B$ arbol sobre $n>>B$
+      elementos?
+      1. [ ] $d \in [0,B/2]$
+      2. [ ] $d \in [1,B/2]$
+      3. [ ] $d \in [0,B]$
+      4. [ ] $d \in [1,B]$
+      5. [ ] $d \in [B/2,B]$
+      6. [ ] otra respuesta
+***** DONE Cantidad de llaves en un nodo de $B$ arbol (Part 2)
+      :LOGBOOK:
+      :END:
+      :SOLUTION:
+      $d \in [0,B]$
+      :END:
+      :CONTEXT:
+      Una pagina de la memoria secundaria puede tener $B$ valores
+      juntas con $B+1$ punteros.  
+      :END:
+      Una pagina de la memoria secundaria puede tener $B$ valores
+      juntas con $B+1$ punteros.  La *raiz* de un $B$ arbol sobre $n>>B$
+      elementos tiene $d$ hijos. Cual es el domanio de valores
+      posibles por $d$?
+      1. [ ] $d \in [0,B/2]$
+      2. [ ] $d \in [1,B/2]$
+      3. [ ] $d \in [0,B]$
+      4. [X] $d \in [1,B]$
+      5. [ ] $d \in [B/2,B]$
+      6. [ ] otra respuesta
+***** DONE Cantidad de llaves en un nodo de $B$ arbol (Part 3)
+      :LOGBOOK:
+      :END:
+      :SOLUTION:
+      $d \in [B/2,B]$
+      :END:
+      :PROOF:
+      si el nodo no esta la raiz, el debe tener entre $B/2$ y $B$
+      valores.
+      :END:
+      :CONTEXT:
+      Una pagina de la memoria secundaria puede tener $B$ valores
+      juntas con $B+1$ punteros.  
+      :END:
+      Un nodo (*otro que la raiz*) en un $B$ arbol sobre $n>>B$ elementos tiene $d$
+      hijos. Cual es el domanio de valores posibles por $d$?
+      1. [ ] $d \in [0,B/2]$
+      2. [ ] $d \in [1,B/2]$
+      3. [ ] $d \in [0,B]$
+      4. [ ] $d \in [1,B]$
+      5. [X] $d \in [B/2,B]$
+      6. [ ] otra respuesta
+***** CANC $B^*$ arboles					       :CANC:
+      :LOGBOOK:
+      :END:
       :SOLUTION:     
       :END:
       :PROOF: 
       :END:
+      :CONTEXT:
       Un $B^* arbol llena sus nodos hasta $2/3$, en vez de $1/2$ por
-      los $B$ arboles. Cual es la consecuencia (el objetivo)
-      principal?
+      los $B$ arboles.
+      :END:
+      Cual es el objetivo de un $B^*$ arbol (en comparacion con un $B$ arbol)? 
       1. [ ] Reducir el tiempo de busqueda?
       2. [ ] Reducir la cantidad de accesos al cache en busqueda?
       3. [ ] Reducir la complejidad espacial?
       4. [ ] Reducir la frecuencia de "Split/Merge"?
       5. [ ] Practical [e.g. Optimizacion para data-set (de injeniero)]
       6. [ ] otra respuesta
-***** NEXT $B^+$ arboles
+***** CANC $B^+$ arboles					       :CANC:
       :SOLUTION:     
       Suportar otro tipos de consultas/busquedas?
       :END:
@@ -1514,81 +1684,128 @@ Se tiene que:
       valores en un interval: se busca para el valor minimal y
       maximal, y se returna el interval en la caldena.
       :END:
+      :CONTEXT:
       En $B^+$ arboles, las hojas tienen punteros adicionales formando
-      una caldena de todas las hojas. Cual es la consecuencia (el
-      objetivo) principal?
+      una caldena de todas las hojas. 
+      :END:
+      Cual es el objetivo de un $B^+$ arbol (en comparacion con un $B$ arbol)? 
       1. [ ] Optimizar la Busqueda Secuencial (adaptiva)?
       2. [ ] Suportar otro tipos de consultas/busquedas?
       3. [ ] Suportar la exportacion de las valors en tiempo razonable?
       4. [ ] Practical (e.g. facilitar el back-up de base de datos)?
       5. [ ] otra respuesta
-***** NEXT vEB arboles
+***** NEXT [#A] vEB arboles vs AVL arboles, $(2,3)$ arboles y AVL Arboles
+      :CONTEXT:
+      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol de $n$ elementos sobre
+      $[0..M-1]$ tiene una raiz con
+      - $\sqrt{M}$ punteros a sus ninos $C[0..\sqrt{M}-1]$,
+      - dos valores $min$ y $max$
+      - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
+      :END: 
+      Que *no* distingue los vEB arboles de las otras estructuras de
+      arboles que conocen (e.g. B-arboles) para el ADT diccionario?
+      1. [ ] usa el dominio de las valores *para buscar*
+      2. [ ] el nodo contiene los elementos extremos (no medios como en un AVL)
+      3. [ ] supporta /FindNext/ y /FindPrev/
+      4. [ ] sirven para colas de prioridades tambien
+      5. [ ] petmitten de optimizar mejor la memoria
+      6. [ ] otra respuesta
+
+	     (las respuestas estan volontaramente vacillas.)
+
+***** DONE Altura de un vEB arbol
       :SOLUTION:     
       $\lg m$, que es al maximo $\lg\lg n$.
       :END:
       :PROOF: 
       :END:
-      en cual clase asimptotica es \{ el tiempo de busqueda, de
-      insercion, de delecion, la altura\} de un vEB con $n$ valors
+      :CONTEXT:
+      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol de $n$ elementos sobre
+      $[0..M-1]$ tiene una raiz con
+      - $\sqrt{M}$ punteros a sus ninos $C[0..\sqrt{M}-1]$,
+      - dos valores $min$ y $max$
+      - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
+      :END: 
+      En cual clase asimptotica es \{ el tiempo de busqueda, de
+      insercion, de delecion, la altura \} de un vEB con $n$ valores
       codificadas en $m$ bits?
       1. [ ] $O(\lg n)$
       2. [ ] $O(\lg m)$
       3. [ ] $O(\lg\lg n)$
       4. [ ] $O(\lg\lg m)$
       5. [ ] otra respuesta
-***** vEB children
+***** NEXT vEB children
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 21:55]
+      :END:
       :SOLUTION:     
       $x \over 2^{m/2}$
       :END:
       :PROOF: 
       :END:
-      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol sobre $[0..M-1]$ tiene
-      una raiz con 
+      :CONTEXT:
+      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol de $n$ elementos sobre
+      $[0..M-1]$ tiene una raiz con
       - $\sqrt{M}$ punteros a sus ninos $C[0..\sqrt{M}-1]$,
       - dos valores $min$ y $max$
       - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
-     El valor $x\in]min,max[$ se encuentra en el nino $C[i]$ donde $i=$
-      1. [ ] $2^{m/2} (max - x) \over (max - min) $ 
-      1. [ ] $2^{m-2} (max - x) \over (max - min) $ 
-      2. [ ] $x \over 2^{m/2}$
-      2. [ ] $x \over 2^{m-2}$
+      :END: 
+      El valor $x\in]min,max[$ se encuentra en el nino $C[i]$ donde $i=$
+      1. [ ] $2^{m/2} (max - x) \over (max - min)$ 
+      2. [ ] $2^{m-2} (max - x) \over (max - min)$ 
+      3. [ ] $x \over 2^{m/2}$
+      4. [ ] $x \over 2^{m-2}$
       5. [ ] otra respuesta
-***** vEB aux
+***** DONE vEB aux
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 21:55]
+      :END:
       :SOLUTION:     
       Find Next
       :END:
       :PROOF: 
       :END:
-      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol sobre $[0..M-1]$ tiene
-      una raiz con 
+      :CONTEXT:
+      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol de $n$ elementos sobre
+      $[0..M-1]$ tiene una raiz con
       - $\sqrt{M}$ punteros a sus ninos $C[0..\sqrt{M}-1]$,
       - dos valores $min$ y $max$
       - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
-	El role de $aux$ es de memorisar cuales ninos son vacillos.
-	$j\in aux$ si y solamente si $T.C[j]$ es non vacillo.
-	Cual es el principal objetivo?
+      :END: 
+      El role de $aux$ es de memorisar cuales ninos son vacios.  $j\in
+      aux$ si y solamente si $T.C[j]$ es non vacio.  Cual es el
+      principal objetivo?
       1. [ ] Optimizar Find
       2. [ ] Optimizar Insert
       3. [ ] Optimizar LookUp
       4. [ ] Optimizar FindNext
       5. [ ] otra respuesta
-***** vEB Find Previous
+***** NEXT vEB Find Previous
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 21:55]
+      :END:
       :SOLUTION:     
       :END:
       :PROOF: 
       :END:
-      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol sobre $[0..M-1]$ tiene
-      una raiz con 
+      :CONTEXT:
+      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol de $n$ elementos sobre
+      $[0..M-1]$ tiene una raiz con
       - $\sqrt{M}$ punteros a sus ninos $C[0..\sqrt{M}-1]$,
       - dos valores $min$ y $max$
       - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
+      :END: 
       La complejidade de Find Previous es en 
       1. [ ] $O(k)$
       2. [ ] $O(2^k=m)$
       3. [ ] $O(2^{2^{k-1}})=\sqrt{M}$
-      3. [ ] $O(2^{2^k})=M$
-      5. [ ] otra respuesta
-***** vEB Insercion
+      4. [ ] $O(2^{2^k})=M$
+      5. [ ] $O((\lg\lg M)^2))$
+      6. [ ] otra respuesta
+***** NEXT vEB Insercion
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 21:55]
+      :END:
       :SOLUTION:     
       Genera un error
       :END:
@@ -1596,14 +1813,16 @@ Se tiene que:
       Genera un error: entrada doblada, $x$ tiene que ser a dentro del
       arbol si el es lleno.
       :END:
-      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol sobre $[0..M-1]$ tiene
-      una raiz con 
+      :CONTEXT:
+      Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol de $n$ elementos sobre
+      $[0..M-1]$ tiene una raiz con
       - $\sqrt{M}$ punteros a sus ninos $C[0..\sqrt{M}-1]$,
       - dos valores $min$ y $max$
       - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
+      :END: 
       Si un nino $C[i]$ es lleno antes de agregar un elemento $x$ a dentro.
       1. [ ] Split $C[i]$ en dos
-      2. [ ] Mudal algunos elementos de $C[i]$ a sus vecinos, y si no
+      2. [ ] Mudar algunos elementos de $C[i]$ a sus vecinos, y si no
              se puede a su padre, recursivamente
       3. [ ] Crea un nuevo sobre arbol con una hoja.
       4. [ ] Genera un error
@@ -1622,7 +1841,7 @@ Se tiene que:
     1) Colas de Prioridades tradicional: 
        - que se necesita?
 	 * Operadores 
-	   - /insert(key,item)/
+ 	   - /insert(key,item)/
 	   - /findMind()/
 	   - /extractMin()/
 	 * Operadores opcionales
@@ -1673,11 +1892,253 @@ Se tiene que:
 	 - sequence heaps
 
     3) Colas de Prioridades en Memoria Secundaria: cota inferior?
-       - Cota inferior para dictionaries es una cota inferior por
+       - Cota inferior para dictionarios es una cota inferior por
 	 colas de prioridades o no?
 	 - No. La reduccion es en la otra direccion.
        - Cual es la cota inferior mas simple que se puede imaginar?
 	 - $\Omega(n/B)$
+
+**** CONCEPT QUESTIONS [1/13] 						 :CQ:
+***** DONE Colas de Prioridades vs Diccionarios
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
+      :END:
+      :SOLUTION:     
+      No son verdades las proposiciones siguentes:
+      - $C$ toma menos espacio que $D$
+      - $D$ es asimptoticamente mas rapido que $C$
+      :END:
+      :PROOF: 
+      Porque no se sabe nada de las complejidad de $C$ y $D$.
+      :END:
+      Dado estruturas de datos $C$ y $D$, respectivamente
+      implementando los ADT "cola de prioridad" y "diccionario". 
+      Cual(es) de estas proposiciones tiene(n) problemas?
+      1. [ ] $C$ implementa el ADT "diccionario" tambien.
+      2. [ ] $D$ implementa el ADT "cola de prioridad" tambien.
+      3. [ ] $C$ toma menos espacio que $D$
+      4. [ ] $D$ es asimptoticamente mas rapido que $C$ (en los
+         operadores que tienen en comun)
+      5. [ ] ninguna
+***** NEXT Colas de Prioridades vs Diccionarios
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
+      :END:
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      Considera las estruturas de datos Heap y AVL-arbol,
+      respectivamente implementando los ADT "cola de prioridad" y
+      "diccionario".  Cual(es) de estas proposiciones tiene(n)
+      problemas?
+      1. [ ] $C$ implementa el ADT "diccionario" tambien, pero en malo tiempo.
+      2. [ ] $D$ implementa el ADT "cola de prioridad" tambien, pero en malo tiempo.
+      3. [ ] $C$ implementa el ADT "diccionario" tambien, pero en malo espacio.
+      4. [ ] $D$ implementa el ADT "cola de prioridad" tambien, pero en malo espacio.
+      5. [ ] $C$ implementa el ADT "diccionario" tambien, pero en malo tiempo y espacio.
+      6. [ ] $D$ implementa el ADT "cola de prioridad" tambien, pero en malo tiempo y espacio.
+      7. [ ] otra respuesta
+***** NEXT Cola de Prioridad: operaciones
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
+      :END:
+      :SOLUTION:     
+      1. [ ] insert(key,item)
+      2. [X] search(key)
+      3. [X] delete(key)
+      4. [X] findNext(key)
+      5. [X] findPrevious(key)
+      6. [ ] findMind()
+      7. [ ] extractMin()      
+      :END:
+      :PROOF: 
+      search(key) delete(key) findNext(key) findPrevious(key) no son
+      en el ADT de colas de prioridades.
+      :END:
+      Cuales (no) son operaciones de una (min) cola de prioridad?
+      1. [ ] insert(key,item)
+      2. [ ] search(key)
+      3. [ ] delete(key)
+      4. [ ] findNext(key)
+      5. [ ] findPrevious(key)
+      6. [ ] findMind()
+      7. [ ] extractMin()
+***** NEXT Cola de Prioridad: Heapify
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
+      :END:
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      El operador "Heapify" 
+      1. [ ] es parte del ADT "colas de Prioridad"
+      2. [ ] es parte de la estructura de datos "Heap"
+      3. [ ] tiene complejidad $O(\lg n)$
+      3. [ ] tiene complejidad $O(n)$
+      3. [ ] tiene complejidad $O(n\lg n)$
+      5. [ ] otra respuesta
+***** NEXT Estructuras de datos "Cola de Prioridad"
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 22:50]
+      :END:
+       Cuales estructuras de datos "Cola de Prioridad" conocen?
+         1. [ ] *binary heap*
+	 2. [ ] sequence-heaps
+	 3. [ ] /binomial queues/
+	 4. [ ] /Fibonacci heaps/
+	 5. [ ] leftist heaps
+	 6. [ ] min-max heaps
+	 7. [ ] pairing heaps
+	 8. [ ] skew heaps
+	 9. [ ] /van Emde Boas queues/
+***** NEXT Heaps en Memoria Segundaria: Find Min
+      :CONTEXT:
+      Considera un modelo de memoria segundaria con paginas de tamaño
+      para contener $B$ elementos, y un "heap" de $n$ elementos
+      ($n>>B$).  
+      :END:
+      A cuantos accessos a la memoria segundaria corresponde un
+      llamado a "FindMin" en un "heap"?
+      1. [ ] $1$ accesso
+      2. [ ] $\log_B n$ accessos
+      3. [ ] $\log n / \log B$ accessos
+      4. [ ] $n/B$ accessos
+      5. [ ] $n$ accessos
+***** NEXT Heaps en Memoria Segundaria: Delete Min
+      :CONTEXT:
+      Considera un modelo de memoria segundaria con paginas de tamaño
+      para contener $B$ elementos, y un "heap" de $n$ elementos
+      ($n>>B$).  
+      :END:
+      A cuantos accessos a la memoria segundaria corresponde un
+      llamado a "DeleteMin" en un "heap"?
+      1. [ ] $\log_B n$ accessos
+      2. [ ] $(n-B)/B+1$ accessos
+      3. [ ] $n/B$ accessos
+      4. [ ] $n-B$ accessos
+      5. [ ] $n$ accessos
+***** NEXT vEB queues: Delete Min
+      :CONTEXT:
+      Considera un modelo de memoria segundaria con paginas de tamaño
+      para contener $B$ elementos, y un "heap" de $n$ elementos
+      ($n>>B$).  
+      :END:
+      A cuantos accessos a la memoria segundaria corresponde un
+      llamado a "DeleteMin" en un vEB?
+      1. [ ] $\log_B n$ accessos
+      2. [ ] $(n-B)/B+1$ accessos
+      3. [ ] $n/B$ accessos
+      4. [ ] $n-B$ accessos
+      5. [ ] otra respuesta
+***** NEXT vEB queues: altura
+      :CONTEXT:
+      Considera un modelo de memoria segundaria con paginas de tamaño
+      para contener $B$ elementos, y un "vEB queue" de $n$ elementos
+      ($n>>B$).  
+      :END:
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 23:04]
+      :END:
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      Cual es la altura de un vEB queue?
+      1. [ ] $\log_B\log_B n$
+      1. [ ] $\log_2\log_2 n$
+      1. [ ] $\log_B n$
+      1. [ ] $\log_2 n$
+      5. [ ] otra respuesta
+
+***** NEXT vEB queues: cantidad de hijos
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 23:10]
+      :END:
+      :CONTEXT:
+      Considera un modelo de memoria segundaria con paginas de tamaño
+      para contener $B$ elementos, y un "vEB queue" de $n$ elementos
+      ($n>>B$).
+      :END:
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+
+      Cuanto hijos tiene la raiz de un vEB?
+      1. [ ] $2$
+      2. [ ] $B$
+      3. [ ] $B+1$
+      4. [ ] $\sqrt{B}$
+      4. [ ] $\sqrt{n}$
+      5. [ ] otra respuesta
+
+***** NEXT vEB queues: tiempo de busqueda
+      :CONTEXT:
+      Considera un modelo de memoria segundaria con paginas de tamaño
+      para contener $B$ elementos, y un "vEB queue" de $n$ elementos
+      ($n>>B$).  
+      :END:
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 23:04]
+      :END:
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+
+      Cual es el tiempo de busqueda ("findKey(k)") un vEB queue?
+      1. [ ] $\log_B\log_B n$
+      1. [ ] $\log_2\log_2 n$
+      1. [ ] $\log_B n$
+      1. [ ] $\log_2 n$
+      5. [ ] otra respuesta
+
+***** TODO vEB queues: tiempo de "deleteMin"
+      :CONTEXT:
+      Considera un modelo de memoria segundaria con paginas de tamaño
+      para contener $B$ elementos, y un "vEB queue" de $n$ elementos
+      ($n>>B$).  
+      :END:
+      :LOGBOOK:
+      - State "TODO"       from "NEXT"       [2011-03-30 Wed 23:07]
+      - State "NEXT"       from ""           [2011-03-30 Wed 23:04]
+      :END:
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+
+      Cual es el tiempo de "deleteMin" en un vEB queue?
+      1. [ ] $\log_B\log_B n$
+      1. [ ] $\log_2\log_2 n$
+      1. [ ] $\log_B n$
+      1. [ ] $\log_2 n$
+      5. [ ] otra respuesta
+
+***** TODO vEB queues: espacio
+      :CONTEXT:
+      Considera un modelo de memoria segundaria con paginas de tamaño
+      para contener $B$ elementos, y un "vEB queue" de $n$ elementos
+      ($n>>B$).  
+      :END:
+      :LOGBOOK:
+      - State "TODO"       from ""           [2011-03-30 Wed 23:11]
+      :END:
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+
+      Cuanto espacio toma este "vEB queue"?
+      
+      1. [ ] $n$
+      2. [ ] $k=\lg m$
+      3. [ ] $m$
+      4. [ ] $M=2^m$
+      5. [ ] otra respuesta
+
 
 **** REFERENCIAS ADICIONALES
      + http://www.dcc.uchile.cl/~gnavarro/algoritmos/tesisRapa.pdf
@@ -4839,3 +5300,4 @@ Se tiene que:
 	    
 	    
    
+	    
