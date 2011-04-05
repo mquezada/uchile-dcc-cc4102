@@ -1246,6 +1246,7 @@ Se tiene que:
        - Busqueda y Codificacion de Enteros (busqueda doblada)
        - Busqueda binaria en $\Theta(1+\lg n)$ (mejor que $2\lg n$)
        - Algoritmo en $2n/3 + O(1)$ comparaciones para min max
+
 ** Memoria Secundaria [Algoritmos y Estructuras de Datos para] (3 semanas = 6 charlas)
 *** PREREQUISITOS DE UNIDAD 
     * Apuntes de CC3001:
@@ -1495,7 +1496,7 @@ Se tiene que:
 	    del nivel considerado
 	  - Insercion
 	  - Delecion
-**** CONCEPT QUESTIONS [10/16] 						 :CQ:
+**** CONCEPT QUESTIONS [12/16] 						 :CQ:
 ***** [#A] Cola de Prioridad: operaciones
       :SOLUTION:     
       Todas se pueden implementar facilamente en un dicionario, pero
@@ -1693,7 +1694,7 @@ Se tiene que:
       3. [ ] Suportar la exportacion de las valors en tiempo razonable?
       4. [ ] Practical (e.g. facilitar el back-up de base de datos)?
       5. [ ] otra respuesta
-***** NEXT vEB arboles vs AVL arboles, $(2,3)$ arboles y AVL Arboles
+***** NEXT [#A] vEB arboles vs AVL arboles, $(2,3)$ arboles y AVL Arboles
       :CONTEXT:
       Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol de $n$ elementos sobre
       $[0..M-1]$ tiene una raiz con
@@ -1701,17 +1702,18 @@ Se tiene que:
       - dos valores $min$ y $max$
       - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
       :END: 
-      Que distingue los vEB arboles de las otras estructuras de
-      arboles para el ADT diccionario?
-      1. [ ] usa el dominio de las valores
-      2. [ ] 
-      3. [ ] 
-      4. [ ] 
-      5. [ ] 
+      Que *no* distingue los vEB arboles de las otras estructuras de
+      arboles que conocen (e.g. B-arboles) para el ADT diccionario?
+      1. [ ] usa el dominio de las valores *para buscar*
+      2. [ ] el nodo contiene los elementos extremos (no medios como en un AVL)
+      3. [ ] supporta /FindNext/ y /FindPrev/
+      4. [ ] sirven para colas de prioridades tambien
+      5. [ ] petmitten de optimizar mejor la memoria
+      6. [ ] otra respuesta
 
 	     (las respuestas estan volontaramente vacillas.)
 
-***** NEXT Altura de un vEB arbol
+***** DONE Altura de un vEB arbol
       :SOLUTION:     
       $\lg m$, que es al maximo $\lg\lg n$.
       :END:
@@ -1749,12 +1751,12 @@ Se tiene que:
       - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
       :END: 
       El valor $x\in]min,max[$ se encuentra en el nino $C[i]$ donde $i=$
-      1. [ ] $2^{m/2} (max - x) \over (max - min) $ 
-      1. [ ] $2^{m-2} (max - x) \over (max - min) $ 
-      2. [ ] $x \over 2^{m/2}$
-      2. [ ] $x \over 2^{m-2}$
+      1. [ ] $2^{m/2} (max - x) \over (max - min)$ 
+      2. [ ] $2^{m-2} (max - x) \over (max - min)$ 
+      3. [ ] $x \over 2^{m/2}$
+      4. [ ] $x \over 2^{m-2}$
       5. [ ] otra respuesta
-***** NEXT vEB aux
+***** DONE vEB aux
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 21:55]
       :END:
@@ -1770,9 +1772,9 @@ Se tiene que:
       - dos valores $min$ y $max$
       - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
       :END: 
-      El role de $aux$ es de memorisar cuales ninos son vacillos.
-      $j\in aux$ si y solamente si $T.C[j]$ es non vacillo.  Cual es
-      el principal objetivo?
+      El role de $aux$ es de memorisar cuales ninos son vacios.  $j\in
+      aux$ si y solamente si $T.C[j]$ es non vacio.  Cual es el
+      principal objetivo?
       1. [ ] Optimizar Find
       2. [ ] Optimizar Insert
       3. [ ] Optimizar LookUp
@@ -1797,8 +1799,9 @@ Se tiene que:
       1. [ ] $O(k)$
       2. [ ] $O(2^k=m)$
       3. [ ] $O(2^{2^{k-1}})=\sqrt{M}$
-      3. [ ] $O(2^{2^k})=M$
-      5. [ ] otra respuesta
+      4. [ ] $O(2^{2^k})=M$
+      5. [ ] $O((\lg\lg M)^2))$
+      6. [ ] otra respuesta
 ***** NEXT vEB Insercion
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 21:55]
@@ -1819,7 +1822,7 @@ Se tiene que:
       :END: 
       Si un nino $C[i]$ es lleno antes de agregar un elemento $x$ a dentro.
       1. [ ] Split $C[i]$ en dos
-      2. [ ] Mudal algunos elementos de $C[i]$ a sus vecinos, y si no
+      2. [ ] Mudar algunos elementos de $C[i]$ a sus vecinos, y si no
              se puede a su padre, recursivamente
       3. [ ] Crea un nuevo sobre arbol con una hoja.
       4. [ ] Genera un error
@@ -1895,8 +1898,8 @@ Se tiene que:
        - Cual es la cota inferior mas simple que se puede imaginar?
 	 - $\Omega(n/B)$
 
-**** CONCEPT QUESTIONS [0/13] 						 :CQ:
-***** NEXT Colas de Prioridades vs Diccionarios
+**** CONCEPT QUESTIONS [1/13] 						 :CQ:
+***** DONE Colas de Prioridades vs Diccionarios
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
       :END:
