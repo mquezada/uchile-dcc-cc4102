@@ -139,9 +139,12 @@
     :Energy:   ZERO
     :Span:     hour
     :END:
-**** Story of Eric Mazur					       :TALK:
-     - link to his talk on UTube 
-**** Hanoi Tower of height 4						 :CQ:
+**** Una corta historia sobre "Concept Questions" 		       :TALK:
+     - Charla de Eric Mazur:
+       - http://www.youtube.com/watch?v=WwslBPj8GgI
+     - Grupo de Investigacion sobre "Peer Instruction"
+       - http://mazur-www.harvard.edu/research/detailspage.php?rowid=8
+**** Torre de Hanoi de altura 4 					 :CQ:
      :PROPERTIES:
      :END:
      :SOLUTION: 
@@ -161,7 +164,7 @@
        4) [ ] $2^4 = 32$
        5) [ ] none of the above
 
-**** Hanoi Tower of height 8						 :CQ:
+**** Torre de Hanoi de altura 8						 :CQ:
      :PROPERTIES:
      :END:
      :SOLUTION: 
@@ -217,7 +220,7 @@
        3) [ ] $2^8$
        4) [ ] $8!=8*7*6*5*4*3*2*1=?$
        5) [ ] none of the above
-*** Conceptos basicos (recuerdando CC3001)
+*** Conceptos básicos (recuerdan CC3001)
 **** Notaciones
      - $O(), o(), \Omega(), \omega(), \Theta(), \theta()$
 **** Definiciones
@@ -231,12 +234,12 @@
      - Cuales cotas inferiores conocen para...
        - buscar?
        - ordenar?
-     - Que problemas dificiles conocen?
+     - Que problemas difíciles conocen?
        - elegir sus cursos
-       - assignar salas y horarios a los cursos
-       - assignar infermeros a hospitales
+       - asignar salas y horarios a los cursos
+       - asignar enfermeros a hospitales
 **** Concept Questions [0/7] 
-***** TODO Asymptotics
+***** TODO Asintóticas
        :LOGBOOK:
        - State "TODO"       from ""           [2011-03-10 Thu 11:55]
        :END:
@@ -270,7 +273,7 @@
       2. [ ] $e = i+1$
       3. [ ] $i = e+1$
       4. [ ] $e = 2^i$
-      5. [ ] sin relacion
+      5. [ ] sin relación
 ***** TODO Sumas de largos de caminos en arboles.
       :LOGBOOK:
       - State "TODO"       from ""           [2011-03-10 Thu 11:55]
@@ -285,7 +288,7 @@ Se tiene que:
      2. [ ] $E_n = I_n+1$
      3. [ ] $E_n = I_n+n$
      4. [ ] $E_n = I_n+2n$
-     5. [ ] sin relacion
+     5. [ ] sin relación
 ***** TODO Heap
       :LOGBOOK:
       - State "TODO"       from ""           [2011-03-10 Thu 11:55]
@@ -323,39 +326,39 @@ Se tiene que:
       4. [ ] $2^h-1$
       5. [ ] ningunas de las respuestas  previas.
 
-*** Busqueda y Codificacion de Enteros (BONUS)
-**** Relacion entre busqueda ordenada y codigos			       :TALK:
+*** Búsqueda y Codificación de Enteros (BONUS)
+**** Relación entre búsqueda ordenada y códigos			       :TALK:
 
-     | Algoritmo de busqueda      | Codigo por enteros |
+     | Algoritmo de búsqueda      | Código por enteros |
      |----------------------------+--------------------|
-     | Busqueda secuencial        | Codigo Unario      |
-     | Busqueda binaria           | Codigo Binario     |
-     | Busqueda doblada           | ???                |
-     | Busqueda por interpolacion | ???                |
-     | ???                        | Huffman Code       |
+     | Búsqueda secuencial        | Código Unario      |
+     | Búsqueda binaria           | Codigo Binario     |
+     | Búsqueda doblada           | ???                |
+     | Búsqueda por interpolación | ???                |
+     | ???                        | Huffman Código       |
 
-     - A cuales algoritmos de busqueda ordenada corresponden codigos?
-     - A cuales codigos corresponden algoritmos de busqueda?
+     - A cuales algoritmos de búsqueda ordenada corresponden códigos?
+     - A cuales códigos corresponden algoritmos de búsqueda?
 
-** Conceptos basicos y complejidad (3 semanas = 6 charlas)
-*** DESCRIPCION de la Unidad:
-**** Resultados de Aprendisajes de la Unidad
+** Conceptos básicos y complejidad (3 semanas = 6 charlas)
+*** DESCRIPCIÓN de la Unidad:
+**** Resultados de Aprendizajes de la Unidad
      - Comprender el concepto de complejidad de un problema como cota inferior
-     - conocer tecnicas elementales para demostrar cotas inferiores
+     - conocer técnicas elementales para demostrar cotas inferiores
      - Conocer algunos casos de estudio relevantes
-     - Adquirir nociones basicas de experimentacion en algoritmos. 
+     - Adquirir nociones básicas de experimentación en algoritmos. 
 **** Principales casos de estudio 
      - Cota inferior para minimo y maximo de un arreglo
-     - Caso promedio del quicksort
-     - Cota inferior para busqueda en un arreglo con distintas probabilidades de acceso
-*** PREREQUISITOS DE UNIDAD 
-**** Lista de themas en apuntes de CC3001 			    :READING:
+     - Caso promedio del "Quicksort"
+     - Cota inferior para búsqueda en un arreglo con distintas probabilidades de acceso
+*** PRERREQUISITOS DE UNIDAD 
+**** Lista de temas en apuntes de CC3001 			    :READING:
     http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
 *** Repaso 
-**** PREREQUISITOS
-***** "Bases de la programacion" en apuntes de CC3001		    :READING:
+**** PRERREQUISITOS
+***** "Bases de la programación" en apuntes de CC3001		    :READING:
       - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
-***** Notaciones asimptoticas					    :READING:
+***** Notaciones Asintóticas					    :READING:
 	- $O()$  http://es.wikipedia.org/wiki/Cota_superior_asint%C3%B3tica
 	- $\Omega()$ http://es.wikipedia.org/wiki/Cota_inferior_asint%C3%B3tica
 	- $\Theta()$ http://es.wikipedia.org/wiki/Cota_ajustada_asint%C3%B3tica
@@ -365,19 +368,19 @@ Se tiene que:
 ***** AVL en  apuntes de CC3001					    :READING:
       - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/#3
 **** Problema de la Torre de Hanoi				       :TALK:
-     - Definicion
+     - Definición
      - Cota superior
      - Cota inferior
 **** Variantes de la Torre de Hanoi				       :TALK:
     - pesos distintos?
-    - Disk Pile Problem ($n$ discos pero $h<n$ tamanos)
-      - Cota inferior en funcion de $n$, en funcion de $n,h$ 
-      - Cota superior en funcion de $n$, en funcion de $n,h$
-    - Precise Disk Pile Problem ($n$ discos con $n_i$ de tamaño $i$, $\forall i\in[1..h]$)
+    - Disk Pile Problema ($n$ discos pero $h<n$ tamaños)
+      - Cota inferior en función de $n$, en función de $n,h$ 
+      - Cota superior en función de $n$, en función de $n,h$
+    - Precise Disk Pile Problema ($n$ discos con $n_i$ de tamaño $i$, $\forall i\in[1..h]$)
       - cota inferior en función de $n$, en función de $h,n_1,...,n_h$ 
       - cota superior en función de $n$, en función de $h,n_1,...,n_h$
 **** CONCEPT QUESTIONS [7/7] 						 :CQ:
-***** DONE [#A] Asymptotics						 :CP:
+***** DONE [#A] Asintóticas						 :CP:
        :LOGBOOK:
        - State "DONE"       from "TODO"       [2011-03-15 Tue 11:05]
        - State "TODO"       from ""           [2011-03-10 Thu 11:55]
@@ -407,7 +410,7 @@ Se tiene que:
       2. [ ] e = i+1
       3. [ ] i = e+1
       4. [ ] e = 2^i
-      5. [ ] sin relacion
+      5. [ ] sin relación
 ***** DONE Sea n = número de nodos internos. Se define:
       :LOGBOOK:
       - State "DONE"       from "TODO"       [2011-03-15 Tue 11:06]
@@ -422,7 +425,7 @@ Se tiene que:
      2. [ ] En = In+1
      3. [ ] En = In+n
      4. [ ] En = In+2n
-     5. [ ] sin relacion
+     5. [ ] sin relación
 ***** DONE Heap
       :LOGBOOK:
       - State "DONE"       from "TODO"       [2011-03-15 Tue 11:06]
@@ -430,12 +433,12 @@ Se tiene que:
       :END:
       La característica que permite que un heap se pueda almacenar
       sin punteros es que, si se utiliza la numeración por niveles
-      indicada, entoncés la(s) relación(es) entre padres e hijos es
+      indicada, entonces la(s) relación(es) entre padres e hijos es
       (son):
-      1. [ ] Hijos del nodo j = {2*j, 2*j+1}
-      2. [ ] Padre del nodo k = floor(k/2) 
-      3. [ ] Hijos del nodo j = {2*j-1, 2*j}
-      4. [ ] Padre del nodo k = floor(k/2)+1 
+      1. [ ] Hijos del nodo $j = \{2*j, 2*j+1\}$
+      2. [ ] Padre del nodo $k = \lfloor k/2 \rfloor$ 
+      3. [ ] Hijos del nodo $j = \{2*j-1, 2*j\}$
+      4. [ ] Padre del nodo $k = \lfloor k/2 \rfloor +1$
       5. [ ] ningunos
 ***** DONE AVL
       :LOGBOOK:
@@ -453,19 +456,19 @@ Se tiene que:
       :END:
       :PROOF:
       (ref http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/#3  )
-      Sea $n_h$ el tamano del arbol AVL mas pequeno de altura $h$.
-      Experimentalemente, 
+      Sea $n_h$ el tamaño del árbol AVL mas pequeño de altura $h$.
+      Experimentalmente, 
       | $h$   | 1 | 2 | 3 | 4 |  5 |
       |-------+---+---+---+---+----|
       | $n_h$ | 2 | 3 | 5 | 8 | 13 |
-      Recursivamente, un tal arbol tiene
+      Recursivamente, un tal árbol tiene
       - un hijo de altura $h-1$ y con $n_{h-1}$ nodos
       - un hijo de altura $h-2$ y con $n_{h-2}$ nodos 
 
-      Asi $n_h = 1+n_{h-1}+n_{h-2}$: es la forma de la secuencia de
+      Así $n_h = 1+n_{h-1}+n_{h-2}$: es la forma de la secuencia de
       Fibonacci (con distintas condiciones iniciales)!  
 
-      La solucion es $n_h=\frac{\phi^{h+2}}{\sqrt{5}}$ (que no es en
+      La solución es $n_h=\frac{\phi^{h+2}}{\sqrt{5}}$ (que no es en
       la lista).
       :END:
       :LOGBOOK:
@@ -478,23 +481,23 @@ Se tiene que:
       2. [ ] $2h$
       3. [ ] $2^h$
       4. [ ] $2^h-1$
-      5. [ ] otra respuest
-*** Metodologia de experimentacion
-**** PREREQUISITOS
+      5. [ ] otra respuesta
+*** Metodología de experimentación
+**** PRERREQUISITOS
      - de las apuntes de CC3001:
        - Nociones básicas de programación http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Programacion/
 	 (sin estudiarlas)
      - de las apuntes de CC4102:
-       - 1.4 Metodologia de experimentacion
+       - 1.4 Metodología de experimentación
      - en la red (y en ingles)
-       - Research Design: Qualitative, Quantitative, and Mixed Methods Approaches 
+       - "Research Design: Qualitative, Quantitative, and Mixed Methods Approaches" 
 	 John W. Creswell
 	 http://www.amazon.com/Research-Design-Qualitative-Quantitative-Approaches/
-**** Al inicio, Ciencias de la computacion fue solamente experimentacion.
-***** Turing y el codigo Enigma
-      - el importante estaba de solucionar la instancia del dia
-	(romper la llave del dia, basado en los messages de
-	meteo, para decryptar los messages mas importantes)
+**** Al inicio, Ciencias de la computación fue solamente experimentación.
+***** Turing y el código Enigma
+      - el importante estaba de solucionar la instancia del día
+	(romper la llave del día, basado en los mensajes de
+	meteorológico, para descifrar los messages mas importantes)
 	 - no mucho focus en el problema, aunque Turing si escribio
 	   la definicion de la Maquina universal.
 ***** Experimentacion basica 
