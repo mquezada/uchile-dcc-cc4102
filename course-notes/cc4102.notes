@@ -1499,7 +1499,7 @@ Se tiene que:
 	    del nivel considerado
 	  - Insercion
 	  - Delecion
-**** CONCEPT QUESTIONS [12/16] 						 :CQ:
+**** CONCEPT QUESTIONS [16/16] 						 :CQ:
 ***** [#A] Cola de Prioridad: operaciones
       :SOLUTION:     
       Todas se pueden implementar facilamente en un dicionario, pero
@@ -1697,7 +1697,7 @@ Se tiene que:
       3. [ ] Suportar la exportacion de las valors en tiempo razonable?
       4. [ ] Practical (e.g. facilitar el back-up de base de datos)?
       5. [ ] otra respuesta
-***** NEXT [#A] vEB arboles vs AVL arboles, $(2,3)$ arboles y AVL Arboles
+***** CANC [#A] vEB arboles vs AVL arboles, $(2,3)$ arboles y AVL Arboles :CANC:
       :CONTEXT:
       Fija $k$, $m=2^k$, $M=2^m$.  Un vEB arbol de $n$ elementos sobre
       $[0..M-1]$ tiene una raiz con
@@ -1713,9 +1713,6 @@ Se tiene que:
       4. [ ] sirven para colas de prioridades tambien
       5. [ ] petmitten de optimizar mejor la memoria
       6. [ ] otra respuesta
-
-	     (las respuestas estan volontaramente vacillas.)
-
 ***** DONE Altura de un vEB arbol
       :SOLUTION:     
       $\lg m$, que es al maximo $\lg\lg n$.
@@ -1737,7 +1734,7 @@ Se tiene que:
       3. [ ] $O(\lg\lg n)$
       4. [ ] $O(\lg\lg m)$
       5. [ ] otra respuesta
-***** NEXT vEB children
+***** CANC vEB children						       :CANC:
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 21:55]
       :END:
@@ -1783,7 +1780,7 @@ Se tiene que:
       3. [ ] Optimizar LookUp
       4. [ ] Optimizar FindNext
       5. [ ] otra respuesta
-***** NEXT vEB Find Previous
+***** DONE vEB Find Previous
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 21:55]
       :END:
@@ -1805,7 +1802,7 @@ Se tiene que:
       4. [ ] $O(2^{2^k})=M$
       5. [ ] $O((\lg\lg M)^2))$
       6. [ ] otra respuesta
-***** NEXT vEB Insercion
+***** DONE vEB Insercion
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 21:55]
       :END:
@@ -1835,9 +1832,9 @@ Se tiene que:
      - Apuntes CC3001
        - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/TDA/#4
      - Colas de Prioridad
-       - http://en.wikipedia.org/wiki/Priority\_queue]]
+       - http://en.wikipedia.org/wiki/Priority\_queue
      - Heaps
-       - http://en.wikipedia.org/wiki/Heap\_data\_structure]]
+       - http://en.wikipedia.org/wiki/Heap\_data\_structure
      - van Emde Boas Queues
        - http://www.itl.nist.gov/div897/sqg/dads/HTML/vanemdeboas.html
 **** APUNTES
@@ -1857,7 +1854,7 @@ Se tiene que:
 	   - ...
        - diccionarios: demasiado espacio para que se pide
 	 - menos operadores que diccionarios 
-	   - => mas flexibilidad en la representacion
+	   - => mas flexibilidad en la representación
 	   - => mejor tiempo y/o espacio
        - *binary heap*: una estructura a dentro de muchas otras:
 	 - sequence-heaps
@@ -1870,7 +1867,7 @@ Se tiene que:
 	 - /van Emde Boas queues/
 
        - *van Emde Boas queues*
-	 - Definicion: 
+	 - Definición: 
 
 	   "An efficient implementation of priority queues where
 	   insert, delete, get minimum, get maximum, etc. take O(log
@@ -1895,35 +1892,35 @@ Se tiene que:
 	 - sequence heaps
 
     3) Colas de Prioridades en Memoria Secundaria: cota inferior?
-       - Cota inferior para dictionarios es una cota inferior por
+       - Cota inferior para diccionarios es una cota inferior por
 	 colas de prioridades o no?
-	 - No. La reduccion es en la otra direccion.
+	 - No. La reducción es en la otra dirección.
        - Cual es la cota inferior mas simple que se puede imaginar?
 	 - $\Omega(n/B)$
 
 **** CONCEPT QUESTIONS [1/13] 						 :CQ:
-***** DONE Colas de Prioridades vs Diccionarios
+***** DONE Colas de Prioridades contra Diccionarios
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
       :END:
       :SOLUTION:     
-      No son verdades las proposiciones siguentes:
+      No son verdades las proposiciones siguientes:
       - $C$ toma menos espacio que $D$
-      - $D$ es asimptoticamente mas rapido que $C$
+      - $D$ es asintóticamente mas rápido que $C$
       :END:
       :PROOF: 
       Porque no se sabe nada de las complejidad de $C$ y $D$.
       :END:
-      Dado estruturas de datos $C$ y $D$, respectivamente
+      Dado estructuras de datos $C$ y $D$, respectivamente
       implementando los ADT "cola de prioridad" y "diccionario". 
       Cual(es) de estas proposiciones tiene(n) problemas?
-      1. [ ] $C$ implementa el ADT "diccionario" tambien.
-      2. [ ] $D$ implementa el ADT "cola de prioridad" tambien.
+      1. [ ] $C$ implementa el ADT "diccionario" también.
+      2. [ ] $D$ implementa el ADT "cola de prioridad" también.
       3. [ ] $C$ toma menos espacio que $D$
-      4. [ ] $D$ es asimptoticamente mas rapido que $C$ (en los
-         operadores que tienen en comun)
+      4. [ ] $D$ es asintóticamente mas rápido que $C$ (en los
+         operadores que tienen en común)
       5. [ ] ninguna
-***** NEXT Colas de Prioridades vs Diccionarios
+***** NEXT Colas de Prioridades contra Diccionarios
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
       :END:
@@ -1931,16 +1928,16 @@ Se tiene que:
       :END:
       :PROOF: 
       :END:
-      Considera las estruturas de datos Heap y AVL-arbol,
+      Considera las estructuras de datos Heap y AVL-árbol,
       respectivamente implementando los ADT "cola de prioridad" y
       "diccionario".  Cual(es) de estas proposiciones tiene(n)
       problemas?
-      1. [ ] $C$ implementa el ADT "diccionario" tambien, pero en malo tiempo.
-      2. [ ] $D$ implementa el ADT "cola de prioridad" tambien, pero en malo tiempo.
-      3. [ ] $C$ implementa el ADT "diccionario" tambien, pero en malo espacio.
-      4. [ ] $D$ implementa el ADT "cola de prioridad" tambien, pero en malo espacio.
-      5. [ ] $C$ implementa el ADT "diccionario" tambien, pero en malo tiempo y espacio.
-      6. [ ] $D$ implementa el ADT "cola de prioridad" tambien, pero en malo tiempo y espacio.
+      1. [ ] $C$ implementa el ADT "diccionario" también, pero en malo tiempo.
+      2. [ ] $D$ implementa el ADT "cola de prioridad" también, pero en malo tiempo.
+      3. [ ] $C$ implementa el ADT "diccionario" también, pero en malo espacio.
+      4. [ ] $D$ implementa el ADT "cola de prioridad" también, pero en malo espacio.
+      5. [ ] $C$ implementa el ADT "diccionario" también, pero en malo tiempo y espacio.
+      6. [ ] $D$ implementa el ADT "cola de prioridad" también, pero en malo tiempo y espacio.
       7. [ ] otra respuesta
 ***** NEXT Cola de Prioridad: operaciones
       :LOGBOOK:
@@ -1996,48 +1993,70 @@ Se tiene que:
 	 7. [ ] pairing heaps
 	 8. [ ] skew heaps
 	 9. [ ] /van Emde Boas queues/
-***** NEXT Heaps en Memoria Segundaria: Find Min
+***** NEXT Heaps en Memoria Segundaría: Find Min
       :CONTEXT:
-      Considera un modelo de memoria segundaria con paginas de tamaño
+      Considera un modelo de memoria segundaría con paginas de tamaño
       para contener $B$ elementos, y un "heap" de $n$ elementos
       ($n>>B$).  
       :END:
-      A cuantos accessos a la memoria segundaria corresponde un
+      A cuantos accesos a la memoria segundaría corresponde un
       llamado a "FindMin" en un "heap"?
-      1. [ ] $1$ accesso
-      2. [ ] $\log_B n$ accessos
-      3. [ ] $\log n / \log B$ accessos
-      4. [ ] $n/B$ accessos
-      5. [ ] $n$ accessos
-***** NEXT Heaps en Memoria Segundaria: Delete Min
+      1. [ ] $1$ acceso
+      2. [ ] $\log_B n$ accesos
+      3. [ ] $\log n / \log B$ accesos
+      4. [ ] $n/B$ accesos
+      5. [ ] $n$ accesos
+***** NEXT Heaps en Memoria Segundaría: Delete Min
       :CONTEXT:
-      Considera un modelo de memoria segundaria con paginas de tamaño
+      Considera un modelo de memoria segundaría con paginas de tamaño
       para contener $B$ elementos, y un "heap" de $n$ elementos
       ($n>>B$).  
       :END:
-      A cuantos accessos a la memoria segundaria corresponde un
+      A cuantos accesos a la memoria segundaría corresponde un
       llamado a "DeleteMin" en un "heap"?
-      1. [ ] $\log_B n$ accessos
-      2. [ ] $(n-B)/B+1$ accessos
-      3. [ ] $n/B$ accessos
-      4. [ ] $n-B$ accessos
-      5. [ ] $n$ accessos
+      1. [ ] $\log_B n$ accesos
+      2. [ ] $(n-B)/B+1$ accesos
+      3. [ ] $n/B$ accesos
+      4. [ ] $n-B$ accesos
+      5. [ ] $n$ accesos
 ***** NEXT vEB queues: Delete Min
       :CONTEXT:
-      Considera un modelo de memoria segundaria con paginas de tamaño
+      Considera un modelo de memoria segundaría con paginas de tamaño
       para contener $B$ elementos, y un "heap" de $n$ elementos
       ($n>>B$).  
       :END:
-      A cuantos accessos a la memoria segundaria corresponde un
+      A cuantos accesos a la memoria segundaría corresponde un
       llamado a "DeleteMin" en un vEB?
-      1. [ ] $\log_B n$ accessos
-      2. [ ] $(n-B)/B+1$ accessos
-      3. [ ] $n/B$ accessos
-      4. [ ] $n-B$ accessos
+      1. [ ] $\log_B n$ accesos
+      2. [ ] $(n-B)/B+1$ accesos
+      3. [ ] $n/B$ accesos
+      4. [ ] $n-B$ accesos
+      5. [ ] otra respuesta
+
+***** NEXT vEB queues: cantidad de hijos
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 23:10]
+      :END:
+      :CONTEXT:
+      Considera un modelo de memoria segundaría con paginas de tamaño
+      para contener $B$ elementos, y un "vEB queue" de $n$ elementos
+      ($n>>B$).
+      :END:
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+
+      Cuanto hijos tiene la raíz de un vEB?
+      1. [ ] $2$
+      2. [ ] $B$
+      3. [ ] $B+1$
+      4. [ ] $\sqrt{B}$
+      4. [ ] $\sqrt{n}$
       5. [ ] otra respuesta
 ***** NEXT vEB queues: altura
       :CONTEXT:
-      Considera un modelo de memoria segundaria con paginas de tamaño
+      Considera un modelo de memoria segundaría con paginas de tamaño
       para contener $B$ elementos, y un "vEB queue" de $n$ elementos
       ($n>>B$).  
       :END:
@@ -2055,31 +2074,9 @@ Se tiene que:
       1. [ ] $\log_2 n$
       5. [ ] otra respuesta
 
-***** NEXT vEB queues: cantidad de hijos
-      :LOGBOOK:
-      - State "NEXT"       from ""           [2011-03-30 Wed 23:10]
-      :END:
+***** NEXT vEB queues: tiempo de búsqueda
       :CONTEXT:
-      Considera un modelo de memoria segundaria con paginas de tamaño
-      para contener $B$ elementos, y un "vEB queue" de $n$ elementos
-      ($n>>B$).
-      :END:
-      :SOLUTION:     
-      :END:
-      :PROOF: 
-      :END:
-
-      Cuanto hijos tiene la raiz de un vEB?
-      1. [ ] $2$
-      2. [ ] $B$
-      3. [ ] $B+1$
-      4. [ ] $\sqrt{B}$
-      4. [ ] $\sqrt{n}$
-      5. [ ] otra respuesta
-
-***** NEXT vEB queues: tiempo de busqueda
-      :CONTEXT:
-      Considera un modelo de memoria segundaria con paginas de tamaño
+      Considera un modelo de memoria segundaría con paginas de tamaño
       para contener $B$ elementos, y un "vEB queue" de $n$ elementos
       ($n>>B$).  
       :END:
@@ -2091,16 +2088,16 @@ Se tiene que:
       :PROOF: 
       :END:
 
-      Cual es el tiempo de busqueda ("findKey(k)") un vEB queue?
+      Cual es el tiempo de búsqueda ("findKey(k)") un vEB queue?
       1. [ ] $\log_B\log_B n$
       1. [ ] $\log_2\log_2 n$
       1. [ ] $\log_B n$
       1. [ ] $\log_2 n$
       5. [ ] otra respuesta
 
-***** TODO vEB queues: tiempo de "deleteMin"
+***** NEXT vEB queues: tiempo de "deleteMin"
       :CONTEXT:
-      Considera un modelo de memoria segundaria con paginas de tamaño
+      Considera un modelo de memoria segundaría con paginas de tamaño
       para contener $B$ elementos, y un "vEB queue" de $n$ elementos
       ($n>>B$).  
       :END:
@@ -2120,9 +2117,9 @@ Se tiene que:
       1. [ ] $\log_2 n$
       5. [ ] otra respuesta
 
-***** TODO vEB queues: espacio
+***** NEXT vEB queues: espacio
       :CONTEXT:
-      Considera un modelo de memoria segundaria con paginas de tamaño
+      Considera un modelo de memoria segundaría con paginas de tamaño
       para contener $B$ elementos, y un "vEB queue" de $n$ elementos
       ($n>>B$).  
       :END:
@@ -2134,14 +2131,13 @@ Se tiene que:
       :PROOF: 
       :END:
 
-      Cuanto espacio toma este "vEB queue"?
+      Cuanto bytes toma un "vEB queue"?
       
-      1. [ ] $n$
+      1. [ ] $n$ 
       2. [ ] $k=\lg m$
       3. [ ] $m$
       4. [ ] $M=2^m$
       5. [ ] otra respuesta
-
 
 **** REFERENCIAS ADICIONALES
      + http://www.dcc.uchile.cl/~gnavarro/algoritmos/tesisRapa.pdf
@@ -2164,7 +2160,7 @@ Se tiene que:
        - Cota Inferior Ordenamiento en Memoria externa
 	 - http://www.daimi.au.dk/~large/ioS06/Alower.pdf 
 **** APUNTES
-    1. Un modelo mas fino
+    1. Un modelo mas fino quel anterior
 
        1) Cuantos paginas quedan en memoria local?
 	  - no tan importante para busqueda
@@ -2179,9 +2175,9 @@ Se tiene que:
 	  - $M$ = cantidad de memoria local
 	  - $m$ = cantidad de paginas locales = $M/B$
 	  - mnemotechnique: 
-	    - $N,M,B$ en cantidad de palabras maquinas (=bytes?)
+	    - $N,M,B$ en cantidad de "palabras maquinas" (=bytes?)
 	    - $n,m$ en cantidad de paginas
-	    - $n<<N$, $m<<M$
+	    - $n<<N$, $m<<M$, por eso son "pequeñas" letras
 
        3) En estas notaciones, usando resultos previos:
 
@@ -2200,19 +2196,23 @@ Se tiene que:
 	 - en modelo RAM? (de comparaciones)
 	   - $\lg N$
 	 - en modele Memoria Externa? (de comparaciones)
-	   - $\lg N / \lg B = \log_B N$    (ajustado)
+	   - al maximo $\lg N / \lg B = \log_B N$    
 
        * para fusionar dos arreglos ordenados?
 	 - en modelo RAM?
 	   - $N$
 	 - en modelo Memoria Externa con paginas de tamano B?
-	   - $N/B = n$   (ajustado)
+	   - al maximo $N/B = n$
 
-       * para fusionar k arreglos ordenados?
+       * para fusionar $k$ arreglos ordenados?
 	 - en modelo RAM? 
 	   - $N$
-	 - en modelo de Memoria Externa con M paginas de tamano B?
-	   - $N/B = n$ (si $M > kB$)
+	 - en modelo de Memoria Externa con $M$ paginas de tamano $B$?
+	   - al maximo $N/B = n$ *si $M > kB$*
+	   - que hacemos si $M < kB$?
+	     - el caso extremo cuando $k=N$ se llama ordenar
+	     - veamos como ordenar, generalisar a la union de $k$
+               arreglos ordenados es un ejericio despues.
 
        * para Ordenar
 	 - (corrige y adapte la prueba de http://www.daimi.au.dk/~large/ioS06/Alower.pdf )
@@ -2224,7 +2224,7 @@ Se tiene que:
 	 - Prueba:
 
 	   * en vez de considerar el problema de ordenamiento,
-	     supponga que el arregla sea una permutacion y
+	     supponga que el arreglo sea una permutacion y
 	     considera el problema (equivalente en ese caso) de
 	     identificar cual permutacion sea.
 
@@ -2234,15 +2234,15 @@ Se tiene que:
 	       accessos a la memoria externa).
 	     - queda $N! / ( (B!)^n )$ permutaciones posibles.
 
-	   * para cada accesso a una pagina de memoria externo,
+	   * para cada accesso a una pagina de memoria externa,
 	     cuantos permutaciones potenciales podemos eliminar?
 	     - con $M$ entradas en memoria primaria
-	     - $B$ nuevas entradas se pueden quedar de ${M \choose B}
-	       = \frac{M!}{B!(M-B)!}$ maneras distintas
+	     - $B$ nuevas entradas se pueden quedar de 
+	       ${M \choose B}= \frac{M!}{B!(M-B)!}$ maneras distintas
 	     - calcular la union de los $M+B$ elementos reduce la
 	       cuantidad de permtuaciones por un factor de
 	       $1 / {M \choose B}$
-	     - despues de t accessos (distintos) a la memoria
+	     - después de $t$ accessos (distintos) a la memoria
 	       externa, se reduci la cuantidad de permutaciones a
 	       $N! / (  (B!)^n  {M \choose B}^t  )$
 
@@ -2252,19 +2252,15 @@ Se tiene que:
 	     - usamos las formulas siguientes:
 	       - $\log(x!) \approx x\log x$
 	       - $\log {M \choose B} \approx B \lg \frac{M}{B}$
-
-                 |-----------+--------+---------------------------------------------|
-                 | $N!$      | $\leq$ | $(B!)^n {M \choose B}^t$                    |
-                 |-----------+--------+---------------------------------------------|
-                 | $N \lg N$ | $\leq$ | $n B \lg B + t B \lg \frac{M}{B}$           |
-                 |-----------+--------+---------------------------------------------|
-                 | $t$       | $\geq$ | $\frac { N\lg N - nB \lg B }{ B \lg(M/B) }$ |
-                 |           | $\geq$ | $\frac { N \lg(N/B) }{ B \lg(M/B) }$        |
-                 |           | $\geq$ | $\frac { n \lg n }{ \lg m }$          |
-                 |           | $\geq$ | $n \log_m n$                                |
-                 |-----------+--------+---------------------------------------------|
-
-
+	     - Inicialemente, tenemos la inequalidad siguiente:
+	       $$N! \leq (B!)^n {M \choose B}^t$$
+	     - aplicando el log de ambos lado (y las formulas previas) queda con 
+	       $$ N \lg N \leq n B \lg B + t B \lg \frac{M}{B}$$
+	     - Una secuencia de reduccion simples da:
+	       $$t \geq \frac { N\lg N - nB \lg B }{ B \lg(M/B) }$$
+	     - que se puede reescribir como $\frac { N \lg(N/B) }{ B \lg(M/B) }$        
+	     - Pero $n=N/B$ y $m=M/B$, asi se puede reescribir $\frac { n \lg n }{ \lg m }$
+	     - en final, deducimos $t \geq n \log_m n$.                                
 
        * BONUS: Para ordenar strings, un caso particular (donde la
 	 comparacion de dos elementos tiene un costo variable):
@@ -2310,6 +2306,323 @@ Se tiene que:
        - una cola de prioridad se puede usar para ordenar (con $N$ accessos)
        - hay una cota inferior para ordernar de $n \log_m n$
        - entonces????
+
+**** CONCEPT QUESTIONS [0/16]						 :CQ:
+***** NEXT Effecto de $M$ sobre /Find/
+      La complejidad de /Find/ en un $B$-arbol o vEB arbol es de
+      $\lg_B N$ acesos a la memoria segundaria, con $M=1$ paginas en
+      memoria principal. Con $M$ mas largo, este complejidad 
+      1. [ ] se queda igual
+      2. [ ] baja a $\lg_B N / M$
+      3. [ ] baja a $\lg_{B/M} N $
+      4. [ ] baja a $\lg_B (N/M)$
+      5. [ ] Otra respuesta
+
+***** NEXT Effecto de $M$ sobre /FindMin/
+      La complejidad de /Find/ en un $B$-arbol o vEB arbol es de
+      $\lg_B N$ acesos a la memoria segundaria, con $M=1$ paginas en
+      memoria principal. Con $M$ mas largo, este complejidad 
+      1. [ ] se queda igual
+      2. [ ] baja a $\lg_B N / M$
+      3. [ ] baja a $\lg_{B/M} N $
+      4. [ ] baja a $\lg_B (N/M)$
+      5. [ ] Otra respuesta
+***** NEXT Complejidad de Insertion Sort en Memoria Segundaria
+      :SOLUTION:     
+      - =Insertion Sort= (en un B-Arbol) performa $N \lg N / \lg B = N \log_B N$  accesos 
+      :END:
+      :PROOF: 
+      :END:
+      :CONTEXT:
+      Considera que 
+      - $B$ = Tamano pagina
+      - $N$ = cantidad de elementos en total
+      - $n$ = cantidad de paginas con elementos = $N/B$
+      - $M$ = cantidad de memoria local
+      - $m$ = cantidad de paginas locales = $M/B$
+      :END:
+      El algoritmo de =Insertion Sort=, con un $B$-arbol, permite de
+      ordenar $N$ elementos en
+      1. [ ] al menos $N \lg N / \lg B = N \log_B N$  accesos 
+      2. [ ] exactamente $N \lg N / \lg B = N \log_B N$  accesos 
+      3. [ ] al maximo $N \lg N / \lg B = N \log_B N$  accesos 
+      4. [ ] menos que $N \lg N / \lg B = N \log_B N$  accesos 
+      5. [ ] otra respuesta
+***** NEXT Complejidad de Heap Sort en Memoria Segundaria
+      :SOLUTION:     
+      - =Heap Sort= (con una vEB cola) performa $N \lg N / \lg B = N \log_B N$ accesos
+      :END:
+      :PROOF: 
+      :END:
+      :CONTEXT:
+      Considera que 
+      - $B$ = Tamano pagina
+      - $N$ = cantidad de elementos en total
+      - $n$ = cantidad de paginas con elementos = $N/B$
+      - $M$ = cantidad de memoria local
+      - $m$ = cantidad de paginas locales = $M/B$
+      :END:
+      El algoritmo de =Heap Sort=, con un vEB-cola de prioridad,
+      permite de ordenar $N$ elementos en
+      1. [ ] al menos $N \lg N / \lg B = N \log_B N$  accesos 
+      2. [ ] exactamente $N \lg N / \lg B = N \log_B N$  accesos 
+      3. [ ] al maximo $N \lg N / \lg B = N \log_B N$  accesos 
+      4. [ ] menos que $N \lg N / \lg B = N \log_B N$  accesos 
+      5. [ ] otra respuesta
+***** NEXT Cota inferior de ordenamiento en memoria segundaria
+      :SOLUTION:     
+      $\Omega( N/B \frac{ \lg(N/B) }{ \lg(M/B) }  )$
+      se nota igualemente $\Omega( n\lg_m n )$      
+      :END:
+      :PROOF: 
+      La cota inferior de $\Omega(n\lg_m n)$ se prueba en las apuntes,
+      y en pegacitos en las otras preguntas de conceptos. 
+
+      Las cotas inferiores de $\Omega(N \lg N / \lg B)$ y $\Omega(N
+      \log_B N)$ son equivalentes, y faltas, porque el algoritmo de
+      mergesort con funnels permite de ordenar $N$ elementos en 
+      $O(n\lg_m n)$ acesos, que contradice la cota inferior.
+      :END:
+      :CONTEXT:
+      Considera que 
+      - $B$ = Tamano pagina
+      - $N$ = cantidad de elementos en total
+      - $n$ = cantidad de paginas con elementos = $N/B$
+      - $M$ = cantidad de memoria local
+      - $m$ = cantidad de paginas locales = $M/B$
+      :END:
+      Cual de estas cotas inferiores para el problema de ordenar en
+      memoria segundaria parece la mas razonable?
+      1. [ ] $\Omega( N/B \frac{ \lg(N/B) }{ \lg(M/B) }  )$
+      2. [ ] $\Omega( n\lg_m n )$      
+      3. [ ] $\Omega(N \lg N / \lg B)$
+      4. [ ] $\Omega(N \log_B N)$
+      5. [ ] otra respuesta
+***** NEXT Ordenar (a dentro de las) paginas
+      :SOLUTION:     
+      $n = N/B$
+      :END:
+      :PROOF: 
+      No contamos las comparaciones, solamente los acesos a las $n$
+      paginas en memoria segundaria.  Ordenar cada pagina se hace sin
+      problema en memoria principal (e.g. si $M=2$ con mergesort, si
+      $M=1$ con heapsort).
+      :END:
+      :CONTEXT:
+      Considera que 
+      - $B$ = Tamano pagina
+      - $N$ = cantidad de elementos en total
+      - $n$ = cantidad de paginas con elementos = $N/B$
+      - $M$ = cantidad de memoria local
+      - $m$ = cantidad de paginas locales = $M/B$
+      - un arreglo $A$ contiene unas de las $N!$ permutaciones possibles sobre $N$ elementos.
+      :END:
+      Cual es el costo (en cantidad de aceso a la memoria segundaria)
+      de ordenar cada bloque (pagina) de $B$ elementos?
+      1. [ ] $n = N/B$
+      2. [ ] $N = n\times B$
+      3. [ ] $n \times B\lg B$
+      4. [ ] $N \times B\lg B$
+      5. [ ] otra respuesta
+***** NEXT La permutacion escrita
+      Alguien elijo una permutacion muy grande sobre $[1..N]$, una de
+      las $N!$ posibles.  El entrega la primera cifra. Cuantas
+      permutaciones posibles quedan?
+      :SOLUTION:     
+      $(N-1)!=$N!/N$$
+      :END:
+      1. [ ] $N!/(N-1)!$
+      2. [ ] $N!/(N-1)$
+      3. [ ] $N!/N$
+      4. [ ] $N!$
+      5. [ ] otra respuesta
+***** NEXT Contando permutaciones (Part 1)
+      :SOLUTION:     
+      $N! / B!$ 
+      :END:
+      :PROOF: 
+      Si hay $X$ permutaciones posibles, cada vez que un bloque es
+      ordenado, eso elimina $X/B!$ permutaciones. Iterar $n$ veces
+      (hay $n$ bloques) lleva el resultado.
+      :END:
+      :CONTEXT:
+      Considera que 
+      - $B$ = Tamano pagina
+      - $N$ = cantidad de elementos en total
+      - $n$ = cantidad de paginas con elementos = $N/B$
+      - $M$ = cantidad de memoria local
+      - $m$ = cantidad de paginas locales = $M/B$
+      - un arreglo $A$ contiene unas de las $N!$ permutaciones possibles sobre $N$ elementos;
+      :END:
+      Cuantas posibilidades de permutaciones quedan en $A$ despues de
+      ordenar la primera paginas?
+      1. [ ] $n! / B!$
+      2. [ ] $N! / B!$ 
+      3. [ ] $N! / B\lg B$
+      4. [ ] $N!$
+      5. [ ] otra respuesta
+***** NEXT Contando permutaciones (Part 2)
+      :SOLUTION:     
+      $N! / (B!)^n$ 
+      :END:
+      :PROOF: 
+      Si hay $X$ permutaciones posibles, cada vez que un bloque es
+      ordenado, eso elimina $X/B!$ permutaciones. Iterar $n$ veces
+      (hay $n$ bloques) lleva el resultado.
+      :END:
+      :CONTEXT:
+      Considera que 
+      - $B$ = Tamano pagina
+      - $N$ = cantidad de elementos en total
+      - $n$ = cantidad de paginas con elementos = $N/B$
+      - $M$ = cantidad de memoria local
+      - $m$ = cantidad de paginas locales = $M/B$
+      - un arreglo $A$ contiene unas de las $N!$ permutaciones possibles sobre $N$ elementos;
+      - alguien ya ordeno cada bloque de $B$ elementos.
+      :END:
+      Cuantas posibilidades de permutaciones quedan en $A$ despues de
+      ordenar a dentro de las paginas?
+      1. [ ] $N! / (B!)^n$ 
+      2. [ ] $N! / n!$
+      3. [ ] $N! / B!$
+      4. [ ] $N!$
+      5. [ ] otra respuesta
+***** NEXT Insertando $B$ elementos en un arreglo ordenado de $M$ elementos (Part 1)  
+      De cuantas maneras se pueden mezclar $B$ valores en un arreglo de $M$ valores?
+      :SOLUTION:     
+      $B$ nuevas entradas se pueden quedar de 
+      ${M \choose B} = \frac{M!}{B!(M-B)!} = M\times(M-1)\times\ldots\times(M-B+1)$
+      maneras distintas      
+      :END:
+      1. [ ] ${M \choose B}$
+      2. [ ] $\frac{M!}{B!(M-B)!}$
+      3. [ ] $M\times(M-1)\times\ldots\times(M-B+1)$
+      4. [ ] $M\times(M-1)\times\ldots\times(M-B)$
+      5. [ ] otra respuesta
+***** NEXT Insertando $B$ elementos en un arreglo ordenado de $M$ elementos (Part 2)
+      Si tenemos $X$ permutaciones posibles, que descubrimos las
+      posiciones relatives de $B$ nuevas valores en relacion con $M$
+      valores en memoria primaria, cuantas permutaciones quedan?
+      :SOLUTION:     
+      $X / {M \choose B} = X / \frac{M!}{B!(M-B)!} = X / M\times(M-1)\times\ldots\times(M-B+1)$
+      :END:
+      
+      1. [ ] $X / {M \choose B}$
+      2. [ ] $X / \frac{M!}{B!(M-B)!}$
+      3. [ ] $X / M\times(M-1)\times\ldots\times(M-B+1)$
+      4. [ ] $X / M\times(M-1)\times\ldots\times(M-B)$
+      5. [ ] otra respuesta
+
+***** NEXT Insertando $t$ veces $B$ elementos a dentro de $M$ elementos
+      :CONTEXT:
+      Considera que 
+      - $B$ = Tamano pagina
+      - $N$ = cantidad de elementos en total
+      - $n$ = cantidad de paginas con elementos = $N/B$
+      - $M$ = cantidad de memoria local
+      - $m$ = cantidad de paginas locales = $M/B$
+      - un arreglo $A$ contiene unas de las $N!$ permutaciones possibles sobre $N$ elementos;
+      - alguien ya ordeno cada bloque de $B$ elementos,
+      - deseamos "descubrir" cual es la permutacion.
+      :END:
+      :SOLUTION:     
+      $N! /  (B!)^n {M \choose B}^t$
+      :END:
+      :PROOF: 
+      No se olvida que iniciamos el proceso con $N! / ( (B!)^n$
+      permutaciones al inicio, y cada etapa reduce la cantidad de
+      permutacion de un factor de $1/ {M \choose B}$.
+      :END:
+      Después de $t$ accessos (distintos) a la memoria externa, la
+      cuantidad de permutaciones se reduci a
+      1. [ ] $N! /  (B!)^t$
+      2. [ ] $N! /  (B!)^n {M \choose B}^t$
+      3. [ ] $N! /  {M \choose B}^t $
+      4. [ ] $N! / (N-B\times t)!$
+      5. [ ] otra respuesta
+***** NEXT Cuantos acesos para reducir a una sola permutacion?
+      :SOLUTION:     
+        |-----------+--------+---------------------------------------------+-----------------------------------------------|
+        | $N!$      | $\leq$ | $(B!)^n {M \choose B}^t$                    |                                               |
+        |-----------+--------+---------------------------------------------+-----------------------------------------------|
+        | $N \lg N$ | $\leq$ | $n B \lg B + t B \lg \frac{M}{B}$           | $\lg$ cresciente$                             |
+        |           |        |                                             | $\lg(x!) \approx x\lg x$                      |
+        |           |        |                                             | $\lg {M \choose B} \approx B \lg \frac{M}{B}$ |
+        |-----------+--------+---------------------------------------------+-----------------------------------------------|
+        | $t$       | $\geq$ | $\frac { N\lg N - nB \lg B }{ B \lg(M/B) }$ | reduccion lineal                              |
+        |           | $\geq$ | $\frac { N \lg(N/B) }{ B \lg(M/B) }$        | $\lg(x/y) = \lg x - \lg y$                    |
+        |           | $\geq$ | $\frac { n \lg n }{ \lg m }$                | $n=N/B$ y $m=M/B$                             |
+        |           | $\geq$ | $n \log_m n$                                | definicion de $\lg_b$                         |
+        |-----------+--------+---------------------------------------------+-----------------------------------------------|
+      :END:
+      Que agumento se usa para cada etapa del razonamiento siguente?
+
+	|-----------+--------+---------------------------------------------|
+	| $N!$      | $\leq$ | $(B!)^n {M \choose B}^t$                    |
+	|-----------+--------+---------------------------------------------|
+	| $N \lg N$ | $\leq$ | $n B \lg B + t B \lg \frac{M}{B}$           |
+	|-----------+--------+---------------------------------------------|
+	| $t$       | $\geq$ | $\frac { N\lg N - nB \lg B }{ B \lg(M/B) }$ |
+	|           | $\geq$ | $\frac { N \lg(N/B) }{ B \lg(M/B) }$        |
+	|           | $\geq$ | $\frac { n \lg n }{ \lg m }$          |
+	|           | $\geq$ | $n \log_m n$                                |
+	|-----------+--------+---------------------------------------------|
+
+      1. [ ] $n=N/B$ y $m=M/B$
+      2. [ ] $\lg x$ es cresciente
+      4. [ ] $\lg(x/y) = \lg x - \lg y$
+      5. [ ] $\lg(x!) \approx x\lg x$
+      6. [ ] $\lg {M \choose B} \approx B \lg \frac{M}{B}$
+      7. [ ] otra tecnica
+
+***** NEXT Cota inferior ordenamiento en memoria segundaria
+      :SOLUTION:     
+      No se puede ordenar en menos que $n \log_m n$ acesos a la memoria segundaria.
+      :END:
+      Que significa que $t \geq n \log_m n$ ?
+      1. [ ] No se puede ordenar en menos que $n \log_m n$ comparaciones.
+      2. [ ] No se puede ordenar en menos que $n \log_m n$ acesos a la memoria segundaria.
+      3. [ ] Se puede ordenar en menos que $n \log_m n$ comparaciones.
+      4. [ ] Se puede ordenar en menos que $n \log_m n$ acesos a la memoria segundaria.
+      5. [ ] otra respuesta
+***** NEXT Cota superior ordenamiento en memoria segundaria
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      :CONTEXT:
+      :END:
+      Existe un algoritmo que ordena $N$ elementos (repartidos en $n$
+      paginas de al maximo $B$ elementos cada una) en $O(n \log_m n)$
+      acesos a la memoria segundaria?
+      1. [ ] No
+      2. [ ] Si, es una varianta de Merge Sort
+      3. [ ] Si, es una varianta de Insertion Sort
+      4. [ ] Si, es una varianta de Heap Sort
+      5. [ ] Otra Respuesta
+***** NEXT Cantidad de memoria Local
+      :SOLUTION:     
+      $M$ affecta  /MergeSort/ mucho mas que los otros:
+      :END:
+      :PROOF: 
+      - en Mergesort una valor mas grande de $M$ permite de fusionar
+        mas arreglos en parallelos (a cada etapa de la computacion);
+      - en Diccionarios y Colas de prioridades, permite solamente de
+        memorisar mas de los primeros niveles de la estructura de
+        datos (con control del algoritmo de cache), o de cachear mas
+        caminos de la estructura de datos (sin control del algoritmo
+        de cache).
+      :END:
+      :CONTEXT:
+      :END:
+      Dado un tamaño de pagina fijo $B$, en cual problema la cantidad
+      $M$ de memoria local (y la cantidad $m$ de paginas que se pueden
+      guardar en memoria local) affecta mas la complejidad asintótica?
+      1. [ ] /Find/ en ADT Diccionario
+      2. [ ] /FindNext/ en ADT Diccionario (e.g. $B$-arbol o van Emde Boas)
+      3. [ ] /FindMin/ en ADT Cola de prioridad
+      4. [ ] /MergeSort/ 
+      5. [ ] todas iguales: mas memoria siempre ayuda.
 
 *** RESUMEN de la Unidad 2
     - Comprender el modelo de costo de memoria secundaria
