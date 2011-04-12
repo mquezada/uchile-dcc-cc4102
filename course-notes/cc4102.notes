@@ -32,7 +32,7 @@
      :END: 
 
 ** Example of Structure of Concept Question subsection 				 
-**** CONCEPT QUESTIONS [0/0]						 :CQ:
+**** PREGUNTAS [0/0]						 :PREGUNTAS:
 ***** 
       :SOLUTION:     
       :END:
@@ -144,7 +144,7 @@
        - http://www.youtube.com/watch?v=WwslBPj8GgI
      - Grupo de Investigacion sobre "Peer Instruction"
        - http://mazur-www.harvard.edu/research/detailspage.php?rowid=8
-**** Torre de Hanoi de altura 4 					 :CQ:
+**** Torre de Hanoi de altura 4 					 :PREGUNTAS:
      :PROPERTIES:
      :END:
      :SOLUTION: 
@@ -164,7 +164,7 @@
        4) [ ] $2^4 = 32$
        5) [ ] none of the above
 
-**** Torre de Hanoi de altura 8						 :CQ:
+**** Torre de Hanoi de altura 8						 :PREGUNTAS:
      :PROPERTIES:
      :END:
      :SOLUTION: 
@@ -184,7 +184,7 @@
        4) [ ] $8! = 8*7*6*5*4*3*2*1 = 40320$
        5) [ ] none of the above
 
-**** Disk Pile of height 8						 :CQ:
+**** Disk Pile of height 8						 :PREGUNTAS:
      :PROPERTIES:
      :SOLUTION: 
      8   
@@ -206,7 +206,7 @@
        4) [ ] $8!=8*7*6*5*4*3*2*1=?$
        5) [ ] none of the above
 
-**** Disk Pile of height 8 with 2 disk sizes				 :CQ:
+**** Disk Pile of height 8 with 2 disk sizes				 :PREGUNTAS:
      :PROPERTIES:
      :SOLUTION:     
      :END:
@@ -379,7 +379,7 @@ Se tiene que:
     - Precise Disk Pile Problema ($n$ discos con $n_i$ de tamaño $i$, $\forall i\in[1..h]$)
       - cota inferior en función de $n$, en función de $h,n_1,...,n_h$ 
       - cota superior en función de $n$, en función de $h,n_1,...,n_h$
-**** CONCEPT QUESTIONS [7/7] 						 :CQ:
+**** PREGUNTAS [7/7] 						 :PREGUNTAS:
 ***** DONE [#A] Asintóticas						 :CP:
        :LOGBOOK:
        - State "DONE"       from "TODO"       [2011-03-15 Tue 11:05]
@@ -495,11 +495,44 @@ Se tiene que:
 	 http://www.amazon.com/Research-Design-Qualitative-Quantitative-Approaches/
 **** Al inicio, Ciencias de la computación fue solamente experimentación.
 ***** Turing y el código Enigma
+
       - el importante estaba de solucionar la instancia del día
 	(romper la llave del día, basado en los mensajes de
 	meteorológico, para descifrar los messages mas importantes)
 	 - no mucho focus en el problema, aunque Turing si escribio
 	   la definicion de la Maquina universal.
+
+***** Alan Turing [http://www.museointernacionaldechile.cl/artistas-amistosos-de-neukolln-presentan-homenaje-a-alan-turing/ [2011-04-09 Sat] ]
+
+Alan Turing (1912 - 1954). Matemático, informático teórico,
+criptógrafo y filósofo inglés. Es considerado uno de los padres de la
+ciencia de la computación, siendo el precursor de la informática
+moderna. Proporcionó una influyente formalización de los conceptos de
+algoritmo y computación: la máquina de Turing. Durante la Segunda
+Guerra Mundial, trabajó en romper los códigosnazis, particularmente
+los de la máquina Enigma; durante un tiempo fue el director de la
+sección Naval Enigma del Bletchley Park. Tras la guerra diseñó uno de
+los primeros computadores electrónicos programables digitales en el
+Laboratorio Nacional de Física del Reino Unido y poco tiempo después
+construyó otra de las primeras máquinas en la Universidad de
+Manchester. Entre otras muchas cosas, también contribuyó de forma
+particular e incluso provocativa al enigma de si las máquinas pueden
+pensar, es decir a la Inteligencia Artificial.
+
+La carrera de Turing terminó súbitamente cuando fue procesado por su
+condición de homosexual. No se defendió de los cargos y se le dio a
+escoger entre la castración química o ir a la cárcel. Eligió lo
+primero y sufrió importantes consecuencias físicas, entre ellas la
+impotencia. Dos años después del juicio, en 1954, se suicidó,
+aparentemente tras comerse una manzana envenenada con cianuro. Su
+misteriosa muerte ha dado lugar a diversas hipótesis, incluso la del
+asesinato. El año 2009 el primer ministro delReino Unido, Gordon
+Brown, emitió un comunicado declarando sus disculpas en nombre del
+gobierno por el trato que recibió Alan Turing durante sus últimos años
+de vida. Este comunicado fue consecuencia de una movilización pública
+solicitando al Gobierno que pidiera disculpas oficialmente por la
+persecución sufrida por Alan Turing.
+
 ***** Experimentacion basica 
       - correga hasta que fonciona (o parece foncionar)
 	- correga hasta que entrega resultados correctos (o que parecen correctos)
@@ -758,7 +791,7 @@ Se tiene que:
          (promedio sobre su aleatoria)
 
 
-**** CONCEPT QUESTIONS [6/8]						 :CQ:
+**** PREGUNTAS [6/8]						 :PREGUNTAS:
 ***** DONE Cota superior de (la complejidad de) Max ord
       :LOGBOOK:
       - State "DONE"       from "NEXT"       [2011-03-15 Tue 12:20]
@@ -1251,6 +1284,12 @@ Se tiene que:
        - Algoritmo en $2n/3 + O(1)$ comparaciones para min max
 
 ** Memoria Secundaria [Algoritmos y Estructuras de Datos para] (3 semanas = 6 charlas)
+*** DESCRIPCION de la Unidad
+    1) Modelos de Memoria
+    2) Diccionarios en Memoria Secundaria
+    3) Colas de Prioridades en Memoria Secundaria
+    4) Ordenamiento en Memoria Secundaria
+    5) Cotas Inferiores en Memoria Secundaria
 *** PREREQUISITOS DE UNIDAD 
     * Apuntes de CC3001:
       - Arboles 2-3
@@ -1293,7 +1332,7 @@ Se tiene que:
 	  - Jerarquia con k niveles, de paginas de tamanos $B_1,...,B_k$
 	  - "Cache oblivious"
 	  - Otros... mas practicas, mas dificil a analizar.
-**** CONCEPT QUESTIONS [6/7] 						 :CQ:
+**** PREGUNTAS [6/7] 						 :PREGUNTAS:
 ***** DONE Cuantas segundas vale 1ns?
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-29 Tue 10:49]
@@ -1499,7 +1538,7 @@ Se tiene que:
 	    del nivel considerado
 	  - Insercion
 	  - Delecion
-**** CONCEPT QUESTIONS [16/16] 						 :CQ:
+**** PREGUNTAS [16/16] 						 :PREGUNTAS:
 ***** [#A] Cola de Prioridad: operaciones
       :SOLUTION:     
       Todas se pueden implementar facilamente en un dicionario, pero
@@ -1898,7 +1937,32 @@ Se tiene que:
        - Cual es la cota inferior mas simple que se puede imaginar?
 	 - $\Omega(n/B)$
 
-**** CONCEPT QUESTIONS [1/13] 						 :CQ:
+**** PREGUNTAS [6/13] 						 :PREGUNTAS:
+***** DONE Cola de Prioridad: operaciones
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
+      :END:
+      :SOLUTION:     
+      1. [ ] insert(key,item)
+      2. [X] search(key)
+      3. [X] delete(key)
+      4. [X] findNext(key)
+      5. [X] findPrevious(key)
+      6. [ ] findMind()
+      7. [ ] extractMin()      
+      :END:
+      :PROOF: 
+      search(key) delete(key) findNext(key) findPrevious(key) no son
+      en el ADT de colas de prioridades.
+      :END:
+      Cuales (no) son operaciones de una (min) cola de prioridad?
+      1. [ ] insert(key,item)
+      2. [X] search(key)
+      3. [X] delete(key)
+      4. [X] findNext(key)
+      5. [X] findPrevious(key)
+      6. [ ] findMin()
+      7. [ ] extractMin()
 ***** DONE Colas de Prioridades contra Diccionarios
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
@@ -1920,7 +1984,7 @@ Se tiene que:
       4. [ ] $D$ es asintóticamente mas rápido que $C$ (en los
          operadores que tienen en común)
       5. [ ] ninguna
-***** NEXT Colas de Prioridades contra Diccionarios
+***** DONE Colas de Prioridades contra Diccionarios
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
       :END:
@@ -1928,43 +1992,18 @@ Se tiene que:
       :END:
       :PROOF: 
       :END:
-      Considera las estructuras de datos Heap y AVL-árbol,
+      Considera las estructuras de datos Heap $C$ y AVL-árbol $D$,
       respectivamente implementando los ADT "cola de prioridad" y
       "diccionario".  Cual(es) de estas proposiciones tiene(n)
       problemas?
-      1. [ ] $C$ implementa el ADT "diccionario" también, pero en malo tiempo.
-      2. [ ] $D$ implementa el ADT "cola de prioridad" también, pero en malo tiempo.
-      3. [ ] $C$ implementa el ADT "diccionario" también, pero en malo espacio.
-      4. [ ] $D$ implementa el ADT "cola de prioridad" también, pero en malo espacio.
-      5. [ ] $C$ implementa el ADT "diccionario" también, pero en malo tiempo y espacio.
-      6. [ ] $D$ implementa el ADT "cola de prioridad" también, pero en malo tiempo y espacio.
+      1. [ ] $C$ implementa el ADT "diccionario" también, pero en malo *tiempo*.
+      2. [X] $D$ implementa el ADT "cola de prioridad" también, pero en malo *tiempo*.
+      3. [X] $C$ implementa el ADT "diccionario" también, pero en malo *espacio*.
+      4. [ ] $D$ implementa el ADT "cola de prioridad" también, pero en malo *espacio*.
+      5. [X] $C$ implementa el ADT "diccionario" también, pero en malo *tiempo y espacio*.
+      6. [X] $D$ implementa el ADT "cola de prioridad" también, pero en malo *tiempo y espacio*.
       7. [ ] otra respuesta
-***** NEXT Cola de Prioridad: operaciones
-      :LOGBOOK:
-      - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
-      :END:
-      :SOLUTION:     
-      1. [ ] insert(key,item)
-      2. [X] search(key)
-      3. [X] delete(key)
-      4. [X] findNext(key)
-      5. [X] findPrevious(key)
-      6. [ ] findMind()
-      7. [ ] extractMin()      
-      :END:
-      :PROOF: 
-      search(key) delete(key) findNext(key) findPrevious(key) no son
-      en el ADT de colas de prioridades.
-      :END:
-      Cuales (no) son operaciones de una (min) cola de prioridad?
-      1. [ ] insert(key,item)
-      2. [ ] search(key)
-      3. [ ] delete(key)
-      4. [ ] findNext(key)
-      5. [ ] findPrevious(key)
-      6. [ ] findMind()
-      7. [ ] extractMin()
-***** NEXT Cola de Prioridad: Heapify
+***** DONE Cola de Prioridad: Heapify
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
       :END:
@@ -1979,7 +2018,7 @@ Se tiene que:
       3. [ ] tiene complejidad $O(n)$
       3. [ ] tiene complejidad $O(n\lg n)$
       5. [ ] otra respuesta
-***** NEXT Estructuras de datos "Cola de Prioridad"
+***** DONE Estructuras de datos "Cola de Prioridad"
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 22:50]
       :END:
@@ -1999,34 +2038,41 @@ Se tiene que:
       para contener $B$ elementos, y un "heap" de $n$ elementos
       ($n>>B$).  
       :END:
-      A cuantos accesos a la memoria segundaría corresponde un
-      llamado a "FindMin" en un "heap"?
-      1. [ ] $1$ acceso
+      A cuantos accesos a la memoria secundaría corresponde un
+      llamado a "FindMin" en un "min heap"?
+      1. [X] $1$ acceso
       2. [ ] $\log_B n$ accesos
       3. [ ] $\log n / \log B$ accesos
       4. [ ] $n/B$ accesos
       5. [ ] $n$ accesos
-***** NEXT Heaps en Memoria Segundaría: Delete Min
+***** DONE Heaps en Memoria Segundaría: Delete Min
       :CONTEXT:
       Considera un modelo de memoria segundaría con paginas de tamaño
-      para contener $B$ elementos, y un "heap" de $n$ elementos
-      ($n>>B$).  
+      para contener $B$ elementos, y un "binary min heap" de $n$
+      elementos ($n>>B$).
+      :END:
+      :SOLUTION:
+      $\lg n-\lg B$
       :END:
       A cuantos accesos a la memoria segundaría corresponde un
-      llamado a "DeleteMin" en un "heap"?
+      llamado a "DeleteMin" en un "min heap"?
       1. [ ] $\log_B n$ accesos
       2. [ ] $(n-B)/B+1$ accesos
       3. [ ] $n/B$ accesos
       4. [ ] $n-B$ accesos
       5. [ ] $n$ accesos
+      6. [ ] otra respuesta
 ***** NEXT vEB queues: Delete Min
       :CONTEXT:
       Considera un modelo de memoria segundaría con paginas de tamaño
       para contener $B$ elementos, y un "heap" de $n$ elementos
       ($n>>B$).  
       :END:
+      :SOLUTION:     
+      $\log_B n$ accesos, que $B$ sea conocido o no.
+      :END:
       A cuantos accesos a la memoria segundaría corresponde un
-      llamado a "DeleteMin" en un vEB?
+      llamado a "DeleteMin" en un vEB Queue?
       1. [ ] $\log_B n$ accesos
       2. [ ] $(n-B)/B+1$ accesos
       3. [ ] $n/B$ accesos
@@ -2043,6 +2089,7 @@ Se tiene que:
       ($n>>B$).
       :END:
       :SOLUTION:     
+      
       :END:
       :PROOF: 
       :END:
@@ -2054,6 +2101,7 @@ Se tiene que:
       4. [ ] $\sqrt{B}$
       4. [ ] $\sqrt{n}$
       5. [ ] otra respuesta
+
 ***** NEXT vEB queues: altura
       :CONTEXT:
       Considera un modelo de memoria segundaría con paginas de tamaño
@@ -2307,11 +2355,13 @@ Se tiene que:
        - hay una cota inferior para ordernar de $n \log_m n$
        - entonces????
 
-**** CONCEPT QUESTIONS [0/16]						 :CQ:
+**** PREGUNTAS [0/16]						 :PREGUNTAS:
 ***** NEXT Effecto de $M$ sobre /Find/
+
       La complejidad de /Find/ en un $B$-arbol o vEB arbol es de
       $\lg_B N$ acesos a la memoria segundaria, con $M=1$ paginas en
       memoria principal. Con $M$ mas largo, este complejidad 
+
       1. [ ] se queda igual
       2. [ ] baja a $\lg_B N / M$
       3. [ ] baja a $\lg_{B/M} N $
@@ -2319,14 +2369,17 @@ Se tiene que:
       5. [ ] Otra respuesta
 
 ***** NEXT Effecto de $M$ sobre /FindMin/
+
       La complejidad de /Find/ en un $B$-arbol o vEB arbol es de
       $\lg_B N$ acesos a la memoria segundaria, con $M=1$ paginas en
       memoria principal. Con $M$ mas largo, este complejidad 
+
       1. [ ] se queda igual
       2. [ ] baja a $\lg_B N / M$
       3. [ ] baja a $\lg_{B/M} N $
       4. [ ] baja a $\lg_B (N/M)$
       5. [ ] Otra respuesta
+
 ***** NEXT Complejidad de Insertion Sort en Memoria Segundaria
       :SOLUTION:     
       - =Insertion Sort= (en un B-Arbol) performa $N \lg N / \lg B = N \log_B N$  accesos 
@@ -2341,13 +2394,16 @@ Se tiene que:
       - $M$ = cantidad de memoria local
       - $m$ = cantidad de paginas locales = $M/B$
       :END:
+
       El algoritmo de =Insertion Sort=, con un $B$-arbol, permite de
       ordenar $N$ elementos en
+
       1. [ ] al menos $N \lg N / \lg B = N \log_B N$  accesos 
       2. [ ] exactamente $N \lg N / \lg B = N \log_B N$  accesos 
       3. [ ] al maximo $N \lg N / \lg B = N \log_B N$  accesos 
       4. [ ] menos que $N \lg N / \lg B = N \log_B N$  accesos 
       5. [ ] otra respuesta
+
 ***** NEXT Complejidad de Heap Sort en Memoria Segundaria
       :SOLUTION:     
       - =Heap Sort= (con una vEB cola) performa $N \lg N / \lg B = N \log_B N$ accesos
@@ -2362,13 +2418,16 @@ Se tiene que:
       - $M$ = cantidad de memoria local
       - $m$ = cantidad de paginas locales = $M/B$
       :END:
+
       El algoritmo de =Heap Sort=, con un vEB-cola de prioridad,
       permite de ordenar $N$ elementos en
+
       1. [ ] al menos $N \lg N / \lg B = N \log_B N$  accesos 
       2. [ ] exactamente $N \lg N / \lg B = N \log_B N$  accesos 
       3. [ ] al maximo $N \lg N / \lg B = N \log_B N$  accesos 
       4. [ ] menos que $N \lg N / \lg B = N \log_B N$  accesos 
       5. [ ] otra respuesta
+
 ***** NEXT Cota inferior de ordenamiento en memoria segundaria
       :SOLUTION:     
       $\Omega( N/B \frac{ \lg(N/B) }{ \lg(M/B) }  )$
@@ -2391,13 +2450,16 @@ Se tiene que:
       - $M$ = cantidad de memoria local
       - $m$ = cantidad de paginas locales = $M/B$
       :END:
+
       Cual de estas cotas inferiores para el problema de ordenar en
       memoria segundaria parece la mas razonable?
+
       1. [ ] $\Omega( N/B \frac{ \lg(N/B) }{ \lg(M/B) }  )$
       2. [ ] $\Omega( n\lg_m n )$      
       3. [ ] $\Omega(N \lg N / \lg B)$
       4. [ ] $\Omega(N \log_B N)$
       5. [ ] otra respuesta
+
 ***** NEXT Ordenar (a dentro de las) paginas
       :SOLUTION:     
       $n = N/B$
@@ -2417,25 +2479,32 @@ Se tiene que:
       - $m$ = cantidad de paginas locales = $M/B$
       - un arreglo $A$ contiene unas de las $N!$ permutaciones possibles sobre $N$ elementos.
       :END:
+
       Cual es el costo (en cantidad de aceso a la memoria segundaria)
       de ordenar cada bloque (pagina) de $B$ elementos?
+
       1. [ ] $n = N/B$
       2. [ ] $N = n\times B$
       3. [ ] $n \times B\lg B$
       4. [ ] $N \times B\lg B$
       5. [ ] otra respuesta
+
 ***** NEXT La permutacion escrita
-      Alguien elijo una permutacion muy grande sobre $[1..N]$, una de
-      las $N!$ posibles.  El entrega la primera cifra. Cuantas
-      permutaciones posibles quedan?
       :SOLUTION:     
       $(N-1)!=$N!/N$$
       :END:
+
+      Alguien elijo una permutacion muy grande sobre $[1..N]$, una de
+      las $N!$ posibles.  El entrega la primera cifra. Cuantas
+      permutaciones posibles quedan?
+
+
       1. [ ] $N!/(N-1)!$
       2. [ ] $N!/(N-1)$
       3. [ ] $N!/N$
       4. [ ] $N!$
       5. [ ] otra respuesta
+	     
 ***** NEXT Contando permutaciones (Part 1)
       :SOLUTION:     
       $N! / B!$ 
@@ -2454,13 +2523,16 @@ Se tiene que:
       - $m$ = cantidad de paginas locales = $M/B$
       - un arreglo $A$ contiene unas de las $N!$ permutaciones possibles sobre $N$ elementos;
       :END:
+
       Cuantas posibilidades de permutaciones quedan en $A$ despues de
       ordenar la primera paginas?
+
       1. [ ] $n! / B!$
       2. [ ] $N! / B!$ 
       3. [ ] $N! / B\lg B$
       4. [ ] $N!$
       5. [ ] otra respuesta
+
 ***** NEXT Contando permutaciones (Part 2)
       :SOLUTION:     
       $N! / (B!)^n$ 
@@ -2480,32 +2552,39 @@ Se tiene que:
       - un arreglo $A$ contiene unas de las $N!$ permutaciones possibles sobre $N$ elementos;
       - alguien ya ordeno cada bloque de $B$ elementos.
       :END:
+
       Cuantas posibilidades de permutaciones quedan en $A$ despues de
       ordenar a dentro de las paginas?
+
       1. [ ] $N! / (B!)^n$ 
       2. [ ] $N! / n!$
       3. [ ] $N! / B!$
       4. [ ] $N!$
       5. [ ] otra respuesta
+
 ***** NEXT Insertando $B$ elementos en un arreglo ordenado de $M$ elementos (Part 1)  
-      De cuantas maneras se pueden mezclar $B$ valores en un arreglo de $M$ valores?
       :SOLUTION:     
       $B$ nuevas entradas se pueden quedar de 
       ${M \choose B} = \frac{M!}{B!(M-B)!} = M\times(M-1)\times\ldots\times(M-B+1)$
       maneras distintas      
       :END:
+
+      De cuantas maneras se pueden mezclar $B$ valores en un arreglo de $M$ valores?
+
       1. [ ] ${M \choose B}$
       2. [ ] $\frac{M!}{B!(M-B)!}$
       3. [ ] $M\times(M-1)\times\ldots\times(M-B+1)$
       4. [ ] $M\times(M-1)\times\ldots\times(M-B)$
       5. [ ] otra respuesta
+
 ***** NEXT Insertando $B$ elementos en un arreglo ordenado de $M$ elementos (Part 2)
-      Si tenemos $X$ permutaciones posibles, que descubrimos las
-      posiciones relatives de $B$ nuevas valores en relacion con $M$
-      valores en memoria primaria, cuantas permutaciones quedan?
       :SOLUTION:     
       $X / {M \choose B} = X / \frac{M!}{B!(M-B)!} = X / M\times(M-1)\times\ldots\times(M-B+1)$
       :END:
+
+      Si tenemos $X$ permutaciones posibles, que descubrimos las
+      posiciones relatives de $B$ nuevas valores en relacion con $M$
+      valores en memoria primaria, cuantas permutaciones quedan?
       
       1. [ ] $X / {M \choose B}$
       2. [ ] $X / \frac{M!}{B!(M-B)!}$
@@ -2533,13 +2612,16 @@ Se tiene que:
       permutaciones al inicio, y cada etapa reduce la cantidad de
       permutacion de un factor de $1/ {M \choose B}$.
       :END:
+
       Después de $t$ accessos (distintos) a la memoria externa, la
       cuantidad de permutaciones se reduci a
+
       1. [ ] $N! /  (B!)^t$
       2. [ ] $N! /  (B!)^n {M \choose B}^t$
       3. [ ] $N! /  {M \choose B}^t $
       4. [ ] $N! / (N-B\times t)!$
       5. [ ] otra respuesta
+
 ***** NEXT Cuantos acesos para reducir a una sola permutacion?
       :SOLUTION:     
         |-----------+--------+---------------------------------------------+-----------------------------------------------|
@@ -2579,12 +2661,15 @@ Se tiene que:
       :SOLUTION:     
       No se puede ordenar en menos que $n \log_m n$ acesos a la memoria segundaria.
       :END:
+
       Que significa que $t \geq n \log_m n$ ?
+
       1. [ ] No se puede ordenar en menos que $n \log_m n$ comparaciones.
       2. [ ] No se puede ordenar en menos que $n \log_m n$ acesos a la memoria segundaria.
       3. [ ] Se puede ordenar en menos que $n \log_m n$ comparaciones.
       4. [ ] Se puede ordenar en menos que $n \log_m n$ acesos a la memoria segundaria.
       5. [ ] otra respuesta
+
 ***** NEXT Cota superior ordenamiento en memoria segundaria
       :SOLUTION:     
       :END:
@@ -2592,14 +2677,17 @@ Se tiene que:
       :END:
       :CONTEXT:
       :END:
+
       Existe un algoritmo que ordena $N$ elementos (repartidos en $n$
       paginas de al maximo $B$ elementos cada una) en $O(n \log_m n)$
       acesos a la memoria segundaria?
+
       1. [ ] No
       2. [ ] Si, es una varianta de Merge Sort
       3. [ ] Si, es una varianta de Insertion Sort
       4. [ ] Si, es una varianta de Heap Sort
       5. [ ] Otra Respuesta
+
 ***** NEXT Cantidad de memoria Local
       :SOLUTION:     
       $M$ affecta  /MergeSort/ mucho mas que los otros:
@@ -2615,9 +2703,11 @@ Se tiene que:
       :END:
       :CONTEXT:
       :END:
+
       Dado un tamaño de pagina fijo $B$, en cual problema la cantidad
       $M$ de memoria local (y la cantidad $m$ de paginas que se pueden
       guardar en memoria local) affecta mas la complejidad asintótica?
+
       1. [ ] /Find/ en ADT Diccionario
       2. [ ] /FindNext/ en ADT Diccionario (e.g. $B$-arbol o van Emde Boas)
       3. [ ] /FindMin/ en ADT Cola de prioridad
@@ -2625,31 +2715,319 @@ Se tiene que:
       5. [ ] todas iguales: mas memoria siempre ayuda.
 
 *** RESUMEN de la Unidad 2
-    - Comprender el modelo de costo de memoria secundaria
-    - Conocer algoritmos y estructuras de datos basicos que son eficientes en memoria secundaria, 
-    - y el analisis de su desempeno.
+**** Objetivos
+      - Comprender el modelo de costo de memoria secundaria
+      - Conocer algoritmos y estructuras de datos basicos que son eficientes en memoria secundaria, 
+      - y el analisis de su desempeno.
+**** Temas:
+     1. [ ] Memoria Secundaria
+     2. [ ] vEB diseno original ($\lg\lg m$ busqueda)
+     3. [ ] vEB diseno "cache-oblivious" ($\log_B n$ busqueda sin conocer $B$)
+     4. [ ] Diccionarios en Memoria Secundaria
+     5. [ ] Colas de Prioridades en Memoria Secundaria
+     6. [ ] Ordenamiento en Memoria Secundaria
+     7. [ ] Cotas Inferiores en Memoria Secundaria
+**** Summary of vEB trees variants
+
+     |                   | B-Arbol             | recursive vEB     | value based vEB       | (otras) |
+     |-------------------+---------------------+-------------------+-----------------------+---------|
+     | Diccionario       | $(2,3)$ generalized | un vEB a dentro   | un arreglo indexado   | (...)   |
+     |                   |                     | de un vEB         | por k/2 bits          |         |
+     |-------------------+---------------------+-------------------+-----------------------+---------|
+     | Cola de prioridad | Heap Generalized    | idem              | idem                  | (...)   |
+     |-------------------+---------------------+-------------------+-----------------------+---------|
+     | Propriedades      | simple cuando       | cache-oblivious   | tiempo $\lg\lg m$     | (...)   |
+     |                   | $B$ conocido        | ($B$ desconocido) | (cuando $n\approx m$) |         |
+     |-------------------+---------------------+-------------------+-----------------------+---------|
+      
+**** PREGUNTAS [0/10]						 :PREGUNTAS:
+***** NEXT Peor Caso de "Insert" en Memoria Secundaria
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      :CONTEXT:
+       Considera un nivel de memoria tal que 
+       - $B$ = Tamano pagina
+       - $N$ = cantidad de elementos en total
+       - $n$ = cantidad de paginas con elementos = $N/B$
+       - $M$ = cantidad de memoria local
+       - $m$ = cantidad de paginas locales = $M/B$
+      :END:
+
+      Para cada de las estructuras de datos siguentes,
+       1) "min binary heap"
+       2) avl arbol
+       3) (2,3)-arbol
+       4) $B$-arbol para diccionario
+       5) $2B$-arbol para diccionario
+       6) $B/2$-arbol para diccionario
+       7) vEB-arbol original para colas de prioridades
+       8) vEB-arbol recursivo para colas de prioridades
+       9) vEB-arbol original para diccionario
+       10) vEB-arbol recursivo  para diccionario
+
+      Cual es el rendimiento (asintótico), en terminos de accesos a la
+      memoria secundaria en el peor caso, por un llamado a "Insert"
+      (se acordan que la estructura de datos contiene $N$ elementos)?
+
+      1. [ ] $\log_B\log_B N$
+      2. [ ] $\log_2\log_2 N$
+      3. [ ] $\log_B N$
+      4. [ ] $\log_2 N$
+      5. [ ] otra respuesta
+
+***** NEXT Mejor Caso de "Insert" en Memoria Secundaria
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      :CONTEXT:
+       Considera un nivel de memoria tal que 
+       - $B$ = Tamano pagina
+       - $N$ = cantidad de elementos en total
+       - $n$ = cantidad de paginas con elementos = $N/B$
+       - $M$ = cantidad de memoria local
+       - $m$ = cantidad de paginas locales = $M/B$
+      :END:
+
+      Para cada de las estructuras de datos siguentes,
+       1) "min binary heap"
+       2) avl arbol
+       3) (2,3)-arbol
+       4) $B$-arbol para diccionario
+       5) $2B$-arbol para diccionario
+       6) $B/2$-arbol para diccionario
+       7) vEB-arbol original para colas de prioridades
+       8) vEB-arbol recursivo para colas de prioridades
+       9) vEB-arbol original para diccionario
+       10) vEB-arbol recursivo  para diccionario
+
+      Cual es el rendimiento, en terminos de accesos a la memoria
+      secundaria en el *mejor* caso, por un llamado a "Insert" (se
+      acordan que la estructura de datos contiene $N$ elementos)?
+
+      1. [ ] $\log_B\log_B N$
+      2. [ ] $\log_2\log_2 N$
+      3. [ ] $\log_B N$
+      4. [ ] $\log_2 N$
+      5. [ ] otra respuesta
+
+
+***** NEXT Ordenamiento en Memoria Secundaria: Cota superior (Part 0)
+      :SOLUTION:     
+      Insertion Sort, Merge Sort, Heap Sort, pero no Bubble Sort
+      :END:
+      :CONTEXT:
+      Considera un nivel de memoria tal que 
+      - $B$ = Tamano pagina
+      - $N$ = cantidad de elementos en total
+      - $n$ = cantidad de paginas con elementos = $N/B$
+      - $M$ = cantidad de memoria local
+      - $m$ = cantidad de paginas locales = $M/B$
+      :END:
+
+      Cual(es) de los algoritmos siguentes, en su varianta adaptada a
+      la memoria secundaria, permite(n) de ordenar $N$ elementos en
+      $O(N\lg N)$ accesos a la memoria secundaria en el peor caso?
+
+      1. [ ] Insertion Sort
+      2. [ ] Merge Sort
+      3. [ ] Heap Sort
+      4. [ ] Bubble Sort
+      5. [ ] otra respuesta
+
+***** NEXT Ordenamiento en Memoria Secundaria: Cota superior (Part 1)
+      :SOLUTION:     
+      Insertion Sort, Merge Sort, Heap Sort, pero no Bubble Sort
+      :END:
+      :CONTEXT:
+      Considera un nivel de memoria tal que 
+      - $B$ = Tamano pagina
+      - $N$ = cantidad de elementos en total
+      - $n$ = cantidad de paginas con elementos = $N/B$
+      - $M$ = cantidad de memoria local
+      - $m$ = cantidad de paginas locales = $M/B$
+      :END:
+
+      Cual(es) de los algoritmos siguentes, en su varianta adaptada a la
+      memoria secundaria, permite(n) de ordenar $N$ elementos en
+      $O(N\log_B N)$ accesos a la memoria secundaria en el peor caso?
+
+      1. [ ] Insertion Sort
+      2. [ ] Merge Sort
+      3. [ ] Heap Sort
+      4. [ ] Bubble Sort
+      5. [ ] otra respuesta
+
+***** NEXT Ordenamiento en Memoria Secundaria: Cota superior (Part 2)
+      :SOLUTION:     
+      Merge Sort (=funnel sort)
+      :END:
+      :CONTEXT:
+      Considera un nivel de memoria tal que 
+      - $B$ = Tamano pagina
+      - $N$ = cantidad de elementos en total
+      - $n$ = cantidad de paginas con elementos = $N/B$
+      - $M$ = cantidad de memoria local
+      - $m$ = cantidad de paginas locales = $M/B$
+      :END:
+
+      Cual(es) de los algoritmos siguentes, en su varianta adaptada a la
+      memoria secundaria, permite(n) de ordenar $N$ elementos en
+      $O(n\log_m n)$ accesos a la memoria secundaria en el peor caso?
+
+
+      1. [ ] Insertion Sort
+      2. [ ] Merge Sort
+      3. [ ] Heap Sort
+      4. [ ] Bubble Sort
+      5. [ ] otra respuesta
+
+***** NEXT Torneo Vencedor: Cota inferior en el peor caso
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      :CONTEXT:
+      El torneo internacional de Karate se tiene en una isla con
+      capacidad por $M=20$ participantes. Una sola nave puede traer
+      los $N=200$ participantes, que pudede transportar $B=5$
+      participantes al mismo tiempo. Se supone que los niveles de los
+      participantes corresponden a un orden total, de manera a ce que
+      se pueden ordenar completamente.
+      - $M=20$
+      - $N=200$
+      - $B=5$
+      :END:
+      
+      Cuantos viajes de la nave se necessitan en total para
+      identificar el gañador del torneo, en el peor caso?
+      1. [ ] $\log_B N$
+      2. [ ] $N/B$
+      3. [ ] $N\log_B N$
+      4. [ ] $N/B + N\log_B N$
+      5. [ ] otra respuesta
+
+***** NEXT Torneo Vencedor: Cota superior en mejor caso
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      :CONTEXT:
+      El torneo internacional de Karate se tiene en una isla con
+      capacidad por $M=20$ participantes. Una sola nave puede traer
+      los $N=200$ participantes, que pudede transportar $B=5$
+      participantes al mismo tiempo. Se supone que los niveles de los
+      participantes corresponden a un orden total, de manera a ce que
+      se pueden ordenar completamente.
+      - $M=20$
+      - $N=200$
+      - $B=5$
+      :END:
+      
+      Cuantos viajes de la nave se necessitan en total para
+      identificar el gañador del torneo, en el *mejor* caso?
+      1. [ ] $\log_B N$
+      2. [ ] $N/B$
+      3. [ ] $N\log_B N$
+      4. [ ] $N/B + N\log_B N$
+      5. [ ] otra respuesta
+
+***** NEXT Torneo Orden: Cota inferior (Part 1)
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      :CONTEXT:
+      El torneo internacional de Karate se tiene en una isla con
+      capacidad por $M=20$ participantes. Una sola nave puede traer
+      los $N=200$ participantes, que pudede transportar $B=5$
+      participantes al mismo tiempo. Se supone que los niveles de los
+      participantes corresponden a un orden total, de manera a ce que
+      se pueden ordenar completamente.
+      - $M=20$
+      - $N=200$
+      - $B=5$
+      :END:
+      
+      Cuantos viajes de la nave se necessitan en total para
+      identificar el orden total del torneo, en el peor caso?
+      1. [ ] $\log_B N$
+      2. [ ] $N/B$
+      3. [ ] $N\log_B N$
+      4. [ ] $N/B + N\log_B N$
+      5. [ ] otra respuesta
+
+***** NEXT Torneo Orden: Cota inferior (Part 2)
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      :CONTEXT:
+      El torneo internacional de Karate se tiene en una isla con
+      capacidad por $M=20$ participantes. Una sola nave puede traer
+      los $N=200$ participantes, que pudede transportar $B=5$
+      participantes al mismo tiempo. Se supone que los niveles de los
+      participantes corresponden a un orden total, de manera a ce que
+      se pueden ordenar completamente.
+      - $M=20$
+      - $N=200$
+      - $B=5$
+      :END:
+      
+      Cuantos viajes de la nave se necessitan en total para
+      identificar el orden total sobre los $20$ mejores participantes
+      del torneo, en el peor caso?
+      1. [ ] $\log_B N$
+      2. [ ] $N/B$
+      3. [ ] $N\log_B N$
+      4. [ ] $N/B + N\log_B N$
+      5. [ ] otra respuesta
+***** TODO vEB arboles con $B=3^i$ 
+      :LOGBOOK:
+      - State "NEXT"       from ""           [2011-04-11 Mon 21:28]
+      :END:
+      :CONTEXT:
+      Considera un nivel de memoria tal que 
+      - $B$ = Tamano pagina
+      - $N$ = cantidad de elementos en total
+      - $n$ = cantidad de paginas con elementos = $N/B$
+      - $M$ = cantidad de memoria local
+      - $m$ = cantidad de paginas locales = $M/B$
+      :END:
+      Cual es la performancia de un vEB recursivo, donde cada nodo
+      tiene $\sqrt{M}$ punteros a hijos, a un nivel de memoria
+      secundaria donde $B=3^i$?
+
+    1. What is the performance of a classical vEB tree at a given
+       level of cache page size $B=3^k$?
+
+    2. How would you modify vEB trees in a memory hierarchy where
+       caches are of size $3^B$, in order to maintain their good
+       cache performance?
 
 ** Tecnicas avanzadas de diseno y analisis de algoritmos (4 semanas = 8 charlas)
-*** Presentacion de la Unidad 3 
-    1) Dominios discretos y finitos 
+*** DESCRIPCION de la Unidad
+     1) Dominios discretos y finitos 
 	- Interpolacion
 	- hash
 	- hash en memoria Secundaria
 	- algoritmos de ordenamientos con universo finito 
      2) Analisis amortizada
-      - analisi completo,
-      - contabilidad de costos, 
-      - funcion potencial
-     3) Algoritmos en linea 
+	- analisi completo,
+	- contabilidad de costos, 
+	- funcion potencial
+     4) Algoritmos en linea 
 	- "ski renting" problema
 	- analisis competitiva ("Competitive Analysis")
 *** PREREQUISITOS DE UNIDAD
     - http://www.wimp.com/justcoincidence/ Birthday Paradox, in English.
-*** Uso de *dominios discretos y finitos* en el diseno de algoritmos y estructuras de datos
-**** Busqueda en domanios discretos
-***** Algorimos de Busqueda (Interpolation Search, Extrapolation Search)
-
-      1) Interpolacion
+    - Colas de Prioridades http://www.leekillough.com/heaps/
+	     
+*** Dominios discretos y finitos (1 semana)
+**** Busqueda en domanios discretos (1 charla)
+***** Busqueda por Interpolacion/Extrapolacion
 
 	 1. Introduccion:	     
 	    - Hagaria busqueda binaria en un anuario telefonico para
@@ -2707,378 +3085,312 @@ Se tiene que:
 
 	       - Tarea 3
 
-      3) Discussion:
-
-	 - Porque todavia estudiar la complejidad en el modelo de comparaciones? 
-
-	   - Cuando el peor caso es importante
-
-	   - Cuando la distribucion no es uniforme o no es conocida
-
-	   - cuando el costo de la evaluacion es mas costo que una
-	     simple comparacion (en particular para la interpolacion
-	     non lineal)
-
-
-
-***** Estructuras de Datos de Busqueda
-****** From Tries to Suffix Arrays
-******* Tries o Arboles Digitales
-       	Ordenamos usualmente como pre-computacion para buscar despues. En el
-       	caso donde n es demasiado grande, ordenar puede ser demasiado
-       	carro. Consideramos alternativas para buscar.
-
-       	1. Ejemplo de trie
-
-       	- Insertar los nodos siguiente en un trie
-	  - hola
-	  - holistico
-	  - holograme
-	  - hologramas
-	  - ola
-	  - ole
-
-       	- .
-	  - h
-	    - o
-	      - l
-		 - a \rightarrow hola
-		 - i \rightarrow holistica
-		 - o 
-		   - g
-		     - r
-		       - a
-			 - m
-			   - a
-			     - $ \rightarrow holograma
-			     - s \rightarrow hologramas
-	  - o
-	    - l
-	      - a \rightarrow ola
-	      - e \rightarrow ole
-
-     2. Busqueda
-
-       	- con arreglos de tamano \sigma en cada nodo: 
-	  - O(l) tiempo, pero O(L\sigma) espacio
-       	- con arreglos de tamano variables en cada nodo:
-	  - O(l \lg sigma) tiempo (busqueda binaria),  O(L) espacio
-	    (optima).
-       	- con hashing
-	  - O(l) tiempo en promedio, O(L) espacio.
-
-     3. Insercion
-
-       	- Insertar "hora" en el arbol precedente
-	  - .
-	    - h
-	      - o
-	       	- l
-		   - a \rightarrow hola
-		   - i \rightarrow holistica
-		   - o 
-		     - g
-		       - r
-			 - a
-			   - m
-			     - a
-			       - $ \rightarrow holograma
-			       - s \rightarrow hologramas
-	       	- r
-		  - a \rightarrow *hora*
-	    - o
-	      - l
-	       	- a \rightarrow ola
-	       	- e \rightarrow ole
-
-       	- Insertar "holistico" en el arbol precedente
-	  - .
-	    - h
-	      - o
-	       	- l
-		   - a \rightarrow hola
-		   - i
-		     - s
-		       - t
-			 - i
-			   - c
-			     - a \rightarrow holistica
-			     - o \rightarrow holistico
-		   - o 
-		     - g
-		       - r
-			 - a
-			   - m
-			     - a
-			       - $ \rightarrow holograma
-			       - s \rightarrow hologramas
-	       	- r
-		  - a \rightarrow *hora*
-	    - o
-	      - l
-	       	- a \rightarrow ola
-	       	- e \rightarrow ole
+	 5. Discussion:
 
-       	- Borrar "hola" y "holistica"
-	  - (TAREA)
-	  - Tiene de "limpiar", pero no costo mas que un factor
-	    constante de la busqueda.
+	    - Porque todavia estudiar la complejidad en el modelo de comparaciones? 
 
-
-
-     4. BONUS: PAT Trie
-
-       	- Comprime las ramas de nodos de grado uno en una sola arista.
-       	- La caldena ("string") etiquetando la arista se guarda en el
-	  nodo hijo de la arista.
-       	- Superio tan en tiempo que en espacio en practica.
-
-******* Arboles y Arreglos de Sufijos
-
-       	1) Arbol de Sufijos 
-
-       - Espacio $O(n)$
-
-       - Construccion $O(n)$
-
-       - Busqueda $O(m)$
-
-       - expresion regular O(n^\lambda) donde $0\leq \lambda \leq 1$
-
-    2) Arreglo de Sufijos
-
-       - Lista de sufijos ordenados
-       - busqueda de patrones = dos busquedas binarias, donde cada
-	 comparacion costa \leq m, resultando en una complejidad de
-	 $O(m \lg n)$
-
-
-    3) BONUS: Rank en Bitmaps
-
-       - $\mathtt{rank}(B,i)$ = cantidad de unos en $B[1,i]$
-       - consideramos 
-	 - $B$ estatico
-	 - se puede almacenar $\lg n$ bits.
-
-       - Solucion de Munro, Raman y Raman:
-
-	 - $b= 1/2 \lg n$   y    $s = \lg^2  n$
-
-	 - Dividimos el index de $B$ en 
-
-	   - $s$ Superbloques de tamano $n/s \lg n$ bits
-
-	   - $b$ Mini bloques de tamano $n/b \lg s$ bits
-	     $${n \over 1/2 \lg n} \lg(\lg^2 n) = \frac{4n \llg n}{\lg n} \in o(n)$$
-
-	   - un diccionario con todos los bit vectores de tamano
-	     $$\sqrt{n} \lg n /2 \llg n  \in o(n)$$
-
-****** Hashing
-******* Introduccion
-       	* Motivaciones	 
-       	- Mejor tiempo *en promedio*
-       	- Uso de todos la herramientas que tenemos
-	  - dominio de las valores
-	  - distribuciones de probabilidades de las valores
-      * Terminologia 
-       	- Tabla de Hash
-	  - Arreglo de tamano $N$ 
-	  - que contiene $n$ elementos a dentro de un universo [1..U]
-       	- Funccion de Hash $h(K)$
-	  - $h:[1..U] \rightarrow [0..N-1]$
-	  - se calcula rapidamente
-	  - distribue uniformemente (mas o menos) las llaves en la tabla
-	    en el caso ideal, $P[h(K)=i] = 1/N, \, \forall K,i$
-       	- Collision 
-	  - cuando $h(K_{1))= h(K_{2})$
-	  - la probabilidad es alta: "Paradoxe del cumpleanos"
-	    ( http://www.wimp.com/justcoincidence/ )
-	  - Cual es la probabilidad que en una pieca de $n$ personas,
-	    dos tiene la misma fecha de cumpleanos (a dentro de $365$
-	    dias)?
-
-	    - probabilidad que cada cumpleanos es unico:
-	      $$ 364! \over {(365 - n)! \times 365^{n-1} }$$
-
-	    - Probabilidad que hay al menos un cumpleanos compartido:
-	      $$ 1 - 364! \over {(365 - n)! \times 365^{n-1} }$$
-
-	      |   n |    Proba |
-	      |-----+----------|
-	      |  10 |      .12 |
-	      |  23 |       .5 |
-	      |  50 |      .97 |
-	      | 100 | .9999996 |
-
-******* Hashing Abierto
-
-       	1) Idea principal:
-	   - resolver las colisions con caldenas
-
-       	2) Ejemplo:  (muy irealistico)
-	   - $h(K) = K \mod 10$
-	   - Secuencia de insercion $52,18,70,22,44,38,62$
-	     - Insertando al final (si hay que probar por repeticiones)
-	       | 0 |       70 |
-	       | 1 |          |
-	       | 2 | 52,22,62 |
-	       | 3 |          |
-	       | 4 |       44 |
-	       | 5 |          |
-	       | 6 |          |
-	       | 7 |          |
-	       | 8 |    18,38 |
-	       | 9 |          |
-	     - Insertando al final (si no hay que probar por repeticiones)
-	       | 0 |       70 |
-	       | 1 |          |
-	       | 2 | 62,22,52 |
-	       | 3 |          |
-	       | 4 |       44 |
-	       | 5 |          |
-	       | 6 |          |
-	       | 7 |          |
-	       | 8 |    38,18 |
-	       | 9 |          |
-	       
-       	3) Analisis:
-
-	   - factor de carga es $\lambda= {n \over N}$
-	   - Rendimiento en el peor caso: $O(n)$
-
-******* Hashing Cerrado
-       	
-       	1) Idea principal:
-	   - resolver las colisiones con busqueda, i.e. 
-	     - $( h(K)+f(i) ) \mod N$
-	   - differentes tipos de busqueda:
-	     - lineal  $f(i) = i$
-	       - primary "clustering" (formacion de secuencias largas)		
-	     - cuadratica $f(i) = i^2$
-	       - secundario "clustering" (si $h(K_1)=h(K_2)$, la
-		 secuencias son las mismas.
-	     - doble hashing $f(i) = i . h'(K)$
-	       - $h'(K)$ debe ser prima con N
-
-       	2) Ideal Hashing
-
-	   - Imagina una funcion de hash que genera una secuencia que
-	     parece aleatoria.
-
-	   - cada posicion tiene la misma probabilidad de ser la
-	     proxima
-	      - Probabilidad $\lambda$ de elegir una posicion ocupada
-	      - Probabilidad $1-\lambda$ de elegir une posicion libre
-	      - la secuencia de prueba puede tocar la misma posicion
-               	mas que una vez.
-	      - llaves identicas todavia siguen la misma secuencia.
-	   - Cual es el costo promedio $u_j$ de una busqueda negativa
-	     con $j$ llaves en la tabla?
-
-	     - $\lambda= \frac{j}{N}$
-
-	     - $u_j = 1 (1-\lambda) + 2\lambda(1-\lambda)+r\lambda^2(1-\lambda)+\ldots$
-
-	     - $= 1 + \lambda + \lambda^2 + \ldots$
-
-	     - $= \frac{1}{1-\lambda}$
-
-	     - $= \frac{1}{1-j/N}$
-
-	     - $= \frac{N}{N-j} \in[1..N]$
-
-	   - Cual es el costo promedio de una busqueda positiva $s_i$
-	     para el $i$-th elemento insertado?
-	     
-	     - $s_i = \frac{1}{1- i/N} = \frac{N}{N-i}$
-
-	     - $s_n = 1/n \sum \frac{N}{N-i}$
-
-	     - $= \frac{N}{n} \sum_{i=0}^{n-1} \frac{1}{N-i}$
-
-	     - $= \frac{1}{\alpha} \sum_{i=0}^{n-1} \frac{1}{N-i}$
-	       con $\alpha = \frac{n}{N}$
-
-	     - $< \frac{1}{\alpha} \integral_{N-n}^{N} 1/x dx$
-
-	     - $= 1/\alpha \ln\frac{N}{N-n}$
-
-	     - $= 1/\alpha \ln\frac{1}{\alpha}$
-
-	   - Para $\alpha = 1/2$, el costo promedio es $1.387$
-
-	   - Para $\alpha = 0.9$, el costo promedio es $2.559$
-
-******* Universal Hashing
-
-       	- $h(K) = ( (aK+b) \mod p) \mod N$
-       	- $a \in [1..p-1]$ elegido al azar
-       	- $b \in [0..p-1]$ elegido al azar
-       	- $p$ es primo y mas grande que $N$ 
-       	- $N$ no es necesaramente primo
-
-******* Hashing en memoria externa
-
-       	1) Que pasa si la tabla de hashing no queda en memoria?
-
-       - IDEA: Simula un B-arbol de altura dos
-	 - organiza el dato con valores de hash
-	 - guarda un index en el nodo raiz
-	 - usa solamente *una parte* de la valor de hash para elegir
-	   el sobre-arbol
-	 - extiende el index cuando mas dato es agregado
-
-    2) Descripcion
+	      - Cuando el peor caso es importante
+
+	      - Cuando la distribucion no es uniforme o no es conocida
+
+	      - cuando el costo de la evaluacion es mas costo que una
+		simple comparacion (en particular para la interpolacion
+		non lineal)
+
+
+
+***** Tries o Arboles Digitales
+      Ordenamos usualmente como pre-computacion para buscar despues. En el
+      caso donde n es demasiado grande, ordenar puede ser demasiado
+      carro. Consideramos alternativas para buscar.
+
+      1. Ejemplo de trie
+
+      - Insertar los nodos siguiente en un trie
+	- hola
+	- holistico
+	- holograme
+	- hologramas
+	- ola
+	- ole
+
+
+   2. Busqueda
+
+      - con arreglos de tamano \sigma en cada nodo: 
+	- O(l) tiempo, pero O(L\sigma) espacio
+      - con arreglos de tamano variables en cada nodo:
+	- O(l \lg sigma) tiempo (busqueda binaria),  O(L) espacio
+	  (optima).
+      - con hashing
+	- O(l) tiempo en promedio, O(L) espacio.
+
+   3. Insercion
+
+      - Insertar "hora" en el arbol precedente
+
+      - Insertar "holistico" en el arbol precedente
+
+      - Borrar "hola" y "holistica"
+	- (TAREA)
+	- Tiene de "limpiar", pero no costo mas que un factor
+	  constante de la busqueda.
+
+
+
+   4. BONUS: PAT Trie
+
+      - Comprime las ramas de nodos de grado uno en una sola arista.
+      - La caldena ("string") etiquetando la arista se guarda en el
+	nodo hijo de la arista.
+      - Superio tan en tiempo que en espacio en practica.
+
+***** Arboles y Arreglos de Sufijos
+
+  1) Arbol de Sufijos 
+
+     - Espacio $O(n)$
+
+     - Construccion $O(n)$
+
+     - Busqueda $O(m)$
+
+     - expresion regular O(n^\lambda) donde $0\leq \lambda \leq 1$
+
+  2) Arreglo de Sufijos
+
+     - Lista de sufijos ordenados
+     - busqueda de patrones = dos busquedas binarias, donde cada
+       comparacion costa \leq m, resultando en una complejidad de
+       $O(m \lg n)$
+
+
+  3) BONUS: Rank en Bitmaps
+
+     - $\mathtt{rank}(B,i)$ = cantidad de unos en $B[1,i]$
+     - consideramos 
+       - $B$ estatico
+       - se puede almacenar $\lg n$ bits.
+
+     - Solucion de Munro, Raman y Raman:
+
+       - $b= 1/2 \lg n$   y    $s = \lg^2  n$
+
+       - Dividimos el index de $B$ en 
+
+	 - $s$ Superbloques de tamano $n/s \lg n$ bits
+
+	 - $b$ Mini bloques de tamano $n/b \lg s$ bits
+	   $${n \over 1/2 \lg n} \lg(\lg^2 n) = \frac{4n \llg n}{\lg n} \in o(n)$$
+
+	 - un diccionario con todos los bit vectores de tamano
+	   $$\sqrt{n} \lg n /2 \llg n  \in o(n)$$
+
+***** Hashing
+****** Introduccion
+       * Motivaciones	 
+       - Mejor tiempo *en promedio*
+       - Uso de todos la herramientas que tenemos
+	 - dominio de las valores
+	 - distribuciones de probabilidades de las valores
+     * Terminologia 
+       - Tabla de Hash
+	 - Arreglo de tamano $N$ 
+	 - que contiene $n$ elementos a dentro de un universo [1..U]
+       - Funccion de Hash $h(K)$
+	 - $h:[1..U] \rightarrow [0..N-1]$
+	 - se calcula rapidamente
+	 - distribue uniformemente (mas o menos) las llaves en la tabla
+	   en el caso ideal, $P[h(K)=i] = 1/N, \, \forall K,i$
+       - Collision 
+	 - cuando $h(K_{1))= h(K_{2})$
+	 - la probabilidad es alta: "Paradoxe del cumpleanos"
+	   ( http://www.wimp.com/justcoincidence/ )
+	 - Cual es la probabilidad que en una pieca de $n$ personas,
+	   dos tiene la misma fecha de cumpleanos (a dentro de $365$
+	   dias)?
+
+	   - probabilidad que cada cumpleanos es unico:
+	     $$ 364! \over {(365 - n)! \times 365^{n-1} }$$
+
+	   - Probabilidad que hay al menos un cumpleanos compartido:
+	     $$ 1 - 364! \over {(365 - n)! \times 365^{n-1} }$$
+
+	     |   n |    Proba |
+	     |-----+----------|
+	     |  10 |      .12 |
+	     |  23 |       .5 |
+	     |  50 |      .97 |
+	     | 100 | .9999996 |
+
+****** Hashing Abierto
+
+       1) Idea principal:
+	  - resolver las colisions con caldenas
+
+       2) Ejemplo:  (muy irealistico)
+	  - $h(K) = K \mod 10$
+	  - Secuencia de insercion $52,18,70,22,44,38,62$
+	    - Insertando al final (si hay que probar por repeticiones)
+	      | 0 |       70 |
+	      | 1 |          |
+	      | 2 | 52,22,62 |
+	      | 3 |          |
+	      | 4 |       44 |
+	      | 5 |          |
+	      | 6 |          |
+	      | 7 |          |
+	      | 8 |    18,38 |
+	      | 9 |          |
+	    - Insertando al final (si no hay que probar por repeticiones)
+	      | 0 |       70 |
+	      | 1 |          |
+	      | 2 | 62,22,52 |
+	      | 3 |          |
+	      | 4 |       44 |
+	      | 5 |          |
+	      | 6 |          |
+	      | 7 |          |
+	      | 8 |    38,18 |
+	      | 9 |          |
+	      
+       3) Analisis:
+
+	  - factor de carga es $\lambda= {n \over N}$
+	  - Rendimiento en el peor caso: $O(n)$
+
+****** Hashing Cerrado
        
-       - $B$ - cantidad de elementos en una pagina
-       - $h$ - funcion de hash \rightarrow $[0..2^k-1]$
-       - $D$ - *profundidad general*, con $D\leq k$
-	 - la raiz tiene $2^D$ punteros a las paginas horas
-	 - la raiz es indexada con los $D$ primeros bits de cada
-	   valor de hash.
-       - $d_l$ - *profundidad local* de cada hora $l$
-	 - Las valores de hash en $l$ tienen en comun los primeros
-	   $d_l$ bits.
-	 - Hay $2^{D-d_l}$ punteros a la hora $l$
-	 - Siempre, $d_l\leq D$
+       1) Idea principal:
+	  - resolver las colisiones con busqueda, i.e. 
+	    - $( h(K)+f(i) ) \mod N$
+	  - differentes tipos de busqueda:
+	    - lineal  $f(i) = i$
+	      - primary "clustering" (formacion de secuencias largas)		
+	    - cuadratica $f(i) = i^2$
+	      - secundario "clustering" (si $h(K_1)=h(K_2)$, la
+		secuencias son las mismas.
+	    - doble hashing $f(i) = i . h'(K)$
+	      - $h'(K)$ debe ser prima con N
 
-    3) Ejemplo
+       2) Ideal Hashing
 
-       - $B=4, k=6, D=2$
+	  - Imagina una funcion de hash que genera una secuencia que
+	    parece aleatoria.
 
-	 | $d_l=2$ | 000100 |
-	 |         | 001000 |
-	 |         | 001011 |
-	 |         | 001100 |
+	  - cada posicion tiene la misma probabilidad de ser la
+	    proxima
+	     - Probabilidad $\lambda$ de elegir una posicion ocupada
+	     - Probabilidad $1-\lambda$ de elegir une posicion libre
+	     - la secuencia de prueba puede tocar la misma posicion
+	       mas que una vez.
+	     - llaves identicas todavia siguen la misma secuencia.
+	  - Cual es el costo promedio $u_j$ de una busqueda negativa
+	    con $j$ llaves en la tabla?
 
-	 | $d_l=2$ | 010101 |
-	 |         | 011100 |
-	 |         |        |
-	 |         |        |
+	    - $\lambda= \frac{j}{N}$
 
-	 | $d_l=1$ | 100100 |
-	 |         | 101101 |
-	 |         | 110001 |
-	 |         | 111100 |
+	    - $u_j = 1 (1-\lambda) + 2\lambda(1-\lambda)+r\lambda^2(1-\lambda)+\ldots$
 
-    4) Algoritmos
+	    - $= 1 + \lambda + \lambda^2 + \ldots$
 
-       - Buscar
-       - Insertar
-       - Remover
+	    - $= \frac{1}{1-\lambda}$
 
-    5) Analisis
+	    - $= \frac{1}{1-j/N}$
 
-       - Buscar, insertar remover
-	 - 1 acceso a la memoria secundariaa si el index se queda
-       - cantidad Promedio de paginas para tener $n$ llaves
-	 - $\frac{n}{B\lg 2}\approx 1.44 \frac{n}{B}$
-	 - paginas son llenas a $69\%$ mas o menos.
+	    - $= \frac{N}{N-j} \in[1..N]$
+
+	  - Cual es el costo promedio de una busqueda positiva $s_i$
+	    para el $i$-th elemento insertado?
+	    
+	    - $s_i = \frac{1}{1- i/N} = \frac{N}{N-i}$
+
+	    - $s_n = 1/n \sum \frac{N}{N-i}$
+
+	    - $= \frac{N}{n} \sum_{i=0}^{n-1} \frac{1}{N-i}$
+
+	    - $= \frac{1}{\alpha} \sum_{i=0}^{n-1} \frac{1}{N-i}$
+	      con $\alpha = \frac{n}{N}$
+
+	    - $< \frac{1}{\alpha} \integral_{N-n}^{N} 1/x dx$
+
+	    - $= 1/\alpha \ln\frac{N}{N-n}$
+
+	    - $= 1/\alpha \ln\frac{1}{\alpha}$
+
+	  - Para $\alpha = 1/2$, el costo promedio es $1.387$
+
+	  - Para $\alpha = 0.9$, el costo promedio es $2.559$
+
+****** Universal Hashing
+
+       - $h(K) = ( (aK+b) \mod p) \mod N$
+       - $a \in [1..p-1]$ elegido al azar
+       - $b \in [0..p-1]$ elegido al azar
+       - $p$ es primo y mas grande que $N$ 
+       - $N$ no es necesaramente primo
+
+****** Hashing en memoria externa
+
+       1) Que pasa si la tabla de hashing no queda en memoria?
+
+      - IDEA: Simula un B-arbol de altura dos
+	- organiza el dato con valores de hash
+	- guarda un index en el nodo raiz
+	- usa solamente *una parte* de la valor de hash para elegir
+	  el sobre-arbol
+	- extiende el index cuando mas dato es agregado
+
+   2) Descripcion
+      
+      - $B$ - cantidad de elementos en una pagina
+      - $h$ - funcion de hash \rightarrow $[0..2^k-1]$
+      - $D$ - *profundidad general*, con $D\leq k$
+	- la raiz tiene $2^D$ punteros a las paginas horas
+	- la raiz es indexada con los $D$ primeros bits de cada
+	  valor de hash.
+      - $d_l$ - *profundidad local* de cada hora $l$
+	- Las valores de hash en $l$ tienen en comun los primeros
+	  $d_l$ bits.
+	- Hay $2^{D-d_l}$ punteros a la hora $l$
+	- Siempre, $d_l\leq D$
+
+   3) Ejemplo
+
+      - $B=4, k=6, D=2$
+
+	| $d_l=2$ | 000100 |
+	|         | 001000 |
+	|         | 001011 |
+	|         | 001100 |
+
+	| $d_l=2$ | 010101 |
+	|         | 011100 |
+	|         |        |
+	|         |        |
+
+	| $d_l=1$ | 100100 |
+	|         | 101101 |
+	|         | 110001 |
+	|         | 111100 |
+
+   4) Algoritmos
+
+      - Buscar
+      - Insertar
+      - Remover
+
+   5) Analisis
+
+      - Buscar, insertar remover
+	- 1 acceso a la memoria secundariaa si el index se queda
+      - cantidad Promedio de paginas para tener $n$ llaves
+	- $\frac{n}{B\lg 2}\approx 1.44 \frac{n}{B}$
+	- paginas son llenas a $69\%$ mas o menos.
 
 
 
-**** Algoritmos de Ordenamiento ( Counting Sort, Bucket sort, radix sort, string sort)
+**** Algoritmos de Ordenamiento ( Counting Sort, Bucket sort, radix sort, string sort) (1 charla)
 ***** Counting Sort   $O(\sigma + n)$
 
       1. for $j=1$ to $\sigma$ do $C[j] \leftarrow 0$
@@ -3156,8 +3468,8 @@ Se tiene que:
    - En el peor caso, la complejidad corresponde a la suma de
      las superficias de los bloques, aka $O(n)$.
 
-*** *Analisi amortizado* de algoritmos y estructuras de datos
-**** Analisis amortizada   
+*** Analisi amortizada
+**** Principio de Analisi amortizada   
 
      * Costo Amortizado:
 	 - Se tiene una secuencia de n operaciones con costos
@@ -3212,242 +3524,239 @@ Se tiene que:
 
 
 
-**** Colas de Prioridades
+**** Analisi amortizada de Colas de Prioridades
 
-     * REFERENCIAS:  
-	   - http://www.leekillough.com/heaps/
-	     
-	 * Problema: Dado un conjunto (dinamica) de $n$ tareas con
-           valores, elegir y remudar la tarea de valor maxima.
+   * Problema: Dado un conjunto (dinamica) de $n$ tareas con
+     valores, elegir y remudar la tarea de valor maxima.
 
-	 * operaciones basicas:
-	   - M.build({e1,e2,...,2n})
-	   - M.insert(e)
-	   - M.min
-	   - M.deleteMin
+     * operaciones basicas:
+       - M.build({e1,e2,...,2n})
+       - M.insert(e)
+       - M.min
+       - M.deleteMin
 
-	 * operaciones adicionales ("Addressable priority queues")
-	   - M.insert(e), volviendo un puntero h ("handle") al elemento insertado
-	   - M.remove(h), remudando el elemento especificado para h
-	   - M.decreaseKey(h,k), reduciendo la llave del elemento especificado para h
-	   - M.merge(Q), agregando el heap Q al heap M.
-	     
-	 * Soluciones (conocidas o no):
+     * operaciones adicionales ("Addressable priority queues")
+       - M.insert(e), volviendo un puntero h ("handle") al elemento insertado
+       - M.remove(h), remudando el elemento especificado para h
+       - M.decreaseKey(h,k), reduciendo la llave del elemento especificado para h
+       - M.merge(Q), agregando el heap Q al heap M.
 
-	   |             | Linked List | Binary Tree    | (Min-)Heap      | Fibonacci Heap | Brodal Queue [1] |
-	   |-------------+-------------+----------------+-----------------+----------------+------------------|
-	   | insert      | $O(1)$      | $O(\lg n)$     | $O(\lg n)$      | $O(1)$         | $O(1)$           |
-	   | accessmin   | $O(n)$      | $O(1)$         | $O(1)$          | $O(1)$         | $O(1)$           |
-	   | deletemin   | $O(n)$      | $O(\lg n)$     | $O(\lg n)$      | $O(\lg n)^*$   | $O(\lg n)$       |
-	   | decreasekey | $O(1)$      | $O(\lg n)$     | $O(\lg n)$      | $O(1)^*$       | $O(1)$           |
-	   | delete      | $O(n)$      | $O(n)$         | $O(\lg n)$      | $O(\lg n)^*$   | $O(\lg n)$       |
-	   | merge       | $O(1)$      | $O(m\lg(n+m))$ | $O(m \lg(n+m))$ | $O(1)$         | $O(1)$           |
+     * Soluciones (conocidas o no):
+
+       |             | Linked List | Binary Tree    | (Min-)Heap      | Fibonacci Heap | Brodal Queue [1] |
+       |-------------+-------------+----------------+-----------------+----------------+------------------|
+       | insert      | $O(1)$      | $O(\lg n)$     | $O(\lg n)$      | $O(1)$         | $O(1)$           |
+       | accessmin   | $O(n)$      | $O(1)$         | $O(1)$          | $O(1)$         | $O(1)$           |
+       | deletemin   | $O(n)$      | $O(\lg n)$     | $O(\lg n)$      | $O(\lg n)^*$   | $O(\lg n)$       |
+       | decreasekey | $O(1)$      | $O(\lg n)$     | $O(\lg n)$      | $O(1)^*$       | $O(1)$           |
+       | delete      | $O(n)$      | $O(n)$         | $O(\lg n)$      | $O(\lg n)^*$   | $O(\lg n)$       |
+       | merge       | $O(1)$      | $O(m\lg(n+m))$ | $O(m \lg(n+m))$ | $O(1)$         | $O(1)$           |
 
 
-      1) Colas de prioridades binarias ("Binary Heaps")
+    1) Colas de prioridades binarias ("Binary Heaps")
 
-	 * La solucion tradicional 
-	   - un arreglo de $n$ elementos
-	   - hijos del nodo $i$ en posiciones $2i$ y $2i+1$
-	   - la valor de cada nodo es mas pequena que las valores de su hijos.
+       * La solucion tradicional 
+	 - un arreglo de $n$ elementos
+	 - hijos del nodo $i$ en posiciones $2i$ y $2i+1$
+	 - la valor de cada nodo es mas pequena que las valores de su hijos.
 
-	 * Complejidad: Espacio n+O(1), y 
-           | Operacion               | Tiempo   |
-           |-------------------------+----------|
-           | M.build({e1,e2,...,2n}) | $O(n)$     |
-           | M.insert(e)             | $O(\lg n)$ |
-           | M.min                   | $O(1)$     |
-           | M.deleteMin             | $O(\lg n)$ |
+       * Complejidad: Espacio n+O(1), y 
+	 | Operacion               | Tiempo   |
+	 |-------------------------+----------|
+	 | M.build({e1,e2,...,2n}) | $O(n)$     |
+	 | M.insert(e)             | $O(\lg n)$ |
+	 | M.min                   | $O(1)$     |
+	 | M.deleteMin             | $O(\lg n)$ |
 
-	 * Detalles de implementacion (mejorando las constantes)
+       * Detalles de implementacion (mejorando las constantes)
 
-	   - Cuidado de no implementar M.build({e1,e2,...,2n}) con n
-             inserciones (sift up \rightarrow $O(n\lg n)$), pero con $n/2$
-             sift-down ($\rightarrow O(n)$).
+	 - Cuidado de no implementar M.build({e1,e2,...,2n}) con n
+	   inserciones (sift up \rightarrow $O(n\lg n)$), pero con $n/2$
+	   sift-down ($\rightarrow O(n)$).
 
-	   - En M.deleteMin(), algunas variantes de implementacion
-             (despues de cambiar el min con $A[n]$):
-	     1. dos comparaciones en cada nivel hasta encontrar la
-                posicion final de $A[n]$ 
-		- $2\lg n$ comparaciones en el peor caso
-		- $\lg n$ copias
-	     2. una comparacion en cada nivel para definir un camino
-                de tamano lg n, y una busqueda binaria para encontrar
-                la posicion final
-		- $\lg n + O(\lg \lg n)$ comparaciones en el peor caso
-		- $\lg n$ copias en el peor caso
-	     3. una comparacion en cada nivel para definir un camino
-                de tamano lg n, y una busqueda *secuencial* up para encontrar
-                la posicion final
-		- $2\lg n$  comparaciones en el peor caso
-		- $\lg n$ copias en el peor caso
-		- pero en practica y promedio mucho mejor.
-
-
-	 * Flexibilidad de estructuras
-	   + Porque la complejidad es mejor con un heap que con un
-	     arreglo ordenado?
-	     - Para cada conjunto, hay solamente un arreglo ordenado
-	       que puede representarlo, pero muchos heaps posibles:
-	       eso da mas flexibilidad para la mantencion dinamica de
-	       la estructura de datos.
-
-	   + Colas de prioridades con punteros ("Addressable priority queues")
-	     - Algun que mas flexible que los arreglos ordenados, las
-               colas de prioridades binarias todavia son de estructura
-               muy estricta, por ejemplo para la union de
-               filas. Estructuras mas flexibles consideran un "bosque"
-               de arboles. Ademas, estas estructuras de arboles son
-               implementadas con puntadores (en ves de implementarlos
-               en arreglos).
-	     - Hay diferentes variantes. Todas tienen en comun los
-               puntos siguientes:
-	       - un puntero *minPtr* indica el nodo de valor minima
-                 en el bosque, raiz de alguno arbol.
-	       - *insert* agregas un nuevo arbol al bosque en tiempo $O(1)$
-	       - *deleteMin* remudas el nodo indicado par minPtr,
-                 dividiendo su arbol en dos nuevos arboles. Buscamos
-                 para el nuevo min y fusionamos algunos arboles (los
-                 detalles diferencian las variantes)
-	       - *decreaseKey(h,k)* es implementado cortando el arbol
-                 al nodo indicado por h, y rebalanceando el arbol
-                 cortado.
-	       - *delete()* es reducido a *decreaseKey(h,0)* y
-                 *deleteMin*
-
-      2) "Pairing Heaps"
-	 
-	 - Malo rendimiento en el peor caso, pero bastante buena en
-           practica.
-
-	 - rebalancea los arboles solamente en deleteMin, y solamente
-           con pares de raises (i.e. la cantidad de arboles es
-           reducida por dos a cada deleteMin).
-
-           | Operacion | Amortizado                 |
-           |------------------+----------------------------|
-           | Insert(C,x)      | $O(1)$                     |
-           | Merge            | $O(1)$                     |
-           | ExtractMin       | $O(\lg n)$                 |
-           | decreaseKey(h,k) | $\Omega(n \lg n \lg\lg n)$ |
-           |------------------+----------------------------|
+	 - En M.deleteMin(), algunas variantes de implementacion
+	   (despues de cambiar el min con $A[n]$):
+	   1. dos comparaciones en cada nivel hasta encontrar la
+	      posicion final de $A[n]$ 
+	      - $2\lg n$ comparaciones en el peor caso
+	      - $\lg n$ copias
+	   2. una comparacion en cada nivel para definir un camino
+	      de tamano lg n, y una busqueda binaria para encontrar
+	      la posicion final
+	      - $\lg n + O(\lg \lg n)$ comparaciones en el peor caso
+	      - $\lg n$ copias en el peor caso
+	   3. una comparacion en cada nivel para definir un camino
+	      de tamano lg n, y una busqueda *secuencial* up para encontrar
+	      la posicion final
+	      - $2\lg n$  comparaciones en el peor caso
+	      - $\lg n$ copias en el peor caso
+	      - pero en practica y promedio mucho mejor.
 
 
-      3) Colas de prioridades binomiales ("Binomial Heaps")
+       * Flexibilidad de estructuras
+	 + Porque la complejidad es mejor con un heap que con un
+	   arreglo ordenado?
+	   - Para cada conjunto, hay solamente un arreglo ordenado
+	     que puede representarlo, pero muchos heaps posibles:
+	     eso da mas flexibilidad para la mantencion dinamica de
+	     la estructura de datos.
 
-	 http://en.wikipedia.org/wiki/Binomial_heap
-	 o p136 de Melhorn y Sanders
+	 + Colas de prioridades con punteros ("Addressable priority queues")
+	   - Algun que mas flexible que los arreglos ordenados, las
+	     colas de prioridades binarias todavia son de estructura
+	     muy estricta, por ejemplo para la union de
+	     filas. Estructuras mas flexibles consideran un "bosque"
+	     de arboles. Ademas, estas estructuras de arboles son
+	     implementadas con puntadores (en ves de implementarlos
+	     en arreglos).
+	   - Hay diferentes variantes. Todas tienen en comun los
+	     puntos siguientes:
+	     - un puntero *minPtr* indica el nodo de valor minima
+	       en el bosque, raiz de alguno arbol.
+	     - *insert* agregas un nuevo arbol al bosque en tiempo $O(1)$
+	     - *deleteMin* remudas el nodo indicado par minPtr,
+	       dividiendo su arbol en dos nuevos arboles. Buscamos
+	       para el nuevo min y fusionamos algunos arboles (los
+	       detalles diferencian las variantes)
+	     - *decreaseKey(h,k)* es implementado cortando el arbol
+	       al nodo indicado por h, y rebalanceando el arbol
+	       cortado.
+	     - *delete()* es reducido a *decreaseKey(h,0)* y
+	       *deleteMin*
 
-	 * Definicion
-	   - Un *arbol binomial* (de orden $k$) tiene exactamente $k$
-             hijos de orden distintos $k-1,k-2,..., 0$. [Un arbol
-             binomial de orden 0 tiene 0 hijos.]
-	   - Un *bosque binomial* es un conjunto de arboles binomiales
-             de orden *distintas* (i.e. hay cero o uno arboles de cada
-             orden).
+    2) "Pairing Heaps"
 
-	 * Propiedades
-	   - Para cada arbol $T$
-	     - $h(T) \leq lg |T|$
-	     - $|T| \geq 2^{h(T)}$
-	   - Para el bosque
-	     - $\forall n$ hay solamente uno bosque binomial con n nodos.
-	     - al maxima tiene $\lfloor \lg (n+1) \rfloor$ arboles.
-	     - la descomposicion del bosque en arboles de orden $k$
-	       corresponde a la descomposicion de $n$ en base de dos.
+       - Malo rendimiento en el peor caso, pero bastante buena en
+	 practica.
 
-	 * Definicion
-	   - una *cola binomial* es un bosque binomial donde cada nodo
-	     almacena una clave, y siempre la clave de un padre es
-	     inferior o igual a la clave de un hijo.
+       - rebalancea los arboles solamente en deleteMin, y solamente
+	 con pares de raises (i.e. la cantidad de arboles es
+	 reducida por dos a cada deleteMin).
 
-	 * Operaciones
-           | Operacion | Peor Caso  |
-           |------------------+------------|
-           | Merge            | $O(\lg n)$ |
-           | FindMin          | $O(\lg n)$ |
-           | ExtractMin       | $O(\lg n)$ |
-           | Insert(C,x)      | $O(\lg n)$ |
-           | Heapify          | $O(n)$     |
-           |------------------+------------|
-           | remove(h)        | $O(\lg n)$ |
-           | decreaseKey(h,k) | $O(\lg n)$ |
-           | merge(Q)         | $O(\lg n)$ |
-           |------------------+------------|
-
-	 * Union
-
-	   - Union de dos arboles binomiales de mismo orden:
-	     - agrega $T_2$ a $T_1$ si $T_1$ tiene la raiz mas pequena.
-	   - Union de dos bosques binomiales:
-	     - si hay uno arbol de orden $k$, es lo de la union
-	     - si hay dos arboles de orden $k$, calcula la union en un arbol de orden $k+1$
-	     - la propagacion es similar a la suma de enteros en binario.
-
-	   - Complejidad 
-	     - $O(\lg n)$ en el peor caso 
-
-	 * Insert
-	   - agrega un arbol de orden 0 y hace la union si necesitado
-	   - Complejidad $O(\lg n)$ en el peor caso
-	   - Puede ser $O(1)$ sin corregir el bosque, que tiene de ser
-             corregido mas tarde, que puede ser en tiempo $O(n)$ peor
-             caso, pero sera $O(\lg n)$ en tiempo amortizado.
-
-	 * Minima
-	   - lei la lista de al maxima $\lfloor \lg (n+1) \rfloor$ raices
-	   - Complejidad $O(\lg n)$
-	   - Puede ser $O(1)$ si precalculando un puntero al minima, que
-             tiene de ser corregido (en tiempo $O(\lg n))$ a cada modificacion.
-
-	 * DeleteMin
-	   - encontra el min
-	   - remuda el min de su arbol (la raiz)
-	   - reordena su hijos para su orden, en un bosque binomial
-	   - hace la union con el bosque binomial original, menos el arbol del min
-	   - complejidad $O(\lg n)$
-
-	 * DecreaseKey
-	   - sigue el camino abajo hasta que la condicion del heap es
-             corregida.
-	   - cada arbol tiene altura lg n, entonces la complejidad es
-             $O(\lg n)$ en el peor caso.
-
-	 * Delete 
-	   - reducido a DecreaseKey+DeleteMin
-	     
+	 | Operacion | Amortizado                 |
+	 |------------------+----------------------------|
+	 | Insert(C,x)      | $O(1)$                     |
+	 | Merge            | $O(1)$                     |
+	 | ExtractMin       | $O(\lg n)$                 |
+	 | decreaseKey(h,k) | $\Omega(n \lg n \lg\lg n)$ |
+	 |------------------+----------------------------|
 
 
-      4) Colas de prioridades de Fibonacci ("Fibonacci Heaps")
+    3) Colas de prioridades binomiales ("Binomial Heaps")
 
-	 [[http://en.wikipedia.org/wiki/Fibonacci_heap]] o pagina 135 de
-	 Melhorn y Sanders.
+       http://en.wikipedia.org/wiki/Binomial_heap
+       o p136 de Melhorn y Sanders
+
+       * Definicion
+	 - Un *arbol binomial* (de orden $k$) tiene exactamente $k$
+	   hijos de orden distintos $k-1,k-2,..., 0$. [Un arbol
+	   binomial de orden 0 tiene 0 hijos.]
+	 - Un *bosque binomial* es un conjunto de arboles binomiales
+	   de orden *distintas* (i.e. hay cero o uno arboles de cada
+	   orden).
+
+       * Propiedades
+	 - Para cada arbol $T$
+	   - $h(T) \leq lg |T|$
+	   - $|T| \geq 2^{h(T)}$
+	 - Para el bosque
+	   - $\forall n$ hay solamente uno bosque binomial con n nodos.
+	   - al maxima tiene $\lfloor \lg (n+1) \rfloor$ arboles.
+	   - la descomposicion del bosque en arboles de orden $k$
+	     corresponde a la descomposicion de $n$ en base de dos.
+
+       * Definicion
+	 - una *cola binomial* es un bosque binomial donde cada nodo
+	   almacena una clave, y siempre la clave de un padre es
+	   inferior o igual a la clave de un hijo.
+
+       * Operaciones
+	 | Operacion | Peor Caso  |
+	 |------------------+------------|
+	 | Merge            | $O(\lg n)$ |
+	 | FindMin          | $O(\lg n)$ |
+	 | ExtractMin       | $O(\lg n)$ |
+	 | Insert(C,x)      | $O(\lg n)$ |
+	 | Heapify          | $O(n)$     |
+	 |------------------+------------|
+	 | remove(h)        | $O(\lg n)$ |
+	 | decreaseKey(h,k) | $O(\lg n)$ |
+	 | merge(Q)         | $O(\lg n)$ |
+	 |------------------+------------|
+
+       * Union
+
+	 - Union de dos arboles binomiales de mismo orden:
+	   - agrega $T_2$ a $T_1$ si $T_1$ tiene la raiz mas pequena.
+	 - Union de dos bosques binomiales:
+	   - si hay uno arbol de orden $k$, es lo de la union
+	   - si hay dos arboles de orden $k$, calcula la union en un arbol de orden $k+1$
+	   - la propagacion es similar a la suma de enteros en binario.
+
+	 - Complejidad 
+	   - $O(\lg n)$ en el peor caso 
+
+       * Insert
+	 - agrega un arbol de orden 0 y hace la union si necesitado
+	 - Complejidad $O(\lg n)$ en el peor caso
+	 - Puede ser $O(1)$ sin corregir el bosque, que tiene de ser
+	   corregido mas tarde, que puede ser en tiempo $O(n)$ peor
+	   caso, pero sera $O(\lg n)$ en tiempo amortizado.
+
+       * Minima
+	 - lei la lista de al maxima $\lfloor \lg (n+1) \rfloor$ raices
+	 - Complejidad $O(\lg n)$
+	 - Puede ser $O(1)$ si precalculando un puntero al minima, que
+	   tiene de ser corregido (en tiempo $O(\lg n))$ a cada modificacion.
+
+       * DeleteMin
+	 - encontra el min
+	 - remuda el min de su arbol (la raiz)
+	 - reordena su hijos para su orden, en un bosque binomial
+	 - hace la union con el bosque binomial original, menos el arbol del min
+	 - complejidad $O(\lg n)$
+
+       * DecreaseKey
+	 - sigue el camino abajo hasta que la condicion del heap es
+	   corregida.
+	 - cada arbol tiene altura lg n, entonces la complejidad es
+	   $O(\lg n)$ en el peor caso.
+
+       * Delete 
+	 - reducido a DecreaseKey+DeleteMin
 
 
-	 * Diferencia con la cola binomial:
 
-	   - relax la estructura de los arboles (heap-forma), pero de
-             forma controlada.
-	   - el tamano de un sub-arbol cual raiz tiene $k$ hijos es al
-             maxima $F_k+2$, donde $F_k$ es el $k$-esimo numero de
-             Fibonacci.
+    4) Colas de prioridades de Fibonacci ("Fibonacci Heaps")
 
-	 * Operaciones
-           | Operacion | Peor Caso  | Amortizado |
-           |------------------+------------+------------|
-           | Merge            | $O(\lg n)$ | $O(1)$       |
-           | FindMin          | $O(\lg n)$ | $O(1)$       |
-           | ExtractMin       | $O(\lg n)$ | .          |
-           | Insert(C,x)      | $O(\lg n)$ | $O(1)$       |
-           | Heapify          | $O(n)$       | .          |
-           |------------------+------------+------------|
-           | remove(h)        | $O(\lg n)$ | .          |
-           | decreaseKey(h,k) | $O(\lg n)$ | $O(1)$       |
-           | merge(Q)         | $O(\lg n)$ | $O(1)$       |
-           |------------------+------------+------------|
+       [[http://en.wikipedia.org/wiki/Fibonacci_heap]] o pagina 135 de
+       Melhorn y Sanders.
 
-      5) Overview
-	 (copy de http://en.wikipedia.org/wiki/Fibonacci_heap)
+
+       * Diferencia con la cola binomial:
+
+	 - relax la estructura de los arboles (heap-forma), pero de
+	   forma controlada.
+	 - el tamano de un sub-arbol cual raiz tiene $k$ hijos es al
+	   maxima $F_k+2$, donde $F_k$ es el $k$-esimo numero de
+	   Fibonacci.
+
+       * Operaciones
+	 | Operacion | Peor Caso  | Amortizado |
+	 |------------------+------------+------------|
+	 | Merge            | $O(\lg n)$ | $O(1)$       |
+	 | FindMin          | $O(\lg n)$ | $O(1)$       |
+	 | ExtractMin       | $O(\lg n)$ | .          |
+	 | Insert(C,x)      | $O(\lg n)$ | $O(1)$       |
+	 | Heapify          | $O(n)$       | .          |
+	 |------------------+------------+------------|
+	 | remove(h)        | $O(\lg n)$ | .          |
+	 | decreaseKey(h,k) | $O(\lg n)$ | $O(1)$       |
+	 | merge(Q)         | $O(\lg n)$ | $O(1)$       |
+	 |------------------+------------+------------|
+
+    5) Overview
+       (copy de http://en.wikipedia.org/wiki/Fibonacci_heap)
 
 
      |             | Linked List | Binary Tree   | (Min-)Heap    | Fibonacci Heap | Brodal Queue [1] |
@@ -3463,47 +3772,7 @@ Se tiene que:
 
 	 - in place
 	 - $O(n \lg n)$ con cualquiera de estas variantes.
-*** *Analisi adaptativa* de algoritmos y estructuras de datos
-**** Analisi en el peor caso: a dentro de que?
-     - peor caso a dentro de las instancias de tamano fijo
-       - el tamano puede ser multidimensional (e.g. grafos)
-     - peor caso a dentro de las instancias de tamano de resultado fijado
-       - cantidad infinita
-     - peor caso a dentro de las instancias de *dificultad* fijada
-       - cantidad infinita
-     - peor caso a dentro de las instancias de *tamano fijo y dificultad* fijada
-
-**** Busqueda Doblada:  $1+2\lceil\lg p\rceil$ comparaciones
-
-     El algoritmo de busqueda doblada 
-
-     - encuentra en $1+\lceil\lg p\rceil$ comparaciones un intervalo
-       de tamaño $p/2$ que contiene $x$, 
-     - encuentra $p$ en $1+\lceil\lg p\rceil$ comparaciones
-       adicionales (usando la segunda variante de la búsqueda
-       binaria),
-     - por un total de   $1+2\lceil\lg p\rceil$ comparaciones
-**** Finger Search Tree: la busqueda doblada de los arboles de busqueda
-***** MATERIAL A LEER
-       	- Árbol 2-3 http://es.wikipedia.org/wiki/%C3%81rbol_2-3
-       	- Finger tree http://en.wikipedia.org/wiki/Finger_tree
-***** APUNTES
-       - Estructura de datos
-       - algorimo de busqueda
-       - analisis: busqueda en $O(\lg p)$ 
-**** Árbol biselado ("Splay Tree")
-***** MATERIAL A LEER
-      - Árbol biselado http://es.wikipedia.org/wiki/%C3%81rbol_biselado
-      - 
-***** APUNTES
-
-**** Algoritmo de Ordenamiento adaptivos basicos
-***** Merge Sort Adaptivo: Runs
-***** Local Insertion Sort: Inv
-***** Another Insertion Sort: REM
-**** Computacion de la Union
-**** Computacion de la Interseccion
-*** *Algoritmos en linea*. Competividad. Adaptividad.
+*** Algoritmos en linea
 **** List Accessing
 
      REFERENCIA: Capitulo 1 en "Online Computation and Competitive
@@ -3814,11 +4083,51 @@ Se tiene que:
 
 
 
-**** "Ski Renting"
+**** BONUS: "Ski Renting"
      http://en.wikipedia.org/wiki/Ski_rental_problem
+*** BONUS Analisi adaptativa
+**** Analisi en el peor caso: a dentro de que?
+     - peor caso a dentro de las instancias de tamano fijo
+       - el tamano puede ser multidimensional (e.g. grafos)
+     - peor caso a dentro de las instancias de tamano de resultado fijado
+       - cantidad infinita
+     - peor caso a dentro de las instancias de *dificultad* fijada
+       - cantidad infinita
+     - peor caso a dentro de las instancias de *tamano fijo y dificultad* fijada
+
+**** Busqueda Doblada:  $1+2\lceil\lg p\rceil$ comparaciones
+
+     El algoritmo de busqueda doblada 
+
+     - encuentra en $1+\lceil\lg p\rceil$ comparaciones un intervalo
+       de tamaño $p/2$ que contiene $x$, 
+     - encuentra $p$ en $1+\lceil\lg p\rceil$ comparaciones
+       adicionales (usando la segunda variante de la búsqueda
+       binaria),
+     - por un total de   $1+2\lceil\lg p\rceil$ comparaciones
+**** Finger Search Tree: la busqueda doblada de los arboles de busqueda
+***** MATERIAL A LEER
+       	- Árbol 2-3 http://es.wikipedia.org/wiki/%C3%81rbol_2-3
+       	- Finger tree http://en.wikipedia.org/wiki/Finger_tree
+***** APUNTES
+       - Estructura de datos
+       - algorimo de busqueda
+       - analisis: busqueda en $O(\lg p)$ 
+**** Árbol biselado ("Splay Tree")
+***** MATERIAL A LEER
+      - Árbol biselado http://es.wikipedia.org/wiki/%C3%81rbol_biselado
+      - 
+***** APUNTES
+
+**** Algoritmo de Ordenamiento adaptivos basicos
+***** Merge Sort Adaptivo: Runs
+***** Local Insertion Sort: Inv
+***** Another Insertion Sort: REM
+**** Computacion de la Union
+**** Computacion de la Interseccion
      
 
-*** Conclusion Unidad 3
+*** RESUMEN Unidad 3
   * Resultados de Aprendisajes de la Unidad
 	- Comprender las tecnicas de algoritmos de 
 	  - costo amortizado, 
@@ -3838,6 +4147,7 @@ Se tiene que:
 	 - tecnica de los cuatro rusos,
 	 - paginamiento
 	 - busqueda no acotada (unbounded search, doubling search)
+
 ** Algoritmos no convencionales (5 semanas = 10 charlas) 
    :LOGBOOK:
    - State "PAUS"       from "TODO"       [2010-10-07 Thu 13:44]
