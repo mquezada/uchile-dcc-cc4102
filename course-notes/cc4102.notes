@@ -2355,8 +2355,8 @@ persecución sufrida por Alan Turing.
        - hay una cota inferior para ordernar de $n \log_m n$
        - entonces????
 
-**** PREGUNTAS [0/16]						 :PREGUNTAS:
-***** NEXT Effecto de $M$ sobre /Find/
+**** PREGUNTAS [11/16]						 :PREGUNTAS:
+***** DONE Effecto de $M$ sobre /Find/
 
       La complejidad de /Find/ en un $B$-arbol o vEB arbol es de
       $\lg_B N$ acesos a la memoria segundaria, con $M=1$ paginas en
@@ -2380,7 +2380,7 @@ persecución sufrida por Alan Turing.
       4. [ ] baja a $\lg_B (N/M)$
       5. [ ] Otra respuesta
 
-***** NEXT Complejidad de Insertion Sort en Memoria Segundaria
+***** DONE Complejidad de Insertion Sort en Memoria Segundaria
       :SOLUTION:     
       - =Insertion Sort= (en un B-Arbol) performa $N \lg N / \lg B = N \log_B N$  accesos 
       :END:
@@ -2428,7 +2428,7 @@ persecución sufrida por Alan Turing.
       4. [ ] menos que $N \lg N / \lg B = N \log_B N$  accesos 
       5. [ ] otra respuesta
 
-***** NEXT Cota inferior de ordenamiento en memoria segundaria
+***** DONE Cota inferior de ordenamiento en memoria segundaria
       :SOLUTION:     
       $\Omega( N/B \frac{ \lg(N/B) }{ \lg(M/B) }  )$
       se nota igualemente $\Omega( n\lg_m n )$      
@@ -2460,7 +2460,7 @@ persecución sufrida por Alan Turing.
       4. [ ] $\Omega(N \log_B N)$
       5. [ ] otra respuesta
 
-***** NEXT Ordenar (a dentro de las) paginas
+***** DONE Ordenar (a dentro de las) paginas
       :SOLUTION:     
       $n = N/B$
       :END:
@@ -2480,8 +2480,8 @@ persecución sufrida por Alan Turing.
       - un arreglo $A$ contiene unas de las $N!$ permutaciones possibles sobre $N$ elementos.
       :END:
 
-      Cual es el costo (en cantidad de aceso a la memoria segundaria)
-      de ordenar cada bloque (pagina) de $B$ elementos?
+      Cual es el costo asintótico (en cantidad de accesos a la memoria
+      secundaria) de ordenar cada bloque (pagina) de $B$ elementos?
 
       1. [ ] $n = N/B$
       2. [ ] $N = n\times B$
@@ -2489,7 +2489,7 @@ persecución sufrida por Alan Turing.
       4. [ ] $N \times B\lg B$
       5. [ ] otra respuesta
 
-***** NEXT La permutacion escrita
+***** DONE La permutacion escrita
       :SOLUTION:     
       $(N-1)!=$N!/N$$
       :END:
@@ -2505,7 +2505,7 @@ persecución sufrida por Alan Turing.
       4. [ ] $N!$
       5. [ ] otra respuesta
 	     
-***** NEXT Contando permutaciones (Part 1)
+***** DONE Contando permutaciones (Part 1)
       :SOLUTION:     
       $N! / B!$ 
       :END:
@@ -2525,15 +2525,17 @@ persecución sufrida por Alan Turing.
       :END:
 
       Cuantas posibilidades de permutaciones quedan en $A$ despues de
-      ordenar la primera paginas?
+      ordenar la primera pagina?
 
       1. [ ] $n! / B!$
       2. [ ] $N! / B!$ 
       3. [ ] $N! / B\lg B$
       4. [ ] $N!$
-      5. [ ] otra respuesta
+      5. [ ] $(N-B)!
+      6. [ ] $N!-B!$
+      7. [ ] otra respuesta
 
-***** NEXT Contando permutaciones (Part 2)
+***** DONE Contando permutaciones (Part 2)
       :SOLUTION:     
       $N! / (B!)^n$ 
       :END:
@@ -2562,14 +2564,15 @@ persecución sufrida por Alan Turing.
       4. [ ] $N!$
       5. [ ] otra respuesta
 
-***** NEXT Insertando $B$ elementos en un arreglo ordenado de $M$ elementos (Part 1)  
+***** DONE Insertando $B$ elementos en un arreglo ordenado de $M$ elementos (Part 1)
       :SOLUTION:     
       $B$ nuevas entradas se pueden quedar de 
       ${M \choose B} = \frac{M!}{B!(M-B)!} = M\times(M-1)\times\ldots\times(M-B+1)$
       maneras distintas      
       :END:
 
-      De cuantas maneras se pueden mezclar $B$ valores en un arreglo de $M$ valores?
+      De cuantas maneras se pueden mezclar $B$ valores en un arreglo
+      de $M$ valores?
 
       1. [ ] ${M \choose B}$
       2. [ ] $\frac{M!}{B!(M-B)!}$
@@ -2577,7 +2580,7 @@ persecución sufrida por Alan Turing.
       4. [ ] $M\times(M-1)\times\ldots\times(M-B)$
       5. [ ] otra respuesta
 
-***** NEXT Insertando $B$ elementos en un arreglo ordenado de $M$ elementos (Part 2)
+***** DONE Insertando $B$ elementos en un arreglo ordenado de $M$ elementos (Part 2)
       :SOLUTION:     
       $X / {M \choose B} = X / \frac{M!}{B!(M-B)!} = X / M\times(M-1)\times\ldots\times(M-B+1)$
       :END:
@@ -2592,7 +2595,7 @@ persecución sufrida por Alan Turing.
       4. [ ] $X / M\times(M-1)\times\ldots\times(M-B)$
       5. [ ] otra respuesta
 
-***** NEXT Insertando $t$ veces $B$ elementos a dentro de $M$ elementos
+***** DONE Insertando $t$ veces $B$ elementos a dentro de $M$ elementos
       :CONTEXT:
       Considera que 
       - $B$ = Tamano pagina
@@ -2622,7 +2625,7 @@ persecución sufrida por Alan Turing.
       4. [ ] $N! / (N-B\times t)!$
       5. [ ] otra respuesta
 
-***** NEXT Cuantos acesos para reducir a una sola permutacion?
+***** DONE Cuantos acesos para reducir a una sola permutacion?
       :SOLUTION:     
         |-----------+--------+---------------------------------------------+-----------------------------------------------|
         | $N!$      | $\leq$ | $(B!)^n {M \choose B}^t$                    |                                               |
