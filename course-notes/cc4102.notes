@@ -68,77 +68,103 @@
   :END:
   :PROPERTIES:
   :ID:       8083f75f-15d1-4cf8-a992-8b787d182c26
-  :COLUMNS:  %80ITEM(TASK)  %5Effort(TIME){:} %5CLOCKSUM
-  :Effort_ALL: 10 20 30 45 60 90 2*90 3*90 4*90
+  :COLUMNS:  %100ITEM(TASK)  %5Effort(TIME){:} %5CLOCKSUM
+  :Effort_ALL: 10 20 30 45 60 90 2*90 3*90 4*90 " "
   :END:
-** Presentación y Evaluación (1 charla)
+** PresentaciÃ³n y EvaluaciÃ³n (1 charla = 90mns)
 *** Presentaciones
+    :PROPERTIES:
+    :Effort:   10
+    :END:
 **** Quien somos?
      - franco-ingles-castellano
 **** Quien son? 
      * Quien
-	 - tomo el curso CC40A o CC4102 en los últimos semestres?
+	 - tomo el curso CC40A o CC4102 en los Ãºltimos semestres?
 	 - toma CC53A?
        * Quien
-	 - piensa seguir en la universidad después de magíster?
+	 - piensa seguir en la universidad despuÃ©s de magÃ­ster?
 **** El curso
-  * =Temáticas= 
-    1. Conceptos básicos y complejidad (3 semanas = 6 charlas)
+***** Contrato Alumno Profesor
+****** Citacion de Randy Pausch (en ingles)
+
+       "Iâ€™d compare college tuition to paying for a personal trainer
+       at an athletic club. We professors play the roles of trainers,
+       giving people access to the equipment (books, labs, our
+       expertise) and after that, it is our job to be demanding. We
+       need to make sure that our students are exerting themselves. We
+       need to praise them when they deserve it and to tell them
+       honestly when they have it in them to work harder.
+
+       Most importantly, we need to let them know how to judge for
+       themselves how theyâ€™re coming along. The great thing about
+       working in a gym is that if you put in effort, you get very
+       obvious results. The same should be true of college. A
+       professorâ€™s job is to teach students how to see their minds
+       growing in the same way they can see their muscles grow when
+       they look in the mirror."
+
+****** Estudiando
+       
+       * el deber del profesor, como un ayudante en un gimnasio, es de
+         ayudar el alumno a
+	 - elegir el mejor camino para apprender
+	 - saber cuanto progreso hizo
+	 - saber cuanto efuerzo le queda para su objetivo
+       * el deber del alumno es 
+	 - de caminar el camino
+	 - dar feedback al profesor sobre sus debilidades.
+
+
+
+***** =TemÃ¡ticas= 
+    1. Conceptos bÃ¡sicos y complejidad (3 semanas = 6 charlas)
     2. Algoritmos y Estructuras de Datos para Memoria Secundaria (3 semanas = 6 charlas)
-    3. Técnicas avanzadas de diseño y análisis de algoritmos (4 semanas = 8 charlas)
+    3. TÃ©cnicas avanzadas de diseÃ±o y anÃ¡lisis de algoritmos (4 semanas = 8 charlas)
     4. Algoritmos no convencionales  (5 semanas = 10 charlas)
-  * =Modo=
-   - *Clases expositivas* del profesor de cátedra
-     - buscando la participación de los alumnos en pequeños
-       problemas que se van proponiendo durante la exposición.
-   - *Clases auxiliares* dedicadas a explicar ejemplos mas
-     extensos, resolver ejercicios propuestos, y preparación pre y
-     post controles.
-   - *Exposición* de las mejores tareas de los alumnos, como casos
-     de estudio de implementación y experimentación.
-  * =Evaluación=
-    * 2010 con 6 tareas y 2 controles
-	 - [2/9] Examen (todas unidades)
-	 - [4/9] Controles
-	   - [2/9] Control 1 (unidades 1, 2 y parte de 3)
-	   - [2/9] Control 2 (unidades 3,4)
-	 - [3/9] Tareas
-	   - [1/18] Tarea 1
-	   - [1/18] Tarea 2
-	   - [1/18] Tarea 3
-	   - [1/18] Tarea 4
-	   - [1/18] Tarea 5
-	   - [1/18] Tarea 6
-    * 2010 con 6 tareas y 2 controles
-      - [1/3] Tareas
-	- [1/18] Tarea 1
-	- [1/18] Tarea 2
-	- [1/18] Tarea 3
-	- [1/18] Tarea 4
-	- [1/18] Tarea 5
-	- [1/18] Tarea 6
-      - [4/9] Controles
-	- [1/9] Control 1 (unidad 1)
-	- [2/9] Control 2 (unidades 2 y 3)
-	- [1/9] Control 3 (unidad 4)
-      - [2/9] Examen (todas unidades)
-  * =Nota Final=      
-    - controles se promedian a partes iguales
-    - el examen reemplaza el peor control si la nota del examen es
-      mayor.
-    - tareas se promedian a partes iguales
-*** Preguntas sobre la Programación				       :TALK:
+***** =Modo=
+  - *Clases expositivas* del profesor de cÃ¡tedra
+    - buscando la participaciÃ³n de los alumnos en pequeÃ±os
+      problemas que se van proponiendo durante la exposiciÃ³n.
+  - *Clases auxiliares* dedicadas a explicar ejemplos mas
+    extensos, resolver ejercicios propuestos, y preparaciÃ³n pre y
+    post controles.
+  - *ExposiciÃ³n* de las mejores tareas de los alumnos, como casos
+    de estudio de implementaciÃ³n y experimentaciÃ³n.
+***** =EvaluaciÃ³n=
+****** 2011 con 6 tareas y 3 controles
+     - [1/3] Tareas
+       - [1/18] Tarea 1
+       - [1/18] Tarea 2
+       - [1/18] Tarea 3
+       - [1/18] Tarea 4
+       - [1/18] Tarea 5
+       - [1/18] Tarea 6
+     - [4/9] Controles
+       - [1/9] Control 1 (unidad 1)
+       - [2/9] Control 2 (unidades 2 y 3)
+       - [1/9] Control 3 (unidad 4)
+     - [2/9] Examen (todas unidades)
+****** =Nota Final=      
+   - controles se promedian a partes iguales
+   - el examen reemplaza el peor control si la nota del examen es
+     mayor.
+   - tareas se promedian a partes iguales
+*** Preguntas sobre la ProgramaciÃ³n				       :TALK:
+    :PROPERTIES:
+    :Effort:   20
+    :END:
    - Cuanto memoria hay en un computador? Como se maneja?
    - Cual es la diferencia entre el disco duro y la memoria?
    - Cuanto procesadores hay en un computador? Como se programan?
    - Cual algoritmo elegir a implementar para un problema dicho?
-   - Cual es la diferencia entre programación imperativa y funcional?
+   - Cual es la diferencia entre programaciÃ³n imperativa y funcional?
 *** Introduciendo "Concept questions": "Hanoi Tower" y "Disk Pile"
     :LOGBOOK:
     - State "DONE"       from "NEXT"       [2011-03-03 Thu 10:17]
     :END:
     :PROPERTIES:
-    :Effort:   0:10
+    :Effort:   20
     :Energy:   ZERO
     :Span:     hour
     :END:
@@ -223,7 +249,10 @@
        3) [ ] $2^8$
        4) [ ] $8!=8*7*6*5*4*3*2*1=?$
        5) [ ] none of the above
-*** Conceptos básicos (recuerdan CC3001)
+*** Conceptos bÃ¡sicos (recuerdan CC3001)
+    :PROPERTIES:
+    :Effort:   20
+    :END:
 **** Notaciones
      - $O(), o(), \Omega(), \omega(), \Theta(), \theta()$
 **** Definiciones
@@ -237,12 +266,12 @@
      - Cuales cotas inferiores conocen para...
        - buscar?
        - ordenar?
-     - Que problemas difíciles conocen?
+     - Que problemas difÃ­ciles conocen?
        - elegir sus cursos
        - asignar salas y horarios a los cursos
        - asignar enfermeros a hospitales
 **** Concept Questions [0/7] 
-***** TODO Asintóticas
+***** TODO AsintÃ³ticas
        :LOGBOOK:
        - State "TODO"       from ""           [2011-03-10 Thu 11:55]
        :END:
@@ -256,7 +285,7 @@
       :LOGBOOK:
       - State "TODO"       from ""           [2011-03-10 Thu 11:55]
       :END:
-      ¿Cuántos árboles binarios distintos se pueden construir con 3 nodos internos?
+      Â¿CuÃ¡ntos Ã¡rboles binarios distintos se pueden construir con 3 nodos internos?
 
       1. [ ] 1
       2. [ ] 3
@@ -266,8 +295,8 @@
 
 ***** TODO Arboles Binarios, nodos internos externos
       Si se define 
-      - $i =$ número de nodos internos,
-      - $e =$ número de nodos externos, 
+      - $i =$ nÃºmero de nodos internos,
+      - $e =$ nÃºmero de nodos externos, 
       entonces se tiene que:
       :LOGBOOK:
       - State "TODO"       from ""           [2011-03-10 Thu 11:55]
@@ -276,29 +305,29 @@
       2. [ ] $e = i+1$
       3. [ ] $i = e+1$
       4. [ ] $e = 2^i$
-      5. [ ] sin relación
+      5. [ ] sin relaciÃ³n
 ***** TODO Sumas de largos de caminos en arboles.
       :LOGBOOK:
       - State "TODO"       from ""           [2011-03-10 Thu 11:55]
       :END:
-Sea $n =$ número de nodos internos. Se define:
- * $I_n =$ suma del largo de los caminos desde la raíz a cada nodo
+Sea $n =$ nÃºmero de nodos internos. Se define:
+ * $I_n =$ suma del largo de los caminos desde la raÃ­z a cada nodo
    interno (largo de caminos internos).
- * $E_n =$ suma del largo de los caminos desde la raíz a cada nodo
+ * $E_n =$ suma del largo de los caminos desde la raÃ­z a cada nodo
    externo (largo de caminos externos).
 Se tiene que:
      1. [ ] $E_n = I_n$
      2. [ ] $E_n = I_n+1$
      3. [ ] $E_n = I_n+n$
      4. [ ] $E_n = I_n+2n$
-     5. [ ] sin relación
+     5. [ ] sin relaciÃ³n
 ***** TODO Heap
       :LOGBOOK:
       - State "TODO"       from ""           [2011-03-10 Thu 11:55]
       :END:
-      La característica que permite que un heap se pueda almacenar
-      sin punteros es que, si se utiliza la numeración por niveles
-      indicada, entonces la(s) relación(es) entre padres e hijos es
+      La caracterÃ­stica que permite que un heap se pueda almacenar
+      sin punteros es que, si se utiliza la numeraciÃ³n por niveles
+      indicada, entonces la(s) relaciÃ³n(es) entre padres e hijos es
       (son):
 
       1. [ ] Hijos del nodo $j = \{2*j, 2*j+1\}$
@@ -321,47 +350,50 @@ Se tiene que:
       4. [ ] en $\Theta(\lg n)$
       5. [ ] ningunos o mas que dos
 ***** TODO AVL h-> n
-      para una altura $h$ dada, cuantos nodos tiene un árbol AVL con
-      *mínimo* número de nodos que alcanza esa altura?
+      para una altura $h$ dada, cuantos nodos tiene un Ã¡rbol AVL con
+      *mÃ­nimo* nÃºmero de nodos que alcanza esa altura?
       1. [ ] $h$
       2. [ ] $2h$
       3. [ ] $2^h$
       4. [ ] $2^h-1$
       5. [ ] ningunas de las respuestas  previas.
 
-*** Búsqueda y Codificación de Enteros (BONUS)
-**** Relación entre búsqueda ordenada y códigos			       :TALK:
+*** BÃºsqueda y CodificaciÃ³n de Enteros (BONUS)
+    :PROPERTIES:
+    :Effort:   20
+    :END:
+**** RelaciÃ³n entre bÃºsqueda ordenada y cÃ³digos			       :TALK:
 
-     | Algoritmo de búsqueda      | Código por enteros |
+     | Algoritmo de bÃºsqueda      | CÃ³digo por enteros |
      |----------------------------+--------------------|
-     | Búsqueda secuencial        | Código Unario      |
-     | Búsqueda binaria           | Codigo Binario     |
-     | Búsqueda doblada           | ???                |
-     | Búsqueda por interpolación | ???                |
-     | ???                        | Huffman Código       |
+     | BÃºsqueda secuencial        | CÃ³digo Unario      |
+     | BÃºsqueda binaria           | Codigo Binario     |
+     | BÃºsqueda doblada           | ???                |
+     | BÃºsqueda por interpolaciÃ³n | ???                |
+     | ???                        | Huffman CÃ³digo       |
 
-     - A cuales algoritmos de búsqueda ordenada corresponden códigos?
-     - A cuales códigos corresponden algoritmos de búsqueda?
+     - A cuales algoritmos de bÃºsqueda ordenada corresponden cÃ³digos?
+     - A cuales cÃ³digos corresponden algoritmos de bÃºsqueda?
 
-** Conceptos básicos y complejidad (3 semanas = 6 charlas)
-*** DESCRIPCIÓN de la Unidad:
+** Conceptos bÃ¡sicos y complejidad (3 semanas = 6 charlas = 540mns)
+*** DESCRIPCIÃ“N de la Unidad:
 **** Resultados de Aprendizajes de la Unidad
      - Comprender el concepto de complejidad de un problema como cota inferior
-     - conocer técnicas elementales para demostrar cotas inferiores
+     - conocer tÃ©cnicas elementales para demostrar cotas inferiores
      - Conocer algunos casos de estudio relevantes
-     - Adquirir nociones básicas de experimentación en algoritmos. 
+     - Adquirir nociones bÃ¡sicas de experimentaciÃ³n en algoritmos. 
 **** Principales casos de estudio 
      - Cota inferior para minimo y maximo de un arreglo
      - Caso promedio del "Quicksort"
-     - Cota inferior para búsqueda en un arreglo con distintas probabilidades de acceso
+     - Cota inferior para bÃºsqueda en un arreglo con distintas probabilidades de acceso
 *** PRERREQUISITOS DE UNIDAD 
 **** Lista de temas en apuntes de CC3001 			    :READING:
     http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
 *** Repaso 
 **** PRERREQUISITOS
-***** "Bases de la programación" en apuntes de CC3001		    :READING:
+***** "Bases de la programaciÃ³n" en apuntes de CC3001		    :READING:
       - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
-***** Notaciones Asintóticas					    :READING:
+***** Notaciones AsintÃ³ticas					    :READING:
 	- $O()$  http://es.wikipedia.org/wiki/Cota_superior_asint%C3%B3tica
 	- $\Omega()$ http://es.wikipedia.org/wiki/Cota_inferior_asint%C3%B3tica
 	- $\Theta()$ http://es.wikipedia.org/wiki/Cota_ajustada_asint%C3%B3tica
@@ -371,19 +403,19 @@ Se tiene que:
 ***** AVL en  apuntes de CC3001					    :READING:
       - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/#3
 **** Problema de la Torre de Hanoi				       :TALK:
-     - Definición
+     - DefiniciÃ³n
      - Cota superior
      - Cota inferior
 **** Variantes de la Torre de Hanoi				       :TALK:
     - pesos distintos?
-    - Disk Pile Problema ($n$ discos pero $h<n$ tamaños)
-      - Cota inferior en función de $n$, en función de $n,h$ 
-      - Cota superior en función de $n$, en función de $n,h$
-    - Precise Disk Pile Problema ($n$ discos con $n_i$ de tamaño $i$, $\forall i\in[1..h]$)
-      - cota inferior en función de $n$, en función de $h,n_1,...,n_h$ 
-      - cota superior en función de $n$, en función de $h,n_1,...,n_h$
+    - Disk Pile Problema ($n$ discos pero $h<n$ tamaÃ±os)
+      - Cota inferior en funciÃ³n de $n$, en funciÃ³n de $n,h$ 
+      - Cota superior en funciÃ³n de $n$, en funciÃ³n de $n,h$
+    - Precise Disk Pile Problema ($n$ discos con $n_i$ de tamaÃ±o $i$, $\forall i\in[1..h]$)
+      - cota inferior en funciÃ³n de $n$, en funciÃ³n de $h,n_1,...,n_h$ 
+      - cota superior en funciÃ³n de $n$, en funciÃ³n de $h,n_1,...,n_h$
 **** PREGUNTAS [7/7] 						 :PREGUNTAS:
-***** DONE [#A] Asintóticas						 :CP:
+***** DONE [#A] AsintÃ³ticas						 :CP:
        :LOGBOOK:
        - State "DONE"       from "TODO"       [2011-03-15 Tue 11:05]
        - State "TODO"       from ""           [2011-03-10 Thu 11:55]
@@ -392,7 +424,7 @@ Se tiene que:
 |-------------------+-----------------+------------------+-----------------------+----------------------|
 | $3n+6$            | $100n-50$       |                  |                       |                      |
 | $n^{\frac{1}{2}}$ | $n^\frac{2}{3}$ |                  |                       |                      |
-***** DONE [#A] ¿Cuántos árboles binarios distintos se pueden construir con 3 nodos internos?
+***** DONE [#A] Â¿CuÃ¡ntos Ã¡rboles binarios distintos se pueden construir con 3 nodos internos?
       :LOGBOOK:
       - State "DONE"       from "TODO"       [2011-03-15 Tue 11:06]
       - State "TODO"       from ""           [2011-03-10 Thu 11:55]
@@ -403,7 +435,7 @@ Se tiene que:
       4. [ ] 6
       5. [ ] otra
 ***** DONE Arboles Binarios, nodos internos externos
-      Si se define i = número de nodos internos, e = número de nodos
+      Si se define i = nÃºmero de nodos internos, e = nÃºmero de nodos
       externos, entonces se tiene que:
       :LOGBOOK:
       - State "DONE"       from "TODO"       [2011-03-15 Tue 11:06]
@@ -413,30 +445,30 @@ Se tiene que:
       2. [ ] e = i+1
       3. [ ] i = e+1
       4. [ ] e = 2^i
-      5. [ ] sin relación
-***** DONE Sea n = número de nodos internos. Se define:
+      5. [ ] sin relaciÃ³n
+***** DONE Sea n = nÃºmero de nodos internos. Se define:
       :LOGBOOK:
       - State "DONE"       from "TODO"       [2011-03-15 Tue 11:06]
       - State "TODO"       from ""           [2011-03-10 Thu 11:55]
       :END:
-   * In = suma del largo de los caminos desde la raíz a cada nodo
+   * In = suma del largo de los caminos desde la raÃ­z a cada nodo
      interno (largo de caminos internos).
-   * En = suma del largo de los caminos desde la raíz a cada nodo
+   * En = suma del largo de los caminos desde la raÃ­z a cada nodo
      externo (largo de caminos externos).
      Se tiene que:
      1. [ ] En = In
      2. [ ] En = In+1
      3. [ ] En = In+n
      4. [ ] En = In+2n
-     5. [ ] sin relación
+     5. [ ] sin relaciÃ³n
 ***** DONE Heap
       :LOGBOOK:
       - State "DONE"       from "TODO"       [2011-03-15 Tue 11:06]
       - State "TODO"       from ""           [2011-03-10 Thu 11:55]
       :END:
-      La característica que permite que un heap se pueda almacenar
-      sin punteros es que, si se utiliza la numeración por niveles
-      indicada, entonces la(s) relación(es) entre padres e hijos es
+      La caracterÃ­stica que permite que un heap se pueda almacenar
+      sin punteros es que, si se utiliza la numeraciÃ³n por niveles
+      indicada, entonces la(s) relaciÃ³n(es) entre padres e hijos es
       (son):
       1. [ ] Hijos del nodo $j = \{2*j, 2*j+1\}$
       2. [ ] Padre del nodo $k = \lfloor k/2 \rfloor$ 
@@ -459,82 +491,82 @@ Se tiene que:
       :END:
       :PROOF:
       (ref http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/#3  )
-      Sea $n_h$ el tamaño del árbol AVL mas pequeño de altura $h$.
+      Sea $n_h$ el tamaÃ±o del Ã¡rbol AVL mas pequeÃ±o de altura $h$.
       Experimentalmente, 
       | $h$   | 1 | 2 | 3 | 4 |  5 |
       |-------+---+---+---+---+----|
       | $n_h$ | 2 | 3 | 5 | 8 | 13 |
-      Recursivamente, un tal árbol tiene
+      Recursivamente, un tal Ã¡rbol tiene
       - un hijo de altura $h-1$ y con $n_{h-1}$ nodos
       - un hijo de altura $h-2$ y con $n_{h-2}$ nodos 
 
-      Así $n_h = 1+n_{h-1}+n_{h-2}$: es la forma de la secuencia de
+      AsÃ­ $n_h = 1+n_{h-1}+n_{h-2}$: es la forma de la secuencia de
       Fibonacci (con distintas condiciones iniciales)!  
 
-      La solución es $n_h=\frac{\phi^{h+2}}{\sqrt{5}}$ (que no es en
+      La soluciÃ³n es $n_h=\frac{\phi^{h+2}}{\sqrt{5}}$ (que no es en
       la lista).
       :END:
       :LOGBOOK:
       - State "DONE"       from "NEXT"       [2011-03-15 Tue 12:08]
       - State "NEXT"       from "TODO"       [2011-03-15 Tue 11:06]
       :END:
-      para una altura $h$ dada, cuantos nodos tiene un árbol AVL con
-      *mínimo* número de nodos que alcanza esa altura?
+      para una altura $h$ dada, cuantos nodos tiene un Ã¡rbol AVL con
+      *mÃ­nimo* nÃºmero de nodos que alcanza esa altura?
       1. [ ] $h$
       2. [ ] $2h$
       3. [ ] $2^h$
       4. [ ] $2^h-1$
       5. [ ] otra respuesta
-*** Metodología de experimentación
+*** MetodologÃ­a de experimentaciÃ³n
 **** PRERREQUISITOS
      - de las apuntes de CC3001:
-       - Nociones básicas de programación http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Programacion/
+       - Nociones bÃ¡sicas de programaciÃ³n http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Programacion/
 	 (sin estudiarlas)
      - de las apuntes de CC4102:
-       - 1.4 Metodología de experimentación
+       - 1.4 MetodologÃ­a de experimentaciÃ³n
      - en la red (y en ingles)
        - "Research Design: Qualitative, Quantitative, and Mixed Methods Approaches" 
 	 John W. Creswell
 	 http://www.amazon.com/Research-Design-Qualitative-Quantitative-Approaches/
-**** Al inicio, Ciencias de la computación fue solamente experimentación.
-***** Turing y el código Enigma
+**** Al inicio, Ciencias de la computaciÃ³n fue solamente experimentaciÃ³n.
+***** Turing y el cÃ³digo Enigma
 
-      - el importante estaba de solucionar la instancia del día
-	(romper la llave del día, basado en los mensajes de
-	meteorológico, para descifrar los messages mas importantes)
+      - el importante estaba de solucionar la instancia del dÃ­a
+	(romper la llave del dÃ­a, basado en los mensajes de
+	meteorolÃ³gico, para descifrar los messages mas importantes)
 	 - no mucho focus en el problema, aunque Turing si escribio
 	   la definicion de la Maquina universal.
 
 ***** Alan Turing [http://www.museointernacionaldechile.cl/artistas-amistosos-de-neukolln-presentan-homenaje-a-alan-turing/ [2011-04-09 Sat] ]
 
-Alan Turing (1912 - 1954). Matemático, informático teórico,
-criptógrafo y filósofo inglés. Es considerado uno de los padres de la
-ciencia de la computación, siendo el precursor de la informática
-moderna. Proporcionó una influyente formalización de los conceptos de
-algoritmo y computación: la máquina de Turing. Durante la Segunda
-Guerra Mundial, trabajó en romper los códigosnazis, particularmente
-los de la máquina Enigma; durante un tiempo fue el director de la
-sección Naval Enigma del Bletchley Park. Tras la guerra diseñó uno de
-los primeros computadores electrónicos programables digitales en el
-Laboratorio Nacional de Física del Reino Unido y poco tiempo después
-construyó otra de las primeras máquinas en la Universidad de
-Manchester. Entre otras muchas cosas, también contribuyó de forma
-particular e incluso provocativa al enigma de si las máquinas pueden
+Alan Turing (1912 - 1954). MatemÃ¡tico, informÃ¡tico teÃ³rico,
+criptÃ³grafo y filÃ³sofo inglÃ©s. Es considerado uno de los padres de la
+ciencia de la computaciÃ³n, siendo el precursor de la informÃ¡tica
+moderna. ProporcionÃ³ una influyente formalizaciÃ³n de los conceptos de
+algoritmo y computaciÃ³n: la mÃ¡quina de Turing. Durante la Segunda
+Guerra Mundial, trabajÃ³ en romper los cÃ³digosnazis, particularmente
+los de la mÃ¡quina Enigma; durante un tiempo fue el director de la
+secciÃ³n Naval Enigma del Bletchley Park. Tras la guerra diseÃ±Ã³ uno de
+los primeros computadores electrÃ³nicos programables digitales en el
+Laboratorio Nacional de FÃ­sica del Reino Unido y poco tiempo despuÃ©s
+construyÃ³ otra de las primeras mÃ¡quinas en la Universidad de
+Manchester. Entre otras muchas cosas, tambiÃ©n contribuyÃ³ de forma
+particular e incluso provocativa al enigma de si las mÃ¡quinas pueden
 pensar, es decir a la Inteligencia Artificial.
 
-La carrera de Turing terminó súbitamente cuando fue procesado por su
-condición de homosexual. No se defendió de los cargos y se le dio a
-escoger entre la castración química o ir a la cárcel. Eligió lo
-primero y sufrió importantes consecuencias físicas, entre ellas la
-impotencia. Dos años después del juicio, en 1954, se suicidó,
+La carrera de Turing terminÃ³ sÃºbitamente cuando fue procesado por su
+condiciÃ³n de homosexual. No se defendiÃ³ de los cargos y se le dio a
+escoger entre la castraciÃ³n quÃ­mica o ir a la cÃ¡rcel. EligiÃ³ lo
+primero y sufriÃ³ importantes consecuencias fÃ­sicas, entre ellas la
+impotencia. Dos aÃ±os despuÃ©s del juicio, en 1954, se suicidÃ³,
 aparentemente tras comerse una manzana envenenada con cianuro. Su
-misteriosa muerte ha dado lugar a diversas hipótesis, incluso la del
-asesinato. El año 2009 el primer ministro delReino Unido, Gordon
-Brown, emitió un comunicado declarando sus disculpas en nombre del
-gobierno por el trato que recibió Alan Turing durante sus últimos años
-de vida. Este comunicado fue consecuencia de una movilización pública
+misteriosa muerte ha dado lugar a diversas hipÃ³tesis, incluso la del
+asesinato. El aÃ±o 2009 el primer ministro delReino Unido, Gordon
+Brown, emitiÃ³ un comunicado declarando sus disculpas en nombre del
+gobierno por el trato que recibiÃ³ Alan Turing durante sus Ãºltimos aÃ±os
+de vida. Este comunicado fue consecuencia de una movilizaciÃ³n pÃºblica
 solicitando al Gobierno que pidiera disculpas oficialmente por la
-persecución sufrida por Alan Turing.
+persecuciÃ³n sufrida por Alan Turing.
 
 ***** Experimentacion basica 
       - correga hasta que fonciona (o parece foncionar)
@@ -976,7 +1008,7 @@ persecución sufrida por Alan Turing.
       :LOGBOOK:
       - State "DONE"       from "NEXT"       [2011-03-17 Thu 13:32]
       :END:
-      Dado $n$ simbolos elegido a dentro de un alfabeto de tamaño  $\sigma$
+      Dado $n$ simbolos elegido a dentro de un alfabeto de tamaÃ±o  $\sigma$
       1. [ ] no se puede codificar *nunca* en $o(n\lg\sigma)$ bits
       2. [X] no se puede codificar *siempre* en $o(n\lg\sigma)$ bits
       3. [X] no se sabe *como codificar siempre* en $o(n\lg\sigma)$ bits
@@ -1126,7 +1158,7 @@ persecución sufrida por Alan Turing.
   :END:
       Cual de las asercions siguentes son falsas?
       Dado una valor $x$ y un arreglo ordenado $A$ de $n$ valores,
-      existe un algoritmo calculando la posicion de inserción $p$ de
+      existe un algoritmo calculando la posicion de inserciÃ³n $p$ de
       $x$ en $A$ en 
       1. [ ] $\lg(1+n)$ comparaciones
       2. [ ] $p+1$ comparaciones
@@ -1166,7 +1198,7 @@ persecución sufrida por Alan Turing.
 ***** NEXT Complejidad en promedio de un algoritmo
       :SOLUTION:
       Ningunas. Falta una distribucion $(p_i)_{i\in[1..2^n]}$ sobre
-      las instancias legales por $A$ de tamaño $n$
+      las instancias legales por $A$ de tamaÃ±o $n$
       :END:
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-22 Tue 11:55]
@@ -1286,7 +1318,7 @@ persecución sufrida por Alan Turing.
        - Busqueda binaria en $\Theta(1+\lg n)$ (mejor que $2\lg n$)
        - Algoritmo en $2n/3 + O(1)$ comparaciones para min max
 
-** Memoria Secundaria [Algoritmos y Estructuras de Datos para] (3 semanas = 6 charlas)
+** Memoria Secundaria [Algoritmos y Estructuras de Datos para] (3 semanas = 6 charlas = 540mns)
 *** DESCRIPCION de la Unidad
     1) Modelos de Memoria
     2) Diccionarios en Memoria Secundaria
@@ -1336,7 +1368,7 @@ persecución sufrida por Alan Turing.
 	  - "Cache oblivious" http://en.wikipedia.org/wiki/Cache-oblivious_algorithm
 	  - Sistemos Operativos
 **** PREGUNTAS [6/7] 						 :PREGUNTAS:
-***** DONE Cuantas segundas vale 1ns?
+***** Cuantas segundas vale 1ns?
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-29 Tue 10:49]
       :END:
@@ -1356,7 +1388,7 @@ persecución sufrida por Alan Turing.
       3. [ ] $10^{-6}$ segundas
       4. [ ] $10^{-3}$ segundas
       5. [ ] otra respuesta
-***** DONE Camino de accesso a valores
+***** Camino de accesso a valores
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-29 Tue 10:51]
       :END:
@@ -1380,7 +1412,7 @@ persecución sufrida por Alan Turing.
       6. [ ] Cache + RAM + Disco Duro
       7. [ ] Cache + Disco Duro
       8. [ ] RAM + Disco Duro
-***** CANC Cual es la significacion de GHz?			       :CANC:
+***** Cual es la significacion de GHz?			       :CANC:
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-29 Tue 11:01]
       :END:
@@ -1404,7 +1436,7 @@ persecución sufrida por Alan Turing.
       3. [ ] $4*10^6$ instrucciones per segunda
       4. [ ] $4*10^9$ instrucciones per segunda
       5. [ ] otra respuesta
-***** DONE Nivel a 25ns
+***** Nivel a 25ns
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-29 Tue 10:54]
       :END:
@@ -1416,7 +1448,7 @@ persecución sufrida por Alan Turing.
 |        | Registro | L1         | L2       | L3       | RAM        | Disco         | Red           | Static   |
 |--------+----------+------------+----------+----------+------------+---------------+---------------+----------|
 | tiempo | 1 ciclo  | O(1) ciclo | L1*2,*10 | >L2      | 100 ciclos | $10^6$ ciclos | O(1) Segundas | sin cota |
-| tamaño | 100  B   | 10 KB      | >512 KB  | >2048 KB | O(1) GB    | 200 GB        | creciendo     | sin cota |
+| tamaÃ±o | 100  B   | 10 KB      | >512 KB  | >2048 KB | O(1) GB    | 200 GB        | creciendo     | sin cota |
       :END:
       Cual de los niveles siguentes parece el mas cerca de un tiempo
       de acceso de 25 ns, por un computador funcionando a 4 GHz?
@@ -1425,7 +1457,7 @@ persecución sufrida por Alan Turing.
       3. [ ] RAM
       4. [ ] Disco duro
       5. [ ] otra respuesta
-***** DONE Nivel a 1ns
+***** Nivel a 1ns
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-29 Tue 10:54]
       :END:
@@ -1438,7 +1470,7 @@ persecución sufrida por Alan Turing.
 |-------------+----------+------------+----------+----------+------------+---------------+---------------+----------|
 | tiempo      | 1 ciclo  | O(1) ciclo | L1*2,*10 | >L2      | 100 ciclos | $10^6$ ciclos | O(1) segundas | sin cota |
 | orden en ns | .25 ns   | 1ns        | 5ns      | 10ns     | 25ns       | 250.000 ns    | 10^9 ns       | sin cota |
-| tamaño      | 100 b    | 10 Kb      | >512 Kb  | >2048 Kb | O(1) Gb    | 200 Gb        | creciendo     | sin cota |
+| tamaÃ±o      | 100 b    | 10 Kb      | >512 Kb  | >2048 Kb | O(1) Gb    | 200 Gb        | creciendo     | sin cota |
       :END:
       Cual de los niveles siguentes parece el mas cerca de un tiempo
       de acceso de 1 ns, por un computador funcionando a 4 GHz?
@@ -1447,7 +1479,7 @@ persecución sufrida por Alan Turing.
       3. [ ] RAM
       4. [ ] Disco duro
       5. [ ] otra respuesta
-***** DONE Cuanto se demora una instruccion?
+***** Cuanto se demora una instruccion?
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-29 Tue 10:59]
       :END:
@@ -1478,11 +1510,11 @@ persecución sufrida por Alan Turing.
      - B-Arboles:
        - Arboles B  en apuntes de CC3001
 	 - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/#5
-       - Árbol-B
+       - Ãrbol-B
 	 - http://es.wikipedia.org/wiki/%C3%81rbol-B
-       - Árbol-B+ (corto)
+       - Ãrbol-B+ (corto)
 	 - http://es.wikipedia.org/wiki/%C3%81rbol-B%2B
-       - Árbol-B* (corto)
+       - Ãrbol-B* (corto)
 	 - http://es.wikipedia.org/wiki/%C3%81rbol-B*
 	 - (en ingles http://en.wikipedia.org/wiki/B*-tree )
      - Descripcion de van Emde Boas arboles
@@ -1823,7 +1855,7 @@ persecución sufrida por Alan Turing.
       3. [ ] $x \over 2^{m/2}$
       4. [ ] $x \over 2^{m-2}$
       5. [ ] otra respuesta
-***** DONE vEB aux
+***** vEB aux
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 21:55]
       :END:
@@ -1847,7 +1879,7 @@ persecución sufrida por Alan Turing.
       3. [ ] Optimizar LookUp
       4. [ ] Optimizar FindNext
       5. [ ] otra respuesta
-***** DONE vEB Find Previous
+***** vEB Find Previous
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 21:55]
       :END:
@@ -1869,7 +1901,7 @@ persecución sufrida por Alan Turing.
       4. [ ] $O(2^{2^k})=M$
       5. [ ] $O((\lg\lg M)^2))$
       6. [ ] otra respuesta
-***** DONE vEB Insercion
+***** vEB Insercion
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 21:55]
       :END:
@@ -1924,7 +1956,7 @@ persecución sufrida por Alan Turing.
 	   - ...
        - diccionarios: demasiado espacio para que se pide
 	 - menos operadores que diccionarios 
-	   - => mas flexibilidad en la representación
+	   - => mas flexibilidad en la representaciÃ³n
 	   - => mejor tiempo y/o espacio
        - *binary heap*: una estructura a dentro de muchas otras:
 	 - sequence-heaps
@@ -1937,7 +1969,7 @@ persecución sufrida por Alan Turing.
 	 - /van Emde Boas queues/
 
        - *van Emde Boas queues*
-	 - Definición: 
+	 - DefiniciÃ³n: 
 
 	   "An efficient implementation of priority queues where
 	   insert, delete, get minimum, get maximum, etc. take O(log
@@ -1964,7 +1996,7 @@ persecución sufrida por Alan Turing.
     3) Colas de Prioridades en Memoria Secundaria: cota inferior?
        - Cota inferior para diccionarios es una cota inferior por
 	 colas de prioridades o no?
-	 - No. La reducción es en la otra dirección: una cota inferior
+	 - No. La reducciÃ³n es en la otra direcciÃ³n: una cota inferior
            por colas de prioridad impliqua una cota inferior por
            diccionarios.
        - Cual es la cota inferior mas simple que se puede imaginar?
@@ -2007,7 +2039,7 @@ persecución sufrida por Alan Turing.
       :SOLUTION:     
       No son verdades las proposiciones siguientes:
       - $C$ toma menos espacio que $D$
-      - $D$ es asintóticamente mas rápido que $C$
+      - $D$ es asintÃ³ticamente mas rÃ¡pido que $C$
       :END:
       :PROOF: 
       Porque no se sabe nada de las complejidad de $C$ y $D$.
@@ -2015,38 +2047,38 @@ persecución sufrida por Alan Turing.
       Dado estructuras de datos $C$ y $D$, respectivamente
       implementando los ADT "cola de prioridad" y "diccionario". 
       Cual(es) de estas proposiciones tiene(n) problemas?
-      1. [ ] $C$ implementa el ADT "diccionario" también.
-      2. [ ] $D$ implementa el ADT "cola de prioridad" también.
+      1. [ ] $C$ implementa el ADT "diccionario" tambiÃ©n.
+      2. [ ] $D$ implementa el ADT "cola de prioridad" tambiÃ©n.
       3. [ ] $C$ toma menos espacio que $D$
-      4. [ ] $D$ es asintóticamente mas rápido que $C$ (en los
-         operadores que tienen en común)
+      4. [ ] $D$ es asintÃ³ticamente mas rÃ¡pido que $C$ (en los
+         operadores que tienen en comÃºn)
       5. [ ] ninguna
 ***** Colas de Prioridades contra Diccionarios
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
       :END:
       :SOLUTION:     
-      1. [ ] $C$ implementa el ADT "diccionario" también, pero en malo *tiempo*.
-      2. [X] $D$ implementa el ADT "cola de prioridad" también, pero en malo *tiempo*.
-      3. [X] $C$ implementa el ADT "diccionario" también, pero en malo *espacio*.
-      4. [ ] $D$ implementa el ADT "cola de prioridad" también, pero en malo *espacio*.
-      5. [X] $C$ implementa el ADT "diccionario" también, pero en malo *tiempo y espacio*.
-      6. [X] $D$ implementa el ADT "cola de prioridad" también, pero en malo *tiempo y espacio*.
+      1. [ ] $C$ implementa el ADT "diccionario" tambiÃ©n, pero en malo *tiempo*.
+      2. [X] $D$ implementa el ADT "cola de prioridad" tambiÃ©n, pero en malo *tiempo*.
+      3. [X] $C$ implementa el ADT "diccionario" tambiÃ©n, pero en malo *espacio*.
+      4. [ ] $D$ implementa el ADT "cola de prioridad" tambiÃ©n, pero en malo *espacio*.
+      5. [X] $C$ implementa el ADT "diccionario" tambiÃ©n, pero en malo *tiempo y espacio*.
+      6. [X] $D$ implementa el ADT "cola de prioridad" tambiÃ©n, pero en malo *tiempo y espacio*.
       :END:
       :PROOF: 
       :END:
-      Considera las estructuras de datos Heap $C$ y AVL-árbol $D$,
+      Considera las estructuras de datos Heap $C$ y AVL-Ã¡rbol $D$,
       respectivamente implementando los ADT "cola de prioridad" y
       "diccionario".  Cual(es) de estas proposiciones tiene(n)
       problemas?
-      1. [ ] $C$ implementa el ADT "diccionario" también, pero en malo *tiempo*.
-      2. [ ] $D$ implementa el ADT "cola de prioridad" también, pero en malo *tiempo*.
-      3. [ ] $C$ implementa el ADT "diccionario" también, pero en malo *espacio*.
-      4. [ ] $D$ implementa el ADT "cola de prioridad" también, pero en malo *espacio*.
-      5. [ ] $C$ implementa el ADT "diccionario" también, pero en malo *tiempo y espacio*.
-      6. [ ] $D$ implementa el ADT "cola de prioridad" también, pero en malo *tiempo y espacio*.
+      1. [ ] $C$ implementa el ADT "diccionario" tambiÃ©n, pero en malo *tiempo*.
+      2. [ ] $D$ implementa el ADT "cola de prioridad" tambiÃ©n, pero en malo *tiempo*.
+      3. [ ] $C$ implementa el ADT "diccionario" tambiÃ©n, pero en malo *espacio*.
+      4. [ ] $D$ implementa el ADT "cola de prioridad" tambiÃ©n, pero en malo *espacio*.
+      5. [ ] $C$ implementa el ADT "diccionario" tambiÃ©n, pero en malo *tiempo y espacio*.
+      6. [ ] $D$ implementa el ADT "cola de prioridad" tambiÃ©n, pero en malo *tiempo y espacio*.
       7. [ ] otra respuesta
-***** DONE Cola de Prioridad: Heapify
+***** Cola de Prioridad: Heapify
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 22:49]
       :END:
@@ -2061,7 +2093,7 @@ persecución sufrida por Alan Turing.
       3. [ ] tiene complejidad $O(n)$
       3. [ ] tiene complejidad $O(n\lg n)$
       5. [ ] otra respuesta
-***** DONE Estructuras de datos "Cola de Prioridad"
+***** Estructuras de datos "Cola de Prioridad"
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 22:50]
       :END:
@@ -2075,29 +2107,29 @@ persecución sufrida por Alan Turing.
 	 7. [ ] pairing heaps
 	 8. [ ] skew heaps
 	 9. [ ] /van Emde Boas queues/
-***** NEXT Heaps en Memoria Segundaría: Find Min
+***** Heaps en Memoria SegundarÃ­a: Find Min
       :CONTEXT:
-      Considera un modelo de memoria segundaría con paginas de tamaño
+      Considera un modelo de memoria segundarÃ­a con paginas de tamaÃ±o
       para contener $B$ elementos, y un "heap" de $n$ elementos
       ($n>>B$).  
       :END:
-      A cuantos accesos a la memoria secundaría corresponde un
+      A cuantos accesos a la memoria secundarÃ­a corresponde un
       llamado a "FindMin" en un "min heap"?
       1. [X] $1$ acceso
       2. [ ] $\log_B n$ accesos
       3. [ ] $\log n / \log B$ accesos
       4. [ ] $n/B$ accesos
       5. [ ] $n$ accesos
-***** DONE Heaps en Memoria Segundaría: Delete Min
+***** Heaps en Memoria SegundarÃ­a: Delete Min
       :CONTEXT:
-      Considera un modelo de memoria segundaría con paginas de tamaño
+      Considera un modelo de memoria segundarÃ­a con paginas de tamaÃ±o
       para contener $B$ elementos, y un "binary min heap" de $n$
       elementos ($n>>B$).
       :END:
       :SOLUTION:
       $\lg n-\lg B$
       :END:
-      A cuantos accesos a la memoria segundaría corresponde un
+      A cuantos accesos a la memoria segundarÃ­a corresponde un
       llamado a "DeleteMin" en un "min heap"?
       1. [ ] $\log_B n$ accesos
       2. [ ] $(n-B)/B+1$ accesos
@@ -2105,16 +2137,16 @@ persecución sufrida por Alan Turing.
       4. [ ] $n-B$ accesos
       5. [ ] $n$ accesos
       6. [ ] otra respuesta
-***** NEXT vEB queues: Delete Min
+***** vEB queues: Delete Min
       :CONTEXT:
-      Considera un modelo de memoria segundaría con paginas de tamaño
+      Considera un modelo de memoria segundarÃ­a con paginas de tamaÃ±o
       para contener $B$ elementos, y un "heap" de $n$ elementos
       ($n>>B$).  
       :END:
       :SOLUTION:     
       $\log_B n$ accesos, que $B$ sea conocido o no.
       :END:
-      A cuantos accesos a la memoria segundaría corresponde un
+      A cuantos accesos a la memoria segundarÃ­a corresponde un
       llamado a "DeleteMin" en un vEB Queue?
       1. [ ] $\log_B n$ accesos
       2. [ ] $(n-B)/B+1$ accesos
@@ -2122,12 +2154,12 @@ persecución sufrida por Alan Turing.
       4. [ ] $n-B$ accesos
       5. [ ] otra respuesta
 
-***** NEXT vEB queues: cantidad de hijos
+***** vEB queues: cantidad de hijos
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-30 Wed 23:10]
       :END:
       :CONTEXT:
-      Considera un modelo de memoria segundaría con paginas de tamaño
+      Considera un modelo de memoria segundarÃ­a con paginas de tamaÃ±o
       para contener $B$ elementos, y un "vEB queue" de $n$ elementos
       ($n>>B$).
       :END:
@@ -2137,7 +2169,7 @@ persecución sufrida por Alan Turing.
       :PROOF: 
       :END:
 
-      Cuanto hijos tiene la raíz de un vEB?
+      Cuanto hijos tiene la raÃ­z de un vEB?
       1. [ ] $2$
       2. [ ] $B$
       3. [ ] $B+1$
@@ -2145,9 +2177,9 @@ persecución sufrida por Alan Turing.
       4. [ ] $\sqrt{n}$
       5. [ ] otra respuesta
 
-***** NEXT vEB queues: altura
+***** vEB queues: altura
       :CONTEXT:
-      Considera un modelo de memoria segundaría con paginas de tamaño
+      Considera un modelo de memoria segundarÃ­a con paginas de tamaÃ±o
       para contener $B$ elementos, y un "vEB queue" de $n$ elementos
       ($n>>B$).  
       :END:
@@ -2165,9 +2197,9 @@ persecución sufrida por Alan Turing.
       1. [ ] $\log_2 n$
       5. [ ] otra respuesta
 
-***** NEXT vEB queues: tiempo de búsqueda
+***** vEB queues: tiempo de bÃºsqueda
       :CONTEXT:
-      Considera un modelo de memoria segundaría con paginas de tamaño
+      Considera un modelo de memoria segundarÃ­a con paginas de tamaÃ±o
       para contener $B$ elementos, y un "vEB queue" de $n$ elementos
       ($n>>B$).  
       :END:
@@ -2179,16 +2211,16 @@ persecución sufrida por Alan Turing.
       :PROOF: 
       :END:
 
-      Cual es el tiempo de búsqueda ("findKey(k)") un vEB queue?
+      Cual es el tiempo de bÃºsqueda ("findKey(k)") un vEB queue?
       1. [ ] $\log_B\log_B n$
       1. [ ] $\log_2\log_2 n$
       1. [ ] $\log_B n$
       1. [ ] $\log_2 n$
       5. [ ] otra respuesta
 
-***** NEXT vEB queues: tiempo de "deleteMin"
+***** vEB queues: tiempo de "deleteMin"
       :CONTEXT:
-      Considera un modelo de memoria segundaría con paginas de tamaño
+      Considera un modelo de memoria segundarÃ­a con paginas de tamaÃ±o
       para contener $B$ elementos, y un "vEB queue" de $n$ elementos
       ($n>>B$).  
       :END:
@@ -2208,9 +2240,9 @@ persecución sufrida por Alan Turing.
       1. [ ] $\log_2 n$
       5. [ ] otra respuesta
 
-***** NEXT vEB queues: espacio
+***** vEB queues: espacio
       :CONTEXT:
-      Considera un modelo de memoria segundaría con paginas de tamaño
+      Considera un modelo de memoria segundarÃ­a con paginas de tamaÃ±o
       para contener $B$ elementos, y un "vEB queue" de $n$ elementos
       ($n>>B$).  
       :END:
@@ -2284,7 +2316,7 @@ persecución sufrida por Alan Turing.
 	  - mnemotechnique: 
 	    - $N,M,B$ en cantidad de "palabras maquinas" (=bytes?)
 	    - $n,m$ en cantidad de paginas
-	    - $n<<N$, $m<<M$, por eso son "pequeñas" letras
+	    - $n<<N$, $m<<M$, por eso son "pequeÃ±as" letras
 
        3) En estas notaciones, usando resultos previos:
 
@@ -2349,7 +2381,7 @@ persecución sufrida por Alan Turing.
 	     - calcular la union de los $M+B$ elementos reduce la
 	       cuantidad de permtuaciones por un factor de
 	       $1 / {M \choose B}$
-	     - después de $t$ accessos (distintos) a la memoria
+	     - despuÃ©s de $t$ accessos (distintos) a la memoria
 	       externa, se reduci la cuantidad de permutaciones a
 	       $N! / (  (B!)^n  {M \choose B}^t  )$
 
@@ -2539,7 +2571,7 @@ persecución sufrida por Alan Turing.
       - un arreglo $A$ contiene unas de las $N!$ permutaciones possibles sobre $N$ elementos.
       :END:
 
-      Cual es el costo asintótico (en cantidad de accesos a la memoria
+      Cual es el costo asintÃ³tico (en cantidad de accesos a la memoria
       secundaria) de ordenar cada bloque (pagina) de $B$ elementos?
 
       1. [ ] $n = N/B$
@@ -2564,7 +2596,7 @@ persecución sufrida por Alan Turing.
       4. [ ] $N!$
       5. [ ] otra respuesta
 	     
-***** DONE Contando permutaciones (Part 1)
+***** Contando permutaciones (Part 1)
       :SOLUTION:     
       $N! / B!$ 
       :END:
@@ -2594,7 +2626,7 @@ persecución sufrida por Alan Turing.
       6. [ ] $N!-B!$
       7. [ ] otra respuesta
 
-***** DONE Contando permutaciones (Part 2)
+***** Contando permutaciones (Part 2)
       :SOLUTION:     
       $N! / (B!)^n$ 
       :END:
@@ -2623,7 +2655,7 @@ persecución sufrida por Alan Turing.
       4. [ ] $N!$
       5. [ ] otra respuesta
 
-***** DONE Insertando $B$ elementos en un arreglo ordenado de $M$ elementos (Part 1)
+***** Insertando $B$ elementos en un arreglo ordenado de $M$ elementos (Part 1)
       :SOLUTION:     
       $B$ nuevas entradas se pueden quedar de 
       ${M \choose B} = \frac{M!}{B!(M-B)!} = M\times(M-1)\times\ldots\times(M-B+1)$
@@ -2639,7 +2671,7 @@ persecución sufrida por Alan Turing.
       4. [ ] $M\times(M-1)\times\ldots\times(M-B)$
       5. [ ] otra respuesta
 
-***** DONE Insertando $B$ elementos en un arreglo ordenado de $M$ elementos (Part 2)
+***** Insertando $B$ elementos en un arreglo ordenado de $M$ elementos (Part 2)
       :SOLUTION:     
       $X / {M \choose B} = X / \frac{M!}{B!(M-B)!} = X / M\times(M-1)\times\ldots\times(M-B+1)$
       :END:
@@ -2654,7 +2686,7 @@ persecución sufrida por Alan Turing.
       4. [ ] $X / M\times(M-1)\times\ldots\times(M-B)$
       5. [ ] otra respuesta
 
-***** DONE Insertando $t$ veces $B$ elementos a dentro de $M$ elementos
+***** Insertando $t$ veces $B$ elementos a dentro de $M$ elementos
       :CONTEXT:
       Considera que 
       - $B$ = Tamano pagina
@@ -2675,7 +2707,7 @@ persecución sufrida por Alan Turing.
       permutacion de un factor de $1/ {M \choose B}$.
       :END:
 
-      Después de $t$ accessos (distintos) a la memoria externa, la
+      DespuÃ©s de $t$ accessos (distintos) a la memoria externa, la
       cuantidad de permutaciones se reduci a
 
       1. [ ] $N! /  (B!)^t$
@@ -2684,7 +2716,7 @@ persecución sufrida por Alan Turing.
       4. [ ] $N! / (N-B\times t)!$
       5. [ ] otra respuesta
 
-***** DONE Cuantos acesos para reducir a una sola permutacion?
+***** Cuantos acesos para reducir a una sola permutacion?
       :SOLUTION:     
         |-----------+--------+---------------------------------------------+-----------------------------------------------|
         | $N!$      | $\leq$ | $(B!)^n {M \choose B}^t$                    |                                               |
@@ -2719,7 +2751,7 @@ persecución sufrida por Alan Turing.
       6. [ ] $\lg {M \choose B} \approx B \lg \frac{M}{B}$
       7. [ ] otra tecnica
 
-***** NEXT Cota inferior ordenamiento en memoria segundaria
+***** Cota inferior ordenamiento en memoria segundaria
       :SOLUTION:     
       No se puede ordenar en menos que $n \log_m n$ acesos a la memoria segundaria.
       :END:
@@ -2732,7 +2764,7 @@ persecución sufrida por Alan Turing.
       4. [ ] Se puede ordenar en menos que $n \log_m n$ acesos a la memoria segundaria.
       5. [ ] otra respuesta
 
-***** NEXT Cota superior ordenamiento en memoria segundaria
+***** Cota superior ordenamiento en memoria segundaria
       :SOLUTION:     
       :END:
       :PROOF: 
@@ -2750,7 +2782,7 @@ persecución sufrida por Alan Turing.
       4. [ ] Si, es una varianta de Heap Sort
       5. [ ] Otra Respuesta
 
-***** NEXT Cantidad de memoria Local
+***** Cantidad de memoria Local
       :SOLUTION:     
       $M$ affecta  /MergeSort/ mucho mas que los otros:
       :END:
@@ -2766,9 +2798,9 @@ persecución sufrida por Alan Turing.
       :CONTEXT:
       :END:
 
-      Dado un tamaño de pagina fijo $B$, en cual problema la cantidad
+      Dado un tamaÃ±o de pagina fijo $B$, en cual problema la cantidad
       $M$ de memoria local (y la cantidad $m$ de paginas que se pueden
-      guardar en memoria local) affecta mas la complejidad asintótica?
+      guardar en memoria local) affecta mas la complejidad asintÃ³tica?
 
       1. [ ] /Find/ en ADT Diccionario
       2. [ ] /FindNext/ en ADT Diccionario (e.g. $B$-arbol o van Emde Boas)
@@ -2801,26 +2833,113 @@ persecución sufrida por Alan Turing.
      | Propriedades      | simple cuando       | cache-oblivious   | tiempo $\lg\lg m$     | (...)   |
      |                   | $B$ conocido        | ($B$ desconocido) | (cuando $n\approx m$) |         |
      |-------------------+---------------------+-------------------+-----------------------+---------|
-      
+
+**** Draft of Test (see LaTeX file for final version)
+
+1. Memoria Secundaria
+
+    Considera un nivel de memoria tal que 
+	+ $B$ = Tamano pagina
+	+ $N$ = cantidad de elementos en total
+	+ $n$ = cantidad de paginas con elementos = $N/B$
+	+ $M$ = cantidad de memoria local
+	+ $m$ = cantidad de paginas locales = $M/B$	 
+
+    Maneja bien su tiempo para responder a las preguntas siguentes:
+
+    1) Mejor y Peor caso
+
+       Para cada de las estructuras de datos siguentes, cual es el
+       rendimiento (asintÃ³tico), en terminos de accesos a la memoria
+       secundaria en el peor caso y en el mejor caso, por un llamado a
+       "Insert" (se acordan que la estructura de datos contiene $N$
+       elementos)?
+
+           |                                               | Peor Caso | Mejor Caso |
+           |-----------------------------------------------+-----------+------------|
+           | "min binary heap"                             |           |            |
+           | avl arbol                                     |           |            |
+           | (2,3)-arbol                                   |           |            |
+           | $B$-arbol para diccionario                    |           |            |
+           | $2B$-arbol para diccionario                   |           |            |
+           | $B/2$-arbol para diccionario                  |           |            |
+           | vEB-arbol original para colas de prioridades  |           |            |
+           | vEB-arbol recursivo para colas de prioridades |           |            |
+           | vEB-arbol original para diccionario           |           |            |
+           | vEB-arbol recursivo  para diccionario         |           |            |
+  
+ 	  
+    2) Ordenamiento
+
+       Cual(es) algoritmos, en su varianta adaptada a la memoria
+       secundaria, permite(n) de ordenar $N$ elementos en el peor caso
+
+       - en $O(N\lg N)$ accesos a la memoria secundaria?
+
+       - en $O(N\log_B N)$ accesos a la memoria secundaria?
+
+       - en $O(n\log_m n)$ accesos a la memoria secundaria?
+
+
+2. Torneo
+
+    El torneo internacional de Karate se tiene en una isla con
+    capacidad por $M=20$ participantes. Una sola nave puede traer los
+    $N=200$ participantes, que pudede transportar $B=5$ participantes
+    al mismo tiempo. Se supone que los niveles de los participantes
+    corresponden a un orden total, de manera a ce que se pueden ordenar
+    completamente.
+
+    1. Cuantos viajes de la nave se necessitan en total para
+       identificar el gaÃ±ador del torneo, en el peor caso?
+
+    2. Cuantos viajes de la nave se necessitan en total para
+       identificar el gaÃ±ador del torneo, en el *mejor* caso?
+
+    3. Cuantos viajes de la nave se necessitan en total para
+       identificar el orden total del torneo, en el peor caso?
+
+    4. Cuantos viajes de la nave se necessitan en total para
+       identificar el orden total sobre los $M=20$ mejores
+       participantes del torneo, en el peor caso?
+
+    5. Cuantos viajes de la nave se necessitan en total para
+       identificar el orden total sobre los $2M=40$ mejores
+       participantes del torneo, en el peor caso?
+
+3. Inventa una pregunta.
+
+   Imagina una pregunta sobre la memoria secundaria y sus $5$ (o mas)
+   respuestas para ayudar un alumno futuro a entender mejor el
+   tema. Indica la(s) respuesta(s) correcta(s) y porque en pocas
+   palabras.
+
 **** PREGUNTAS [0/10]						 :PREGUNTAS:
 ***** NEXT Peor Caso de "Insert" en Memoria Secundaria
       :SOLUTION:     
-       1. $\log_B\log_B N$
-       2. $\log_2\log_2 N$
-	  1. vEB-arbol original para colas de prioridades
-	  2. vEB-arbol original para diccionario
-       3. $\log_B N$
-	  1. $B$-arbol para diccionario
-	  2. $2B$-arbol para diccionario
-	  3. $B/2$-arbol para diccionario
-	  4. vEB-arbol recursivo para colas de prioridades
-	  5. vEB-arbol recursivo  para diccionario
-       5. $\log_2 N$
-	  1) "min binary heap"
-	  2) avl arbol
-	  3) (2,3)-arbol
+       - $\log_B\log_B N$
+       - $\log_2\log_2 N$
+       - $\log_B N$
+	 + $B$-arbol para diccionario
+	 + $2B$-arbol para diccionario
+	 + $B/2$-arbol para diccionario
+	 + vEB-arbol recursivo para colas de prioridades
+	 + vEB-arbol recursivo  para diccionario
+       - $\log_2 N$
+	 + "min binary heap"
+	 + avl arbol
+	 + (2,3)-arbol
+       - Otra Respuesta
+	 + vEB-arbol original para colas de prioridades
+	 + vEB-arbol original para diccionario
       :END:
-      :PROOF: 
+      :PROOF:
+      - For general large values of $B$, es imposible de lograr a
+        $\log_B\log_B N$ en el modelo de comparaciones.
+      - vEB's complexity cannot be guaranteed to be in $\log_2\log_2
+        N$, when the domain of the values is not specified.
+      - Differencia de un factor de 2 en el tamano de B no impacta la
+        compleidad asintotica.
       :END:
       :CONTEXT:
        Considera un nivel de memoria tal que 
@@ -2843,7 +2962,7 @@ persecución sufrida por Alan Turing.
        9) vEB-arbol original para diccionario
        10) vEB-arbol recursivo  para diccionario
 
-      Cual es el rendimiento (asintótico), en terminos de accesos a la
+      Cual es el rendimiento (asintÃ³tico), en terminos de accesos a la
       memoria secundaria en el peor caso, por un llamado a "Insert"
       (se acordan que la estructura de datos contiene $N$ elementos)?
 
@@ -2853,10 +2972,45 @@ persecución sufrida por Alan Turing.
       4. [ ] $\log_2 N$
       5. [ ] otra respuesta
 
-***** NEXT Mejor Caso de "Insert" en Memoria Secundaria
+***** NEXT Mejor Caso de "Insert" en Memoria Secundaria (Part 1)
       :SOLUTION:     
+       - $\log_B\log_B N$
+       - $\log_2\log_2 N$
+       - $\log_B N$
+	 + "min binary heap"
+	 + $B$-arbol para diccionario
+	 + $2B$-arbol para diccionario
+	 + $B/2$-arbol para diccionario
+       - $\log_2 N$
+       - (2,3)-arbol 
+	 + avl arbol
+       - Otra Respuesta
+	 + Constante
+	   + vEB-arbol recursivo para colas de prioridades
+	   + vEB-arbol recursivo para diccionario
+	 + sin cota
+	   + vEB-arbol original para colas de prioridades
+	   + vEB-arbol original para diccionario
       :END:
-      :PROOF: 
+      :PROOF:
+      - $B$-arboles y $(2,3)$ arboles, aunque pueden agregar un
+        elemento en un nodo, igual deben ir hasta el 
+
+      :END:
+       - $\log_B\log_B N$
+       - $\log_2\log_2 N$
+       - $\log_B N$
+       - $\log_2 N$
+       - otra respuesta (constante)
+	 - "min binary heap"
+	 - avl arbol
+	 - (2,3)-arbol
+	 - $B$-arbol para diccionario
+	 - $2B$-arbol para diccionario
+	 - $B/2$-arbol para diccionario
+	 - vEB-arbol original para colas de prioridades
+	 - vEB-arbol recursivo para colas de prioridades
+	 - vEB-arbol original para diccionario
       :END:
       :CONTEXT:
        Considera un nivel de memoria tal que 
@@ -2880,8 +3034,57 @@ persecución sufrida por Alan Turing.
        10) vEB-arbol recursivo  para diccionario
 
       Cual es el rendimiento, en terminos de accesos a la memoria
-      secundaria en el *mejor* caso, por un llamado a "Insert" (se
-      acordan que la estructura de datos contiene $N$ elementos)?
+      secundaria en el *mejor* caso, por un llamado a "Insert" ?
+
+      1. [ ] $\log_B\log_B N$
+      2. [ ] $\log_2\log_2 N$
+      3. [ ] $\log_B N$
+      4. [ ] $\log_2 N$
+      5. [ ] otra respuesta
+
+
+***** NEXT Mejor Caso de "Insert" en Memoria Secundaria (Part 2)
+      :SOLUTION:     
+       - $\log_B\log_B N$
+       - $\log_2\log_2 N$
+       - $\log_B N$
+	 - $B$-arbol para diccionario
+	 - $2B$-arbol para diccionario
+	 - $B/2$-arbol para diccionario
+	 - vEB-arbol recursivo para colas de prioridades
+	 - vEB-arbol recursivo para diccionarios
+       - $\log_2 N$
+	 - "min binary heap"
+	 - avl arbol
+	 - (2,3)-arbol
+       - otra respuesta
+	 - vEB-arbol original para colas de prioridades
+	 - vEB-arbol original para diccionario
+      :END:
+      :CONTEXT:
+       Considera un nivel de memoria tal que 
+       - $B$ = Tamano pagina
+       - $N$ = cantidad de elementos en total
+       - $n$ = cantidad de paginas con elementos = $N/B$
+       - $M$ = cantidad de memoria local
+       - $m$ = cantidad de paginas locales = $M/B$
+      :END:
+
+      Para cada de las estructuras de datos siguentes,
+       1) "min binary heap"
+       2) avl arbol
+       3) (2,3)-arbol
+       4) $B$-arbol para diccionario
+       5) $2B$-arbol para diccionario
+       6) $B/2$-arbol para diccionario
+       7) vEB-arbol original para colas de prioridades
+       8) vEB-arbol recursivo para colas de prioridades
+       9) vEB-arbol original para diccionario
+       10) vEB-arbol recursivo  para diccionario
+
+      Cual es el rendimiento, en terminos de accesos a la memoria
+      secundaria en el *mejor* caso, por un llamado a "Insert" *con un
+      nuevo elemento*?
 
       1. [ ] $\log_B\log_B N$
       2. [ ] $\log_2\log_2 N$
@@ -2961,8 +3164,10 @@ persecución sufrida por Alan Turing.
 
 ***** NEXT Torneo Vencedor: Cota inferior en el peor caso
       :SOLUTION:     
+      $N/B$
       :END:
       :PROOF: 
+      Es un problema de Max.
       :END:
       :CONTEXT:
       El torneo internacional de Karate se tiene en una isla con
@@ -2977,7 +3182,7 @@ persecución sufrida por Alan Turing.
       :END:
       
       Cuantos viajes de la nave se necessitan en total para
-      identificar el gañador del torneo, en el peor caso?
+      identificar el ganador del torneo, en el peor caso?
       1. [ ] $\log_B N$
       2. [ ] $N/B$
       3. [ ] $N\log_B N$
@@ -2986,6 +3191,8 @@ persecución sufrida por Alan Turing.
 
 ***** NEXT Torneo Vencedor: Cota superior en mejor caso
       :SOLUTION:     
+      $N/B$, igual, hay que leerlas todas para asegurarse de ser
+      correcto.
       :END:
       :PROOF: 
       :END:
@@ -3002,7 +3209,7 @@ persecución sufrida por Alan Turing.
       :END:
       
       Cuantos viajes de la nave se necessitan en total para
-      identificar el gañador del torneo, en el *mejor* caso?
+      identificar el gaÃ±ador del torneo, en el *mejor* caso?
       1. [ ] $\log_B N$
       2. [ ] $N/B$
       3. [ ] $N\log_B N$
@@ -3011,6 +3218,7 @@ persecución sufrida por Alan Turing.
 
 ***** NEXT Torneo Orden: Cota inferior (Part 1)
       :SOLUTION:     
+      - otra respuesta: $n\log_m n$ (es un problema de ordenamiento
       :END:
       :PROOF: 
       :END:
@@ -3037,6 +3245,7 @@ persecución sufrida por Alan Turing.
 
 ***** NEXT Torneo Orden: Cota inferior (Part 2)
       :SOLUTION:     
+      $N/B$
       :END:
       :PROOF: 
       :END:
@@ -3089,32 +3298,58 @@ persecución sufrida por Alan Turing.
       4. [ ] $N/B + N\log_B N$
       5. [ ] otra respuesta
 
-** Tecnicas avanzadas de diseno y analisis de algoritmos (4 semanas = 8 charlas)
-*** DESCRIPCION de la Unidad
-     1) Dominios discretos y finitos 
-	- Interpolacion
-	- hash
-	- hash en memoria Secundaria
-	- algoritmos de ordenamientos con universo finito 
-     2) Analisis amortizada
-	- analisi completo,
-	- contabilidad de costos, 
-	- funcion potencial
-     4) Algoritmos en linea 
-	- "ski renting" problema
-	- analisis competitiva ("Competitive Analysis")
-*** PREREQUISITOS DE UNIDAD
-    - http://www.wimp.com/justcoincidence/ Birthday Paradox, in English.
+
+
+** Tecnicas avanzadas de diseno y analisis de algoritmos (4 semanas = 8 charlas = 720mns)
+*** Material relevante de los anos previos:
+    :PROPERTIES:
+    :Effort:   10
+    :END:
     - Colas de Prioridades http://www.leekillough.com/heaps/
     - Arboles 2-3 (para "Finger Search Trees"
       - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/#4
-	     
+    - http://www.wimp.com/justcoincidence/ Birthday Paradox, in English.
+    - Interpolation Search
+      - CC3001?
+    - Counting Sort
+      - CLRS 
+      - CC3001 
+*** Introduccion
+    :PROPERTIES:
+    :Effort:   10
+    :END:
+     1) Dominios discretos y finitos 
+	1. Busqueda en Dominios discretos y finitos
+	   - Interpolacion/extrapolation
+	   - Tries o arboles digitales
+	   - Arboles y Arreglos de Sufijos
+	   - Hash y Hash en memoria Secundaria
+	2. Algoritmos de Ordenamientos con universo finito 
+	   - Counting Sort
+	   - Bucket Sort
+	   - Radix Sort
+     2) Tecnicas de Analisis 
+	1. Analisis amortizada
+	   - tecnicas
+	   - colas de prioridades
+	   - splay arboles
+	2. Analisis parametrizada
+	   - busqueda doblada y finger search trees
+	   - ordenamiento adaptivo
+	   - operaciones de conjuntos adaptivos
+	3. Analisis de Algoritmos en linea
+	   - "ski renting" problema
+	   - analisis competitiva ("Competitive Analysis")
+
 *** Dominios discretos y finitos
 **** Busqueda en domanios discretos
      :PROPERTIES:
-     :Effort:   90
+     :Effort:   102:00
      :END:
 ***** Busqueda por Interpolacion/Extrapolacion
+      :PROPERTIES:
+      :Effort:   10
+      :END:
 
 	 1. Introduccion:	     
 	    - Hagaria busqueda binaria en un anuario telefonico para
@@ -3187,6 +3422,9 @@ persecución sufrida por Alan Turing.
 
 
 ***** Tries o Arboles Digitales
+      :PROPERTIES:
+      :Effort:   45
+      :END:
       Ordenamos usualmente como pre-computacion para buscar despues. En el
       caso donde n es demasiado grande, ordenar puede ser demasiado
       carro. Consideramos alternativas para buscar.
@@ -3233,6 +3471,9 @@ persecución sufrida por Alan Turing.
       - Superio tan en tiempo que en espacio en practica.
 
 ***** Arboles y Arreglos de Sufijos
+      :PROPERTIES:
+      :Effort:   45
+      :END:
 
   1) Arbol de Sufijos 
 
@@ -3274,6 +3515,9 @@ persecución sufrida por Alan Turing.
 	   $$\sqrt{n} \lg n /2 \lg\lg n  \in o(n)$$
 
 ***** Hashing
+      :PROPERTIES:
+      :Effort:   2*90
+      :END:
 ****** Introduccion
        * Motivaciones	 
        - Mejor tiempo *en promedio*
@@ -3474,14 +3718,14 @@ persecución sufrida por Alan Turing.
       - cantidad Promedio de paginas para tener $n$ llaves
 	- $\frac{n}{B\lg 2}\approx 1.44 \frac{n}{B}$
 	- paginas son llenas a $69\%$ mas o menos.
-
-
-
-**** Algoritmos de Ordenamiento ( Counting Sort, Bucket sort, radix sort, string sort) (1 charla)
+**** Algoritmos de Ordenamiento ( Counting Sort, Bucket sort, radix sort, string sort)
      :PROPERTIES:
-     :Effort:   90
+     :Effort:   40:00
      :END:
 ***** Counting Sort   $O(\sigma + n)$
+      :PROPERTIES:
+      :Effort:   10
+      :END:
 
       1. for $j=1$ to $\sigma$ do $C[j] \leftarrow 0$
       2. for $i=1$ to $n$ do $C[A[i]]++$
@@ -3496,6 +3740,9 @@ persecución sufrida por Alan Turing.
 	     logica, Bucket Sort.
 
 ***** Bucket Sort   $O(\sigma+n)$
+      :PROPERTIES:
+      :Effort:   10
+      :END:
 
       1. for $j=1$ to $\sigma$ do $C[j] \leftarrow 0$
      2. for $i=1$ to $n$ do $C[A[i]]++$
@@ -3511,6 +3758,9 @@ persecución sufrida por Alan Turing.
 	  ordenamiento es *estable*.
 
 ***** Radix Sort $O(n \lg_n \sigma) = O(c n)$
+      :PROPERTIES:
+      :Effort:   10
+      :END:
 
 
       - Considera un arreglo A de tamano n sobre alfabeto $\sigma$
@@ -3534,6 +3784,9 @@ persecución sufrida por Alan Turing.
 	 $O( n \lceil \frac{\lg \sigma}{\lg n}\rceil )$
 
 ***** BONUS Provechando de las repeticiones en el modelo de Comparaciones
+      :PROPERTIES:
+      :Effort:   10
+      :END:
       - Se puede o no?
 
   - Ordenar en $n H_i$ comparaciones
@@ -3557,18 +3810,25 @@ persecución sufrida por Alan Turing.
 
    - En el peor caso, la complejidad corresponde a la suma de
      las superficias de los bloques, aka $O(n)$.
-
+**** MAYB Heap
 *** Tecnicas de Analisis
 **** Analisi amortizada 
+***** MATERIAL A LEER
+      - "Amortized Analysis Explained" by Rebecca Fiebrink
+	- http://www.cs.princeton.edu/~fiebrink/423/AmortizedAnalysisExplained_Fiebrink.pdf
+      - Amortized Analysis
+	- CLRS, Chapter 17: Amortized Analizis p.405-430
+      - Ãrbol biselado (Splay Trees)
+	- http://es.wikipedia.org/wiki/%C3%81rbol_biselado
 ***** Principio de Analisi amortizada
       :PROPERTIES:
-      :Effort:   90
+      :Effort:   30
       :END:   
 
-      * Costo Amortizado:
+        * Costo Amortizado:
 	  - Se tiene una secuencia de n operaciones con costos
 	    $c_1,c_2,...,c_n$. 
-	  - Se quiere determinar $C=\sum c_i$.
+	  - Se quiere determinar $C=\sum_{i\in[1..n]} c_i$.
 	  - Se puede tomar el peor caso de $ci\leq t$ para tener una
 	    cota superior de $C\leq t n$.
 	  - Un mejor analisis puede analizar el costo amortizado,
@@ -3577,8 +3837,41 @@ persecución sufrida por Alan Turing.
 	    - contabilidad de costos
 	    - funcion potencial.
 
-       	* Ejemplo simple: Incremento binario
+       	* Applicaciones: 
+	  - Move To Front
+	  - "Self-adjusting and balanced binary trees" (Splay Trees"
+	  - union-find data-structures 
+	  - max flow
+	  - Fibonacci heaps
+	  - dynamic array (vector en Java)
 
+
+       	* Tres tecnicas basicas:
+
+	  1) "Aggregate analysis"
+	     - bound las proporciones de operaciones de cada tipo
+	     - (e.g. mas inserciones que deleciones)
+	  2) "Accounting Method"
+	     - asigna un costo (positivo o negativo) a cada operacion
+	     - ejemplos:
+	       - stack
+	       - java vector
+	     - costo amortizado es la suma de los costos.
+	  3) "Potential Method" (CLRS p.405)
+	     - asigna una funcion de "energia potencial" (como en fisica)
+	       - (accounting method = height, potential method = potential energy)
+	     - costo amortizado de una operacion es su costo mas el
+               cambio de funcion de potencial que resulta de la
+               operacion.
+	     - es sufficiente de asegurarse que la funcion de
+               potencial es siempre mas grande que su valor inicial
+               para mostrar que el costo total amortizado es una cota
+               superior sobre el costo total de las operaciones.
+	     - ejemplo:
+	       - analisis del algoritmo para min y max
+	       - analisis de MTF
+
+       	* Ejemplo: Incremento binario
 	   - Incrementar $n$ veces un numero binario de $k$ bits,
 	   - e.g. desde cero hasta $2^k-1$, con $n=2^k$.
 	   - costo $\leq k n$   (brute force)
@@ -3587,40 +3880,35 @@ persecución sufrida por Alan Turing.
 	     - un flip de 0 a 1 cuesta 2
 	     - un flip de 1 a 0 cuesta 0
 	     - cada incremento cuesta 2.
+	   - Analisis
+	     - $\phi$ = cantidad de unos en el numero
+	     - $\phi_0 = 0$
+	     - $c_i = l+1$ cuando hay $l$ unos
+	     - $\Delta \phi_i = -l+1$
+	     - $\sum \overline{c_i} = \sum c_i + \phi_n -\phi_0 
+	       \geq 2$
 
-
-       	* Funcion Potencial para contar el costo
-
-	  - $\phi_0 = 0$
-	  - $\phi_i$ es el tamano de la bolsa luego de ejecutar $c_1,\ldots,c_i$
-	  - $\Delta \phi_i = \phi_i - \phi_{i-1}$
-	  - costo amortizado = $\overline{c_i} = c_i + \Delta\phi_i$
-	  - $\sum \overline{c_i} = \sum c_i + \phi_n -\phi_0 \geq \sum c_i$
-
-	    - Ejemplo : la analisis del algoritmo para min y max al mismo tiempo.
-
-       	* En el ejemplo de Incrementacion binaria: 
-	  - $\phi$ = cantidad de unos en el numero
-	  - $\phi_0 = 0$
-	  - $c_i = l+1$ cuando hay $l$ unos
-	  - $\Delta \phi_i = -l+1$
-	  - $\sum \overline{c_i} = \sum c_i + \phi_n -\phi_0 
-	    \geq 2$
-
-       	* Ejemplo: realocacion amortizada
-
+       	* Ejemplo: arreglo dinamico, e.g. java Vector
 	  - considera el tipo "Vector" en Java.
 	  - de tamano fijo $n$
 	  - cuando accede a $n+1$, crea un otro arreglo de tamano $2n$, y
 	    copia todo.
 	  - cual es el costo amortizado si agregando elementos uno a
 	    uno?
-
+	* Ejemplo: Move-to-Front
+	  - analisis amortizada se puede usar para mostrar que MTF
+            siempre performa a dentro de un factor de 4 de cualquier
+            algoritmo (incluido un algoritmo optimal que conoce la
+            secuencia de busquedas desde el inicio).
+	  - Foncion de potencial es $2\times Inv(MTF)
+	* Ejemplo: Splay Arboles
+	  - el costo amortizado de cada insercion es $O(\lg n)$.
+	* Ejemplo: Fibonacci Heap
 
 
 ***** Analisi amortizada de Colas de Prioridades
       :PROPERTIES:
-      :Effort:   90
+      :Effort:   30
       :END:
 
     * Problema: Dado un conjunto (dinamica) de $n$ tareas con
@@ -3853,23 +4141,33 @@ persecución sufrida por Alan Turing.
 	  |------------------+------------+------------|
 
      5) Overview
-       	(copy de http://en.wikipedia.org/wiki/Fibonacci_heap)
+       	(copidao de http://en.wikipedia.org/wiki/Fibonacci_heap)
 
+\begin{center}
+      |             | Linked List | Binary Tree    | (Min-)Heap     | Fibonacci Heap | Brodal Queue     |
+      |-------------+-------------+----------------+----------------+----------------+------------------|
+      | insert      | $O(1)$      | $O(\lg n)$     | $O(\lg n)$     | $O(1)$         | $O(1)$           |
+      | accessmin   | $O(n)$      | $O(1)$         | $O(1)$         | $O(1)$         | $O(1)$           |
+      | deletemin   | $O(n)$      | $O(\lg n)$     | $O(\lg n)$     | $O(\lg n)^*$   | $O(\lg n)$       |
+      | decreasekey | $O(1)$      | $O(\lg n)$     | $O(\lg n)$     | $O(1)^*$       | $O(1)$           |
+      | delete      | $O(n)$      | $O(n)$         | $O(\lg n)$     | $O(\lg n)^*$   | $O(\lg n)$       |
+      | merge       | $O(1)$      | $O(m\lg(n+m))$ | $O(m\lg(n+m))$ | $O(1)$         | $O(1)$           |
 
-      |             | Linked List | Binary Tree   | (Min-)Heap    | Fibonacci Heap | Brodal Queue [1] |
-      |-------------+-------------+---------------+---------------+----------------+------------------|
-      | insert      | $O(1)$        | $O(\lg n)$      | $O(\lg n)$      | $O(1)$           | $O(1)$             |
-      | accessmin   | $O(n)$        | $O(1)$          | $O(1)$          | $O(1)$           | $O(1)$             |
-      | deletemin   | $O(n)$        | $O(\lg n)$      | $O(\lg n)$      | $O(\lg n)^*$     | $O(\lg n)$         |
-      | decreasekey | $O(1)$        | $O(\lg n)$      | $O(\lg n)$      | $O(1)^*$         | $O(1)$             |
-      | delete      | $O(n)$        | $O(n)$          | $O(\lg n)$      | $O(\lg n)^*$     | $O(\lg n)$         |
-      | merge       | $O(1)$        | $O(m log(n+m))$ | $O(m log(n+m))$ | $O(1)$           | $O(1)$             |
+\end{center}
 
        6) BONUS Heapsort
 
 	  - in place
 	  - $O(n \lg n)$ con cualquiera de estas variantes.
+***** Ãrbol biselado ("Splay Tree")
+      :PROPERTIES:
+      :Effort:   30
+      :END:
+****** APUNTES
 **** Analisi adaptativa
+***** MATERIAL A LEER
+	- Ãrbol 2-3 http://es.wikipedia.org/wiki/%C3%81rbol_2-3
+	- Finger tree http://en.wikipedia.org/wiki/Finger_tree
 ***** Analisi en el peor caso: a dentro de que?
       :PROPERTIES:
       :Effort:   10
@@ -3899,25 +4197,13 @@ persecución sufrida por Alan Turing.
       :PROPERTIES:
       :Effort:   20
       :END:
-****** MATERIAL A LEER
-	 - Árbol 2-3 http://es.wikipedia.org/wiki/%C3%81rbol_2-3
-	 - Finger tree http://en.wikipedia.org/wiki/Finger_tree
 ****** APUNTES
 	- Estructura de datos
 	- algorimo de busqueda
 	- analisis: busqueda en $O(\lg p)$ 
-***** Árbol biselado ("Splay Tree")
-      :PROPERTIES:
-      :Effort:   10
-      :END:
-****** MATERIAL A LEER
-       - Árbol biselado http://es.wikipedia.org/wiki/%C3%81rbol_biselado
-       - 
-****** APUNTES
-
 ***** Algoritmo de Ordenamiento adaptivos basicos
       :PROPERTIES:
-      :Effort:   10
+      :Effort:   20
       :END:
 ****** Merge Sort Adaptivo: Runs
 ****** Local Insertion Sort: Inv
@@ -4058,41 +4344,30 @@ persecución sufrida por Alan Turing.
 		 - $C_{MTF}=\sum_{j=1}^{n} p_j(1+\mbox{number of keys before } k_j)$
 		   
 		 - To compute the average number of keys before $k_j$:
-		   $$\begin{eqnarray*}
-		   \Pr[\mbox{ $k_i$ before $k_j$}] &=& \frac{p_i}{p_i+p_j} \\
-		   E(\mbox{ \alert{number of keys before $k_j$}}) &=&
-		   \sum_{i\neq j} \frac{p_i}{p_i+p_j} \\  
-		   \end{eqnarray*}$$
+
+		   $$\Pr[\mbox{ $k_i$ before $k_j$}] = \frac{p_i}{p_i+p_j}$$
+
+		   $$E(\mbox{ number of keys before $k_j$}) = \sum_{i\neq j} \frac{p_i}{p_i+p_j}$$
 
 		 - $k_i$ is before $k_j$ if and only if
 		   $k_i$ was accessed more recently than $k_j$. 
 
 		 - Consider the last time either $k_i$ or $k_j$ was looked up. What is the probability that it was $k_i$?
-		   $$\begin{eqnarray*}
-		   P(k_i \textrm{ before } k_j) &=
-		   %& P(k_i \textrm{ chosen }|\ k_i \textrm{ or }k_j\textrm{ chosen }) \\ &=
-		   & \frac{P(k_i \textrm{ chosen })}{P(k_i \textrm{ or } k_j \textrm{ chosen })} \\
-		   &=& \frac{p_i}{p_i+p_j}
-		   \end{eqnarray*}$$
+		   $$P(k_i \textrm{ before } k_j) = P(k_i \textrm{ chosen }|\ k_i \textrm{ or }k_j\textrm{ chosen })$$
+		   $$P(k_i \textrm{ before } k_j) = \frac{P(k_i \textrm{ chosen })}{P(k_i \textrm{ or } k_j \textrm{ chosen })}$$
+		   $$P(k_i \textrm{ before } k_j) = \frac{p_i}{p_i+p_j}$$
 
 		 - Therefore,
-		   $$\begin{eqnarray*}
-		   C_{MTF} & = & \sum_{j=1}^{n} p_j (1+\sum_{i\not = j} \frac{p_i}{p_i+p_j}) 
-		   \mbox{\hspace{.5cm} (Joining both previous formulas.)}
-		   \\
-		   & = & 1 + 2 \sum_{j=1}^n \sum_{i<j} \frac{p_i p_j }{p_i+p_j} 
-		   \mbox{\hspace{1cm} (By reordering the terms.)}
-		   \\
-		   & \leq &  1 + 2 \sum_{j=1}^n p_j (\sum_{i<j} 1) 
-		   \mbox{\hspace{2cm} (Because $\frac{p_i}{p_i+p_j}\leq1$.)}
-		   \\
-		   & = & 1 +  2 \sum_{j=1}^n p_j (j-1) 
-		   \\
-		   & = & 1 + 2C_{OPT} + 2 \sum_{j=1}^n(-p_j) 
-		   \\
-		   & = & 2C_{OPT}-1.
-		   \mbox{\hspace{3cm} (Because $\sum_{j=1}^n(p_j)=1$.) \qedhere}
-		   \end{eqnarray*}  $$
+		   - Joining both previous formulas:
+		     $$C_{MTF} = \sum_{j=1}^{n} p_j (1+\sum_{i\not = j} \frac{p_i}{p_i+p_j})$$
+		   - reordering the terms:
+		     $$C_{MTF} =  1 + 2 \sum_{j=1}^n \sum_{i<j} \frac{p_i p_j }{p_i+p_j}$$
+		   - Because $\frac{p_i}{p_i+p_j}\leq1$:
+		     $$C_{MTF} \leq   1 + 2 \sum_{j=1}^n p_j (\sum_{i<j} 1)$$
+		     $$C_{MTF} =  1 +  2 \sum_{j=1}^n p_j (j-1)$$
+		     $$C_{MTF} = 1 + 2C_{OPT} + 2 \sum_{j=1}^n(-p_j)$$
+		 - Because $\sum_{j=1}^n(p_j)=1$:
+		     $$C_{MTF} = 2C_{OPT}-1$$
 
 
 
@@ -4249,10 +4524,113 @@ persecución sufrida por Alan Turing.
 
 ***** BONUS: "Ski Renting"
       http://en.wikipedia.org/wiki/Ski_rental_problem      
-**** Complejidad Parametrizada
+**** MAYB Complejidad Parametrizada
      :PROPERTIES:
-     :Effort:   90
+     :Effort:  
      :END:
+**** PREGUNTAS [0/0]						 :PREGUNTAS:
+***** Analisis Amortizada: arreglo dinamico (Part 1)
+      :SOLUTION:     
+      $O(n)$
+      :END:
+      :PROOF: 
+      :END:
+      :CONTEXT:
+      :END:
+      
+      Queremos implementar una pila ("stack") en un arreglo. Iniciamos
+      con un arreglo de tamaÃ±o $s=1$, y cuando se llena, creamos un
+      arreglo mas grande, copiamos todo en en nuevo arreglo y sigamos.
+
+      Cual es el costo amortizado de una insercion si el nuevo arreglo
+      es de tamaÃ±o $n+1$?
+
+      1. [ ] $O(1)$
+      2. [ ] $O(\lg n)$
+      3. [ ] $O(n)$
+      4. [ ] $O(n^2)$
+      5. [ ] otra respuesta
+
+***** Analisis Amortizada: arreglo dinamico (Part 2)
+      :SOLUTION:     
+      $3\in O(1)$
+      :END:
+      :PROOF: 
+      Para cada secuencia de $n$ operaciones, el costo total de copias
+      es $1+2+4+8+\ldots+2^i$, donde $2^i< n \leq 2^{i+1}$.  
+
+      La suma es $2^{i+1}-1$, en el pero caso (si $n=2^i+1$) igual a
+      $2n-1$ copias. 
+
+      Adicionando eso al costo de las $n$ inserciones da un costo
+      total de $3n-1$, amortizado a un costo amortizado por operacion
+      de $3\in O(1)$.
+      :END:
+      :CONTEXT:
+      Queremos implementar una pila ("stack") en un arreglo. Iniciamos
+      con un arreglo de tamaÃ±o $s=1$, y cuando se llena, creamos un
+      arreglo mas grande, copiamos todo en en nuevo arreglo y sigamos.
+      :END:
+      
+      Cual es el costo amortizado de una insercion si el nuevo arreglo
+      es de tamaÃ±o $2n$?
+
+      1. [ ] $O(1)$
+      2. [ ] $O(\lg n)$
+      3. [ ] $O(n)$
+      4. [ ] $O(n^2)$
+      5. [ ] otra respuesta
+
+***** Analisis Amortizada: arreglo dinamico (Part 3)
+      :SOLUTION:     
+      menos que $2$: exactamente, de $1+1/3\in O(1)$
+      :END:
+      :PROOF: 
+      Para cada secuencia de $n$ operaciones, el costo total de copias
+      es $1+4+16+\ldots+4^i$, donde $4^i< n \leq 4^{i+1}$.  
+
+      La suma es $(4^{i+1}-1)/3$, en el pero caso (si $n=4^i+1$,
+      i.e. $4n-5=4^{i+1}-1$) igual a $(4n-5)/3$ copias.
+
+      Adicionando eso al costo de las $n$ inserciones da un costo
+      total de $(7n-5)/3$, amortizado a un costo amortizado por
+      operacion de $7/3 - 5/3n\in O(1)$ asintoticamente.
+      :END:
+      :CONTEXT:
+      Queremos implementar una pila ("stack") en un arreglo. Iniciamos
+      con un arreglo de tamaÃ±o $s=1$, y cuando se llena, creamos un
+      arreglo mas grande, copiamos todo en en nuevo arreglo y sigamos.
+      :END:
+
+      Cual es el costo amortizado de una insercion si el nuevo arreglo
+      es de tamaÃ±o $4n$? 
+
+      1. [ ] menos que $2$
+      2. [ ] $2$
+      3. [ ] entre $2$ y $3$
+      4. [ ] $3$
+      5. [ ] mas que $3$
+
+***** Analisis Amortizada: arreglo dinamico (Part 4)
+      :SOLUTION:     
+      :END:
+      :PROOF: 
+      :END:
+      :CONTEXT:
+      Queremos implementar una pila ("stack") en un arreglo. Iniciamos
+      con un arreglo de tamaÃ±o $s=1$, y cuando se llena, creamos un
+      arreglo mas grande, copiamos todo en en nuevo arreglo y sigamos.
+      :END:
+      
+      Cual es el costo amortizado de una insercion si el nuevo arreglo
+      es de tamaÃ±o $n^2$ (y el primero arreglo de tamaÃ±o 2)?
+
+      1. [ ] $O(1)$
+      2. [ ] $O(\lg n)$
+      3. [ ] $O(n)$
+      4. [ ] $O(n^2)$
+      5. [ ] otra respuesta
+
 *** RESUMEN Unidad 3
     :PROPERTIES:
     :Effort:   90
@@ -4277,7 +4655,9 @@ persecución sufrida por Alan Turing.
 	 - paginamiento
 	 - busqueda no acotada (unbounded search, doubling search)
 
-** Algoritmos no convencionales (5 semanas = 10 charlas) 
+
+# 
+** Algoritmos no convencionales (5 semanas = 10 charlas = 900mns) 
    :LOGBOOK:
    - State "PAUS"       from "TODO"       [2010-10-07 Thu 13:44]
    - State "TODO"       from ""           [2010-10-07 Thu 13:43]
@@ -5097,7 +5477,7 @@ persecución sufrida por Alan Turing.
 
        	In 1975, Vaughan Pratt showed that there existed a
        	certificate for primality that was checkable in polynomial
-       	time, and thus that PRIMES was in NP, and therefore in NP Á
+       	time, and thus that PRIMES was in NP, and therefore in NP Ã
        	coNP.
 
 
