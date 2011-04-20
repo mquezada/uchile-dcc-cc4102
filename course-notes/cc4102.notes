@@ -1368,7 +1368,7 @@ persecución sufrida por Alan Turing.
 	  - "Cache oblivious" http://en.wikipedia.org/wiki/Cache-oblivious_algorithm
 	  - Sistemos Operativos
 **** PREGUNTAS [6/7] 						 :PREGUNTAS:
-***** Cuantas segundas vale 1ns?
+***** Cuantos segundos vale 1ns?
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-29 Tue 10:49]
       :END:
@@ -1382,13 +1382,13 @@ persecución sufrida por Alan Turing.
       | 1 centi | $10^{-2}$ |
       |         |           |      
       :END:
-      Cuantas segundas vale un nano segunda?
-      1. [ ] $10^{-12}$ segundas
-      2. [ ] $10^{-9}$ segundas
-      3. [ ] $10^{-6}$ segundas
-      4. [ ] $10^{-3}$ segundas
+      Cuántos segundos vale un nano segundo?
+      1. [ ] $10^{-12}$ segundos
+      2. [ ] $10^{-9}$ segundos
+      3. [ ] $10^{-6}$ segundos
+      4. [ ] $10^{-3}$ segundos
       5. [ ] otra respuesta
-***** Camino de accesso a valores
+***** Camino de acceso a valores
       :LOGBOOK:
       - State "NEXT"       from ""           [2011-03-29 Tue 10:51]
       :END:
@@ -1432,9 +1432,9 @@ persecución sufrida por Alan Turing.
       :END:
       Que significa que un procesador funciona a 4 GHz?
       1. [ ] $4$ instrucciones per segunda
-      2. [ ] $4*10^3$ instrucciones per segunda
-      3. [ ] $4*10^6$ instrucciones per segunda
-      4. [ ] $4*10^9$ instrucciones per segunda
+      2. [ ] $4*10^3$ instrucciones per segundo
+      3. [ ] $4*10^6$ instrucciones per segundo
+      4. [ ] $4*10^9$ instrucciones per segundo
       5. [ ] otra respuesta
 ***** Nivel a 25ns
       :LOGBOOK:
@@ -1499,16 +1499,16 @@ persecución sufrida por Alan Turing.
       :END:
       Un CPU funciona a 4 GHz: cuanto se demora una instruccion?
       (elija el valor mas cercano).
-      1. [ ] 1 nano segunda
-      2. [ ] 1 micro segunda
-      3. [ ] 1 mili segunda
-      4. [ ] 1 centi segunda
+      1. [ ] 1 nano segundo
+      2. [ ] 1 micro segundo
+      3. [ ] 1 mili segundo
+      4. [ ] 1 centi segundo
       5. [ ] otra respuesta
-***** TODO Cuesto (en plata) de la memoria
+***** TODO Costo (en plata) de la memoria
 *** Diccionarios en Memoria Externa
 **** MATERIAL A LEER
      - B-Arboles:
-       - Arboles B  en apuntes de CC3001
+       - Arboles-B en apuntes de CC3001
 	 - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Diccionario/#5
        - Árbol-B
 	 - http://es.wikipedia.org/wiki/%C3%81rbol-B
@@ -1520,84 +1520,85 @@ persecución sufrida por Alan Turing.
      - Descripcion de van Emde Boas arboles
        - http://en.wikipedia.org/wiki/Van\_Emde\_Boas\_tree
 **** APUNTES
-    1. Cota inferior en el modelo de comparacion
+    1. Cota inferior en el modelo de comparación
 
        - Una cota inferior trivial de la cantidad de accesos (en el
          modelo de comparacion) es $\Omega(\log_B n)$:
-	 - la busqueda (en el modelo de comparacion) tiene una cota
+	 - la búsqueda (en el modelo de comparación) tiene una cota
            inferior de $\Omega(\log n)$ sobre la cantidad de
            comparaciones para un "find"
-	 - una pagina de $B$ elementos tiene una cota *superior* de
-           $\lg B$ sobre la cantidad de informacion que puede dar
-           sobre la posicion relativa de un elemento $x$.
+	 - una página de $B$ elementos tiene una cota *superior* de
+           $\lg B$ sobre la cantidad de información que puede dar
+           sobre la posición relativa de un elemento $x$.
 	 - eso resulta en una cota inferior de $\Omega(\log_B n)$
            sobre la cantidad de accesos a la memoria secundaria.
 
-    2. Cota superior en el modelo de comparacion 
+    2. Cota superior en el modelo de comparación 
 
-       Nota que la cota inferior es valida a todos niveles de memoria,
-       por cualquier valor de $B$.  La cota es asintoticamente
+       Nota que la cota inferior es válida a todos niveles de memoria,
+       para cualquier valor de $B$.  La cota es asintóticamente
        estricta. Se puede lograr con un $B$-arbol, conociendo $B$, o
        con un $vEB$-arbol, sin conocer $B$.
 
-       Nota que en la seccion [[*Dominios%20discretos%20y%20finitos][Dominios discretos y finitos]], veremos
-       una estructura de datos con mejor rendimiento, afuera del
-       modelo de comparacion.
+       Nota que en la sección [[*Dominios%20discretos%20y%20finitos][Dominios discretos y finitos]], veremos
+       una estructura de datos con mejor rendimiento, fuera del
+       modelo de comparaciones.
 
        1. B-arbol
-	  1) $(2,3)$ Arbol: un arbol de busqueda donde
+	  1) $(2,3)$ Arbol: un árbol de búsqueda donde
 	     - cada nodo tiene 1 o 2 llaves, que corresponde a 2 o 3
-	       hijos, con la excepcion de la raiz;
-	     - todas las hojas son al mismo nivel (arbol completamente balanceado)
+	       hijos, con la excepción de la raíz;
+	     - todas las hojas están al mismo nivel (árbol completamente balanceado)
 	     - Propiedades: 
-	       - altura de un $(2,3)$ arbol?
-	       - tiempo de busqueda?
-	       - insercion en un $(2,3)$ arbol?
-	       - delecion en un $(2,3)$ arbol?
-	  2) $(d,2d)$ Arbol un arbol donde
-	     - cada nodo tiene de $d$ a $2d$ hijos, con la excepcion de la
-	       raiz (significa $d-1$ a $2d-1$ llaves).
-	     - todas las hojas son al mismo nivel (arbol completamente
+	       - Cuál es la altura de un $(2,3)$-árbol?,
+	       - tiempo de búsqueda?,
+	       - inserción en un $(2,3)$ arbol?,
+	       - eliminación en un $(2,3)$ arbol?
+	  2) $(d,2d)$-Arbol es un árbol donde
+	     - Cada nodo tiene de $d$ a $2d$ hijos, con la excepción de la
+	       raiz (es decir, $d-1$ a $2d-1$ llaves).
+	     - todas las hojas están en el mismo nivel (árbol completamente
 	       balanceado)
 	     - Propiedades: 
-	       - altura de un $(d,2d)$ arbol?
-	       - tiempo de busqueda?
-	       - insercion en un $(d,2d)$ arbol?
-	       - delecion en un $(d,2d)$ arbol?
+	       - Cuál es altura de un $(d,2d)$ árbol?,
+	       - tiempo de búsqueda?,
+	       - inserción en un $(d,2d)$ árbol?,
+	       - eliminación en un $(d,2d)$ árbol?
 	  3) $B$-Arbol, y variantes
 	     - $B$-Arbol
 	       - http://www.youtube.com/watch?v=coRJrcIYbF4
 	       - http://en.wikipedia.org/wiki/B-tree
-	     - $B^*$ arbol
-	       - otros nodos que la raiz son llenos al menos hasta $2/3$ (en vez de $1/2$)
+	     - $B^*$-Arbol
+	       - Todos los nodos, excepto la raiz, están llenos al menos 
+		 hasta $2/3$ de su capacidad (en vez de $1/2$)
 	       - http://en.wikipedia.org/wiki/B*-tree
-	     - $B^+$ arbol
-	       - una caldena conecta todas las hojas del arbol: permite
-		 de describir intervales de soluciones.
+	     - $B^+$-Arbol
+	       - una lista enlazada conecta a todas las hojas del árbol: permite
+		 describir intervalos de soluciones.
        2. Van Emde Boas arbol (vEB)
 	  1) Historia:
 	     - Originalemente (1977) un estructura de datos normal, que
 	       suporta todas las operaciones en $O(\lg\lg n)$, inventada
 	       por el equipo de Peter van Emde Boas.
-	     - No considerado utiles en practica para "pequenos"
-	       arboles.
-	     - Applicacion a "Cache-Oblivious" algoritmos  y estructuras de datos
-	       - optimiza el cache sin conocer el tamano $B$ de sus paginas
-	       - => optimiza todos los niveles sin conocer $B_1,...,B_k$
-	     - otras applicaciones despues en calculo parallelo (?)
-	  2) Definicion
-	     - Cada nodo contiene un arbol van EmdeBoas sobre $\sqrt{n}$ elementos
-	     - $\lg\lg n$ niveles de arboles
-	     - operadores:
-	       * Findnext
+	     - No son considerados útiles en la práctica para "pequeños"
+	       árboles.
+	     - Aplicación a algoritmos "Cache-Oblivious" y estructuras de datos
+	       - Optimiza el cache sin conocer el tamaño $B$ de sus páginas
+	       - => Optimiza todos los niveles sin conocer $B_1,...,B_k$
+	     - Otras aplicaciones después en cálculo paralelo (?)
+	  2) Definición
+	     - Cada nodo contiene un arbol van Emde Boas sobre $\sqrt{n}$ elementos
+	     - $\lg\lg n$ niveles de árboles
+	     - Operaciones:
+	       * FindNext
 	       * Insert
 	       * Delete
-	  3) Analisis
-	     - Busqueda en "tiempo" $O(\lg n / \lg B)$ a cualquier nivel
-	       $i$, donde el tiempo es la cuantidad de accessos al cache
+	  3) Análisis
+	     - Búsqueda en "tiempo" $O(\lg n / \lg B)$ a cualquier nivel
+	       $i$, donde el tiempo es la cantidad de accesos al cache
 	       del nivel considerado
-	     - Insercion
-	     - Delecion
+	     - Cuál es el tiempo de Inserción?
+	     - de eliminación?
 **** PREGUNTAS [3/3] 						 :PREGUNTAS:
 ***** Cola de Prioridad: operaciones
       :SOLUTION:     
@@ -1607,7 +1608,7 @@ persecución sufrida por Alan Turing.
       :END:
       :PROOF: 
       :END:
-      Cuales (no) son operaciones de un diccionario?
+      Cuáles (no) son operaciones de un diccionario?
       1. [ ] insert(key,item)
       2. [ ] search(key)
       3. [ ] delete(key)
@@ -1628,8 +1629,8 @@ persecución sufrida por Alan Turing.
       ternario tiene una altura de $\log_3 n$. Un arbol $(2,3)$ tiene
       una altura entre los dos.
       :END:
-      Cual es el orden de \{la altura, el tiempo de busqueda, el
-      tiempo de insercion, el tiempo de delecion\} de un $(2,3)$ arbol
+      Cuál es el orden de \{la altura, el tiempo de búsqueda, el
+      tiempo de inserción, el tiempo de eliminación\} de un $(2,3)$-árbol
       con $n$ valores?
       1. [ ] menos que $\log_3 n +O(1)$
       2. [ ] $\log_3 n +O(1)$
@@ -1645,8 +1646,8 @@ persecución sufrida por Alan Turing.
       :END:
       :PROOF: 
       :END:
-      Cual es \{la altura, el tiempo de busqueda, el tiempo de
-      insercion, el tiempo de delecion\} de un $(2,3)$ arbol con
+      Cuál es \{la altura, el tiempo de búsqueda, el tiempo de
+      inserción, el tiempo de eliminación\} de un $(2,3)$-árbol con
       $n\in\{8,9,256\}$ valores?
       1. [ ] menos que $\log_3 n +O(1)$
       2. [ ] $\log_3 n +O(1)$
@@ -1660,8 +1661,8 @@ persecución sufrida por Alan Turing.
       Menos que $\log_3 n +O(1)$, por $B>3$, que es verdad en todas
       aplicaciones.
       :END:
-      Cual es \{la altura, el tiempo de busqueda, el tiempo de
-      insercion, el tiempo de delecion\} de un $B$ arbol con
+      Cuál es \{la altura, el tiempo de búsqueda, el tiempo de
+      inserción, el tiempo de eliminación\} de un $B$-árbol con
       $n=\{8,9,256\}$ valores?
       1. [ ] menos que $\log_3 n +O(1)$
       2. [ ] $\log_3 n +O(1)$
@@ -1676,8 +1677,8 @@ persecución sufrida por Alan Turing.
       Menos que $\log_3 n +O(1)$, por $B>3$, que es verdad en todas
       aplicaciones.
       :END:
-      Cual es \{la altura, el tiempo de busqueda, el tiempo de
-      insercion, el tiempo de delecion\} de un $B$ arbol sobre
+      Cuál es \{la altura, el tiempo de búsqueda, el tiempo de
+      inserción, el tiempo de eliminación\} de un $B$-Arbol sobre
       $n=\{8,9,256\}$ valores, si cada nodo contiene $B$ valores?
       1. [ ] $n/B$
       2. [ ] $\lg n / \lg B$
@@ -1687,8 +1688,8 @@ persecución sufrida por Alan Turing.
 ***** Relacion hijos/llaves en la raiz de un $B$ arboles
       :LOGBOOK:
       :END:
-      Si un nodo de un $B$ arbol tiene $d$ llaves, cuantos hijos
-      tienes?
+      Si un nodo de un $B$ arbol tiene $d$ llaves, cuántos hijos
+      tiene?
       1. [ ] $d-1$
       2. [ ] $d$
       3. [ ] $d+1$
@@ -1709,7 +1710,7 @@ persecución sufrida por Alan Turing.
       Una pagina de la memoria secundaria puede tener $B$ valores
       juntas con $B+1$ punteros.  
       :END:
-      Cuantos hijos ($d$) puede tener un $B$ arbol sobre $n>>B$
+      Cuántos hijos ($d$) puede tener un $B$ arbol sobre $n>>B$
       elementos?
       1. [ ] $d \in [0,B/2]$
       2. [ ] $d \in [1,B/2]$
@@ -1727,9 +1728,9 @@ persecución sufrida por Alan Turing.
       Una pagina de la memoria secundaria puede tener $B$ valores
       juntas con $B+1$ punteros.  
       :END:
-      Una pagina de la memoria secundaria puede tener $B$ valores
-      juntas con $B+1$ punteros.  La *raiz* de un $B$ arbol sobre $n>>B$
-      elementos tiene $d$ hijos. Cual es el domanio de valores
+      Una página de la memoria secundaria puede tener $B$ valores
+      juntos con $B+1$ punteros. La *raíz* de un $B$-Arbol sobre $n>>B$
+      elementos tiene $d$ hijos. Cuál es el dominio de valores
       posibles por $d$?
       1. [ ] $d \in [0,B/2]$
       2. [ ] $d \in [1,B/2]$
@@ -1751,8 +1752,8 @@ persecución sufrida por Alan Turing.
       Una pagina de la memoria secundaria puede tener $B$ valores
       juntas con $B+1$ punteros.  
       :END:
-      Un nodo (*otro que la raiz*) en un $B$ arbol sobre $n>>B$ elementos tiene $d$
-      hijos. Cual es el domanio de valores posibles por $d$?
+      Un nodo (*distinto de la raiz*) en un $B$-Arbol sobre $n>>B$ elementos tiene $d$
+      hijos. Cual es el dominio de valores posibles por $d$?
       1. [ ] $d \in [0,B/2]$
       2. [ ] $d \in [1,B/2]$
       3. [ ] $d \in [0,B]$
@@ -1770,9 +1771,9 @@ persecución sufrida por Alan Turing.
       Un $B^*$ arbol llena sus nodos hasta $2/3$, en vez de $1/2$ por
       los $B$ arboles.
       :END:
-      Cual es el objetivo de un $B^*$ arbol (en comparacion con un $B$ arbol)? 
-      1. [ ] Reducir el tiempo de busqueda?
-      2. [ ] Reducir la cantidad de accesos al cache en busqueda?
+      Cuál es el objetivo de un $B^*$-Arbol (en comparación con un $B$-Arbol)? 
+      1. [ ] Reducir el tiempo de búsqueda?
+      2. [ ] Reducir la cantidad de accesos al cache en búsqueda?
       3. [ ] Reducir la complejidad espacial?
       4. [ ] Reducir la frecuencia de "Split/Merge"?
       5. [ ] Practical [e.g. Optimizacion para data-set (de injeniero)]
@@ -1790,10 +1791,10 @@ persecución sufrida por Alan Turing.
       En $B^+$ arboles, las hojas tienen punteros adicionales formando
       una caldena de todas las hojas. 
       :END:
-      Cual es el objetivo de un $B^+$ arbol (en comparacion con un $B$ arbol)? 
-      1. [ ] Optimizar la Busqueda Secuencial (adaptiva)?
-      2. [ ] Suportar otro tipos de consultas/busquedas?
-      3. [ ] Suportar la exportacion de las valors en tiempo razonable?
+      Cuál es el objetivo de un $B^+$-Arbol (en comparación con un $B$-Arbol)? 
+      1. [ ] Optimizar la Busqueda Secuencial (adaptativa)?
+      2. [ ] Suportar otro tipos de consultas/búsquedas?
+      3. [ ] Suportar la exportación de los valores en tiempo razonable?
       4. [ ] Practical (e.g. facilitar el back-up de base de datos)?
       5. [ ] otra respuesta
 ***** [#A] vEB arboles vs AVL arboles, $(2,3)$ arboles y AVL Arboles   :CANC:
@@ -1806,11 +1807,11 @@ persecución sufrida por Alan Turing.
       :END: 
       Que *no* distingue los vEB arboles de las otras estructuras de
       arboles que conocen (e.g. B-arboles) para el ADT diccionario?
-      1. [ ] usa el dominio de las valores *para buscar*
+      1. [ ] usa el dominio de los valores *para buscar*
       2. [ ] el nodo contiene los elementos extremos (no medios como en un AVL)
       3. [ ] supporta /FindNext/ y /FindPrev/
-      4. [ ] sirven para colas de prioridades tambien
-      5. [ ] petmitten de optimizar mejor la memoria
+      4. [ ] sirven para colas de prioridades también
+      5. [ ] petmiten de optimizar mejor la memoria
       6. [ ] otra respuesta
 ***** Altura de un vEB arbol
       :SOLUTION:     
@@ -1825,8 +1826,8 @@ persecución sufrida por Alan Turing.
       - dos valores $min$ y $max$
       - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
       :END: 
-      En cual clase asimptotica es \{ el tiempo de busqueda, de
-      insercion, de delecion, la altura \} de un vEB con $n$ valores
+      En cual clase asintótica está \{ el tiempo de búsqueda, de
+      inserción, de eliminación y la altura \} de un vEB con $n$ valores
       codificadas en $m$ bits?
       1. [ ] $O(\lg n)$
       2. [ ] $O(\lg m)$
@@ -1849,7 +1850,7 @@ persecución sufrida por Alan Turing.
       - dos valores $min$ y $max$
       - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
       :END: 
-      El valor $x\in]min,max[$ se encuentra en el nino $C[i]$ donde $i=$
+      El valor $x\in]min,max[$ se encuentra en el hijo $C[i]$ donde $i=$
       1. [ ] $2^{m/2} (max - x) \over (max - min)$ 
       2. [ ] $2^{m-2} (max - x) \over (max - min)$ 
       3. [ ] $x \over 2^{m/2}$
@@ -1871,9 +1872,9 @@ persecución sufrida por Alan Turing.
       - dos valores $min$ y $max$
       - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
       :END: 
-      El role de $aux$ es de memorisar cuales ninos son vacios.  $j\in
-      aux$ si y solamente si $T.C[j]$ es non vacio.  Cual es el
-      principal objetivo?
+      El rol de $aux$ (o $summary$, como fue visto en la auxiliar) es de 
+      memorizar cuales hijos están vacíos.  $j\in aux$ si y sólo si
+      $T.C[j]$ es no vacío.  Cuál es el principal objetivo de esto?
       1. [ ] Optimizar Find
       2. [ ] Optimizar Insert
       3. [ ] Optimizar LookUp
@@ -1894,7 +1895,7 @@ persecución sufrida por Alan Turing.
       - dos valores $min$ y $max$
       - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
       :END: 
-      La complejidade de Find Previous es en 
+      La complejidade de Find Previous está en 
       1. [ ] $O(k)$
       2. [ ] $O(2^k=m)$
       3. [ ] $O(2^{2^{k-1}})=\sqrt{M}$
@@ -1919,11 +1920,11 @@ persecución sufrida por Alan Turing.
       - dos valores $min$ y $max$
       - un otro vEB $aux$ sobre $[0..\sqrt{M}-1]$
       :END: 
-      Si un nino $C[i]$ es lleno antes de agregar un elemento $x$ a dentro.
+      Si un hijo $C[i]$ está lleno antes de agregar un elemento $x$ adentro.
       1. [ ] Split $C[i]$ en dos
       2. [ ] Mudar algunos elementos de $C[i]$ a sus vecinos, y si no
              se puede a su padre, recursivamente
-      3. [ ] Crea un nuevo sobre arbol con una hoja.
+      3. [ ] Crea un nuevo sobre árbol con una hoja.
       4. [ ] Genera un error
       5. [ ] otra respuesta
 *** Colas de prioridad en memoria secundaria. Cotas inferiores.
@@ -1958,7 +1959,7 @@ persecución sufrida por Alan Turing.
 	 - menos operadores que diccionarios 
 	   - => mas flexibilidad en la representación
 	   - => mejor tiempo y/o espacio
-       - *binary heap*: una estructura a dentro de muchas otras:
+       - *binary heap*: una estructura dentro de muchas otras:
 	 - sequence-heaps
 	 - binomial queues
 	 - Fibonacci heaps
@@ -1981,11 +1982,11 @@ persecución sufrida por Alan Turing.
 	   called the bottom queues, and one more priority queue of
 	   array indexes of the bottom queues."
 
-	   - rendimiento en memoria secundaria de "binary heap": muy malo?
+	   - rendimiento en memoria secundaria de "binary heap": Muy malo?
 
-    2) Colas de Prioridades en Memoria Secundaria: diseno  
+    2) Colas de Prioridades en Memoria Secundaria: diseño  
        * El equivalente de B-Arbol
-       * Muchas alternativas en practica
+       * Muchas alternativas en la practica:
 	 - Buffer trees
 	 - M/B-ary heaps
 	 - array heaps
@@ -1999,10 +2000,10 @@ persecución sufrida por Alan Turing.
 	 - No. La reducción es en la otra dirección: una cota inferior
            por colas de prioridad impliqua una cota inferior por
            diccionarios.
-       - Cual es la cota inferior mas simple que se puede imaginar?
+       - Cual es la cota inferior más simple que se puede imaginar?
 	 - $\Omega(n/B)$
        - La cota superior de $O(\log_B n)$ que da una estructura de
-         diccionario, on un $B$-heap es optima o no?
+         diccionario, con un $B$-heap es optima o no?
 	 - en el modelo de comparacion, se puede mostrar una cota
            inferior de $\Omega(\log_B n)$
 
@@ -2849,11 +2850,11 @@ persecución sufrida por Alan Turing.
 
     1) Mejor y Peor caso
 
-       Para cada de las estructuras de datos siguentes, cual es el
-       rendimiento (asintótico), en terminos de accesos a la memoria
+       Para cada de las estructuras de datos siguentes, cuál es el
+       rendimiento (asintótico), en términos de accesos a la memoria
        secundaria en el peor caso y en el mejor caso, por un llamado a
-       "Insert" (se acordan que la estructura de datos contiene $N$
-       elementos)?
+       "Insert"? (recuerde que la estructura de datos contiene $N$
+       elementos)
 
            |                                               | Peor Caso | Mejor Caso |
            |-----------------------------------------------+-----------+------------|
@@ -2871,14 +2872,14 @@ persecución sufrida por Alan Turing.
  	  
     2) Ordenamiento
 
-       Cual(es) algoritmos, en su varianta adaptada a la memoria
+       Cuál(es) algoritmos, en su variante adaptada a la memoria
        secundaria, permite(n) de ordenar $N$ elementos en el peor caso
 
-       - en $O(N\lg N)$ accesos a la memoria secundaria?
+       - En $O(N\lg N)$ accesos a la memoria secundaria?
 
-       - en $O(N\log_B N)$ accesos a la memoria secundaria?
+       - En $O(N\log_B N)$ accesos a la memoria secundaria?
 
-       - en $O(n\log_m n)$ accesos a la memoria secundaria?
+       - En $O(n\log_m n)$ accesos a la memoria secundaria?
 
 
 2. Torneo
@@ -2887,31 +2888,31 @@ persecución sufrida por Alan Turing.
     capacidad por $M=20$ participantes. Una sola nave puede traer los
     $N=200$ participantes, que pudede transportar $B=5$ participantes
     al mismo tiempo. Se supone que los niveles de los participantes
-    corresponden a un orden total, de manera a ce que se pueden ordenar
+    corresponden a un orden total, de manera que se pueden ordenar
     completamente.
 
-    1. Cuantos viajes de la nave se necessitan en total para
-       identificar el gañador del torneo, en el peor caso?
+    1. Cuántos viajes de la nave se necesitan en total para
+       identificar el ganador del torneo, en el *peor* caso?
 
-    2. Cuantos viajes de la nave se necessitan en total para
-       identificar el gañador del torneo, en el *mejor* caso?
+    2. Cuántos viajes de la nave se necesitan en total para
+       identificar el ganador del torneo, en el *mejor* caso?
 
-    3. Cuantos viajes de la nave se necessitan en total para
+    3. Cuántos viajes de la nave se necesitan en total para
        identificar el orden total del torneo, en el peor caso?
 
-    4. Cuantos viajes de la nave se necessitan en total para
+    4. Cuántos viajes de la nave se necesitan en total para
        identificar el orden total sobre los $M=20$ mejores
        participantes del torneo, en el peor caso?
 
-    5. Cuantos viajes de la nave se necessitan en total para
+    5. Cuántos viajes de la nave se necesitan en total para
        identificar el orden total sobre los $2M=40$ mejores
        participantes del torneo, en el peor caso?
 
 3. Inventa una pregunta.
 
    Imagina una pregunta sobre la memoria secundaria y sus $5$ (o mas)
-   respuestas para ayudar un alumno futuro a entender mejor el
-   tema. Indica la(s) respuesta(s) correcta(s) y porque en pocas
+   respuestas para ayudar un futuro alumno a entender mejor el
+   tema. Indica la(s) respuesta(s) correcta(s) y el porqué en pocas
    palabras.
 
 **** PREGUNTAS [0/10]						 :PREGUNTAS:
@@ -2963,8 +2964,8 @@ persecución sufrida por Alan Turing.
        10) vEB-arbol recursivo  para diccionario
 
       Cual es el rendimiento (asintótico), en terminos de accesos a la
-      memoria secundaria en el peor caso, por un llamado a "Insert"
-      (se acordan que la estructura de datos contiene $N$ elementos)?
+      memoria secundaria en el peor caso, por un llamado a "Insert"?
+      (recuerde que la estructura de datos contiene $N$ elementos)
 
       1. [ ] $\log_B\log_B N$
       2. [ ] $\log_2\log_2 N$
@@ -3042,7 +3043,6 @@ persecución sufrida por Alan Turing.
       4. [ ] $\log_2 N$
       5. [ ] otra respuesta
 
-
 ***** NEXT Mejor Caso de "Insert" en Memoria Secundaria (Part 2)
       :SOLUTION:     
        - $\log_B\log_B N$
@@ -3092,7 +3092,6 @@ persecución sufrida por Alan Turing.
       4. [ ] $\log_2 N$
       5. [ ] otra respuesta
 
-
 ***** NEXT Ordenamiento en Memoria Secundaria: Cota superior (Part 0)
       :SOLUTION:     
       Insertion Sort, Merge Sort, Heap Sort, pero no Bubble Sort
@@ -3106,7 +3105,7 @@ persecución sufrida por Alan Turing.
       - $m$ = cantidad de paginas locales = $M/B$
       :END:
 
-      Cual(es) de los algoritmos siguentes, en su varianta adaptada a
+      Cual(es) de los algoritmos siguentes, en su variante adaptada a
       la memoria secundaria, permite(n) de ordenar $N$ elementos en
       $O(N\lg N)$ accesos a la memoria secundaria en el peor caso?
 
