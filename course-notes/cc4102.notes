@@ -3301,7 +3301,7 @@ persecución sufrida por Alan Turing.
 
 
 ** Tecnicas avanzadas de diseno y analisis de algoritmos (4 semanas = 8 charlas = 720mns)
-*** Material relevante de los anos previos:
+*** Material relevante de los años previos:
     :PROPERTIES:
     :Effort:   10
     :END:
@@ -3316,7 +3316,7 @@ persecución sufrida por Alan Turing.
       - CC3001 
 *** Introduccion
     :PROPERTIES:
-    :Effort:   10
+    :Effort:   20
     :END:
      1) Dominios discretos y finitos 
 	1. Busqueda en Dominios discretos y finitos
@@ -3342,9 +3342,103 @@ persecución sufrida por Alan Turing.
 	   - analisis competitiva ("Competitive Analysis")
 
 *** Dominios discretos y finitos
+**** Introduccion
+
+     - afuera del modelo de comparacion. 
+**** Algoritmos de Ordenamiento ( Counting Sort, Bucket sort, radix sort, string sort)
+     :PROPERTIES:
+     :Effort:   70:00
+     :END:
+***** Counting Sort   $O(\sigma + n)$
+      :PROPERTIES:
+      :Effort:   10
+      :END:
+
+      1. for $j=1$ to $\sigma$ do $C[j] \leftarrow 0$
+      2. for $i=1$ to $n$ do $C[A[i]]++$
+      3. $p\leftarrow 1$ 
+      4. for $j=1$ to $\sigma$ do
+	 - for $i=1$ to $C[j]$ do
+	   - $A[p++] \leftarrow j$
+
+	     Este algoritmo es bueno para ordenar multi conjuntos (donde
+	     cada elementos puede ser presente muchas veces), pero pobre
+	     para diccionarios, para cual es mejor usar la extension
+	     logica, Bucket Sort.
+
+***** Bucket Sort   $O(\sigma+n)$
+      :PROPERTIES:
+      :Effort:   20
+      :END:
+
+     1. for $j=1$ to $\sigma$ do $C[j] \leftarrow 0$
+     2. for $i=1$ to $n$ do $C[A[i]]++$
+     3. $P[1] \leftarrow 1$
+     4. for $j\leftarrow 2$ to $\sigma$ do 
+	- $P[j] \leftarrow P[j-1] + C[j-1]$
+     5. for $i\leftarrow 1$ to $n$
+	- $B[P[A[i]]++] \leftarrow A[i]$
+
+	  Este algoritmo es particularmente practica para ordenar
+	  llaves asociadas con objetos, donde dos llaves pueden ser
+	  asociadas con algunas valores distintas. Nota que el
+	  ordenamiento es *estable*.
+
+***** Radix Sort $O(n \lg_n \sigma) = O(c n)$
+      :PROPERTIES:
+      :Effort:   30
+      :END:
+
+     - Considera un arreglo A de tamaño n sobre alfabeto $\sigma$
+     - si $\sigma=n$, se recuerdan que bucket sort puede
+       ordenar A en $O(n)$
+     - si $\sigma=n^2$, bucket sort puede ordenar A en $O(n)$:
+       - 1 ves con los $\lg n$ bits de la derecha
+       - 1 ves con los $\lg n$ bits de la izquierda
+	 (utilizando la estabilidad de bucket sort)
+     - si $\sigma=n^c$, bucket sort puede ordenar A 
+       - en tiempo $O(cn)$
+       - con espacio $O(n)$
+
+	 El espacio se puede reducir a $2n+\sqrt{n}$ con $\lg n/ 2$
+	 bits a cada iteracion de Bucketsort, cambiando la
+	 complejidad solamente por un factor de $2$.
+
+     - En final, si $A$ es de tamaño $n$ sobre un alfabeto de
+       tamaño $\sigma$, radix sort puede ordenar $A$ en tiempo
+       $O( n \lceil \frac{\lg \sigma}{\lg n}\rceil )$
+
+***** MAYB Provechando de las repeticiones en el modelo de Comparaciones :MAYB:
+      :PROPERTIES:
+      :Effort:   10
+      :END:
+      - Se puede o no?
+
+  - Ordenar en $n H_i$ comparaciones
+
+***** MAYB String Sort						       :MAYB:
+
+      + Problema: Ordenar $k$ strings sobre alfabeto [\sigma], de
+	largo total $n=\sum_i n_i$.
+
+ + Si $\sigma \leq k$, y cada string es de mismo tamaño.
+
+   - Si utilizamos bucket-sort de la derecha a la izquierda,
+     podemos ordenar en tiempo $O(n)$, porque $O(n \lceil \lg
+     \sigma/\lg l \rceil )$ y $\sigma<n$.
+
+ + Si $\sigma \in O(1)$
+
+   - Radix Sort sobre $c$ simboles, donde $c$ es el tamaño
+     minima de una string, y iterar recursivamente sobre el
+     restos de la strings mas grande con mismo prefijo.
+
+   - En el peor caso, la complejidad corresponde a la suma de
+     las superficias de los bloques, aka $O(n)$.
+
 **** Busqueda en domanios discretos
      :PROPERTIES:
-     :Effort:   102:00
+     :Effort:   100:00
      :END:
 ***** Busqueda por Interpolacion/Extrapolacion
       :PROPERTIES:
@@ -3352,7 +3446,7 @@ persecución sufrida por Alan Turing.
       :END:
 
 	 1. Introduccion:	     
-	    - Hagaria busqueda binaria en un anuario telefonico para
+	    - Haria busqueda binaria en un guia telefonico para
 	      el nombre "Barbay"? En un diccionario para la ciudad
 	      "Zanzibar"?
 	    - ojala que no: se puede provechar de la informacion
@@ -3371,7 +3465,7 @@ persecución sufrida por Alan Turing.
 	       	distancia en promedio de la posicion calculada por
 	       	interpolacion *lineal* hasta la posicion real es de
 	       	$\sqrt{r-l}$.
-	      - entonces, se puede reducir el tamano del subarreglo
+	      - entonces, se puede reducir el tamaño del subarreglo
 	       	de $n$ a $\sqrt{n}$ cada (dos) comparaciones
 	      - la busqueda por interpolacion 
 	       	- en promedio, 
@@ -3442,9 +3536,9 @@ persecución sufrida por Alan Turing.
 
    2. Busqueda
 
-      - con arreglos de tamano $\sigma$ en cada nodo: 
+      - con arreglos de tamaño $\sigma$ en cada nodo: 
 	- $O(l)$ tiempo, pero $O(L\sigma)$ espacio
-      - con arreglos de tamano variables en cada nodo:
+      - con arreglos de tamaño variables en cada nodo:
 	- $O(l \lg sigma)$ tiempo (busqueda binaria),  $O(L)$ espacio
 	  (optima).
       - con hashing
@@ -3492,7 +3586,6 @@ persecución sufrida por Alan Turing.
        comparacion costa $\leq m$, resultando en una complejidad de
        $O(m \lg n)$
 
-
   3) BONUS: Rank en Bitmaps
 
      - $\mathtt{rank}(B,i)$ = cantidad de unos en $B[1,i]$
@@ -3506,312 +3599,238 @@ persecución sufrida por Alan Turing.
 
        - Dividimos el index de $B$ en 
 
-	 - $s$ Superbloques de tamano $n/s \lg n$ bits
+	 - $s$ Superbloques de tamaño $n/s \lg n$ bits
 
-	 - $b$ Mini bloques de tamano $n/b \lg s$ bits
+	 - $b$ Mini bloques de tamaño $n/b \lg s$ bits
 	   $${n \over 1/2 \lg n} \lg(\lg^2 n) = \frac{4n \lg\lg n}{\lg n} \in o(n)$$
 
-	 - un diccionario con todos los bit vectores de tamano
+	 - un diccionario con todos los bit vectores de tamaño
 	   $$\sqrt{n} \lg n /2 \lg\lg n  \in o(n)$$
-
-***** Hashing
-      :PROPERTIES:
-      :Effort:   2*90
-      :END:
-****** Introduccion
-       * Motivaciones	 
-       - Mejor tiempo *en promedio*
-       - Uso de todos la herramientas que tenemos
-	 - dominio de las valores
-	 - distribuciones de probabilidades de las valores
-     * Terminologia 
-       - Tabla de Hash
-	 - Arreglo de tamano $N$ 
-	 - que contiene $n$ elementos a dentro de un universo $[1..U]$
-       - Funccion de Hash $h(K)$
-	 - $h:[1..U] \rightarrow [0..N-1]$
-	 - se calcula rapidamente
-	 - distribue uniformemente (mas o menos) las llaves en la tabla
-	   en el caso ideal, $P[h(K)=i] = 1/N, \, \forall K,i$
-       - Collision 
-	 - cuando $h(K_{1})= h(K_{2})$
-	 - la probabilidad es alta: "Paradoxe del cumpleanos"
-	   - ( http://www.wimp.com/justcoincidence/ )
-	 - Cual es la probabilidad que en una pieca de $n$ personas,
-	   dos tiene la misma fecha de cumpleanos (a dentro de $365$
-	   dias)?
-
-	   - probabilidad que cada cumpleanos es unico:
-	     $$ 364! \over {(365 - n)! \times 365^{n-1} }$$
-
-	   - Probabilidad que hay al menos un cumpleanos compartido:
-	     $$ 1 - 364! \over {(365 - n)! \times 365^{n-1} }$$
-
-	     |   n |    Proba |
-	     |-----+----------|
-	     |  10 |      .12 |
-	     |  23 |       .5 |
-	     |  50 |      .97 |
-	     | 100 | .9999996 |
-
-****** Hashing Abierto
-
-       1) Idea principal:
-	  - resolver las colisions con caldenas
-
-       2) Ejemplo:  (muy irealistico)
-	  - $h(K) = K \mathtt{ mod } 10$
-	  - Secuencia de insercion $52,18,70,22,44,38,62$
-	    - Insertando al final (si hay que probar por repeticiones)
-	      | 0 |       70 |
-	      | 1 |          |
-	      | 2 | 52,22,62 |
-	      | 3 |          |
-	      | 4 |       44 |
-	      | 5 |          |
-	      | 6 |          |
-	      | 7 |          |
-	      | 8 |    18,38 |
-	      | 9 |          |
-	    - Insertando al final (si no hay que probar por repeticiones)
-	      | 0 |       70 |
-	      | 1 |          |
-	      | 2 | 62,22,52 |
-	      | 3 |          |
-	      | 4 |       44 |
-	      | 5 |          |
-	      | 6 |          |
-	      | 7 |          |
-	      | 8 |    38,18 |
-	      | 9 |          |
-	      
-       3) Analisis:
-
-	  - factor de carga es $\lambda= {n \over N}$
-	  - Rendimiento en el peor caso: $O(n)$
-
-****** Hashing Cerrado
-       
-       1) Idea principal:
-	  - resolver las colisiones con busqueda, i.e. 
-	    - $( h(K)+f(i) ) \mathtt{ mod } N$
-	  - differentes tipos de busqueda:
-	    - lineal  $f(i) = i$
-	      - primary "clustering" (formacion de secuencias largas)		
-	    - cuadratica $f(i) = i^2$
-	      - secundario "clustering" (si $h(K_1)=h(K_2)$, la
-		secuencias son las mismas.
-	    - doble hashing $f(i) = i . h'(K)$
-	      - $h'(K)$ debe ser prima con N
-
-       2) Ideal Hashing
-
-	  - Imagina una funcion de hash que genera una secuencia que
-	    parece aleatoria.
-
-	  - cada posicion tiene la misma probabilidad de ser la
-	    proxima
-	     - Probabilidad $\lambda$ de elegir una posicion ocupada
-	     - Probabilidad $1-\lambda$ de elegir une posicion libre
-	     - la secuencia de prueba puede tocar la misma posicion
-	       mas que una vez.
-	     - llaves identicas todavia siguen la misma secuencia.
-	  - Cual es el costo promedio $u_j$ de una busqueda negativa
-	    con $j$ llaves en la tabla?
-
-	    - $\lambda= \frac{j}{N}$
-
-	    - $u_j = 1 (1-\lambda) + 2\lambda(1-\lambda)+r\lambda^2(1-\lambda)+\ldots$
-
-	    - $= 1 + \lambda + \lambda^2 + \ldots$
-
-	    - $= \frac{1}{1-\lambda}$
-
-	    - $= \frac{1}{1-j/N}$
-
-	    - $= \frac{N}{N-j} \in[1..N]$
-
-	  - Cual es el costo promedio de una busqueda positiva $s_i$
-	    para el $i$-th elemento insertado?
-	    
-	    - $s_i = \frac{1}{1- i/N} = \frac{N}{N-i}$
-
-	    - $s_n = 1/n \sum \frac{N}{N-i}$
-
-	    - $= \frac{N}{n} \sum_{i=0}^{n-1} \frac{1}{N-i}$
-
-	    - $= \frac{1}{\alpha} \sum_{i=0}^{n-1} \frac{1}{N-i}$
-	      con $\alpha = \frac{n}{N}$
-
-	    - $< \frac{1}{\alpha} \int_{N-n}^{N} 1/x dx$
-
-	    - $= 1/\alpha \ln\frac{N}{N-n}$
-
-	    - $= 1/\alpha \ln\frac{1}{\alpha}$
-
-	  - Para $\alpha = 1/2$, el costo promedio es $1.387$
-
-	  - Para $\alpha = 0.9$, el costo promedio es $2.559$
-
-****** Universal Hashing
-
-       - $h(K) = ( (aK+b) \mathtt{ mod } p) \mathtt{ mod } N$
-       - $a \in [1..p-1]$ elegido al azar
-       - $b \in [0..p-1]$ elegido al azar
-       - $p$ es primo y mas grande que $N$ 
-       - $N$ no es necesaramente primo
-
-****** Hashing en memoria externa
-
-       1) Que pasa si la tabla de hashing no queda en memoria?
-
-      - IDEA: Simula un B-arbol de altura dos
-	- organiza el dato con valores de hash
-	- guarda un index en el nodo raiz
-	- usa solamente *una parte* de la valor de hash para elegir
-	  el sobre-arbol
-	- extiende el index cuando mas dato es agregado
-
-   2) Descripcion
-      
-      - $B$ - cantidad de elementos en una pagina
-      - $h$ - funcion de hash $\rightarrow [0..2^k-1]$
-      - $D$ - *profundidad general*, con $D\leq k$
-	- la raiz tiene $2^D$ punteros a las paginas horas
-	- la raiz es indexada con los $D$ primeros bits de cada
-	  valor de hash.
-      - $d_l$ - *profundidad local* de cada hora $l$
-	- Las valores de hash en $l$ tienen en comun los primeros
-	  $d_l$ bits.
-	- Hay $2^{D-d_l}$ punteros a la hora $l$
-	- Siempre, $d_l\leq D$
-
-   3) Ejemplo
-
-      - $B=4, k=6, D=2$
-
-	| $d_l=2$ | 000100 |
-	|         | 001000 |
-	|         | 001011 |
-	|         | 001100 |
-
-	| $d_l=2$ | 010101 |
-	|         | 011100 |
-	|         |        |
-	|         |        |
-
-	| $d_l=1$ | 100100 |
-	|         | 101101 |
-	|         | 110001 |
-	|         | 111100 |
-
-   4) Algoritmos
-
-      - Buscar
-      - Insertar
-      - Remover
-
-   5) Analisis
-
-      - Buscar, insertar remover
-	- 1 acceso a la memoria secundariaa si el index se queda
-      - cantidad Promedio de paginas para tener $n$ llaves
-	- $\frac{n}{B\lg 2}\approx 1.44 \frac{n}{B}$
-	- paginas son llenas a $69\%$ mas o menos.
-**** Algoritmos de Ordenamiento ( Counting Sort, Bucket sort, radix sort, string sort)
+**** Hashing
      :PROPERTIES:
-     :Effort:   40:00
+     :Effort:   200:00
      :END:
-***** Counting Sort   $O(\sigma + n)$
+***** Introduccion
+      :PROPERTIES:
+      :Effort:   10
+      :END:
+      * Motivaciones	 
+      - Mejor tiempo *en promedio*
+      - Uso de todos la herramientas que tenemos
+	- dominio de las valores
+	- distribuciones de probabilidades de las valores
+    * Terminologia 
+      - Tabla de Hash
+	- Arreglo de tamaño $N$ 
+	- que contiene $n$ elementos a dentro de un universo $[1..U]$
+      - Funccion de Hash $h(K)$
+	- $h:[1..U] \rightarrow [0..N-1]$
+	- se calcula rapidamente
+	- distribue uniformemente (mas o menos) las llaves en la tabla
+	  en el caso ideal, $P[h(K)=i] = 1/N, \, \forall K,i$
+      - Collision 
+	- cuando $h(K_{1})= h(K_{2})$
+	- la probabilidad es alta: "Paradoxe del cumpleaños"
+	  - ( http://www.wimp.com/justcoincidence/ )
+	- Cual es la probabilidad que en una pieca de $n$ personas,
+	  dos tiene la misma fecha de cumpleaños (a dentro de $365$
+	  dias)?
+
+	  - probabilidad que cada cumpleaños es unico:
+	    $$ 364! \over {(365 - n)! \times 365^{n-1} }$$
+
+	  - Probabilidad que hay al menos un cumpleaños compartido:
+	    $$ 1 - 364! \over {(365 - n)! \times 365^{n-1} }$$
+
+	    |   n |    Proba |
+	    |-----+----------|
+	    |  10 |      .12 |
+	    |  23 |       .5 |
+	    |  50 |      .97 |
+	    | 100 | .9999996 |
+
+***** Hashing Abierto
+      :PROPERTIES:
+      :Effort:   45
+      :END:
+
+      1) Idea principal:
+	 - resolver las colisions con caldenas
+
+      2) Ejemplo:  (muy irealistico)
+	 - $h(K) = K \mathtt{ mod } 10$
+	 - Secuencia de insercion $52,18,70,22,44,38,62$
+	   - Insertando al final (si hay que probar por repeticiones)
+	     | 0 |       70 |
+	     | 1 |          |
+	     | 2 | 52,22,62 |
+	     | 3 |          |
+	     | 4 |       44 |
+	     | 5 |          |
+	     | 6 |          |
+	     | 7 |          |
+	     | 8 |    18,38 |
+	     | 9 |          |
+	   - Insertando al final (si no hay que probar por repeticiones)
+	     | 0 |       70 |
+	     | 1 |          |
+	     | 2 | 62,22,52 |
+	     | 3 |          |
+	     | 4 |       44 |
+	     | 5 |          |
+	     | 6 |          |
+	     | 7 |          |
+	     | 8 |    38,18 |
+	     | 9 |          |
+	     
+      3) Analisis:
+
+	 - factor de carga es $\lambda= {n \over N}$
+	 - Rendimiento en el peor caso: $O(n)$
+
+***** Hashing Cerrado
+      :PROPERTIES:
+      :Effort:   45
+      :END:
+      
+      1) Idea principal:
+	 - resolver las colisiones con busqueda, i.e. 
+	   - $( h(K)+f(i) ) \mathtt{ mod } N$
+	 - differentes tipos de busqueda:
+	   - lineal  $f(i) = i$
+	     - primary "clustering" (formacion de secuencias largas)		
+	   - cuadratica $f(i) = i^2$
+	     - secundario "clustering" (si $h(K_1)=h(K_2)$, la
+	       secuencias son las mismas.
+	   - doble hashing $f(i) = i . h'(K)$
+	     - $h'(K)$ debe ser prima con N
+
+      2) Ideal Hashing
+
+	 - Imagina una funcion de hash que genera una secuencia que
+	   parece aleatoria.
+
+	 - cada posicion tiene la misma probabilidad de ser la
+	   proxima
+	    - Probabilidad $\lambda$ de elegir una posicion ocupada
+	    - Probabilidad $1-\lambda$ de elegir une posicion libre
+	    - la secuencia de prueba puede tocar la misma posicion
+	      mas que una vez.
+	    - llaves identicas todavia siguen la misma secuencia.
+	 - Cual es el costo promedio $u_j$ de una busqueda negativa
+	   con $j$ llaves en la tabla?
+
+	   - $\lambda= \frac{j}{N}$
+
+	   - $u_j = 1 (1-\lambda) + 2\lambda(1-\lambda)+r\lambda^2(1-\lambda)+\ldots$
+
+	   - $= 1 + \lambda + \lambda^2 + \ldots$
+
+	   - $= \frac{1}{1-\lambda}$
+
+	   - $= \frac{1}{1-j/N}$
+
+	   - $= \frac{N}{N-j} \in[1..N]$
+
+	 - Cual es el costo promedio de una busqueda positiva $s_i$
+	   para el $i$-th elemento insertado?
+	   
+	   - $s_i = \frac{1}{1- i/N} = \frac{N}{N-i}$
+
+	   - $s_n = 1/n \sum \frac{N}{N-i}$
+
+	   - $= \frac{N}{n} \sum_{i=0}^{n-1} \frac{1}{N-i}$
+
+	   - $= \frac{1}{\alpha} \sum_{i=0}^{n-1} \frac{1}{N-i}$
+	     con $\alpha = \frac{n}{N}$
+
+	   - $< \frac{1}{\alpha} \int_{N-n}^{N} 1/x dx$
+
+	   - $= 1/\alpha \ln\frac{N}{N-n}$
+
+	   - $= 1/\alpha \ln\frac{1}{\alpha}$
+
+	 - Para $\alpha = 1/2$, el costo promedio es $1.387$
+
+	 - Para $\alpha = 0.9$, el costo promedio es $2.559$
+
+***** Universal Hashing
       :PROPERTIES:
       :Effort:   10
       :END:
 
-      1. for $j=1$ to $\sigma$ do $C[j] \leftarrow 0$
-      2. for $i=1$ to $n$ do $C[A[i]]++$
-      3. $p\leftarrow 1$ 
-      4. for $j=1$ to $\sigma$ do
-	 - for $i=1$ to $C[j]$ do
-	   - $A[p++] \leftarrow j$
+      - $h(K) = ( (aK+b) \mathtt{ mod } p) \mathtt{ mod } N$
+      - $a \in [1..p-1]$ elegido al azar
+      - $b \in [0..p-1]$ elegido al azar
+      - $p$ es primo y mas grande que $N$ 
+      - $N$ no es necesaramente primo
 
-	     Este algoritmo es bueno para ordenar multi conjuntos (donde
-	     cada elementos puede ser presente muchas veces), pero pobre
-	     para diccionarios, para cual es mejor usar la extension
-	     logica, Bucket Sort.
-
-***** Bucket Sort   $O(\sigma+n)$
+***** Hashing en memoria externa
       :PROPERTIES:
-      :Effort:   10
+      :Effort:   90
       :END:
 
-      1. for $j=1$ to $\sigma$ do $C[j] \leftarrow 0$
-     2. for $i=1$ to $n$ do $C[A[i]]++$
-     3. $P[1] \leftarrow 1$
-     4. for $j\leftarrow 2$ to $\sigma$ do 
-	- $P[j] \leftarrow P[j-1] + C[j-1]$
-     5. for $i\leftarrow 1$ to $n$
-	- $B[P[A[i]]++] \leftarrow A[i]$
+      1) Que pasa si la tabla de hashing no queda en memoria?
 
-	  Este algoritmo es particularmente practica para ordenar
-	  llaves asociadas con objetos, donde dos llaves pueden ser
-	  asociadas con algunas valores distintas. Nota que el
-	  ordenamiento es *estable*.
+     - IDEA: Simula un B-arbol de altura dos
+       - organiza el dato con valores de hash
+       - guarda un index en el nodo raiz
+       - usa solamente *una parte* de la valor de hash para elegir
+	 el sobre-arbol
+       - extiende el index cuando mas dato es agregado
 
-***** Radix Sort $O(n \lg_n \sigma) = O(c n)$
-      :PROPERTIES:
-      :Effort:   10
-      :END:
+  2) Descripcion
+     
+     - $B$ - cantidad de elementos en una pagina
+     - $h$ - funcion de hash $\rightarrow [0..2^k-1]$
+     - $D$ - *profundidad general*, con $D\leq k$
+       - la raiz tiene $2^D$ punteros a las paginas horas
+       - la raiz es indexada con los $D$ primeros bits de cada
+	 valor de hash.
+     - $d_l$ - *profundidad local* de cada hora $l$
+       - Las valores de hash en $l$ tienen en comun los primeros
+	 $d_l$ bits.
+       - Hay $2^{D-d_l}$ punteros a la hora $l$
+       - Siempre, $d_l\leq D$
 
+  3) Ejemplo
 
-      - Considera un arreglo A de tamano n sobre alfabeto $\sigma$
-     - si $\sigma=n$, se recuerdan que bucket sort puede
-       ordenar A en $O(n)$
-     - si $\sigma=n^2$, bucket sort puede ordenar A en $O(n)$:
-       - 1 ves con los $\lg n$ bits de la derecha
-       - 1 ves con los $\lg n$ bits de la izquierda
-	 (utilizando la estabilidad de bucket sort)
-     - si $|A|=n^c$, bucket sort puede ordenar A 
-       - en tiempo $O(cn)$
-       - con espacio $2n + \sigma \approx 3n$
-	 ($\sigma \approx n$ a cada iteracion de bucket sort)
+     - $B=4, k=6, D=2$
 
-	 El espacio se puede reducir a $2n+\sqrt{n}$ con $\lg n/ 2$
-	 bits a cada iteracion de Bucketsort, cambiando la
-	 complejidad solamente por un factor de $2$.
+       | $d_l=2$ | 000100 |
+       |         | 001000 |
+       |         | 001011 |
+       |         | 001100 |
 
-	 En final, si $A$ es de tamano $n$ sobre un alfabeto de
-	 tamano $\sigma$, radix sort puede ordenar $A$ en tiempo
-	 $O( n \lceil \frac{\lg \sigma}{\lg n}\rceil )$
+       | $d_l=2$ | 010101 |
+       |         | 011100 |
+       |         |        |
+       |         |        |
 
-***** BONUS Provechando de las repeticiones en el modelo de Comparaciones
-      :PROPERTIES:
-      :Effort:   10
-      :END:
-      - Se puede o no?
+       | $d_l=1$ | 100100 |
+       |         | 101101 |
+       |         | 110001 |
+       |         | 111100 |
 
-  - Ordenar en $n H_i$ comparaciones
+  4) Algoritmos
 
-***** BONUS String Sort   
+     - Buscar
+     - Insertar
+     - Remover
 
-      + Problema: Ordenar $k$ strings sobre alfabeto [\sigma], de
-	largo total $n=\sum_i n_i$.
+  5) Analisis
 
- + Si $\sigma \leq k$, y cada string es de mismo tamano.
-
-   - Si utilizamos bucket-sort de la derecha a la izquierda,
-     podemos ordenar en tiempo $O(n)$, porque $O(n \lceil \lg
-     \sigma/\lg l \rceil )$ y $\sigma<n$.
-
- + Si $\sigma \in O(1)$
-
-   - Radix Sort sobre $c$ simboles, donde $c$ es el tamano
-     minima de una string, y iterar recursivamente sobre el
-     restos de la strings mas grande con mismo prefijo.
-
-   - En el peor caso, la complejidad corresponde a la suma de
-     las superficias de los bloques, aka $O(n)$.
-**** MAYB Heap
+     - Buscar, insertar remover
+       - 1 acceso a la memoria secundariaa si el index se queda
+     - cantidad Promedio de paginas para tener $n$ llaves
+       - $\frac{n}{B\lg 2}\approx 1.44 \frac{n}{B}$
+       - paginas son llenas a $69\%$ mas o menos.
+**** Conclusion
 *** Tecnicas de Analisis
+**** Introduccion
+     :PROPERTIES:
+     :Effort:   10
+     :END:
 **** Analisi amortizada 
 ***** MATERIAL A LEER
       - "Amortized Analysis Explained" by Rebecca Fiebrink
@@ -3890,8 +3909,8 @@ persecución sufrida por Alan Turing.
 
        	* Ejemplo: arreglo dinamico, e.g. java Vector
 	  - considera el tipo "Vector" en Java.
-	  - de tamano fijo $n$
-	  - cuando accede a $n+1$, crea un otro arreglo de tamano $2n$, y
+	  - de tamaño fijo $n$
+	  - cuando accede a $n+1$, crea un otro arreglo de tamaño $2n$, y
 	    copia todo.
 	  - cual es el costo amortizado si agregando elementos uno a
 	    uno?
@@ -3966,12 +3985,12 @@ persecución sufrida por Alan Turing.
 	       - $2\lg n$ comparaciones en el peor caso
 	       - $\lg n$ copias
 	    2. una comparacion en cada nivel para definir un camino
-	       de tamano lg n, y una busqueda binaria para encontrar
+	       de tamaño lg n, y una busqueda binaria para encontrar
 	       la posicion final
 	       - $\lg n + O(\lg \lg n)$ comparaciones en el peor caso
 	       - $\lg n$ copias en el peor caso
 	    3. una comparacion en cada nivel para definir un camino
-	       de tamano lg n, y una busqueda *secuencial* up para encontrar
+	       de tamaño lg n, y una busqueda *secuencial* up para encontrar
 	       la posicion final
 	       - $2\lg n$  comparaciones en el peor caso
 	       - $\lg n$ copias en el peor caso
@@ -4122,7 +4141,7 @@ persecución sufrida por Alan Turing.
 
 	  - relax la estructura de los arboles (heap-forma), pero de
 	    forma controlada.
-	  - el tamano de un sub-arbol cual raiz tiene $k$ hijos es al
+	  - el tamaño de un sub-arbol cual raiz tiene $k$ hijos es al
 	    maxima $F_k+2$, donde $F_k$ es el $k$-esimo numero de
 	    Fibonacci.
 
@@ -4172,13 +4191,13 @@ persecución sufrida por Alan Turing.
       :PROPERTIES:
       :Effort:   10
       :END:
-      - peor caso a dentro de las instancias de tamano fijo
-	- el tamano puede ser multidimensional (e.g. grafos)
-      - peor caso a dentro de las instancias de tamano de resultado fijado
+      - peor caso a dentro de las instancias de tamaño fijo
+	- el tamaño puede ser multidimensional (e.g. grafos)
+      - peor caso a dentro de las instancias de tamaño de resultado fijado
 	- cantidad infinita
       - peor caso a dentro de las instancias de *dificultad* fijada
 	- cantidad infinita
-      - peor caso a dentro de las instancias de *tamano fijo y dificultad* fijada
+      - peor caso a dentro de las instancias de *tamaño fijo y dificultad* fijada
 
 ***** Busqueda Doblada:  $1+2\lceil\lg p\rceil$ comparaciones
       :PROPERTIES:
@@ -4188,7 +4207,7 @@ persecución sufrida por Alan Turing.
       El algoritmo de busqueda doblada 
 
       - encuentra en $1+\lceil\lg p\rceil$ comparaciones un intervalo
-	de tamano $p/2$ que contiene $x$, 
+	de tamaño $p/2$ que contiene $x$, 
       - encuentra $p$ en $1+\lceil\lg p\rceil$ comparaciones
 	adicionales (usando la segunda variante de la busqueda
 	binaria),
@@ -4227,8 +4246,8 @@ persecución sufrida por Alan Turing.
 
       1) "List Accessing"
 
-	 - Considera la secuencia de busqueda de tamano $n$, en un
-	   diccionario de tamano $\sigma$:
+	 - Considera la secuencia de busqueda de tamaño $n$, en un
+	   diccionario de tamaño $\sigma$:
 	   "1,1,1,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6,..."
 
 	 - Cual es el rendimiento de una estructura de diccionario
@@ -4515,7 +4534,7 @@ persecución sufrida por Alan Turing.
 
 	 4. En practica, sabemos que LRU es mucho mejor que FWF (for
 	    instancia). Habia mucha investigacion para intentar de
-	    mejorar la analisis por 20 anos, ahora parece que hay una
+	    mejorar la analisis por 20 años, ahora parece que hay una
 	    analisis que explica la mejor rendimiento de LRU sobre
 	    FWF, y de variantes de LRU que pueden saber $x$ pasos en
 	    el futuro (Reza Dorrigiv y Alex Lopez-Ortiz).
@@ -4527,6 +4546,10 @@ persecución sufrida por Alan Turing.
 **** MAYB Complejidad Parametrizada
      :PROPERTIES:
      :Effort:  
+     :END:
+**** Conclusion
+     :PROPERTIES:
+     :Effort:   20
      :END:
 **** PREGUNTAS [0/0]						 :PREGUNTAS:
 ***** Analisis Amortizada: arreglo dinamico (Part 1)
@@ -4633,7 +4656,7 @@ persecución sufrida por Alan Turing.
 
 *** RESUMEN Unidad 3
     :PROPERTIES:
-    :Effort:   90
+    :Effort:   20
     :END:
   * Resultados de Aprendisajes de la Unidad
 	- Comprender las tecnicas de algoritmos de 
@@ -4657,6 +4680,8 @@ persecución sufrida por Alan Turing.
 
 
 # 
+
+#
 ** Algoritmos no convencionales (5 semanas = 10 charlas = 900mns) 
    :LOGBOOK:
    - State "PAUS"       from "TODO"       [2010-10-07 Thu 13:44]
@@ -6435,5 +6460,6 @@ persecución sufrida por Alan Turing.
 	    
 	    
    
+	    
 	    
 	    
