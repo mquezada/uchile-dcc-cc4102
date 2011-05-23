@@ -8,7 +8,6 @@
 #+TITLE: CC4102/CC40A/CC53A - Diseno y Analisis de Algoritmos
 #+AUTHOR: Jeremy Barbay
 
-
 * Examples
 ** Example of Mathematical formulas seen with C-c C-x C-l 
 *** Basic formulas
@@ -349,7 +348,7 @@ Se tiene que:
       3. [ ] en $\Omega(\lg n)$
       4. [ ] en $\Theta(\lg n)$
       5. [ ] ningunos o mas que dos
-***** TODO AVL h-> n
+***** TODO AVL $h-> n$
       para una altura $h$ dada, cuantos nodos tiene un árbol AVL con
       *mínimo* número de nodos que alcanza esa altura?
       1. [ ] $h$
@@ -485,7 +484,7 @@ Se tiene que:
       3. [ ] en $\Omega(\lg n)$
       4. [ ] en $\Theta(\lg n)$
       5. [ ] ningunos o mas que dos
-***** DONE [#A] AVL h-> n
+***** DONE [#A] AVL $h-> n$
       :SOLUTION:
       5. otra respuesta
       :END:
@@ -3340,8 +3339,12 @@ persecución sufrida por Alan Turing.
 	   - "ski renting" problema
 	   - analisis competitiva ("Competitive Analysis")
 
+
 *** Dominios discretos y finitos
 **** Introduccion
+     :PROPERTIES:
+     :Effort:   20
+     :END:
 
      - afuera del modelo de comparacion. 
 **** Algoritmos de Ordenamiento ( Counting Sort, Bucket sort, radix sort, string sort)
@@ -3435,85 +3438,82 @@ persecución sufrida por Alan Turing.
    - En el peor caso, la complejidad corresponde a la suma de
      las superficias de los bloques, aka $O(n)$.
 
-**** Busqueda en domanios discretos
+**** Busqueda por Interpolacion/Extrapolacion
      :PROPERTIES:
-     :Effort:   100:00
+     :Effort:   90
      :END:
-***** Busqueda por Interpolacion/Extrapolacion
-      :PROPERTIES:
-      :Effort:   10
-      :END:
 
-	 1. Introduccion:	     
-	    - Haria busqueda binaria en un guia telefonico para
-	      el nombre "Barbay"? En un diccionario para la ciudad
-	      "Zanzibar"?
-	    - ojala que no: se puede provechar de la informacion
-	      que da la primera letra de cada palabra
+	1. Introduccion:	     
+	   - Haria busqueda binaria en un guia telefonico para
+	     el nombre "Barbay"? En un diccionario para la ciudad
+	     "Zanzibar"?
+	   - ojala que no: se puede provechar de la informacion
+	     que da la primera letra de cada palabra
 
-	 2. Algoritmo
+	2. Algoritmo
 
-	    - Interaccion
+	   - Interaccion
 
-	 3. Analisis
-	    * La analisis *en promedio* es complicada: conversamos
-	      solamente la intuicion matematica (para mas ver la
-	      publicacion cientifica de SODA04, Demaine Jones y
-	      Patrascu):
-	      - si las llaves son *distribuidas uniformamente*, la
-	       	distancia en promedio de la posicion calculada por
-	       	interpolacion *lineal* hasta la posicion real es de
-	       	$\sqrt{r-l}$.
-	      - entonces, se puede reducir el tamaño del subarreglo
-	       	de $n$ a $\sqrt{n}$ cada (dos) comparaciones
-	      - la busqueda por interpolacion 
-	       	- en promedio, 
-	       	- si las llaves son *distribuidas uniformamente*,
-	       	- toma $O(\lg \lg n)$ comparaciones
+	3. Analisis
+	   * La analisis *en promedio* es complicada: conversamos
+	     solamente la intuicion matematica (para mas ver la
+	     publicacion cientifica de SODA04, Demaine Jones y
+	     Patrascu):
+	     - si las llaves son *distribuidas uniformamente*, la
+	       distancia en promedio de la posicion calculada por
+	       interpolacion *lineal* hasta la posicion real es de
+	       $\sqrt{r-l}$.
+	     - entonces, se puede reducir el tamaño del subarreglo
+	       de $n$ a $\sqrt{n}$ cada (dos) comparaciones
+	     - la busqueda por interpolacion 
+	       - en promedio, 
+	       - si las llaves son *distribuidas uniformamente*,
+	       - toma $O(\lg \lg n)$ comparaciones
 
-	    * La analisis *en el peor caso*
+	   * La analisis *en el peor caso*
 
-	      - Interaccion.
+	     - Interaccion.
 
-	 4. Variantas
+	4. Variantas
 
-	    1. Interpolacion non-lineal
+	   1. Interpolacion non-lineal
 
-	       - en un anuario telefonico o en un diccionario, las
-		 frecuencias de las letras *no* son uniformes
+	      - en un anuario telefonico o en un diccionario, las
+		frecuencias de las letras *no* son uniformes
 
-	    2. Busqueda por Interpolacion Mixta con Binaria
+	   2. Busqueda por Interpolacion Mixta con Binaria
 
-	       - Se puede buscar en tiempo 
-		 - $O(\lg n)$ en el peor caso Y
-		 - $O(\lg \lg n)$ en el caso promedio?
+	      - Se puede buscar en tiempo 
+		- $O(\lg n)$ en el peor caso Y
+		- $O(\lg \lg n)$ en el caso promedio?
 
-	       - Solucion facil
+	      - Solucion facil
 
-	       - Solucion mas compleja
+	      - Solucion mas compleja
 
-	    3. Busqueda por Extrapolacion
-	       
-	       - Tarea 3
+	   3. Busqueda por Extrapolacion
+	      
+	      - Tarea 3
 
-	    4. Busqueda por Extrapolacion Mixta con Doblada
+	   4. Busqueda por Extrapolacion Mixta con Doblada
 
-	       - Tarea 3
+	      - Tarea 3
 
-	 5. Discussion:
+	5. Discussion:
 
-	    - Porque todavia estudiar la complejidad en el modelo de comparaciones? 
+	   - Porque todavia estudiar la complejidad en el modelo de comparaciones? 
 
-	      - Cuando el peor caso es importante
+	     - Cuando el peor caso es importante
 
-	      - Cuando la distribucion no es uniforme o no es conocida
+	     - Cuando la distribucion no es uniforme o no es conocida
 
-	      - cuando el costo de la evaluacion es mas costo que una
-		simple comparacion (en particular para la interpolacion
-		non lineal)
+	     - cuando el costo de la evaluacion es mas costo que una
+	       simple comparacion (en particular para la interpolacion
+	       non lineal)
 
 
 
+**** Estructuras de Arboles con Dominio Discreto
 ***** Tries o Arboles Digitales
       :PROPERTIES:
       :Effort:   45
@@ -3522,26 +3522,26 @@ persecución sufrida por Alan Turing.
       caso donde n es demasiado grande, ordenar puede ser demasiado
       carro. Consideramos alternativas para buscar.
 
-      1. Ejemplo de trie
+   1. Ejemplo de trie
 
       - Insertar los nodos siguiente en un trie
-	- hola
-	- holistico
-	- holograme
-	- hologramas
-	- ola
-	- ole
+       	- hola
+       	- holistico
+       	- holograme
+       	- hologramas
+       	- ola
+       	- ole
 
 
    2. Busqueda
 
       - con arreglos de tamaño $\sigma$ en cada nodo: 
-	- $O(l)$ tiempo, pero $O(L\sigma)$ espacio
+       	- $O(l)$ tiempo, pero $O(L\sigma)$ espacio
       - con arreglos de tamaño variables en cada nodo:
-	- $O(l \lg sigma)$ tiempo (busqueda binaria),  $O(L)$ espacio
-	  (optima).
+       	- $O(l\lg\sigma)$ tiempo (busqueda binaria), $O(L)$ espacio
+          (optima).
       - con hashing
-	- $O(l)$ tiempo en promedio, $O(L)$ espacio.
+       	- $O(l)$ tiempo en promedio, $O(L)$ espacio.
 
    3. Insercion
 
@@ -3550,20 +3550,37 @@ persecución sufrida por Alan Turing.
       - Insertar "holistico" en el arbol precedente
 
       - Borrar "hola" y "holistica"
-	- (TAREA)
-	- Tiene de "limpiar", pero no costo mas que un factor
+       	- (TAREA)
+       	- Tiene que "limpiar", pero no costo mas que un factor
 	  constante de la busqueda.
 
 
 
-   4. BONUS: PAT Trie
+   4. Espacio en el peor caso
+
+      - Pero caso por variable fijas:
+	- $n$, la cantidad de llaves en el diccionario
+	- $\sigma$, el alfabeto
+	- $m$, el tamaño maximo de una llava
+	- ($\sigma^m$ llaves possibles).
+
+      - $\log_\sigma n$ niveles donde los arreglos son llenos
+      - $m-\log_sigma n$ niveles donde cada arreglo contiene solamente un puntero.
+      - El costo total es del orden de $O((n+m)\sigma)$
+	- $\sigma \times$ la cantidad de nodos.
+	- los $\log_sigma n$ primeros niveles se suman a
+          $1+\sigma+\sigma^2+...$ nodos, que son $\frac{n\sigma -1}{\sigma-1}$
+	- los otros niveles costan $n(m-\log_sigma n)\sigma)$
+	- En total son $O(n\sigma (1+m-\log_sigma n))$
+
+   5. BONUS: PAT Trie
 
       - Comprime las ramas de nodos de grado uno en una sola arista.
       - La caldena ("string") etiquetando la arista se guarda en el
-	nodo hijo de la arista.
+       	nodo hijo de la arista.
       - Superio tan en tiempo que en espacio en practica.
 
-***** Arboles y Arreglos de Sufijos
+***** Arboles de Sufijos (y Arreglos de Sufijos)
       :PROPERTIES:
       :Effort:   45
       :END:
@@ -3581,7 +3598,7 @@ persecución sufrida por Alan Turing.
   2) Arreglo de Sufijos
 
      - Lista de sufijos ordenados
-     - busqueda de patrones = dos busquedas binarias, donde cada
+     - cada busqueda de patrones costa dos busquedas binarias, donde cada
        comparacion costa $\leq m$, resultando en una complejidad de
        $O(m \lg n)$
 
@@ -3607,7 +3624,7 @@ persecución sufrida por Alan Turing.
 	   $$\sqrt{n} \lg n /2 \lg\lg n  \in o(n)$$
 **** Hashing
      :PROPERTIES:
-     :Effort:   200:00
+     :Effort:   60:00
      :END:
 ***** Introduccion
       :PROPERTIES:
@@ -3629,8 +3646,16 @@ persecución sufrida por Alan Turing.
 	  en el caso ideal, $P[h(K)=i] = 1/N, \, \forall K,i$
       - Collision 
 	- cuando $h(K_{1})= h(K_{2})$
-	- la probabilidad es alta: "Paradoxe del cumpleaños"
+
+***** Paradoxe del cumpleaños (Probabilidad de Colision)
+      :PROPERTIES:
+      :Effort:   10
+      :END:
+
+	- la probabilidad de collision es alta: "Paradoxe del
+          cumpleaños"
 	  - ( http://www.wimp.com/justcoincidence/ )
+
 	- Cual es la probabilidad que en una pieca de $n$ personas,
 	  dos tiene la misma fecha de cumpleaños (a dentro de $365$
 	  dias)?
@@ -3650,7 +3675,7 @@ persecución sufrida por Alan Turing.
 
 ***** Hashing Abierto
       :PROPERTIES:
-      :Effort:   45
+      :Effort:   10
       :END:
 
       1) Idea principal:
@@ -3689,73 +3714,74 @@ persecución sufrida por Alan Turing.
 
 ***** Hashing Cerrado
       :PROPERTIES:
-      :Effort:   45
+      :Effort:   10
       :END:
       
       1) Idea principal:
 	 - resolver las colisiones con busqueda, i.e. 
 	   - $( h(K)+f(i) ) \mathtt{ mod } N$
 	 - differentes tipos de busqueda:
-	   - lineal  $f(i) = i$
+	   - *lineal*  $f(i) = i$
 	     - primary "clustering" (formacion de secuencias largas)		
-	   - cuadratica $f(i) = i^2$
+	   - *cuadratica* $f(i) = i^2$
 	     - secundario "clustering" (si $h(K_1)=h(K_2)$, la
 	       secuencias son las mismas.
-	   - doble hashing $f(i) = i . h'(K)$
+	   - *doble hashing* $f(i) = i . h'(K)$
 	     - $h'(K)$ debe ser prima con N
 
-      2) Ideal Hashing
+***** Ideal Hashing
 
-	 - Imagina una funcion de hash que genera una secuencia que
-	   parece aleatoria.
+	- Imagina una funcion de hash que genera una secuencia que
+	  parece aleatoria.
 
-	 - cada posicion tiene la misma probabilidad de ser la
-	   proxima
-	    - Probabilidad $\lambda$ de elegir una posicion ocupada
-	    - Probabilidad $1-\lambda$ de elegir une posicion libre
-	    - la secuencia de prueba puede tocar la misma posicion
-	      mas que una vez.
-	    - llaves identicas todavia siguen la misma secuencia.
-	 - Cual es el costo promedio $u_j$ de una busqueda negativa
-	   con $j$ llaves en la tabla?
+	- cada posicion tiene la misma probabilidad de ser la
+	  proxima
+	   - Probabilidad $\lambda$ de elegir una posicion ocupada
+	   - Probabilidad $1-\lambda$ de elegir une posicion libre
+	   - la secuencia de prueba puede tocar la misma posicion
+	     mas que una vez.
+	   - llaves identicas todavia siguen la misma secuencia.
 
-	   - $\lambda= \frac{j}{N}$
+	- Cual es el costo promedio $u_j$ de una busqueda negativa
+	  con $j$ llaves en la tabla?
 
-	   - $u_j = 1 (1-\lambda) + 2\lambda(1-\lambda)+r\lambda^2(1-\lambda)+\ldots$
+	  - $\lambda= \frac{j}{N}$
 
-	   - $= 1 + \lambda + \lambda^2 + \ldots$
+	  - $u_j = 1 (1-\lambda) + 2\lambda(1-\lambda)+r\lambda^2(1-\lambda)+\ldots$
 
-	   - $= \frac{1}{1-\lambda}$
+	  - $= 1 + \lambda + \lambda^2 + \ldots$
 
-	   - $= \frac{1}{1-j/N}$
+	  - $= \frac{1}{1-\lambda}$
 
-	   - $= \frac{N}{N-j} \in[1..N]$
+	  - $= \frac{1}{1-j/N}$
 
-	 - Cual es el costo promedio de una busqueda positiva $s_i$
-	   para el $i$-th elemento insertado?
-	   
-	   - $s_i = \frac{1}{1- i/N} = \frac{N}{N-i}$
+	  - $= \frac{N}{N-j} \in[1..N]$
 
-	   - $s_n = 1/n \sum \frac{N}{N-i}$
+	- Cual es el costo promedio de una busqueda positiva $s_i$
+	  para el $i$-th elemento insertado?
+	  
+	  - $s_i = \frac{1}{1- i/N} = \frac{N}{N-i}$
 
-	   - $= \frac{N}{n} \sum_{i=0}^{n-1} \frac{1}{N-i}$
+	  - $s_n = 1/n \sum \frac{N}{N-i}$
 
-	   - $= \frac{1}{\alpha} \sum_{i=0}^{n-1} \frac{1}{N-i}$
-	     con $\alpha = \frac{n}{N}$
+	  - $= \frac{N}{n} \sum_{i=0}^{n-1} \frac{1}{N-i}$
 
-	   - $< \frac{1}{\alpha} \int_{N-n}^{N} 1/x dx$
+	  - $= \frac{1}{\alpha} \sum_{i=0}^{n-1} \frac{1}{N-i}$
+	    con $\alpha = \frac{n}{N}$
 
-	   - $= 1/\alpha \ln\frac{N}{N-n}$
+	  - $< \frac{1}{\alpha} \int_{N-n}^{N} 1/x dx$
 
-	   - $= 1/\alpha \ln\frac{1}{\alpha}$
+	  - $= 1/\alpha \ln\frac{N}{N-n}$
 
-	 - Para $\alpha = 1/2$, el costo promedio es $1.387$
+	  - $= 1/\alpha \ln\frac{1}{\alpha}$
 
-	 - Para $\alpha = 0.9$, el costo promedio es $2.559$
+	- Para $\alpha = 1/2$, el costo promedio es $1.387$
+
+	- Para $\alpha = 0.9$, el costo promedio es $2.559$
 
 ***** Universal Hashing
       :PROPERTIES:
-      :Effort:   10
+      :Effort:   20
       :END:
 
       - $h(K) = ( (aK+b) \mathtt{ mod } p) \mathtt{ mod } N$
@@ -3764,72 +3790,91 @@ persecución sufrida por Alan Turing.
       - $p$ es primo y mas grande que $N$ 
       - $N$ no es necesaramente primo
 
-***** Hashing en memoria externa
-      :PROPERTIES:
-      :Effort:   90
-      :END:
+**** Hashing en memoria externa
+     :PROPERTIES:
+     :Effort:   30
+     :END:
 
-      1) Que pasa si la tabla de hashing no queda en memoria?
+ 1) Que pasa si la tabla de hashing no queda en memoria?
 
-     - IDEA: Simula un B-arbol de altura dos
-       - organiza el dato con valores de hash
-       - guarda un index en el nodo raiz
-       - usa solamente *una parte* de la valor de hash para elegir
-	 el sobre-arbol
-       - extiende el index cuando mas dato es agregado
+    - IDEA: Simula un B-arbol de altura dos
+      - organiza el dato con valores de hash
+      - guarda un index en el nodo raiz
+      - usa solamente *una parte* de la valor de hash para elegir
+	el sobre-arbol
+      - extiende el index cuando mas dato es agregado
 
-  2) Descripcion
-     
-     - $B$ - cantidad de elementos en una pagina
-     - $h$ - funcion de hash $\rightarrow [0..2^k-1]$
-     - $D$ - *profundidad general*, con $D\leq k$
-       - la raiz tiene $2^D$ punteros a las paginas horas
-       - la raiz es indexada con los $D$ primeros bits de cada
-	 valor de hash.
-     - $d_l$ - *profundidad local* de cada hora $l$
-       - Las valores de hash en $l$ tienen en comun los primeros
-	 $d_l$ bits.
-       - Hay $2^{D-d_l}$ punteros a la hora $l$
-       - Siempre, $d_l\leq D$
+ 2) Ideas de soluciones
 
-  3) Ejemplo
+    - usar tecnicas similares a $B$-arboles, vEB arboles.
 
-     - $B=4, k=6, D=2$
+ 3) Descripcion
+    
+    - $B$ - cantidad de elementos en una pagina
+    - $h$ - funcion de hash $\rightarrow [0..2^k-1]$
+    - $D$ - *profundidad general*, con $D\leq k$
+      - la raiz tiene $2^D$ punteros a las paginas horas
+      - la raiz es indexada con los $D$ primeros bits de cada
+	valor de hash.
+    - $d_l$ - *profundidad local* de cada hora $l$
+      - Las valores de hash en $l$ tienen en comun los primeros
+	$d_l$ bits.
+      - Hay $2^{D-d_l}$ punteros a la hora $l$
+      - Siempre, $d_l\leq D$
 
-       | $d_l=2$ | 000100 |
-       |         | 001000 |
-       |         | 001011 |
-       |         | 001100 |
+ 4) Ejemplo
 
-       | $d_l=2$ | 010101 |
-       |         | 011100 |
-       |         |        |
-       |         |        |
+    - $B=4, k=6, D=2$
 
-       | $d_l=1$ | 100100 |
-       |         | 101101 |
-       |         | 110001 |
-       |         | 111100 |
+      | $d_l=2$ | 000100 |
+      |         | 001000 |
+      |         | 001011 |
+      |         | 001100 |
 
-  4) Algoritmos
+      | $d_l=2$ | 010101 |
+      |         | 011100 |
+      |         |        |
+      |         |        |
 
-     - Buscar
-     - Insertar
-     - Remover
+      | $d_l=1$ | 100100 |
+      |         | 101101 |
+      |         | 110001 |
+      |         | 111100 |
 
-  5) Analisis
+ 5) Algoritmos
 
-     - Buscar, insertar remover
-       - 1 acceso a la memoria secundariaa si el index se queda
-     - cantidad Promedio de paginas para tener $n$ llaves
-       - $\frac{n}{B\lg 2}\approx 1.44 \frac{n}{B}$
-       - paginas son llenas a $69\%$ mas o menos.
-**** Conclusion
+    - Buscar
+    - Insertar
+    - Remover
+
+ 6) Analisis
+
+    - Buscar, insertar remover
+      - 1 acceso a la memoria secundariaa si el index se queda
+    - cantidad Promedio de paginas para tener $n$ llaves
+      - $\frac{n}{B\lg 2}\approx 1.44 \frac{n}{B}$
+      - paginas son llenas a $69\%$ mas o menos.
+
+
 *** Tecnicas de Analisis
 **** Introduccion
      :PROPERTIES:
      :Effort:   10
      :END:
+     * Cual es la performancia en el peor caso de las tecnicas en
+       dominios discretos?
+       - Peor caso sobre 
+	 - los datos, o 
+	 - las consultas?
+       - Varios Problemas
+	 - ordenamiento
+	 - busqueda en arreglos ordenados
+	 - busqueda desordenada (hashing)
+     * Cual otra tecnica de analisis se puede usar para analisar la
+       performancia de estos estructuras de datos y algoritmos?
+       - analisis amortizada
+       - analisis adaptativa
+       - analisis competitiva (de algoritmos en linea)
 **** Analisi amortizada 
 ***** MATERIAL A LEER
       - "Amortized Analysis Explained" by Rebecca Fiebrink
@@ -3851,7 +3896,7 @@ persecución sufrida por Alan Turing.
 	    cota superior de $C\leq t n$.
 	  - Un mejor analisis puede analizar el costo amortizado,
 	    con varias tecnicas:
-	    - analisis agragada
+	    - analisis agregada
 	    - contabilidad de costos
 	    - funcion potencial.
 
@@ -3866,16 +3911,16 @@ persecución sufrida por Alan Turing.
 
        	* Tres tecnicas basicas:
 
-	  1) "Aggregate analysis"
+	  1) "*Aggregate analysis*"
 	     - bound las proporciones de operaciones de cada tipo
 	     - (e.g. mas inserciones que deleciones)
-	  2) "Accounting Method"
+	  2) "*Accounting Method*"
 	     - asigna un costo (positivo o negativo) a cada operacion
 	     - ejemplos:
 	       - stack
 	       - java vector
 	     - costo amortizado es la suma de los costos.
-	  3) "Potential Method" (CLRS p.405)
+	  3) "*Potential Method*" (CLRS p.405)
 	     - asigna una funcion de "energia potencial" (como en fisica)
 	       - (accounting method = height, potential method = potential energy)
 	     - costo amortizado de una operacion es su costo mas el
@@ -3889,7 +3934,7 @@ persecución sufrida por Alan Turing.
 	       - analisis del algoritmo para min y max
 	       - analisis de MTF
 
-       	* Ejemplo: Incremento binario
+       	* *Ejemplo*: =Incremento binario=
 	   - Incrementar $n$ veces un numero binario de $k$ bits,
 	   - e.g. desde cero hasta $2^k-1$, con $n=2^k$.
 	   - costo $\leq k n$   (brute force)
@@ -3906,22 +3951,25 @@ persecución sufrida por Alan Turing.
 	     - $\sum \overline{c_i} = \sum c_i + \phi_n -\phi_0 
 	       \geq 2$
 
-       	* Ejemplo: arreglo dinamico, e.g. java Vector
+       	* *Ejemplo*: =arreglo dinamico=, e.g. java Vector
 	  - considera el tipo "Vector" en Java.
 	  - de tamaño fijo $n$
 	  - cuando accede a $n+1$, crea un otro arreglo de tamaño $2n$, y
 	    copia todo.
 	  - cual es el costo amortizado si agregando elementos uno a
 	    uno?
-	* Ejemplo: Move-to-Front
+
+	* *Ejemplo*: =Move-to-Front=
 	  - analisis amortizada se puede usar para mostrar que MTF
             siempre performa a dentro de un factor de 4 de cualquier
             algoritmo (incluido un algoritmo optimal que conoce la
             secuencia de busquedas desde el inicio).
 	  - Foncion de potencial es $2\times Inv(MTF)
-	* Ejemplo: Splay Arboles
+
+	* *Ejemplo*: Splay Arboles
 	  - el costo amortizado de cada insercion es $O(\lg n)$.
-	* Ejemplo: Fibonacci Heap
+
+	* *Ejemplo*: Fibonacci Heap
 
 
 ***** Analisi amortizada de Colas de Prioridades
@@ -4546,11 +4594,7 @@ persecución sufrida por Alan Turing.
      :PROPERTIES:
      :Effort:  
      :END:
-**** Conclusion
-     :PROPERTIES:
-     :Effort:   20
-     :END:
-**** PREGUNTAS [0/0]						 :PREGUNTAS:
+**** PREGUNTAS [0/1]						  :PREGUNTAS:
 ***** Analisis Amortizada: arreglo dinamico (Part 1)
       :SOLUTION:     
       $O(n)$
@@ -4559,7 +4603,7 @@ persecución sufrida por Alan Turing.
       :END:
       :CONTEXT:
       :END:
-      
+       
       Queremos implementar una pila ("stack") en un arreglo. Iniciamos
       con un arreglo de tamaño $s=1$, y cuando se llena, creamos un
       arreglo mas grande, copiamos todo en en nuevo arreglo y sigamos.
@@ -4581,7 +4625,7 @@ persecución sufrida por Alan Turing.
       Para cada secuencia de $n$ operaciones, el costo total de copias
       es $1+2+4+8+\ldots+2^i$, donde $2^i< n \leq 2^{i+1}$.  
 
-      La suma es $2^{i+1}-1$, en el pero caso (si $n=2^i+1$) igual a
+      La suma es $2^{i+1}-1$, en el peor caso (si $n=2^i+1$) igual a
       $2n-1$ copias. 
 
       Adicionando eso al costo de las $n$ inserciones da un costo
@@ -4603,9 +4647,9 @@ persecución sufrida por Alan Turing.
       4. [ ] $O(n^2)$
       5. [ ] otra respuesta
 
-***** Analisis Amortizada: arreglo dinamico (Part 3)
+***** TODO Analisis Amortizada: arreglo dinamico (Part 3)
       :SOLUTION:     
-      menos que $2$: exactamente, de $1+1/3\in O(1)$
+      de $2+1/3\in O(1)$
       :END:
       :PROOF: 
       Para cada secuencia de $n$ operaciones, el costo total de copias
@@ -4635,6 +4679,7 @@ persecución sufrida por Alan Turing.
 
 ***** Analisis Amortizada: arreglo dinamico (Part 4)
       :SOLUTION:     
+      $O(1)$
       :END:
       :PROOF: 
       :END:
@@ -4652,6 +4697,12 @@ persecución sufrida por Alan Turing.
       3. [ ] $O(n)$
       4. [ ] $O(n^2)$
       5. [ ] otra respuesta
+
+
+*** Conclusion
+    :PROPERTIES:
+    :Effort:   20
+    :END:
 
 *** RESUMEN Unidad 3
     :PROPERTIES:
@@ -4681,11 +4732,16 @@ persecución sufrida por Alan Turing.
 # 
 
 #
+	   
 ** Algoritmos no convencionales (5 semanas = 10 charlas = 900mns) 
    :LOGBOOK:
    - State "PAUS"       from "TODO"       [2010-10-07 Thu 13:44]
    - State "TODO"       from ""           [2010-10-07 Thu 13:43]
    :END:
+*** Referencias
+  - Paralelismo:
+    - Section 12.3.2 of "Introduction to Algorithms, A Creative Approach", Udi Manber, p. 382]]
+
 *** Descripcion de la Unidad
     :LOGBOOK:
     - State "DONE"       from ""           [2010-10-14 Thu 22:34]
@@ -4772,10 +4828,10 @@ persecución sufrida por Alan Turing.
 	       	- $P(accept | negative) < \epsilon$
 	       	- $P(refuse | negative) > 1-\epsilon$
 	       	- $P(accept | positive) > 1-\epsilon$
-	       	- $P(refuse | positive) < epsilon$
+	       	- $P(refuse | positive) < \epsilon$
 	      - One-sided error
-	       	- $P(accept | negative) < epsilon$
-	       	- $P(refuse | negative) > 1 -\epsilon $
+	       	- $P(accept | negative) < \epsilon$
+	       	- $P(refuse | negative) > 1 -\epsilon$
 	       	- $P(accept | positive) = 1$
 	       	- $P(refuse | positive) = 0$
 
@@ -4789,13 +4845,14 @@ persecución sufrida por Alan Turing.
 
        - Relacion
 	 - Si se puede verificar el resultado en tiempo razonable,
-	   Monte Carlos iterado hasta correcto => Las Vegas
+	   Monte Carlos iterado hasta correcto, genera Las Vegas
 
 **** El poder de un algoritmo aleatorizado: Ejemplos
      Nota: Trae los juguetes/cajas de colores, con un tesoro a esconder a dentro.
      Ejemplos de algoritmos o estructuras de datos aleatorizados
 
     1. *hidden coin*
+
        - Decidir si un elemento pertenece en un lista
 	 desordenada de tamano k, o si hay una moneda a dentro
 	 de una de las $k$ caja.
@@ -4805,7 +4862,9 @@ persecución sufrida por Alan Turing.
 	 - si $c=1$?
 	 - si $c=n-1$?
 	 - si $c=n/2$?
+
     2. Respuestas:
+
        - Si una sola instancia de la valor buscada
 	 - $k$ en el peor caso deterministico
 	 - $k/2$ en (promedio y en) el peor caso aleatorio
@@ -4814,29 +4873,34 @@ persecución sufrida por Alan Turing.
        - Si $r$ instancias de la valor buscada
 	 - $k-r$ en el peor caso deterministico
 	 - $O(k/r)$ en (promedio y en) el peor caso aleatorio
-    3. Decidir si un elemento pertenece en una lista ordenadas
-       de tamano $n$
-       * $\Theta(\lg n)$ comparaciones en ambos casos,
-	 deterministico y probabilistico.
+
+    3. Decidir si un elemento pertenece en una lista ordenadas de
+       tamano $n$
+
+       - $\Theta(\lg n)$ comparaciones en ambos casos, deterministico
+         y probabilistico.
+
     4. *problema de union* 
-       * Decidir si un elemento pertenece en una de las $k$ listas
+       
+       - Decidir si un elemento pertenece en una de las $k$ listas
 	 ordenadas de tamano n
-       * Si una sola lista contiene la valor buscada
+       - Si una sola lista contiene la valor buscada
 	 - $k$ busquedas en el peor caso deterministico, que da
 	   $k\lg(n)$ comparaciones
 	 - $k/2$ busquedas en (promedio y en) el peor caso
 	   aleatorio, que da $k\lg(n)/2$ comparaciones
-       * Si $r<k$ listas contienen la valor buscada
+       - Si $r<k$ listas contienen la valor buscada
 	 - $k-r$ busquedas en el peor caso deterministico, que dan
 	   $(k-r)\lg(n)$ comparaciones
 	 - $k/r$ busquedas en (promedio y en) el peor caso
 	   aleatorio, que dan $(k/r)\lg(n)$ comparaciones
-       * Si $r=k$ listas contienen la valor buscada
+       - Si $r=k$ listas contienen la valor buscada
 	 - $k$ busquedas en el peor caso deterministico, en
 	   promedio y en el peor caso aleatorio, que dan $k\lg n$
 	   comparaciones
 
     5. *problema de interseccion*
+
        - dado $k$ arreglos ordenados de tamano $n$ cada uno, y un
 	 elemento $x$.
        - cual son las complejidades determinisitica y aleatorizada
@@ -4881,7 +4945,7 @@ persecución sufrida por Alan Turing.
 	- *skiplists*: estructura de datos aleatorizada, que simula en
           promedio un arbol binario
 
-***** SkipLists
+***** SkipLists (Ya vista en CC3001!)
       :LOGBOOK:
       - State "DONE"       from ""           [2010-10-07 Thu 10:54]
       :END:
@@ -4930,10 +4994,10 @@ persecución sufrida por Alan Turing.
 
 	3. Ejemplo
 
-	 | 4 | X       | -  | -  | -  | -  | -  | -  | -> | X      |
-	 | 3 | X       | -  | -> | X  | -  | -  | -  | -> | X      |
-	 | 2 | X       | -  | -> | X  | X  | -> | X  | -> | X      |
-	 | 1 | X       | X  | -> | X  | X  | -> | X  | -> | X      |
+	 | 4 | X       | -  | -  | -  | -  | -  | -  | >  | X      |
+	 | 3 | X       | -  | >  | X  | -  | -  | -  | >  | X      |
+	 | 2 | X       | -  | >  | X  | X  | >  | X  | >  | X      |
+	 | 1 | X       | X  | >  | X  | X  | >  | X  | >  | X      |
 	 | 0 | X       | X  | X  | X  | X  | X  | X  | X  | X      |
 	 |---+---------+----+----+----+----+----+----+----+--------|
 	 |   | $-\infty$ | 10 | 20 | 30 | 40 | 50 | 60 | 70 | $\infty$ |
@@ -4960,21 +5024,21 @@ persecución sufrida por Alan Turing.
 
 	   * Insert(55) con secuencia aleatora (1,0)
 
-         | 4 | X         | -  | -  | -  | -  | -    | -    | -  | -> | X        |
-         | 3 | X         | -  | -> | X  | -  | -    | -    | -  | -> | X        |
-         | 2 | X         | -  | -> | X  | X  | -    | ->   | X  | -> | X        |
-         | 1 | X         | X  | -> | X  | X  | *->* | *X*  | X  | -> | X        |
+         | 4 | X         | -  | -  | -  | -  | -    | -    | -  | > | X        |
+         | 3 | X         | -  | > | X  | -  | -    | -    | -  | > | X        |
+         | 2 | X         | -  | > | X  | X  | -    | >   | X  | > | X        |
+         | 1 | X         | X  | > | X  | X  | *>* | *X*  | X  | > | X        |
          | 0 | X         | X  | X  | X  | X  | X    | *X*  | X  | X  | X        |
          |---+-----------+----+----+----+----+------+------+----+----+----------|
          |   | $-\infty$ | 10 | 20 | 30 | 40 | 50   | *55* | 60 | 70 | $\infty$ |
 
 	   * Insert(25) con (1,1,1,1,0)
 
-         | 5 | *X*       | -  | -    | -    | -  | -  | -  | -  | -  | *->* | *X*      |
-         | 4 | X         | -  | *->* | *X*  | -  | -  | -  | -  | -  | ->   | X        |
-         | 3 | X         | -  | *->* | *X*  | X  | -  | -  | -  | -  | ->   | X        |
-         | 2 | X         | -  | *->* | *X*  | X  | X  | -  | -> | X  | ->   | X        |
-         | 1 | X         | X  | *->* | *X*  | X  | X  | -> | X  | X  | ->   | X        |
+         | 5 | *X*       | -  | -    | -    | -  | -  | -  | -  | -  | *>* | *X*      |
+         | 4 | X         | -  | *>* | *X*  | -  | -  | -  | -  | -  | >   | X        |
+         | 3 | X         | -  | *>* | *X*  | X  | -  | -  | -  | -  | >   | X        |
+         | 2 | X         | -  | *>* | *X*  | X  | X  | -  | > | X  | >   | X        |
+         | 1 | X         | X  | *>* | *X*  | X  | X  | > | X  | X  | >   | X        |
          | 0 | X         | X  | X    | *X*  | X  | X  | X  | X  | X  | X    | X        |
          |---+-----------+----+------+------+----+----+----+----+----+------+----------|
          |   | $-\infty$ | 10 | 20   | *25* | 30 | 40 | 50 | 55 | 60 | 70   | $\infty$ |
@@ -4982,11 +5046,11 @@ persecución sufrida por Alan Turing.
 	   * Delete(60) 
 
 
-         | 5 | X         | -  | -  | -  | -  | -  | -  | -  | ->   | X        |
-         | 4 | X         | -  | -> | X  | -  | -  | -  | -  | ->   | X        |
-         | 3 | X         | -  | -> | X  | X  | -  | -  | -  | ->   | X        |
-         | 2 | X         | -  | -> | X  | X  | X  | -  | -  | *->* | X        |
-         | 1 | X         | X  | -> | X  | X  | X  | -> | X  | ->   | X        |
+         | 5 | X         | -  | -  | -  | -  | -  | -  | -  | >   | X        |
+         | 4 | X         | -  | > | X  | -  | -  | -  | -  | >   | X        |
+         | 3 | X         | -  | > | X  | X  | -  | -  | -  | >   | X        |
+         | 2 | X         | -  | > | X  | X  | X  | -  | -  | *>* | X        |
+         | 1 | X         | X  | > | X  | X  | X  | > | X  | >   | X        |
          | 0 | X         | X  | X  | X  | X  | X  | X  | X  | X    | X        |
          |---+-----------+----+----+----+----+----+----+----+------+----------|
          |   | $-\infty$ | 10 | 20 | 25 | 30 | 40 | 50 | 55 | 70   | $\infty$ |
@@ -5017,13 +5081,12 @@ persecución sufrida por Alan Turing.
 
 ****** Tipos de Adversarios (cf p372 [Motwani Raghavan])
 
-     * Veamos en el caso deterministico un tipo de adversario
-       offline, como medida de dificultad para las instancias online.
-       Para el problema de paginamiento con k paginas, el ratio
-       optima entre un algoritmo online y offline es de $k$
-       (e.g. entre LRU y LFD).
+     Veamos en el caso deterministico un tipo de adversario offline,
+     como medida de dificultad para las instancias online.  Para el
+     problema de paginamiento con k paginas, el ratio optima entre un
+     algoritmo online y offline es de $k$ (e.g. entre LRU y LFD).
      
-     * DEFINICION: 
+     + DEFINICION: 
 
        En el caso aleatorizado, se puede considerar mas tipos de
        adversarios, cada uno definiendo una medida de dificultad y
@@ -5444,13 +5507,12 @@ persecución sufrida por Alan Turing.
 	 decomposa en dos partes, de altura polynomial $p(n)$:
 	 - una parte de *decisiones* non-deterministica (fan-out)
 	 - una parte de *verificacion* deterministica (straight)
-       - Si una solamente de las $2^{p(n))$ soluciones corresponde a
-	 una solucion valida del problema, la aleatorizacion no
-	 ayuda, pero si una proporcion constante
-	 (e.g. 1/2,1/3,1/4,...) de las ramas corresponden a una
-	 solucion correcta, existe un algoritmo aleatorizado que
-	 resuelve el problema NP-dificil en tiempo polynomial *en
-	 promedio*.
+       - Si una solamente de las $2^{p(n)}$ soluciones corresponde a
+         una solucion valida del problema, la aleatorizacion no ayuda,
+         pero si una proporcion constante (e.g. $1/2,1/3,1/4,...$) de
+         las ramas corresponden a una solucion correcta, existe un
+         algoritmo aleatorizado que resuelve el problema NP-dificil en
+         tiempo polynomial *en promedio*.
 
 
 
@@ -5469,15 +5531,16 @@ persecución sufrida por Alan Turing.
 	   es el promedio de la complejidad (en este instancia) de
 	   los algoritmos deterministicos que le compasan:
 
-	   C((A_r)_r,I) = E_r( C(A_r,I) )
+	   $C((A_r)_r,I) = E_r( C(A_r,I) )$
 
 	 - La complejidad en el peor caso de un algoritmo aleatorio
 	   es el peor caso del promedio de la complejidad de los
 	   algoritmos deterministicos que le composan:
 
-	   C((A_r)_r) = \max_I C((A_r)_r,I) =  \max_I  E_r( C(A_r,I) )
+	   $C((A_r)_r) = \max_I C((A_r)_r,I) =  \max_I  E_r( C(A_r,I) )$
 
 **** Primalidad
+
       * REFERENCIAS: 
        	- Primalidad: Capitulo 14.6 en "Randomized Algorithms", de Rajeev Motwani and Prabhakar Raghavan.
        	- http://en.wikipedia.org/wiki/Primality_test#Complexity
@@ -5615,29 +5678,28 @@ persecución sufrida por Alan Turing.
 	generalmente de optimizacion.  Si se necesita una soluciono
 	en tiempo polinomial, se puede considerar una aproximacion.
 
-**** 4.2.1 *$p(n)$-aproximacion*
+**** *$p(n)$-aproximacion*
 
 ***** Definicion
+      Dado un problema de minimizacion, un algoritmo $A$ es un
 
-      * Dado un problema de minimizacion, un algoritmo $A$ es un
-       	*$p(n)$-aproximacion* si
-       	$\forall n \max \frac{ C_A(x) }{ C_{OPT}(x) } \leq p(n)$
+      * *$p(n)$-aproximacion* si $\forall n \max \frac{ C_A(x) }{
+        C_{OPT}(x) } \leq p(n)$
 
-      * Dado un problema de maximizacion, un algoritmo $A$ es un
-       	*$p(n)$-aproximacion* si
-       	$\forall n \max \frac{ C_{OPT}(x) }{ C_A(x) } \leq p(n)$
+      * *$p(n)$-aproximacion* si $\forall n \max \frac{ C_{OPT}(x) }{
+        C_A(x) } \leq p(n)$
 
-       - Notas: 
-	 1) Aqui consideramos la cualidad de la solucion, NO la
-	    complejidad del algoritmo. Usualmente el problema es
-	    NP-dificil, y el algoritmo de aproximacion es de
-	    complejidad polinomial.
-	 2) Las razones estas $\geq 1$ (elijamos las definiciones para
-	    eso)
-	 3) A veces consideramos tambien $C_A(x)-C_{OPT}(x)$
-	    (minimizacion) y $C_{OPT}(x)-C_A(x)$: eso se llama un
-	    "esquema de aproximacion polinomial" y vamos a verlo mas
-	    tarde.
+      * Notas: 
+	1) Aqui consideramos la cualidad de la solucion, NO la
+	   complejidad del algoritmo. Usualmente el problema es
+	   NP-dificil, y el algoritmo de aproximacion es de
+	   complejidad polinomial.
+	2) Las razones estas $\geq 1$ (elijamos las definiciones para
+	   eso)
+	3) A veces consideramos tambien $C_A(x)-C_{OPT}(x)$
+	   (minimizacion) y $C_{OPT}(x)-C_A(x)$: eso se llama un
+	   "esquema de aproximacion polinomial" y vamos a verlo mas
+	   tarde.
 
 ***** Ejemplo: Bin Packing (un problema que es 2-aproximable)
 
@@ -5660,7 +5722,7 @@ persecución sufrida por Alan Turing.
 
      - Ademas, hay mejores aproximaciones, 
        1. Best-fit tiene performance ratio de 1.7 en el peor caso
-       2. [Best-Fit Bin-Packing with Random Order (1997), Kenyon]
+       2. Extract from "Best-Fit Bin-Packing with Random Order (1997), Kenyon"
 
 	  Best-fit is the best known algorithm for on-line
 	  binpacking, in the sense that no algorithm is known to
@@ -5739,9 +5801,9 @@ persecución sufrida por Alan Turing.
 	 - Algoritmo de Aproximacion (con desigualdad triangular)
 	   - construir un arbol cobertor minimo (MST)
 	     - se puede hacer en tiempo polinomial, con programacion lineal.
-	     - C_{MST} \leq C_{OPT}
+	     - $C_{MST} \leq C_{OPT}$
 	   - producimos un recorrido en profundidad DFS del MST:
-	     - C_{DFS} = 2C_{MST} \leq 2 C_{OPT}
+	     - $C_{DFS} = 2C_{MST} \leq 2 C_{OPT}$
 	     - (factor dos porque el camino de vuelta puede ser al
 	       maximo de tamano igual al tamano del camino de ida)
 	   - eliminamos los nodos repetidos del camino, que no crece
@@ -5756,11 +5818,11 @@ persecución sufrida por Alan Turing.
        - PROOF:   
 	 - Supongamos que existe una p(n)-aproximacion de tiempo
 	   polinomial.
-	 - Dado un grafo G=(V,E)
-	 - Construimos un grafo G'=(V,E') tal que 
-	   - E'=V^2 (grafo completo), y
-	   - c(u,v) =  1 si (u,v)\in E
-		       n p(n) sino
+	 - Dado un grafo $G=(V,E)$
+	 - Construimos un grafo $G'=(V,E')$ tal que 
+	   - $E'=V^2$ (grafo completo), y
+	   - $c(u,v) =  1$ si $(u,v)\in E$
+		       $n p(n)$ sino
 	 - Si no hay un Ciclo Hamiltonian en E,
 	   - todas las soluciones usan al menos una arista que no es
 	     en E
@@ -5775,8 +5837,8 @@ persecución sufrida por Alan Turing.
 
      - DEFINICION
 
-       Dado G=(V,E) y c:V\rightarrowR^+, se quiere un V^*\subseteq V que cubra
-       E y que minimice \sum_{v\in V^*} c(v).
+       Dado $G=(V,E)$ y $c:V\rightarrowR^+$, se quiere un $V^*\subseteq V$ que cubra
+       E y que minimice $\sum_{v\in V^*} c(v)$.
 
      - Este problema es NP Completo.
 
@@ -5817,11 +5879,15 @@ persecución sufrida por Alan Turing.
 ***** Definiciones
 
      * Esquema de aproximacion poliniomial *PTAS*
+
        Un *esquema de aproximacion polinomial* para un problema es un
-       algoritmo $A$ que recibe como input una instancia del problema
-       y un para-metro $\varepsilon>0$ y produce una $(1+\varepsilon)$
-       aproximacion. Para todo $\varepsilon$ fijo, el tiempo de $A$
-       debe ser polinomial en $n$, el tamano de la instancia.
+       algoritmo $A$ que recibe como input 
+       - una instancia del problema y 
+       - un parametro $\varepsilon>0$ 
+
+       y produce una $(1+\varepsilon)$ aproximacion. Para todo
+       $\varepsilon$ fijo, el tiempo de $A$ debe ser polinomial en
+       $n$, el tamaño de la instancia.
 
      * Ejemplos de complejidades: Cuales tienen sentidos?
        - [ ] $O(n^{2/3})$
@@ -5832,107 +5898,108 @@ persecución sufrida por Alan Turing.
      * Esquema de aproximacion completamente polinomial *FPTAS*
 
        Un *esquema de aproximacion completamente polinomial* es un
-       PTAS donde el tiempo del algoritmo es polinomial en $n$ *y en
-       $1/\varepsilon$*.
+       PTAS donde el tiempo del algoritmo es polinomial en $n$ y en
+       $1/\varepsilon$.
 
 ***** Ejemplo: Problema de la Mochila    
-+ Definicion
-  + Dado 	  
-    - $n$ pesos $p_1,\ldots,p_n\geq 0$,
-    - $n$ valores $v_1,\ldots,v_n\geq 0$,
-    - un peso total maximo $P$
-  + Queremos encontrar $S\subset [1..n[$ tal que 
-    - $\sum_{i\in S} p_i \leq P$ 
-    - $\sum_{i\in S} v_i$ sea maximal.
 
-+ Solucion Exacta
+      1) Definicion
+	 + Dado 	  
+	   - $n$ pesos $p_1,\ldots,p_n\geq 0$,
+	   - $n$ valores $v_1,\ldots,v_n\geq 0$,
+	   - un peso total maximo $P$
+	 + Queremos encontrar $S\subset [1..n[$ tal que 
+	   - $\sum_{i\in S} p_i \leq P$ 
+	   - $\sum_{i\in S} v_i$ sea maximal.
 
-  + Dado $L=\{y_1,,\ldots y_m\}$, 
-    - definimos $L+x=\{y_1+x,\ldots,y_m+x\}$.
+      2) Solucion Exacta
 
-  + Algoritmo:
-    - $L \leftarrow \{\emptyset\}$
-    - for $i\leftarrow 1$ to $n$
-      - $L \leftarrow$ merge $(L,L+x_i)$
-      - prune$(L,P)$      (remudando las valores $> P$)
-    - return $\max(L)$
+	 + Dado $L=\{y_1,,\ldots y_m\}$, 
+	   - definimos $L+x=\{y_1+x,\ldots,y_m+x\}$.
 
-+ Solucion aproximada (inspirada del algoritmo exacto)
+	 + Algoritmo:
+	   - $L \leftarrow \{\emptyset\}$
+	   - for $i\leftarrow 1$ to $n$
+	     - $L \leftarrow$ merge $(L,L+x_i)$
+	     - prune$(L,P)$      (remudando las valores $> P$)
+	   - return $\max(L)$
 
-  + Operacion "Recorte"
-     - Definimos la operacion de *recorte* de una lista L con
-       parametro $\delta$:
-       - Dado $y,z \in L$, $z$ *represente* a $y$ si
-	 - $y /(1+\delta)   \leq   z   \leq y$ 
-     - vamos a eliminar de $L$ todos los $y$ que sean representados
-       por alguno $z$ no eliminado de $L$.
+      3) Solucion aproximada (inspirada del algoritmo exacto)
 
-     - Recortar$(L,\delta)$
-       - Sea $L=\{y_1,\ldots,y_m\}$
-       - $L'\leftarrow \{y_1\}$
-       - $\mathit{Last} \leftarrow y_1$
-       - for $i\leftarrow 2$ to $m$
-	 - si $y_i > \mathit{Last}(1+\delta)$
-	   - $L \leftarrow L'.\{y_i\}$
-	   - $\mathit{Last}\leftarrow y_i$
-       - return $L'$
+	 + Operacion "Recorte"
+	    - Definimos la operacion de *recorte* de una lista L con
+	      parametro $\delta$:
+	      - Dado $y,z \in L$, $z$ *represente* a $y$ si
+		- $y /(1+\delta)   \leq   z   \leq y$ 
+	    - vamos a eliminar de $L$ todos los $y$ que sean representados
+	      por alguno $z$ no eliminado de $L$.
 
-  + Algoritmo de Aproximacion:
+	    - Recortar$(L,\delta)$
+	      - Sea $L=\{y_1,\ldots,y_m\}$
+	      - $L'\leftarrow \{y_1\}$
+	      - $\mathit{Last} \leftarrow y_1$
+	      - for $i\leftarrow 2$ to $m$
+		- si $y_i > \mathit{Last}(1+\delta)$
+		  - $L\leftarrow L'.\{y_i\}$
+		  - $\mathit{Last}\leftarrow y_i$
+	      - return $L'$
 
-       - $L \leftarrow \{\emptyset\}$
-       - for $i\leftarrow 1$ to $n$
-	 - $L \leftarrow \mathit{merge} (L,L+x_i)$
-	 - $\mathit{prune}(L,t)$      (remudando las valores $> t$)
-	 - *$L \leftarrow \mathit{recortar}(L,\epsilon/2n)$*
-       - return max(L)
+	 + Algoritmo de Aproximacion:
 
-  + Analysis
+	      - $L \leftarrow \{\emptyset\}$
+	      - for $i\leftarrow 1$ to $n$
+		- $L \leftarrow \mathit{merge} (L,L+x_i)$
+		- $\mathit{prune}(L,t)$      (remudando las valores $> t$)
+		- $L \leftarrow \mathit{recortar}(L,\epsilon/2n)$
+	      - return $\max(L)$
 
-     - El resultado es una $(1+\epsilon)$-aproximacion:
-       1. retorne una solucion valida, tal que 
-	  - $\sum(S')\leq t$ para algun $S'\subset S$
-       2. en el paso $i$, para todo $z\in L_{OPT}$,
-	  existe un $y\in L_A$ tal que $z$ representa a $y$.
-	  - Luego de los $n$ pasos, el $z^*$ optimo en $L_{OPT}$
-	    tiene un representante $y^*\in L_A$ tal que 
-	    $$z^*/(1+\epsilon/2n)^n \leq y^* \leq z^*$$
-       3. Para mostrar que el algoritmo es una $(1+\epsilon)$
-	  aproximacion, 
-	  - hay que mostrar que
-	    - $z^*/(1+\epsilon) \leq y^*$
-	  - entonces, debemos mostrar que 
-	    - $(1+\epsilon/2n)^n \leq 1+\epsilon$
-	  - Eso se muestra con puro calculo:
-	    - $(1+\epsilon/2n)^n \leq? 1+\epsilon$
-	    - $e^{n\lg(1+\epsilon/2n) }$
-	    - $\leq e^{ n \epsilon /2n }$
-	    - $= e^{ \epsilon/2 }$
-	    - $\leq? e^{\ln(1+\epsilon)}$
-	    - eso es equivalente a elegir \epsilon tal
-	      que $\epsilon/2 \leq \ln(1+\epsilon)$
-	    - i.e. cualquier tal que $0<\epsilon\leq 1$
-       4. El algoritmo es polinomial (en todos los parametros)
-	  - despues de recortar dedos $y_i,y_{i+1}\in L$
-	    se cumple $y_{i+1}>y_i(1+\delta)$
-	    y el ultimo elemento es $\leq t$
-	  - entonces, la lista contiene $0,1$
-	    y luego a lo mas $\lfloor \log_{(1+\delta)} t \rfloor$
-	  - entonces el largo de L en cada iteracion no supera
-	    $2+ \frac{ \log t }{ \log( 1+\varepsilon/2n) }$
-	  - Nota que $\ln(1+x)$
-	    - $= - \ln (1/(1+x))$
-	    - $= - \ln ( (1+x-x)/(1+x) )$
-	    - $= - \ln ( 1 - x/(1+x) )$
-	    - $= - \ln (1+y) \geq -y$
-	    - $\geq - (-x/(1+x)) = x/(1+x)$
-	  - Entonces
-	    - $2+ \frac{ \ln t }{ \ln 1 + \epsilon/2n }$
-	    - $\leq 2 + ((1+\epsilon/2n) 2n \ln t )/\epsilon$
-	    - $= ( 2n\ln t )/ \epsilon + \ln t + 2$
-	    - $= O(n \lg t /\epsilon)$
-	  - Entonces cada iteracion toma $O(n \lg t /\epsilon)$ operaciones
-	  - Las $n$ iteraciones en total toman 
-	    - $O(n^2 \lg t /\epsilon)$ operaciones
+	 + Analysis
+
+	    - El resultado es una $(1+\epsilon)$-aproximacion:
+	      1. retorne una solucion valida, tal que 
+		 - $\sum(S')\leq t$ para algun $S'\subset S$
+	      2. en el paso $i$, para todo $z\in L_{OPT}$,
+		 existe un $y\in L_A$ tal que $z$ representa a $y$.
+		 - Luego de los $n$ pasos, el $z^*$ optimo en $L_{OPT}$
+		   tiene un representante $y^*\in L_A$ tal que 
+		   $$z^*/(1+\epsilon/2n)^n \leq y^* \leq z^*$$
+	      3. Para mostrar que el algoritmo es una $(1+\epsilon)$
+		 aproximacion, 
+		 - hay que mostrar que
+		   - $z^*/(1+\epsilon) \leq y^*$
+		 - entonces, debemos mostrar que 
+		   - $(1+\epsilon/2n)^n \leq 1+\epsilon$
+		 - Eso se muestra con puro calculo:
+		   - $(1+\epsilon/2n)^n \leq? 1+\epsilon$
+		   - $e^{n\lg(1+\epsilon/2n) }$
+		   - $\leq e^{ n \epsilon /2n }$
+		   - $= e^{ \epsilon/2 }$
+		   - $\leq? e^{\ln(1+\epsilon)}$
+		   - eso es equivalente a elegir \epsilon tal
+		     que $\epsilon/2 \leq \ln(1+\epsilon)$
+		   - i.e. cualquier tal que $0<\epsilon\leq 1$
+	      4. El algoritmo es polinomial (en todos los parametros)
+		 - despues de recortar dedos $y_i,y_{i+1}\in L$
+		   se cumple $y_{i+1}>y_i(1+\delta)$
+		   y el ultimo elemento es $\leq t$
+		 - entonces, la lista contiene $0,1$
+		   y luego a lo mas $\lfloor \log_{(1+\delta)} t \rfloor$
+		 - entonces el largo de L en cada iteracion no supera
+		   $2+ \frac{ \log t }{ \log( 1+\varepsilon/2n) }$
+		 - Nota que $\ln(1+x)$
+		   - $= - \ln (1/(1+x))$
+		   - $= - \ln ( (1+x-x)/(1+x) )$
+		   - $= - \ln ( 1 - x/(1+x) )$
+		   - $= - \ln (1+y) \geq -y$
+		   - $\geq - (-x/(1+x)) = x/(1+x)$
+		 - Entonces
+		   - $2+ \frac{ \ln t }{ \ln 1 + \epsilon/2n }$
+		   - $\leq 2 + ((1+\epsilon/2n) 2n \ln t )/\epsilon$
+		   - $= ( 2n\ln t )/ \epsilon + \ln t + 2$
+		   - $= O(n \lg t /\epsilon)$
+		 - Entonces cada iteracion toma $O(n \lg t /\epsilon)$ operaciones
+		 - Las $n$ iteraciones en total toman 
+		   - $O(n^2 \lg t /\epsilon)$ operaciones
 
 *** Algoritmos *paralelos* y distribuidos (2 semanas = 4 charlas)
     - Medidas de complejidad
@@ -5940,7 +6007,9 @@ persecución sufrida por Alan Turing.
 **** PREREQUISITOS
      - Chap 12 of "Introduction to Algorithms, A Creative Approach",
        Udi Manber, p. 375
-     - http://www.catonmat.net/blog/mit-introduction-to-algorithms-part-thirteen/
+
+     - [[http://www.catonmat.net/blog/mit-introduction-to-algorithms-part-thirteen]]
+
 **** Modelos de paralelismo y modelo PRAM
 
     * Instrucciones
@@ -5962,9 +6031,10 @@ persecución sufrida por Alan Turing.
 	|      |                    | Bulk Synchronous Process, etc...                    |
 	|------+--------------------+-----------------------------------------------------|
 
-    * En este curso consideramos en particular el modelo PRAM
-
+    
 ***** Modelo PRAM
+
+    En este curso consideramos en particular el modelo PRAM.
 
     * Mucha unidad de CPU, una sola memoria RAM
 
@@ -5973,12 +6043,12 @@ persecución sufrida por Alan Turing.
 
     * Ejemplo:
       
-      + if p mod 2 = 0 then
-       	+ A[p] += A[p-1]
+      + if $p \mod 2 = 0$ then
+       	+ $A[p] += A[p-1]$
       + else
-       	+ A[p] += A[p+1]
-      + b \leftarrow A[p];
-      + A[p]\leftarrow b;
+       	+ $A[p] += A[p+1]$
+      + $b \leftarrow A[p]$;
+      + $A[p]\leftarrow b$;
 
     * Problema: el resultado no es bien definido, puede tener
       *conflictos* si los procesadores estan asinchronos. Las soluciones a
@@ -5993,7 +6063,7 @@ persecución sufrida por Alan Turing.
 	 - todos deben escribir lo mismo
 	 - arbitrario resultado
 	 - priorizado
-	 - alguna f() de lo que se escribe
+	 - alguna $f()$ de lo que se escribe
 
 	   
 ***** Como medir el "trade-off" entre recursos (cantidad de procesadores) y tiempo?
@@ -6024,7 +6094,7 @@ persecución sufrida por Alan Turing.
 
 	 (Nota estas definiciones en la pisara, vamos a usarlas despues.)
 **** LEMMA de Brent, Trabajo y Consecuencias
-***** PROBLEMA: Calcular Max(A[1,...,N])
+***** PROBLEMA: Calcular $\max(A[1,...,N])$
 
      1. Solucion Secuencial
 
@@ -6056,10 +6126,10 @@ persecución sufrida por Alan Turing.
 
        	* Complejidad: 
 
-	  - tiempo $O(\lg n)$ con $n$ procesador, i.e. en nuestra notaciones:
+	  - tiempo $O(\lg n)$ con $n$ procesador, i.e. en nuestras notaciones:
 	  - $T(n,n) = \lg n$
-	  - $S(n,n) = \frac{n}{\lg n} $
-	  - $E(n,n) = \frac{n}{n\lg n} = {1\over\lg n} $
+	  - $S(n,n) = \frac{n}{\lg n}$
+	  - $E(n,n) = \frac{n}{n\lg n} = {1\over\lg n}$
 
        	* Nota: no se puede hacer mas rapido, pero hay mucho
 	  procesadores poco usados: quizas se puede calcular el max
@@ -6081,10 +6151,9 @@ persecución sufrida por Alan Turing.
 	  - tiempo $O(\lg n)$ con $n$ procesador, i.e. en nuestra notaciones:
 	    - $T(n, {n\over\lg n} ) = 2 \lg n \in O(\lg n)$
 	      - $T(n,p)= {n\over p} + \lg p$
-	    - $S(n,p) = \frac{n}{{n\over p} + \lg p} 
-	      = p ( 1 - \frac {p\lg p}{n+p\lg p})
-	      \rightarrow p$ si $n\rightarrow \infty$ y p
-	    - $E(n,p) = \frac{n}{{n\over\lg n}\lg n} = 1/2 $
+	    - $S(n,p) = \frac{n}{{n\over p} + \lg p}  = p ( 1 - \frac {p\lg p}{n+p\lg p})$
+	      $\rightarrow p$ si $n\rightarrow \infty$ 
+	    - $E(n,p) = \frac{n}{{n\over\lg n}\lg n} = 1/2$
 
        	* Discusion:
 	  
@@ -6147,7 +6216,6 @@ persecución sufrida por Alan Turing.
 	- $T(n,p)$? (solucion en el corolario)
 	- $S(n,p)$? (trivial desde $T(n,p)$) 
 	- $E(n,p)$? (solucion en el corolario)
-	  - 
 
 ***** COROLARIO
 
@@ -6251,13 +6319,13 @@ persecución sufrida por Alan Turing.
 
       * ParallelPrefix1(i,j)
 	- if $i_p=j_p$
-	  - return x_{i_p}
+	  - return $x_{i_p}$
 	- $m_p \leftarrow \lfloor \frac{i_p + j_p}{2} \rfloor$;
 	- if $p\leq m$ then
-	  - algo( i_p, m_p )
+	  - algo$( i_p, m_p )$
 	- else
-	  - algo(m+1, j_p)
-	  - y_p \leftarrow y_m . y_p
+	  - algo$(m+1, j_p)$
+	  - $y_p \leftarrow y_m . y_p$
 
       * Otra forma de escribir el algoritmo (de p. 384 de
         "Introduction to Algorithms, A Creative Approach", Udi
@@ -6269,8 +6337,8 @@ persecución sufrida por Alan Turing.
 	   - else
 	     - $middle \leftarrow (left+right-1)/2$
 	     - do in paralel
-	       - ParallelPrefix1(left,middle) \{assigned to $\{P_1 to P_{n/2}\}$\}
-	       - ParallelPrefix1(middle+1,right) \{assigned to $\{P_{n/2+1} to P_n\}$\}
+	       - $ParallelPrefix1(left,middle) \{$ assigned to $\{P_1 to P_{n/2}\}\}$
+	       - $ParallelPrefix1(middle+1,right) \{$ assigned to $\{P_{n/2+1} to P_n\}\}$
 	     - for $i \leftarrow middle+1$ to $right$ do in paralel
 	       - $x[i] \leftarrow x[middle] . x[i]$
 
@@ -6299,10 +6367,10 @@ persecución sufrida por Alan Turing.
 
 	 - Calculamos la eficiencia
 
-	   - $E_{A_1}(n,p^*) 
-	     = \frac{ T^*(n) }{ p^* T(n)+W(n) }
-	     = \frac{ n }{ n\lg n } 
-	     = {1 \over \lg n}$
+	   - $E_{A_1}(n,p^*)$ 
+	     $= \frac{ T^*(n) }{ p^* T(n)+W(n) }$
+	     $= \frac{ n }{ n\lg n }$ 
+	     $= {1 \over \lg n}$
 
 	   - es poco eficiente =(
 
@@ -6339,22 +6407,22 @@ persecución sufrida por Alan Turing.
 
       - visualizacion 
 
-	0. 
-	1. [0,1]
-	2. 
-	3. [2,3] [0,3]
-	4. 
-	5. [4,5]
-	6. 
-	7. [6,7] [4,7] [0,7]
-	8. 
-	9.  [8,9]
-	10.
-	11. [10,11] [8,11]
-	12. 
-	13. [12,13]
-	14. 
-	15. [14,15] [12,15] [8,15] [0,15]
+	1) 
+	2) (0,1)
+	3) 
+	4) (2,3) (0,3)
+	5) 
+	6) (4,5)
+	7) 
+	8) (6,7) (4,7) (0,7)
+	9) 
+	10) (8,9)
+	11) 
+	12) (10,11) (8,11)
+	13) 
+	14) (12,13)
+	15) 
+	16) (14,15) (12,15) (8,15) (0,15)
 
       - Notas:
 	- Este algoritmo es EREW
@@ -6388,7 +6456,7 @@ persecución sufrida por Alan Turing.
     * Vimos
       1. Aleatorizacion
       2. Aproximabilidad
-      3. Paralelizacion / Distribucio
+      3. Paralelizacion / Distribucion
     * Contexto
       + son *extenciones* del contenido del curso
       + hay muchas otras
