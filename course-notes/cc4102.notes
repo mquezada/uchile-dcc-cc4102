@@ -4738,6 +4738,9 @@ persecución sufrida por Alan Turing.
    - State "PAUS"       from "TODO"       [2010-10-07 Thu 13:44]
    - State "TODO"       from ""           [2010-10-07 Thu 13:43]
    :END:
+   :PROPERTIES:
+   :ID:       47d0f647-5d5f-4d00-98c0-2b0fdfb9c237
+   :END:
 *** Referencias
   - Paralelismo:
     - Section 12.3.2 of "Introduction to Algorithms, A Creative Approach", Udi Manber, p. 382]]
