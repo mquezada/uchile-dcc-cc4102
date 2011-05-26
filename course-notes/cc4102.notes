@@ -67,10 +67,16 @@
   :END:
   :PROPERTIES:
   :ID:       8083f75f-15d1-4cf8-a992-8b787d182c26
-  :COLUMNS:  %70ITEM(TASK)  %5Effort(TIME){:} %5CLOCKSUM
+  :COLUMNS:  %70ITEM(TASK) %5Talks{+} %5mns{:} %5Effort(TIME){:} %5CLOCKSUM 
   :Effort_ALL: 10 20 30 45 60 90 2*90 3*90 4*90 " "
+  :Talks_ALL: 1 2 3 4 5 6 7 8 9 10 " "
   :END:
-** Presentación y Evaluación (1 charla = 90mns)
+** Presentación y Evaluación 
+   :PROPERTIES:
+   :Volume:   1t=90mns
+   :Talks:     1
+   :mns:      90
+   :END:
 *** Presentaciones
     :PROPERTIES:
     :Effort:   10
@@ -374,21 +380,32 @@ Se tiene que:
      - A cuales algoritmos de búsqueda ordenada corresponden códigos?
      - A cuales códigos corresponden algoritmos de búsqueda?
 
-** Conceptos básicos y complejidad (3 semanas = 6 charlas = 540mns)
-*** DESCRIPCIÓN de la Unidad:
-**** Resultados de Aprendizajes de la Unidad
-     - Comprender el concepto de complejidad de un problema como cota inferior
-     - conocer técnicas elementales para demostrar cotas inferiores
-     - Conocer algunos casos de estudio relevantes
-     - Adquirir nociones básicas de experimentación en algoritmos. 
-**** Principales casos de estudio 
-     - Cota inferior para minimo y maximo de un arreglo
-     - Caso promedio del "Quicksort"
-     - Cota inferior para búsqueda en un arreglo con distintas probabilidades de acceso
-*** PRERREQUISITOS DE UNIDAD 
-**** Lista de temas en apuntes de CC3001 			    :READING:
-    http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
-*** Repaso 
+** Conceptos básicos y complejidad 
+   :PROPERTIES:
+   :Talks:     6
+   :mns:      540
+   :END:
+*** Introduccion Unidad 1
+    :PROPERTIES:
+    :Effort:   45
+    :END:
+**** PRERREQUISITOS DE UNIDAD 
+***** Lista de temas en apuntes de CC3001			    :READING:
+     http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
+**** DESCRIPCIÓN de la Unidad:
+***** Resultados de Aprendizajes de la Unidad
+      - Comprender el concepto de complejidad de un problema como cota inferior
+      - conocer técnicas elementales para demostrar cotas inferiores
+      - Conocer algunos casos de estudio relevantes
+      - Adquirir nociones básicas de experimentación en algoritmos. 
+***** Principales casos de estudio 
+      - Cota inferior para minimo y maximo de un arreglo
+      - Caso promedio del "Quicksort"
+      - Cota inferior para búsqueda en un arreglo con distintas probabilidades de acceso
+*** Repaso
+    :PROPERTIES:
+    :Effort:   45
+    :END: 
 **** PRERREQUISITOS
 ***** "Bases de la programación" en apuntes de CC3001		    :READING:
       - http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/
@@ -517,6 +534,9 @@ Se tiene que:
       4. [ ] $2^h-1$
       5. [ ] otra respuesta
 *** Metodología de experimentación
+    :PROPERTIES:
+    :Effort:   90
+    :END:
 **** PRERREQUISITOS
      - de las apuntes de CC3001:
        - Nociones básicas de programación http://www.dcc.uchile.cl/~bebustos/apuntes/cc3001/Programacion/
@@ -675,6 +695,9 @@ persecución sufrida por Alan Turing.
        John W. Creswell
        http://www.amazon.com/Research-Design-Qualitative-Quantitative-Approaches/
 *** Complejidad Computacional Deterministica: cotas inferiores
+    :PROPERTIES:
+    :Effort:   2*90
+    :END:
     adversario, teoria de la informacion, reduccion
 **** PREREQUISITOS
      - de las apuntes de CC3001:
@@ -1259,11 +1282,10 @@ persecución sufrida por Alan Turing.
 	3. [ ] Arbol Binario de Decision
 	4. [ ] lemma del minimax
 	5. [ ] ningunas o mas de dos.
-*** TODO Complejidad Computacional en Promedio: cotas inferiores
-    :LOGBOOK:
-    - State "TODO"       from ""           [2011-03-31 Thu 11:37]
-    :END:
-*** Recurrencias y Introduccion a la programacion dinamica 
+*** Recurrencias y Introduccion a la programacion dinamica
+    :PROPERTIES:
+    :Effort:   2*90
+    :END: 
 **** PREREQUISITOS
      - de las apuntes de CC3001:
        - Torre de Hanoi y recursion 
@@ -1295,6 +1317,9 @@ persecución sufrida por Alan Turing.
       + Solucion en espacio lineal (y tiempo $O(n^2)$)
       + (BONUS) Solucion de Hirshberg en tiempo $O(nm)$ y espacio $\min(n,m)$
 *** RESUMEN de la Unidad 1
+    :PROPERTIES:
+    :Effort:   90
+    :END:
     1. Conceptos Basicos
        - $O(), o(), \Omega(), \omega(), \Theta(), \theta()$
        - Complejidad en el peor caso, en promedio
@@ -1317,7 +1342,11 @@ persecución sufrida por Alan Turing.
        - Busqueda binaria en $\Theta(1+\lg n)$ (mejor que $2\lg n$)
        - Algoritmo en $2n/3 + O(1)$ comparaciones para min max
 
-** Memoria Secundaria [Algoritmos y Estructuras de Datos para] (3 semanas = 6 charlas = 540mns)
+** Memoria Secundaria [Algoritmos y Estructuras de Datos para] 
+   :PROPERTIES:
+   :Talks:    6
+   :mns:      540
+   :END:
 *** DESCRIPCION de la Unidad
     1) Modelos de Memoria
     2) Diccionarios en Memoria Secundaria
@@ -3298,7 +3327,11 @@ persecución sufrida por Alan Turing.
 
 
 
-** Tecnicas avanzadas de diseno y analisis de algoritmos (4 semanas = 8 charlas = 720mns)
+** Tecnicas avanzadas de diseno y analisis de algoritmos 
+   :PROPERTIES:
+   :Talks:     8
+   :mns:      720
+   :END:
 *** Material relevante de los años previos:
     :PROPERTIES:
     :Effort:   10
@@ -4733,20 +4766,22 @@ persecución sufrida por Alan Turing.
 
 #
 	   
-** Algoritmos no convencionales (5 semanas = 10 charlas = 900mns) 
+** Algoritmos no convencionales  
    :LOGBOOK:
    - State "PAUS"       from "TODO"       [2010-10-07 Thu 13:44]
    - State "TODO"       from ""           [2010-10-07 Thu 13:43]
    :END:
    :PROPERTIES:
    :ID:       47d0f647-5d5f-4d00-98c0-2b0fdfb9c237
+   :Talks:     10
+   :mns:      900
    :END:
 *** Introduccion
     :LOGBOOK:
     - State "DONE"       from ""           [2010-10-14 Thu 22:34]
     :END:
     :PROPERTIES:
-    :Effort:   10
+    :Effort:  
     :END:
 **** Resultados de Aprendisajes de la Unidad
      :LOGBOOK:
@@ -4779,7 +4814,7 @@ persecución sufrida por Alan Turing.
    - Paralelismo:
      - Section 12.3.2 of "Introduction to Algorithms, A Creative Approach", Udi Manber, p. 382]]
 
-*** *Aleatorizacion* (1 semana = 2 charlas = 180mns)
+*** *Aleatorizacion* (1w = 2t = 180mns)
       :LOGBOOK:
       - State "DONE"       from "ACTF"       [2010-10-18 Mon 19:45]
       - State "ACTF"       from "PAUS"       [2010-10-18 Mon 15:36]
@@ -5258,7 +5293,7 @@ persecución sufrida por Alan Turing.
 
 REFERENCIA: 
    - Capitulo 1 en "Randomized Algorithms", de Rajeev Motwani and Prabhakar Raghavan.
-
+     
 ***** Introduccion
       :PROPERTIES:
       :Effort:   10
@@ -5426,7 +5461,7 @@ REFERENCIA:
        :Effort:   10
        :END:
 
-      * Del leima de Loomis podemos concluir que 
+      * Del lema de Loomis podemos concluir que 
 
        	$$
        	\max_\beta \alpha^T M \beta = \max_b \alpha^T M b
@@ -5653,9 +5688,9 @@ REFERENCIA:
        + "Online Algorithms", en particular paginamiento.
        + Algoritmos de aproximacion
 
-**** Primalidad
+**** Primalidad							      :BONUS:
      :PROPERTIES:
-     :Effort:   10
+     :Effort:  
      :END:
 
       * REFERENCIAS: 
@@ -5664,7 +5699,7 @@ REFERENCIA:
 
       * Algoritmo "Random Walks" para SAT
        	1. eliga cualquieras valores $x_1,\ldots,x_n$
-       	2. si todas las  clausilas son  satisfechas,
+       	2. si todas las  clausulas son  satisfechas,
 	   - accepta
        	3. sino
 	   - eliga una clausula non satisfecha (deterministicamente
@@ -5717,7 +5752,7 @@ REFERENCIA:
 
 **** Clases de complejidad aleatorizada 			      :BONUS:
      :PROPERTIES:
-     :Effort:   10
+     :Effort:  
      :END:
 
 ***** RP
@@ -5774,12 +5809,15 @@ REFERENCIA:
       $BPP = coBPP$
 
 
-*** Nociones de *aproximabilidad* (2 semanas = 4 charlas = 360mns)
+*** Nociones de *aproximabilidad* (2w = 4t = 360mns)
     :LOGBOOK:
     - State "DONE"       from ""           [2010-10-07 Thu 10:50]
     :END:
     - problemas que son o no aproximables
-**** (Motivacion) 
+**** (Motivacion)
+     :PROPERTIES:
+     :Effort:   10
+     :END: 
 
      Aproximacion de problemas de optimizacion NP-dificiles
 
@@ -5799,8 +5837,10 @@ REFERENCIA:
 	en tiempo polinomial, se puede considerar una aproximacion.
 
 **** *$p(n)$-aproximacion*
-
 ***** Definicion
+      :PROPERTIES:
+      :Effort:   10
+      :END:
       Dado un problema de minimizacion, un algoritmo $A$ es un
 
       * *$p(n)$-aproximacion* si $\forall n \max \frac{ C_A(x) }{
@@ -5822,6 +5862,9 @@ REFERENCIA:
 	   tarde.
 
 ***** Ejemplo: Bin Packing (un problema que es 2-aproximable)
+      :PROPERTIES:
+      :Effort:   30
+      :END:
 
      - DEFINICION
 
@@ -5871,8 +5914,10 @@ REFERENCIA:
        4. la distribucion de los tamanos de las cajas hacen la
 	  instancia dificil o facil.
 
-
 ***** Ejemplo: Recubrimiento de Vertices (Vertex Cover)
+      :PROPERTIES:
+      :Effort:   30
+      :END:
 
      - DEFINICION:
 
@@ -5906,6 +5951,9 @@ REFERENCIA:
 
 
 ***** Ejemplo: Vendedor viajero (Traveling Salesman)
+      :PROPERTIES:
+      :Effort:   90
+      :END:
 
      - DEFINICION:
 
@@ -5953,6 +6001,9 @@ REFERENCIA:
 	     que $(n-1)p(n)$                 QED
 
 ***** Ejemplo: Vertex Cover con pesos
+      :PROPERTIES:
+      :Effort:   90
+      :END:
 
 
      - DEFINICION
@@ -5995,8 +6046,11 @@ REFERENCIA:
        5. QED
 
 
-**** 4.2.2 PTAS y FPTAS
+**** PTAS y FPTAS
 ***** Definiciones
+      :PROPERTIES:
+      :Effort:   10
+      :END:
 
      * Esquema de aproximacion poliniomial *PTAS*
 
@@ -6021,7 +6075,10 @@ REFERENCIA:
        PTAS donde el tiempo del algoritmo es polinomial en $n$ y en
        $1/\varepsilon$.
 
-***** Ejemplo: Problema de la Mochila    
+***** Ejemplo: Problema de la Mochila
+      :PROPERTIES:
+      :Effort:   90
+      :END:    
 
       1) Definicion
 	 + Dado 	  
@@ -6121,7 +6178,7 @@ REFERENCIA:
 		 - Las $n$ iteraciones en total toman 
 		   - $O(n^2 \lg t /\epsilon)$ operaciones
 
-*** Algoritmos *paralelos* y distribuidos (2 semanas = 4 charlas = 360mns)
+*** Algoritmos *paralelos* y distribuidos (2w = 4t = 360mns)
     - Medidas de complejidad
     - Tecnicas de diseno
 **** PREREQUISITOS
@@ -6592,6 +6649,10 @@ REFERENCIA:
 
 
 ** CONCLUSION del curso
+   :PROPERTIES:
+   :Talks:     1
+   :mns:      90
+   :END:
 
     * Unidades:
 
