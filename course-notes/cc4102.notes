@@ -4791,181 +4791,211 @@ persecución sufrida por Alan Turing.
   * REFERENCIA: 
     - Capitulo 1 en "Randomized Algorithms", de Rajeev Motwani and Prabhakar Raghavan.
 
-**** El poder de un algoritmo aleatorizado: Ejemplos
-     :PROPERTIES:
-     :Effort:   20
-     :END:
-     Nota: Trae los juguetes/cajas de colores, con un tesoro a esconder a dentro.
-     Ejemplos de algoritmos o estructuras de datos aleatorizados
+**** Introduccion a la Aleatorizacion
+***** El poder de un algoritmo aleatorizado: Ejemplos
+      :PROPERTIES:
+      :Effort:   20
+      :END:
+      Nota: Trae los juguetes/cajas de colores, con un tesoro a esconder a dentro.
+      Ejemplos de algoritmos o estructuras de datos aleatorizados
 
-    1. *hidden coin*
+     1. *hidden coin*
 
-       - Decidir si un elemento pertenece en un lista
-	 desordenada de tamano k, o si hay una moneda a dentro
-	 de una de las $k$ caja.
-       - cual son las complejidades determinisitica y
-	 aleatorizada del problema de encontrar *una* moneda,
-	 con $c$ la cantidad de monedas,
-	 - si $c=1$?
-	 - si $c=n-1$?
-	 - si $c=n/2$?
+       	- Decidir si un elemento pertenece en un lista
+	  desordenada de tamano k, o si hay una moneda a dentro
+	  de una de las $k$ caja.
+       	- cual son las complejidades determinisitica y
+	  aleatorizada del problema de encontrar *una* moneda,
+	  con $c$ la cantidad de monedas,
+	  - si $c=1$?
+	  - si $c=n-1$?
+	  - si $c=n/2$?
 
-    2. Respuestas:
+     2. Respuestas:
 
-       - Si una sola instancia de la valor buscada
-	 - $k$ en el peor caso deterministico
-	 - $k/2$ en (promedio y en) el peor caso aleatorio
-	   - con una direccion al azar
-	   - con $\lg(k!)$ bits aleatorios
-       - Si $r$ instancias de la valor buscada
-	 - $k-r$ en el peor caso deterministico
-	 - $O(k/r)$ en (promedio y en) el peor caso aleatorio
+       	- Si una sola instancia de la valor buscada
+	  - $k$ en el peor caso deterministico
+	  - $k/2$ en (promedio y en) el peor caso aleatorio
+	    - con una direccion al azar
+	    - con $\lg(k!)$ bits aleatorios
+       	- Si $r$ instancias de la valor buscada
+	  - $k-r$ en el peor caso deterministico
+	  - $O(k/r)$ en (promedio y en) el peor caso aleatorio
 
-    3. Decidir si un elemento pertenece en una lista ordenadas de
-       tamano $n$
+     3. Decidir si un elemento pertenece en una lista ordenadas de
+       	tamano $n$
 
-       - $\Theta(\lg n)$ comparaciones en ambos casos, deterministico
-         y probabilistico.
+       	- $\Theta(\lg n)$ comparaciones en ambos casos, deterministico
+          y probabilistico.
 
-    4. *problema de union* 
-       
-       - Decidir si un elemento pertenece en una de las $k$ listas
-	 ordenadas de tamano n
-       - Si una sola lista contiene la valor buscada
-	 - $k$ busquedas en el peor caso deterministico, que da
-	   $k\lg(n)$ comparaciones
-	 - $k/2$ busquedas en (promedio y en) el peor caso
-	   aleatorio, que da $k\lg(n)/2$ comparaciones
-       - Si $r<k$ listas contienen la valor buscada
-	 - $k-r$ busquedas en el peor caso deterministico, que dan
-	   $(k-r)\lg(n)$ comparaciones
-	 - $k/r$ busquedas en (promedio y en) el peor caso
-	   aleatorio, que dan $(k/r)\lg(n)$ comparaciones
-       - Si $r=k$ listas contienen la valor buscada
-	 - $k$ busquedas en el peor caso deterministico, en
-	   promedio y en el peor caso aleatorio, que dan $k\lg n$
-	   comparaciones
+     4. *problema de union* 
+       	
+       	- Decidir si un elemento pertenece en una de las $k$ listas
+	  ordenadas de tamano n
+       	- Si una sola lista contiene la valor buscada
+	  - $k$ busquedas en el peor caso deterministico, que da
+	    $k\lg(n)$ comparaciones
+	  - $k/2$ busquedas en (promedio y en) el peor caso
+	    aleatorio, que da $k\lg(n)/2$ comparaciones
+       	- Si $r<k$ listas contienen la valor buscada
+	  - $k-r$ busquedas en el peor caso deterministico, que dan
+	    $(k-r)\lg(n)$ comparaciones
+	  - $k/r$ busquedas en (promedio y en) el peor caso
+	    aleatorio, que dan $(k/r)\lg(n)$ comparaciones
+       	- Si $r=k$ listas contienen la valor buscada
+	  - $k$ busquedas en el peor caso deterministico, en
+	    promedio y en el peor caso aleatorio, que dan $k\lg n$
+	    comparaciones
 
-    5. *problema de interseccion*
+     5. *problema de interseccion*
 
-       - dado $k$ arreglos ordenados de tamano $n$ cada uno, y un
-	 elemento $x$.
-       - cual son las complejidades determinisitica y aleatorizada
-	 del problema de encontrar *un* arreglo que no contiene
-	 $x$ (i.e. mostrar que la interseccion de $\{x\}$ con $\cap A$
-	 es vacilla)? 
-	 - si $c=1$ arreglo contiene $x$?
-	 - si $c=n-1$ arreglos contienen $x$?
-	 - si $c=n/2$ arreglos contienen $x$?
+       	- dado $k$ arreglos ordenados de tamano $n$ cada uno, y un
+	  elemento $x$.
+       	- cual son las complejidades determinisitica y aleatorizada
+	  del problema de encontrar *un* arreglo que no contiene
+	  $x$ (i.e. mostrar que la interseccion de $\{x\}$ con $\cap A$
+	  es vacilla)? 
+	  - si $c=1$ arreglo contiene $x$?
+	  - si $c=n-1$ arreglos contienen $x$?
+	  - si $c=n/2$ arreglos contienen $x$?
 
-	 | $c$   | deterministica | aleatorizada |                   |
-	 |-------+----------------+--------------+-------------------|
-	 | $1$   | $2\lg n$       | $< 2\lg n$   |                   |
-	 | $k-1$ | $k\lg n$       | $< (k-1)\lg n$ |                   |
-	 | $k/2$ | $(k/2+1)\lg n$ | $< 2\lg n$   | HUGE IMPROVEMENT! |
-	 |-------+----------------+--------------+-------------------|
-	 | $c$   | $(c+1)\lg n$   | $<$          |                   |
+	  | $c$   | deterministica | aleatorizada |                   |
+	  |-------+----------------+--------------+-------------------|
+	  | $1$   | $2\lg n$       | $< 2\lg n$   |                   |
+	  | $k-1$ | $k\lg n$       | $< (k-1)\lg n$ |                   |
+	  | $k/2$ | $(k/2+1)\lg n$ | $< 2\lg n$   | HUGE IMPROVEMENT! |
+	  |-------+----------------+--------------+-------------------|
+	  | $c$   | $(c+1)\lg n$   | $<$          |                   |
 
-    6. Eso se puede aplicar a la interseccion de posting lists
-       (Google Queries).
+     6. Eso se puede aplicar a la interseccion de posting lists
+       	(Google Queries).
 
-**** Definiciones
-     :PROPERTIES:
-     :Effort:   30
-     :END:
+***** Definiciones
+      :PROPERTIES:
+      :Effort:   30
+      :END:
 
-       - *Algoritmos deterministico*
-	 - algoritmo que usa solamente instrucciones
-	   *deterministicas*. 
-	 - algoritmo de cual la ejecucion (y, entonces, el
-	   rendimiento) depende solamente del input.
+       	- *Algoritmos deterministico*
+	  - algoritmo que usa solamente instrucciones
+	    *deterministicas*. 
+	  - algoritmo de cual la ejecucion (y, entonces, el
+	    rendimiento) depende solamente del input.
 
-       - *Algoritmos aleatorizados*
-	 - algoritmo que usa una instruccion *aleatorizada*
-	   (potentialemente muchas veces)
-	 - una distribucion de probabilidades sobre una familia de
-	   algoritmos deterministicos.
+       	- *Algoritmos aleatorizados*
+	  - algoritmo que usa una instruccion *aleatorizada*
+	    (potentialemente muchas veces)
+	  - una distribucion de probabilidades sobre una familia de
+	    algoritmos deterministicos.
 
-       - *Analisis probabilistica*
-	 - analysis del rendimiento de un algoritmo, en promedio
-	   sobre
-	   - el aleatorio de la entrada, o 
-	   - el aleatorio del algoritmo, o 
-	   - los dos.
-	 - veamos que son nociones equivalentes.
+       	- *Analisis probabilistica*
+	  - analysis del rendimiento de un algoritmo, en promedio
+	    sobre
+	    - el aleatorio de la entrada, o 
+	    - el aleatorio del algoritmo, o 
+	    - los dos.
+	  - veamos que son nociones equivalentes.
 
-       - Formalizacion
-	     |------------------------+---------------|
-	     | Algoritmos clasicos    | Non clasicos  |
-	     |------------------------+---------------|
-	     | Siempre hacen lo mismo | aleatorizados |
-	     |------------------------+---------------|
-	     | Nunca se equivocan     | Monte Carlo   |
-	     |------------------------+---------------|
-	     | Siempre terminan       | Las Vegas     |
-	     |------------------------+---------------|
+       	- Formalizacion
+	      |------------------------+---------------|
+	      | Algoritmos clasicos    | Non clasicos  |
+	      |------------------------+---------------|
+	      | Siempre hacen lo mismo | aleatorizados |
+	      |------------------------+---------------|
+	      | Nunca se equivocan     | Monte Carlo   |
+	      |------------------------+---------------|
+	      | Siempre terminan       | Las Vegas     |
+	      |------------------------+---------------|
 
-       - Clasificacion de los algoritmos *de decision* aleatorizados
+       	- Clasificacion de los algoritmos *de decision* aleatorizados
 
-	 1. Probabilistico: Monte Carlo
-	    - $P(error) < \epsilon$
-	    - Ejemplo:
-	      - deteccion de cliquas
-	    - Se puede considerar tambien variantes mas fines:
-	      - two-sided error ( => clase de complejidad $BPP$)
-	       	- $P(accept | negative) < \epsilon$
-	       	- $P(refuse | negative) > 1-\epsilon$
-	       	- $P(accept | positive) > 1-\epsilon$
-	       	- $P(refuse | positive) < \epsilon$
-	      - One-sided error
-	       	- $P(accept | negative) < \epsilon$
-	       	- $P(refuse | negative) > 1 -\epsilon$
-	       	- $P(accept | positive) = 1$
-	       	- $P(refuse | positive) = 0$
+	  1. Probabilistico: Monte Carlo
+	     - $P(error) < \epsilon$
+	     - Ejemplo:
+	       - deteccion de cliquas
+	     - Se puede considerar tambien variantes mas fines:
+	       - two-sided error ( => clase de complejidad $BPP$)
+	       	 - $P(accept | negative) < \epsilon$
+	       	 - $P(refuse | negative) > 1-\epsilon$
+	       	 - $P(accept | positive) > 1-\epsilon$
+	       	 - $P(refuse | positive) < \epsilon$
+	       - One-sided error
+	       	 - $P(accept | negative) < \epsilon$
+	       	 - $P(refuse | negative) > 1 -\epsilon$
+	       	 - $P(accept | positive) = 1$
+	       	 - $P(refuse | positive) = 0$
 
-	 2. Probabilistico: Las Vegas
-	    - Tiempo es una variable aleatoria
-	    - Ejemplos: 
-	      - determinar primalidad [Miller Robin] (one sided error)
-	      - busqueda en arreglo desordenado 
-	      - etc...
+	  2. Probabilistico: Las Vegas
+	     - Tiempo es una variable aleatoria
+	     - Ejemplos: 
+	       - determinar primalidad [Miller Robin] (one sided error)
+	       - busqueda en arreglo desordenado 
+	       - etc...
+
+       	- Relacion
+	  - Si se puede verificar el resultado en tiempo razonable,
+	    Monte Carlos iterado hasta correcto, genera Las Vegas
+
+***** Complejidad de un algoritmo aleatorizado
+      :PROPERTIES:
+      :Effort:   10
+      :END:
+
+       	* Considera algoritmos con comparaciones
+	  - algoritmos deterministicos se pueden ver como arboles de
+	    decision.
+	  - algoritmos aleatorios se pueden ver (de manera
+	    intercambiable) como
+	    - una distribucion sobre los arboles de decision,
+	    - un arbol de decision con algunos nodos "aleatorios".
+
+	  - La complejidad en una instancia de un algoritmo aleatorio
+	    es el promedio de la complejidad (en este instancia) de
+	    los algoritmos deterministicos que le compasan:
+
+	    $C((A_r)_r,I) = E_r( C(A_r,I) )$
+
+	  - La complejidad en el peor caso de un algoritmo aleatorio
+	    es el peor caso del promedio de la complejidad de los
+	    algoritmos deterministicos que le composan:
+
+	    $C((A_r)_r) = \max_I C((A_r)_r,I) =  \max_I  E_r( C(A_r,I) )$
 
 
-       - Relacion
-	 - Si se puede verificar el resultado en tiempo razonable,
-	   Monte Carlos iterado hasta correcto, genera Las Vegas
+**** Applicacion de la Aleatorizacion
+***** Aleatorizacion de la entrada
+      :PROPERTIES:
+      :Effort:   10
+      :END:
 
-**** Aleatorizacion de la entrada
-     :PROPERTIES:
-     :Effort:   10
-     :END:
+      * Independencia de la distribucion  de la entrada
 
-     * Independencia de la distribucion  de la entrada
+       	- Si el input sigue una distribucion non-conocida, el input
+	  perturbado tiene una distribucion conocida (para una
+	  perturbacion bien elegida)
 
-       - Si el input sigue una distribucion non-conocida, el input
-	 perturbado tiene una distribucion conocida (para una
-	 perturbacion bien elegida)
+       	- Ejemplo:
+	  - flip $b$ de una bit con probabilidad $p$ que puede ser
+	    distinta de $1/2$.
+	  - suma-lo modulo 1 con un otro bit aleatorizado, con
+	    probabilidad $1/2$ de ser uno.
+	  - la suma es igual a uno con probabilidad $1/2$.
 
-       - Ejemplo:
-	 - flip $b$ de una bit con probabilidad $p$ que puede ser
-	   distinta de $1/2$.
-	 - suma-lo modulo 1 con un otro bit aleatorizado, con
-	   probabilidad $1/2$ de ser uno.
-	 - la suma es igual a uno con probabilidad $1/2$.
+      * Estructuras de datos aleatorizadas
 
-     * Estructuras de datos aleatorizadas
+	 - *funciones de hash*: estructura de datos aleatorizada, donde
+           $(a,b)$ son elegidos al azar.
 
-	- *funciones de hash*: estructura de datos aleatorizada, donde
-          $(a,b)$ son elegidos al azar.
+	 - *arboles aleatorizados*
 
-	- *arboles aleatorizados*
-
-	- *skiplists*: estructura de datos aleatorizada, que simula en
-          promedio un arbol binario
+	 - *skiplists*: estructura de datos aleatorizada, que simula en
+           promedio un arbol binario
 
 ***** SkipLists (Ya vista en CC3001!)
       :LOGBOOK:
       - State "DONE"       from ""           [2010-10-07 Thu 10:54]
+      :END:
+      :PROPERTIES:
+      :Effort:  
       :END:
 
      1) Estructuras de datos para diccionarios
@@ -4982,7 +5012,7 @@ persecución sufrida por Alan Turing.
 
      2) Skip Lists
 
-	1. Motivacion
+       	1. Motivacion
 	   - un arbol binario con entradas aleatorizadas tienen una
 	     altura $O(\lg n)$, pero eso supone un orden de input
 	     aleatorizados.
@@ -4991,7 +5021,7 @@ persecución sufrida por Alan Turing.
 	   - tambien, es el equivalente de una busqueda binaria en
 	     listas via un resumen de resumen de resumen...
 
-	2. Definicion 
+       	2. Definicion 
 	   
 	   - una skip-list de altura $h$ para un diccionario $D$ de
 	     $n$ elementos es una familia de lists $S_0,\ldots,S_h$ y
@@ -5010,7 +5040,7 @@ persecución sufrida por Alan Turing.
 	   - la informacion del diccionario estan solamente en $S_0$ (no
 	     se duplica)
 
-	3. Ejemplo
+       	3. Ejemplo
 
 	 | 4 | X       | -  | -  | -  | -  | -  | -  | >  | X      |
 	 | 3 | X       | -  | >  | X  | -  | -  | -  | >  | X      |
@@ -5020,7 +5050,7 @@ persecución sufrida por Alan Turing.
 	 |---+---------+----+----+----+----+----+----+----+--------|
 	 |   | $-\infty$ | 10 | 20 | 30 | 40 | 50 | 60 | 70 | $\infty$ |
 
-	4. Operaciones
+       	4. Operaciones
 
 	   * Search(x): 
 	     - Start a the first element of $S_h$
@@ -5031,49 +5061,49 @@ persecución sufrida por Alan Turing.
 	   * Insert(x)
 	     - Search(x)
 	     - create a tower of random height ($p=1/2$ to increase
-               height, typically)
+	       height, typically)
 	     - insert it in all the lists it cuts.
 
 	   * Delete(x)
 	     - Search(x)
 	     - remove tower from all lists.
 
-	5. Ejemplos 
+       	5. Ejemplos 
 
 	   * Insert(55) con secuencia aleatora (1,0)
 
-         | 4 | X         | -  | -  | -  | -  | -    | -    | -  | > | X        |
-         | 3 | X         | -  | > | X  | -  | -    | -    | -  | > | X        |
-         | 2 | X         | -  | > | X  | X  | -    | >   | X  | > | X        |
-         | 1 | X         | X  | > | X  | X  | *>* | *X*  | X  | > | X        |
-         | 0 | X         | X  | X  | X  | X  | X    | *X*  | X  | X  | X        |
-         |---+-----------+----+----+----+----+------+------+----+----+----------|
-         |   | $-\infty$ | 10 | 20 | 30 | 40 | 50   | *55* | 60 | 70 | $\infty$ |
+	 | 4 | X         | -  | -  | -  | -  | -    | -    | -  | > | X        |
+	 | 3 | X         | -  | > | X  | -  | -    | -    | -  | > | X        |
+	 | 2 | X         | -  | > | X  | X  | -    | >   | X  | > | X        |
+	 | 1 | X         | X  | > | X  | X  | *>* | *X*  | X  | > | X        |
+	 | 0 | X         | X  | X  | X  | X  | X    | *X*  | X  | X  | X        |
+	 |---+-----------+----+----+----+----+------+------+----+----+----------|
+	 |   | $-\infty$ | 10 | 20 | 30 | 40 | 50   | *55* | 60 | 70 | $\infty$ |
 
 	   * Insert(25) con (1,1,1,1,0)
 
-         | 5 | *X*       | -  | -    | -    | -  | -  | -  | -  | -  | *>* | *X*      |
-         | 4 | X         | -  | *>* | *X*  | -  | -  | -  | -  | -  | >   | X        |
-         | 3 | X         | -  | *>* | *X*  | X  | -  | -  | -  | -  | >   | X        |
-         | 2 | X         | -  | *>* | *X*  | X  | X  | -  | > | X  | >   | X        |
-         | 1 | X         | X  | *>* | *X*  | X  | X  | > | X  | X  | >   | X        |
-         | 0 | X         | X  | X    | *X*  | X  | X  | X  | X  | X  | X    | X        |
-         |---+-----------+----+------+------+----+----+----+----+----+------+----------|
-         |   | $-\infty$ | 10 | 20   | *25* | 30 | 40 | 50 | 55 | 60 | 70   | $\infty$ |
+	 | 5 | *X*       | -  | -    | -    | -  | -  | -  | -  | -  | *>* | *X*      |
+	 | 4 | X         | -  | *>* | *X*  | -  | -  | -  | -  | -  | >   | X        |
+	 | 3 | X         | -  | *>* | *X*  | X  | -  | -  | -  | -  | >   | X        |
+	 | 2 | X         | -  | *>* | *X*  | X  | X  | -  | > | X  | >   | X        |
+	 | 1 | X         | X  | *>* | *X*  | X  | X  | > | X  | X  | >   | X        |
+	 | 0 | X         | X  | X    | *X*  | X  | X  | X  | X  | X  | X    | X        |
+	 |---+-----------+----+------+------+----+----+----+----+----+------+----------|
+	 |   | $-\infty$ | 10 | 20   | *25* | 30 | 40 | 50 | 55 | 60 | 70   | $\infty$ |
 
 	   * Delete(60) 
 
 
-         | 5 | X         | -  | -  | -  | -  | -  | -  | -  | >   | X        |
-         | 4 | X         | -  | > | X  | -  | -  | -  | -  | >   | X        |
-         | 3 | X         | -  | > | X  | X  | -  | -  | -  | >   | X        |
-         | 2 | X         | -  | > | X  | X  | X  | -  | -  | *>* | X        |
-         | 1 | X         | X  | > | X  | X  | X  | > | X  | >   | X        |
-         | 0 | X         | X  | X  | X  | X  | X  | X  | X  | X    | X        |
-         |---+-----------+----+----+----+----+----+----+----+------+----------|
-         |   | $-\infty$ | 10 | 20 | 25 | 30 | 40 | 50 | 55 | 70   | $\infty$ |
+	 | 5 | X         | -  | -  | -  | -  | -  | -  | -  | >   | X        |
+	 | 4 | X         | -  | > | X  | -  | -  | -  | -  | >   | X        |
+	 | 3 | X         | -  | > | X  | X  | -  | -  | -  | >   | X        |
+	 | 2 | X         | -  | > | X  | X  | X  | -  | -  | *>* | X        |
+	 | 1 | X         | X  | > | X  | X  | X  | > | X  | >   | X        |
+	 | 0 | X         | X  | X  | X  | X  | X  | X  | X  | X    | X        |
+	 |---+-----------+----+----+----+----+----+----+----+------+----------|
+	 |   | $-\infty$ | 10 | 20 | 25 | 30 | 40 | 50 | 55 | 70   | $\infty$ |
 
-	6. Analisis
+       	6. Analisis
 
 	   * Espacio: Cuanto nodos en promedio?
 	     - cuanto nodos en lista S_i?
@@ -5139,11 +5169,11 @@ persecución sufrida por Alan Turing.
 ****** Comparacion de los Tipos de adversarios.
 
       - Por las definiciones, es claro que 
-	- el adversario offline adaptativo 
+       	- el adversario offline adaptativo 
 	  - es mas poderoso que
-	- el adversario online adaptativo
+       	- el adversario online adaptativo
 	  - es mas poderoso que
-	- el adversario oblivious
+       	- el adversario oblivious
 
 ****** Competitiva Ratios
 
@@ -5172,6 +5202,9 @@ persecución sufrida por Alan Turing.
       :LOGBOOK:
       - State "DONE"       from ""           [2010-10-07 Thu 10:53]
       :END:
+      :PROPERTIES:
+      :Effort:   10
+      :END:
    - Conrado Martinez. Randomized binary search trees. Algorithms
      Seminar. Universitat Politecnica de Catalunya, Spain, 1996.
 
@@ -5180,123 +5213,163 @@ persecución sufrida por Alan Turing.
 
    - http://en.wikipedia.org/wiki/Treap, seccion
      "Randomized_binary_search_tree".		   
-**** *Relacion con Problemas NP-Dificiles*
+***** *Relacion con Problemas NP-Dificiles*
 
-     :PROPERTIES:
-     :Effort:   10
-     :END:
-     * Ejemplos de Problemas NP-Dificiles
+      :PROPERTIES:
+      :Effort:   10
+      :END:
+      * Ejemplos de Problemas NP-Dificiles
 
-	 1. *Maxcut*
-	    - dado un grafe $G=(V,E)$
-	    - encontrar una partition $(L,R)$ tq $L\cup R=V$ y que
-	      *maximiza* la cantidad de aristas entre $L$ y $R$
-	    - el problema es NP dificil
-	    - se aproxima con un factor de dos con un algoritmo
-	      aleatorizado en tiempo polinomial.
-	    
-	 2. *mincut*
-	    - dado un grafe $G=(V,E)$
-	    - encontrar una partition $(L,R)$ tq $L\cup R=V$ y que
-	      minimiza la cantidad de aristas entre $L$ y $R$
-	    - el problema es NP dificil
+	  1. *Maxcut*
+	     - dado un grafe $G=(V,E)$
+	     - encontrar una partition $(L,R)$ tq $L\cup R=V$ y que
+	       *maximiza* la cantidad de aristas entre $L$ y $R$
+	     - el problema es NP dificil
+	     - se aproxima con un factor de dos con un algoritmo
+	       aleatorizado en tiempo polinomial.
+	     
+	  2. *mincut*
+	     - dado un grafe $G=(V,E)$
+	     - encontrar una partition $(L,R)$ tq $L\cup R=V$ y que
+	       minimiza la cantidad de aristas entre $L$ y $R$
+	     - el problema es NP dificil
 
-     * Relacion con la nocion de NP:
+      * Relacion con la nocion de NP:
 
-       - El arbol representando la ejecucion de un algoritmo
-	 non-deterministico en tiempo polynomial (i.e. NP) se
-	 decomposa en dos partes, de altura polynomial $p(n)$:
-	 - una parte de *decisiones* non-deterministica (fan-out)
-	 - una parte de *verificacion* deterministica (straight)
-       - Si una solamente de las $2^{p(n)}$ soluciones corresponde a
-         una solucion valida del problema, la aleatorizacion no ayuda,
-         pero si una proporcion constante (e.g. $1/2,1/3,1/4,...$) de
-         las ramas corresponden a una solucion correcta, existe un
-         algoritmo aleatorizado que resuelve el problema NP-dificil en
-         tiempo polynomial *en promedio*.
-
-
-
-
-**** Complejidad de un algoritmo aleatorizado
-     :PROPERTIES:
-     :Effort:   10
-     :END:
-
-       * Considera algoritmos con comparaciones
-	 - algoritmos deterministicos se pueden ver como arboles de
-	   decision.
-	 - algoritmos aleatorios se pueden ver (de manera
-	   intercambiable) como
-	   - una distribucion sobre los arboles de decision,
-	   - un arbol de decision con algunos nodos "aleatorios".
-
-	 - La complejidad en una instancia de un algoritmo aleatorio
-	   es el promedio de la complejidad (en este instancia) de
-	   los algoritmos deterministicos que le compasan:
-
-	   $C((A_r)_r,I) = E_r( C(A_r,I) )$
-
-	 - La complejidad en el peor caso de un algoritmo aleatorio
-	   es el peor caso del promedio de la complejidad de los
-	   algoritmos deterministicos que le composan:
-
-	   $C((A_r)_r) = \max_I C((A_r)_r,I) =  \max_I  E_r( C(A_r,I) )$
+       	- El arbol representando la ejecucion de un algoritmo
+	  non-deterministico en tiempo polynomial (i.e. NP) se
+	  decomposa en dos partes, de altura polynomial $p(n)$:
+	  - una parte de *decisiones* non-deterministica (fan-out)
+	  - una parte de *verificacion* deterministica (straight)
+       	- Si una solamente de las $2^{p(n)}$ soluciones corresponde a
+          una solucion valida del problema, la aleatorizacion no ayuda,
+          pero si una proporcion constante (e.g. $1/2,1/3,1/4,...$) de
+          las ramas corresponden a una solucion correcta, existe un
+          algoritmo aleatorizado que resuelve el problema NP-dificil en
+          tiempo polynomial *en promedio*.
 
 **** Complejidad Probabilistica: cotas inferiores
      :LOGBOOK:
      - State "DONE"       from ""           [2010-10-07 Thu 10:53]
      :END:
      :PROPERTIES:
-     :Effort:   60
+     :Effort:   90:00
      :END:
- * REFERENCIA: 
+
+REFERENCIA: 
    - Capitulo 1 en "Randomized Algorithms", de Rajeev Motwani and Prabhakar Raghavan.
 
-  1) Problema
+***** Introduccion
+      :PROPERTIES:
+      :Effort:   10
+      :END:
 
-      - Strategia de adversario no funciona
+     + Resultado Principal
+       - El *peor caso* de un *algoritmo aleatorio*
+       - corresponde a
+       - la *peor distribucion* para un *algoritmo deterministico*.
+  
+     + Diferencia con cotas inferiores deterministicas
 
-      - En algunos casos, teoria de codigos es suficiente
-        (e.g. busqueda en arreglo ordenado). Eso es una cota inferior
-        sobre el tamano del certificado.
+       1. Strategia de adversario no funciona
 
-      - En otros caso, teoria de codigos no es suficiente.  En
-        particular, cuando el precio para verificar un certificado es
-        mas pequeno que de encontrarlo. En estos casos, utilizamos
-        otras tecnicas:
+       2. En algunos casos, teoria de codigos es suficiente
+          (e.g. busqueda en arreglo ordenado). Eso es una cota inferior
+          sobre el tamano del certificado.
+
+       3. En otros caso, teoria de codigos no es suficiente.  En
+          particular, cuando el precio para verificar un certificado es
+          mas pequeno que de encontrarlo. En estos casos, utilizamos
+          otras tecnicas:
 	  - teoria de juegos (que vamos a ver) y equilibro de Nash
 	  - cotas sobre la comunicacion en un sistema de "Interactive
             Proof"
 
-  2) Algunas Notaciones Algebraicas
+***** Prueba
+****** Notaciones Algebraicas
+       :PROPERTIES:
+       :Effort:   10
+       :END:
 
-     Sea:
+      Sea:
 
-     - $A$ una familia de $n_a$ algoritmos deterministicos
-     - $a$ un vector $(0,...,0,1,0,...,0)$ de dimension $n_a$
-     - $\alpha$ una distribucion de probabilidad de dimension $n_a$
+      - $A$ una familia de $n_a$ algoritmos deterministicos
+      - $a$ un vector $(0,...,0,1,0,...,0)$ de dimension $n_a$
+      - $\alpha$ una distribucion de probabilidad de dimension $n_a$
 
-     - $B$ una familia de $n_n$ instancias
-     - $b$ un vector $(0,...,0,1,0,...,0)$ de dimension $n_b$
-     - $\beta$ una distribucion de probabilidad de dimension $n_b$
+      - $B$ una familia de $n_n$ instancias
+      - $b$ un vector $(0,...,0,1,0,...,0)$ de dimension $n_b$
+      - $\beta$ una distribucion de probabilidad de dimension $n_b$
 
-     - $M$ una matriz de dimension $n_a\times n_b$ tal que M_{a,b}
-       es el costo del algoritmo $a$ sobre la instancia $b$.
-       Por definicion,
-       - $a^t M b = M_{a,b}$
-       - $\alpha^t M b$ es la complejidad en promedio (sobre el
-	 aleatorio del algoritmo $\alpha$) de $\alpha$ sobre $b$
-       - $a^t M \beta$ es la complejidad en promedio (sobre la
-	 distribucion de instancias $\beta$) de a sobre \beta
-       - \alpha^t M \beta es la complejidad en promedio del
-	 algoritmo aleatorizados $\alpha$ sobre la distribucion de
-	 instancia $\beta$.
+      - $M$ una matriz de dimension $n_a\times n_b$ tal que M_{a,b}
+       	es el costo del algoritmo $a$ sobre la instancia $b$.
+       	Por definicion,
+       	- $a^t M b = M_{a,b}$
+       	- $\alpha^t M b$ es la complejidad en promedio (sobre el
+	  aleatorio del algoritmo $\alpha$) de $\alpha$ sobre $b$
+       	- $a^t M \beta$ es la complejidad en promedio (sobre la
+	  distribucion de instancias $\beta$) de a sobre \beta
+       	- \alpha^t M \beta es la complejidad en promedio del
+	  algoritmo aleatorizados $\alpha$ sobre la distribucion de
+	  instancia $\beta$.
 
+****** Promedio de instancias vs de algoritmo: teorema de von Neuman
+       :PROPERTIES:
+       :Effort:   10
+       :END:
 
-  3) von Neuman's theorem: infsup = supinf = minmax = maxmin
+      1. Teorema de von Neuman: 
 
-     1. OPCIONAL Existencia de $\tilde{\alpha}$ et $\tilde{\beta}$ 
+	 - Dado un juego $\Gamma$ definido por la matrica  $M$~:
+
+	   - $\min_\alpha \max_\beta  \alpha ^T M \beta$ 
+	   - $=$
+	   - $\max_\beta  \min_\alpha \alpha ^T M \beta$
+
+         - o, de manera corta:
+
+	   - infsup = supinf = minmax = maxmin
+
+	 - o, en castellano:
+
+	   - tomar
+	     - el mejor algoritmo aleatorizado
+	       - por la complejidad en promedio sobre la peor distribucion para cada algoritmo
+	   - es equivalente a tomar
+	     - una peor distribucion de instancias
+	       - y elegir el mejor algoritmo para esta distribucion
+	   
+      2. Interpretacion:
+
+	 + Este resultado significa que si consideramos ambos
+	   distribuciones sobre algoritmos y instancias, no
+	   importa el orden del max o min:
+	   - podemos elegir el mejor algoritmo (i.e. minimizar
+	     sobre los algoritmos aleatorizados) y despues
+	     elegir la peor distribucion de instancias para el
+	     (i.e. maximizar sobre las distribuciones de
+	     instancias), o al reves
+	   - podemos elegir la peor distribucion de instancias
+	     (i.e. maximizar sobre las distribuciones de
+	     instancias), y considerar el mejor algoritmo
+	     (i.e. minimizar sobre los algoritmos
+	     aleatorizados) para este distribucion.
+
+	 + ATENCION!!!!  Veamos que 
+	   - El promedio (sobre las instancias) de las
+	     complejidades (de los algoritmos) en el peor caso
+	   - no es igual 
+	   - al peor caso (sobre las instancias) de la complejidad
+	     en promedio (sobre el aleatorio del algoritmo)
+	   - donde el segundo termo es realmente la complejidad de
+	     un algoritmo aleatorizados.
+
+	 + Todavia falta la relacion con la complejidad en el
+	   peor caso $b$ de un algoritmo aleatorizados $\alpha$:
+
+	   $$\max_b  \min_\alpha \alpha^T M b$$
+
+******* OPCIONAL Existencia de $\tilde{\alpha}$ et $\tilde{\beta}$
 
 	Dado  $\phi$ y $\psi$ definidas sobre $\mathcal{R}^m$ y $\mathcal{R}^n$ por
 	$$\phi(\alpha) = \sup_\beta \alpha ^T M \beta 
@@ -5304,265 +5377,281 @@ persecución sufrida por Alan Turing.
 	\psi(\beta)  = \inf_\alpha \alpha ^T M \beta$$
 	Entonces:
 
-	- $\phi(\alpha) = \max_\beta \alpha ^T M \beta$ 
-	- $\psi(\beta)  = \min_\alpha \alpha ^T M \beta$
-	- hay estrategias mixtas  
-	  - $\tilde{\alpha}$ por $A$
-	  - $\tilde{\beta}$ por $B$ 
-	- tal que 
-	  - $\phi$ es a su minima  en $\tilde{\alpha}$ y
-	  - $\psi$ es a su maxima en $\tilde{\beta}$.
+	 - $\phi(\alpha) = \max_\beta \alpha ^T M \beta$ 
+	 - $\psi(\beta)  = \min_\alpha \alpha ^T M \beta$
+	 - hay estrategias mixtas  
+	   - $\tilde{\alpha}$ por $A$
+	   - $\tilde{\beta}$ por $B$ 
+	 - tal que 
+	   - $\phi$ es a su minima  en $\tilde{\alpha}$ y
+	   - $\psi$ es a su maxima en $\tilde{\beta}$.
 
-     2. Resultado de von Neuman: 
+****** Applicacion a cotas inferiores: Lema de Loomis
+       :PROPERTIES:
+       :Effort:   10
+       :END: 
 
-	Dado un juego $\Gamma$ definido por la matrica  $M$~:
-	$$
-	\min_\alpha \max_\beta  \alpha ^T M \beta 
-	=
-	\max_\beta  \min_\alpha \alpha ^T M \beta 
-	$$
+      * Dado una estrategia aleatoria $\alpha$, emite una instancia
+       	$b$ tal que $\alpha$ es tan mal en $b$ que en el
+       	peor $\beta$.
 
-     3. Interpretacion:
+       	$$
+       	\forall \alpha \exists b,
+       	\max_\beta \alpha^T M \beta = \alpha^T M b
+       	$$
 
-	+ Este resultado significa que si consideramos ambos
-	  distribuciones sobre algoritmos y instancias, no
-	  importa el orden del max o min:
-	     - podemos elegir el mejor algoritmo (i.e. minimizar
-	       sobre los algoritmos aleatorizados) y despues
-	       elegir la peor distribucion de instancias para el
-	       (i.e. maximizar sobre las distribuciones de
-	       instancias), o al reves
-	     - podemos elegir la peor distribucion de instancias
-	       (i.e. maximizar sobre las distribuciones de
-	       instancias), y considerar el mejor algoritmo
-	       (i.e. minimizar sobre los algoritmos
-	       aleatorizados) para este distribucion.
-	+ ATENCION!!!!  Veamos que 
-	  - El promedio (sobre las instancias) de las
-	    complejidades (de los algoritmos) en el peor caso
-	  - no es igual 
-	  - al peor caso (sobre las instancias) de la complejidad
-	    en promedio (sobre el aleatorio del algoritmo)
-	  - donde el segundo termo es realmente la complejidad de
-	    un algoritmo aleatorizados.
+      * Dado una distribucion de instancias $\beta$, existe un
+       	algoritmo deterministico $a$ tal que $a$ es tan
+       	bien que el mejor algoritmo aleatorizados $\alpha$ sobre
+       	la distribucion de instancias $\beta$:
 
-	+ Todavia falta la relacion con la complejidad en el
-	  peor caso $b$ de un algoritmo aleatorizados $\alpha$:
+       	$$
+       	\forall \beta \exists a,
+       	\min_\alpha \alpha^T M \beta = a^T M \beta
+       	$$
 
-	  $$\max_b  \min_\alpha \alpha ^T M b$$
+      * Interpretacion:
 
+       	+ En frente a una distribucion de instancias especifica,
+	  siempre existe un algoritmo deterministico optima en
+	  comparacion con los algoritmos aleatorizados (que
+	  incluen los deterministicos).
 
-  4) Lema de Loomis 
+       	+ En frente a un algoritmo aleatorizados, siempre existe
+	  una instan ca tan mal que la pero distribucion de
+	  instancias.
 
-     * Dado una estrategia aleatoria $\alpha$, emite una instancia
-       $b$ tal que $\alpha$ es tan mal en $b$ que en el
-       peor $\beta$.
+****** Applicacion a cotas inferiores: Principe de Yao
+       :PROPERTIES:
+       :Effort:   10
+       :END:
 
-       $$
-       \forall \alpha \exists b,
-       \max_\beta \alpha^T M \beta = \alpha^T M b
-       $$
+      * Del leima de Loomis podemos concluir que 
 
-     * Dado una distribucion de instancias $\beta$, existe un
-       algoritmo deterministico $a$ tal que $a$ es tan
-       bien que el mejor algoritmo aleatorizados $\alpha$ sobre
-       la distribucion de instancias $\beta$:
+       	$$
+       	\max_\beta \alpha^T M \beta = \max_b \alpha^T M b
+       	$$
 
-       $$
-       \forall \beta \exists a,
-       \min_\alpha \alpha^T M \beta = a^T M \beta
-       $$
+       	$$
+       	\min_\alpha \alpha^T M \beta = \min_a a^T M \beta
+       	$$
 
-     * Interpretacion:
+      * Del resultado de von Neuman sabemos que maxmin=minmax
+       	(sobre \alpha y \beta):
 
-       + En frente a una distribucion de instancias especifica,
-	 siempre existe un algoritmo deterministico optima en
-	 comparacion con los algoritmos aleatorizados (que
-	 incluen los deterministicos).
+	 $$
+	 \min_\alpha \max_\beta  \alpha ^T M \beta 
+	 =
+	 \max_\beta  \min_\alpha \alpha ^T M \beta 
+	 $$
 
-       + En frente a un algoritmo aleatorizados, siempre existe
-	 una instan ca tan mal que la pero distribucion de
-	 instancias.
+      * Entonces    
 
-  5) Principe de Yao
+       	$$
+       	\min_alpha \max_b \alpha^T M b
+       	= (Loomis)
+       	\min_\alpha \max_\beta  \alpha ^T M \beta 
+       	= (von Neuman)
+       	\max_\beta  \min_\alpha \alpha ^T M \beta 
+       	= (Loomis)
+       	\max_\beta \min_a a^T M \beta
+       	$$
 
-     * Del leima de Loomis podemos concluir que 
+      * Interpretacion
 
-       $$
-       \max_\beta \alpha^T M \beta = \max_b \alpha^T M b
-       $$
+       | $\min_\alpha$                    | $\max_b$        | $\alpha^T M b$ |
+       |                                  |                 | La complejidad |
+       | del mejor algoritmo aleatorizado |                 |                |
+       |                                  | en el peor caso |                |
 
-       $$
-       \min_\alpha \alpha^T M \beta = \min_a a^T M \beta
-       $$
+       	es igual a 
 
-     * Del resultado de von Neuman sabemos que maxmin=minmax
-       (sobre \alpha y \beta):
-
-	$$
-	\min_\alpha \max_\beta  \alpha ^T M \beta 
-	=
-	\max_\beta  \min_\alpha \alpha ^T M \beta 
-	$$
-
-     * Entonces    
-
-       $$
-       \min_alpha \max_b \alpha^T M b
-       = (Loomis)
-       \min_\alpha \max_\beta  \alpha ^T M \beta 
-       = (von Neuman)
-       \max_\beta  \min_\alpha \alpha ^T M \beta 
-       = (Loomis)
-       \max_\beta \min_a a^T M \beta
-       $$
-
-     * Interpretacion
-
-      | $\min_\alpha$                    | $\max_b$        | $\alpha^T M b$ |
-      |                                  |                 | La complejidad |
-      | del mejor algoritmo aleatorizado |                 |                |
-      |                                  | en el peor caso |                |
-
-       es igual a 
-
-      | $\max_\beta$                             | $\min_a$                           | $\alpha^T M b$ |
-      |                                          |                                    | La complejidad |
-      |                                          | del mejor algoritmo deterministico |                |
-      | sobre la peor distribucion de instancias |                                    |                |
+       | $\max_\beta$                             | $\min_a$                           | $\alpha^T M b$ |
+       |                                          |                                    | La complejidad |
+       |                                          | del mejor algoritmo deterministico |                |
+       | sobre la peor distribucion de instancias |                                    |                |
 
 
-       "El peor caso del mejor algoritmo aleatorizado
-       corresponde a
-       la peor distribucion para el mejor algoritmo deterministico."
+       	"El peor caso del mejor algoritmo aleatorizado
+       	corresponde a
+       	la peor distribucion para el mejor algoritmo deterministico."
 
 
- * Ejemplos de cotas inferiores:
+***** Ejemplos de cotas inferiores:
+      :PROPERTIES:
+      :Effort:   30:00
+      :END:
+****** Busqueda Ordenada
+       :PROPERTIES:
+       :Effort:   10
+       :END:
+       - Considera el problema de 
+	 - Decidir si un elemento pertenece en una lista ordenadas de tamano $n$
 
-   1. Decidir si un elemento pertenece en una lista ordenadas de tamano $n$
+       - Cual es el peor caso $b$ de un algoritmo aleatorizado $\alpha$?
 
-      - Cual es el peor caso $b$ de un algoritmo aleatorizado $\alpha$?
-      - Buscamos una distribucion $\beta_0$ que es mala para todos
-	los algoritmos deterministicos $a$ (del modelo de comparaciones)
-      - Consideramos la distribucion uniforma.
-      - Cada algoritmo deterministico se puede representar como un
-	arbol de decision (binario) con $2n+1$ hojas.
+       - Buscamos una distribucion $\beta_0$ que es mala para todos
+	 los algoritmos deterministicos $a$ (del modelo de comparaciones)
+	 - Consideramos la distribucion uniforma.
+	 - Cada algoritmo deterministico se puede representar como un
+           arbol de decision (binario) con $2n+1$ hojas.
 
-      - Ya utilizamos para la cota inferior deterministica que la
-	altura de un tal arbol es al menos $\lg(2n+1)\in\Omega(\lg
-	n)$. Esta propiedad se muestra por recurrencia.
-      - De manera similar, se puede mostrar por recurrencia que la
-	altura en promedio de un tal arbol binario es al menos
-	$\lg(2n+1)\in\Omega(\lg n)$.
+	 - Ya utilizamos para la cota inferior deterministica que la
+           altura de un tal arbol es al menos $\lg(2n+1)\in\Omega(\lg
+           n)$. Esta propiedad se muestra por recurrencia.
+	 - De manera similar, se puede mostrar por recurrencia que la
+           altura en promedio de un tal arbol binario es al menos
+           $\lg(2n+1)\in\Omega(\lg n)$.
 
-      - Entonces, la complejidad promedio de cada algoritmo
-	deterministico $a$ sobre $\beta_0$ es al menos
-	$\lg(2n+1)\in\Omega(\lg n)$.
+       - Entonces, la complejidad promedio de cada algoritmo
+         deterministico $a$ sobre $\beta_0$ es al menos
+         $\lg(2n+1)\in\Omega(\lg n)$.
 
-      - Entonces, utilizando el principie de Yao, la complejidad en
-	el peor caso de un algoritmo aleatorizado en el modelo de
-	comparaciones es al menos $\lg(2n+1)\in\Omega(\lg n)$.
+       - Entonces, utilizando el principie de Yao, la complejidad en
+	 el peor caso de un algoritmo aleatorizado en el modelo de
+	 comparaciones es al menos $\lg(2n+1)\in\Omega(\lg n)$.
 
-      - El corolario interesante, es que el algoritmo
-	deterministico de busqueda binaria es *oprima* a dentro de
-	la clase mas general de algoritmos aleatorizados.
+       - Un corolario interesante, es que
+	 - el *algoritmo deterministico* de busqueda binaria
+	 - es *optima*
+	 - a dentro los *algoritmos aleatorizados*.
 
-   2. Decidir si un elemento pertenece en un lista desordenada de tamano k
-      * Si una sola instancia de la valor buscada ($r=1$)
-	* Cotas superiores
-	  - $k$ en el peor caso deterministico
-	  - $(k+1)/2$ en el peor caso aleatorio
-	    - con una direccion al azar
-	    - con $\lg(k!)$ bits aleatorios
-	* Cota inferior
-	  - Buscamos una distribucion $\beta_0$ que es mala para
-	    todos los algoritmos deterministicos $a$ (en el modelo de
-	    comparaciones).
-	  - Consideramos la distribucion uniforma (cada algoritmo
-	    reordena la instancia a su gusto, de toda manera,
-	    entonces solamente la distribucion uniforma tiene
-	    sentido): cada posicion es elegida con probabilidad $1/k$
-	  - Se puede considerar solamente los algoritmos que no
-	    consideran mas que una ves cada posicion, y que
-	    consideran todas las posiciones en el peor caso:
-	    entonces cada algoritmo puede ser representado por una
-	    permutacion sobre $k$.
+****** Busqueda Desordenada
+       :PROPERTIES:
+       :Effort:   10
+       :END:
+       Decidir si un elemento pertenece en un lista desordenada de tamano k
 
-	  - Dado un algoritmo deterministico $a$, para cada
-	    $i\in[1,k]$, hay una instancia sobre cual el performe
-	    $i$ comparaciones. Entonces, su complejidad en promedio
-	    en este instancia es $\sum_i i/k$, que es $k(k+1)/2k =
-	    (k+1)/2$. Como eso es verdad para todos los algoritmos
-	    deterministicos, es verdad para el mejor de ellos
-	    tambien.
+       * Si una sola instancia de la valor buscada ($r=1$)
+	 * Cotas superiores
+	   - $k$ en el peor caso deterministico
+	   - $(k+1)/2$ en el peor caso aleatorio
+	     - con una direccion al azar
+	     - con $\lg(k!)$ bits aleatorios
+	 * Cota inferior
+	   - Buscamos una distribucion $\beta_0$ que es mala para
+	     todos los algoritmos deterministicos $a$ (en el modelo de
+	     comparaciones).
+	   - Consideramos la distribucion uniforma (cada algoritmo
+	     reordena la instancia a su gusto, de toda manera,
+	     entonces solamente la distribucion uniforma tiene
+	     sentido): cada posicion es elegida con probabilidad $1/k$
+	   - Se puede considerar solamente los algoritmos que no
+	     consideran mas que una ves cada posicion, y que
+	     consideran todas las posiciones en el peor caso:
+	     entonces cada algoritmo puede ser representado por una
+	     permutacion sobre $k$.
 
-	  - Entonces, utilizando el principio de Yao, la complejidad
-	    en el peor caso de un algoritmo aleatorizado en el
-	    modelo de comparaciones es al menos $(k+1)/2$.
+	   - Dado un algoritmo deterministico $a$, para cada
+	     $i\in[1,k]$, hay una instancia sobre cual el performe
+	     $i$ comparaciones. Entonces, su complejidad en promedio
+	     en este instancia es $\sum_i i/k$, que es $k(k+1)/2k =
+	     (k+1)/2$. Como eso es verdad para todos los algoritmos
+	     deterministicos, es verdad para el mejor de ellos
+	     tambien.
 
-      * Si $r$ instancias de la valor buscada
-	* Cotas superiores
-	  - $k-r$ en el peor caso deterministico
-	  - $O(k/r)$ en (promedio y en) el peor caso aleatorio
-	* Cota inferior
-	  - Buscamos una distribucion $\beta_0$ que es mala para
-	    todos los algoritmos deterministicos $a$ (en el modelo de
-	    comparaciones).
-	  - Consideramos la distribucion uniforma (cada algoritmo
-	    reordena la instancia a su gusto, de toda manera,
-	    entonces solamente la distribucion uniforma tiene
-	    sentido): cada posicion es elegida con probabilidad $1/k$
-	  - Se puede considerar solamente los algoritmos que no
-	    consideran mas que una ves cada posicion. 
-	  - De verdad, no algoritmo tiene de considerar mas
-	    posiciones que $k-r+1$, entonces hay menos algoritmos
-	    que de permutaciones sobre $k$ elementos. Para
-	    simplificar la prueba, podemos exigir que los algoritmos
-	    especifican una permutacion entera, pero no vamos a
-	    contar las comparaciones despues que un de las $r$
-	    valores fue encontrada.
+	   - Entonces, utilizando el principio de Yao, la complejidad
+	     en el peor caso de un algoritmo aleatorizado en el
+	     modelo de comparaciones es al menos $(k+1)/2$.
 
+       * Si $r$ instancias de la valor buscada
+	 * Cotas superiores
+	   - $k-r$ en el peor caso deterministico
+	   - $O(k/r)$ en (promedio y en) el peor caso aleatorio
+	 * Cota inferior
+	   - Buscamos una distribucion $\beta_0$ que es mala para
+	     todos los algoritmos deterministicos $a$ (en el modelo de
+	     comparaciones).
+	   - Consideramos la distribucion uniforma (cada algoritmo
+	     reordena la instancia a su gusto, de toda manera,
+	     entonces solamente la distribucion uniforma tiene
+	     sentido): cada posicion es elegida con probabilidad $1/k$
+	   - Se puede considerar solamente los algoritmos que no
+	     consideran mas que una ves cada posicion. 
+	   - De verdad, no algoritmo tiene de considerar mas
+	     posiciones que $k-r+1$, entonces hay menos algoritmos
+	     que de permutaciones sobre $k$ elementos. Para
+	     simplificar la prueba, podemos exigir que los algoritmos
+	     especifican una permutacion entera, pero no vamos a
+	     contar las comparaciones despues que un de las $r$
+	     valores fue encontrada.
 
+****** Interseccion Elemental de arreglos ordenados
+       :PROPERTIES:
+       :Effort:   10
+       :END:
 
-   3. Decidir si un elemento pertenece en k listas ordenadas de tamano $n/k$
-      * Cotas superiores
-	 * Si una sola lista contiene la valor buscada
+       Decidir si un elemento pertenece en $k$ arreglos ordenadas de
+       tamano $n/k$:
+
+       * Cotas superiores
+	 - Si una sola lista contiene la valor buscada
 	   - $k$ busquedas en el peor caso deterministico, que da
 	     $k\lg(n/k)$ comparaciones
 	   - $k/2$ busquedas en (promedio y en) el peor caso
 	     aleatorio, que da $k\lg(n/k)/2$ comparaciones
 
-	 * Si $r<k$ listas contienen la valor buscada
+	 - Si $r<k$ listas contienen la valor buscada
 	   - $k-r$ busquedas en el peor caso deterministico, que dan
 	     $(k-r)\lg(n/(k-r))$ comparaciones
 	   - $k/r$ busquedas en (promedio y en) el peor caso
 	     aleatorio, que dan $(k/r)\lg(n/k)$ comparaciones
 
-	 * Si $r=k$ listas contienen la valor buscada
+	 - Si $r=k$ listas contienen la valor buscada
 	   - $k$ busquedas en el peor caso deterministico, en promedio y
 	     en el peor caso aleatorio, que dan $k\lg(n/k)$ comparaciones
 
-   4. Aplicacion: 
 
-      algoritmos de interseccion de listas ordenadas.
+       * Cota inferior ${k\over r}\lg(n/k)$ comparaciones
+	 - Si $x$ es en $r$ arreglos, y no es en $k-r$ arreglos.
+	   - Considera la peor distribucion de instancias tal que
+	     - rango de insercion de $x$ es uniforme en cada arreglo
+	       (buscarlo costa $\lg n_i$ comparaciones en promedio)
+	     - se eliga $r$ arreglos 
+	   - cualquier algoritmo executa en promedio
+	     - ${k\over r}\sum \lg n_i$ comparaciones
+
+       * Cota inferior $\sum\lg n_i\over r$ comparaciones
+	 - Si $x$ es en $r$ arreglos, y no es en $k-r$ arreglos.
+	   - Considera la peor distribucion de instancias tal que
+	     - rango de insercion de $x$ es uniforme en cada arreglo
+	       (buscarlo costa $\lg n_i$ comparaciones en promedio)
+	     - se eliga $r$ arreglos 
+	   - cualquier algoritmo executa en promedio
+	     - ${k\over r}\sum \lg n_i$ comparaciones
+
+****** Interseccion de arreglos ordenados (Bonus)
+
+       - Calcular la interseccion de $k$ arreglos ordenadas, de
+         tamanos $n_1,\ldots,n_k$, donde
+	 - $\n_1\leq n_2 \leq \ldots n_k$
+	 - $n=n_1+\ldots+n_k$
+
+       - Cota inferior de 
+	 - $n_1 \sum_{i\in[2..k]} \lg(1+n_i/n_1)$
+	 - $\in O( k n_1 \lg(1+n_i/kn_1))$
+
+       - Se muestra con $n_1$ instancias independantes de
+         "Interseccion Elemental"
 
 
+***** Conclusion 
+       :PROPERTIES:
+       :Effort:   10
+       :END:
 
- * Conclusion:
+    1) Relacion fuerte entre 
+       - algoritmos aleatorizados y
+       - complejidad en promedio
 
-   * Relacion fuerte entre algoritmos aleatorizados y complejidad en
-     promedio
+    2) El *peor caso* de un *algoritmo aleatorio* corresponde a 
+       - la *peor distribucion* para un *algoritmo deterministico*.
 
-   * El peor caso de un algoritmo aleatorio corresponde a la
-     peor distribucion para un algoritmo deterministico.
+    3) Muchas aplicaciones importantes de los algoritmos aleatorizados
 
- * Otras aplicaciones importantes de los algoritmos aleatorizados
-
-   * "Online Algorithms", en particular paginamiento.
-
-   * Algoritmos de aproximacion
-
-  * Hashing
+       + Hashing
+       + "Online Algorithms", en particular paginamiento.
+       + Algoritmos de aproximacion
 
 **** Primalidad
      :PROPERTIES:
