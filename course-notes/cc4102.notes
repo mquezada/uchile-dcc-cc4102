@@ -5814,7 +5814,11 @@ REFERENCIA:
     - State "DONE"       from ""           [2010-10-07 Thu 10:50]
     :END:
     - problemas que son o no aproximables
+    - Referencia: Cap 35, "Approximation Algorithms", pag 1022, CLRS 2nd Edition
 **** (Motivacion)
+     :CLOCK:
+     CLOCK: 
+     :END:
      :PROPERTIES:
      :Effort:   10
      :END: 
@@ -5878,6 +5882,9 @@ REFERENCIA:
       :Effort:   30
       :END:
 
+     - Referencia:
+       - CLRS2, pagina 1049
+
      - DEFINICION
 
        	Dado $n$ valores $x_1, \ldots, x_n$, $0\leq x_i\leq 1/2$,
@@ -5913,29 +5920,35 @@ REFERENCIA:
        4. la distribucion de los tamanos de las valores hacen la
           instancia dificil o facil.
 
-***** Ejemplo: Recubrimiento de Vertices (Vertex Cover)
+***** Ejemplo: "Vertex Cover" (Recubrimiento de Vertices)
       :PROPERTIES:
       :Effort:   30
       :END:
 
+     - REFERENCIA: CLRS2, pagina 1024
+
      - DEFINICION:
 
        - Dado un grafo $G=(V,E)$,
-       - cual es el menor $V'\subseteq V$ tal que
-	 - $V'$ sea un /vertex cover/ de $G$?
-	 - ($V'$ de tamano minimo
-	 - tq $\forall e=(u,v)\in E$, $u\in V'$ o $v\in V'$)
+       - $V'$ es un /vertex cover/ de $G$ si
+	 - $\forall e=(u,v)\in E$, $u\in V'$ o $v\in V'$)
+       - $V'$ es un /vertex cover optima/ de $G$ si
+	 - $V'$ es de tamano minima.
 
-     - Algoritmo de aproximacion:
+       - Cual es el menor $V'\subseteq V$ tal que
+       - $V'$ sea un /vertex cover optima/ de $G$?
 
+     - Algoritmo de aproximación:
        - $V'\leftarrow \emptyset$
        - while $E\neq \emptyset$
 	 - sea $(u,v) \in E$
 	 - $V'\leftarrow V'\cup {u,v}$
-	 - $E \leftarrow E \ {(x,y), x=u \text{ o } x=v \text{ o } y=u \text{ o } y=v }$
-       - return $V$
+	 - $E \leftarrow E \ {(x,y) \text{ tal que } x=u \text{ o } x=v \text{ o } y=u \text{ o } y=v }$
+       - return $V'$
 
-     - Discusion: es una 2-aproximacion o no?
+     - Discusion: 
+       - Cual es la complejidad del algoritmo?
+       - es una 2-aproximacion o no?
 
      - LEMA: El algoritmo es una 2-aproximacion.
 
@@ -5950,15 +5963,19 @@ REFERENCIA:
 	 + quod erat demonstrandum, (QED).
 
 
-***** Ejemplo: Vertex Cover con pesos
+***** Ejemplo: "Vertex Cover" con pesos
       :PROPERTIES:
       :Effort:   30
       :END:
 
      - DEFINICION
 
-       Dado $G=(V,E)$ y $c:V\rightarrowR^+$, se quiere un $V^*\subseteq V$ que cubra
-       E y que minimice $\sum_{v\in V^*} c(v)$.
+       - Dado 
+	 - $G=(V,E)$ y 
+	 - $c:V\rightarrowR^+$, 
+       - se quiere un 
+	 - $V^*\subseteq V$ que cubra E y 
+	 - que minimice $\sum_{v\in V^*} c(v)$.
 
      - Este problema es NP Completo.
        - exercicio: que los alumnos le prueban.
@@ -6005,10 +6022,11 @@ REFERENCIA:
 
 
 
-***** Ejemplo: Vendedor viajero (Traveling Salesman)
+***** Ejemplo: Vendedor viajero con inegalidad triangular (Traveling Salesman)
       :PROPERTIES:
-      :Effort:   90
+      :Effort:   30
       :END:
+     - REFERENCIA: CLRS2, pagina 1027
 
      - DEFINICION:
 
@@ -6022,10 +6040,10 @@ REFERENCIA:
 
        - PROOF: 
 	 - Algoritmo de Aproximacion (con desigualdad triangular)
-	   - construir un arbol cobertor minimo (MST)
+	   - construir un /arbol cobertor minimo/ ("Minimum Spanning Tree" MST)
 	     - se puede hacer en tiempo polinomial, con programacion lineal.
 	     - $C_{MST} \leq C_{OPT}$
-	   - producimos un recorrido en profundidad DFS del MST:
+	   - producimos un recorrido en profundidad "Deep First Search" (DFS) del MST:
 	     - $C_{DFS} = 2C_{MST} \leq 2 C_{OPT}$
 	     - (factor dos porque el camino de vuelta puede ser al
 	       maximo de tamano igual al tamano del camino de ida)
@@ -6033,6 +6051,11 @@ REFERENCIA:
 	     el costo
 	     - $C_A\leq 2 C_{OPT}$
 	 - quod erat demonstradndum, QED.
+
+***** Ejemplo: Vendedor viajero sin inegalidad triangular (Traveling Salesman)
+      :PROPERTIES:
+      :Effort:   30
+      :END:
 
      - LEMA: Si $c$ no satisface la desigualdad triangular, el
        problema de vendedor viajero no es aproximables en tiempo
@@ -6191,8 +6214,9 @@ REFERENCIA:
 
 **** Conclusion/Wrap up Aproximabilidad
      :PROPERTIES:
-     :Effort:   60
-     :END:*** Algoritmos *paralelos* y distribuidos (2w = 4t = 360mns)
+     :Effort:   90
+     :END:
+*** Algoritmos *paralelos* y distribuidos (2w = 4t = 360mns)
     - Medidas de complejidad
     - Tecnicas de diseno
 **** PREREQUISITOS
