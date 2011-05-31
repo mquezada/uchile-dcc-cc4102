@@ -5841,25 +5841,37 @@ REFERENCIA:
       :PROPERTIES:
       :Effort:   10
       :END:
-      Dado un problema de minimizacion, un algoritmo $A$ es un
 
-      * *$p(n)$-aproximacion* si $\forall n \max \frac{ C_A(x) }{
-        C_{OPT}(x) } \leq p(n)$
+      * Dado un problema de minimizacion, un algoritmo $A$ es un
+        *$p(n)$-aproximacion* si
 
-      * *$p(n)$-aproximacion* si $\forall n \max \frac{ C_{OPT}(x) }{
-        C_A(x) } \leq p(n)$
+     $$\forall n \max_x \frac{ C_A(x) }{ C_{OPT}(x) } \leq p(n)$$
+
+
+      * Dado un problema de maximizacion, un algoritmo $A$ es un
+        *$p(n)$-aproximacion* si
+
+     $$\forall n \max_x \frac{ C_{OPT}(x) }{ C_A(x) } \leq p(n)$$
+
 
       * Notas: 
 	1) Aqui consideramos la cualidad de la solucion, NO la
 	   complejidad del algoritmo. Usualmente el problema es
 	   NP-dificil, y el algoritmo de aproximacion es de
 	   complejidad polinomial.
-	2) Las razones estas $\geq 1$ (elijamos las definiciones para
-	   eso)
+
+	2) Las definiciones estan escritas de manera que las
+           fracciones sean mayor que $1$.
+
 	3) A veces consideramos tambien $C_A(x)-C_{OPT}(x)$
-	   (minimizacion) y $C_{OPT}(x)-C_A(x)$: eso se llama un
-	   "esquema de aproximacion polinomial" y vamos a verlo mas
-	   tarde.
+	   (minimizacion) y $C_{OPT}(x)-C_A(x)$.
+	   - Si $C_A(x)-C_{OPT}(x)<\varepsilon \forall x$,
+	   - que se puede decir de $\frac{ C_A(x) }{ C_{OPT}(x) }$?
+	     - $\frac{ C_A(x) }{ C_{OPT}(x) }$
+	       - $<\frac{ C_{OPT}(x) + \varepsilon }{ C_{OPT}(x) }$
+	       - $= 1 + \frac{ \varepsilon }{ C_{OPT}(x) }$
+	       - $\rightarrow 1$ cuando $C_{OPT}(x)$ crece al infinito.
+
 
 ***** Ejemplo: Bin Packing (un problema que es 2-aproximable)
       :PROPERTIES:
@@ -5869,50 +5881,37 @@ REFERENCIA:
      - DEFINICION
 
        	Dado $n$ valores $x_1, \ldots, x_n$, $0\leq x_i\leq 1/2$,
-       	cual es la menor cantidad de cajas de tamano 1 necesarias
+       	cual es la menor cantidad de cajas de tamaño $1$ necesarias
        	para empaquetarlas?
 
-     - Algoritmo "Greedy"
+     - Algoritmo =Greedy=
        - Considerando los $x_i$ en orden,
        - llenar la caja actual todo lo posible,
-       - pasar ala siguiente caja.
+       - pasar a la siguiente caja.
 
      - Analisis
        - Este algoritmo tiene complejidad lineal $O(n)$.
-       - Greedy da una 2-aproximacion.
+       - =Greedy= da una 2-aproximacion.
        - (se puede mostrar facilamente en las instancias donde el
 	 algoritmo optima llene completamente todas las cajas.)
+	 - (interaccion)
 
      - Ademas, hay mejores aproximaciones, 
-       1. Best-fit tiene performance ratio de 1.7 en el peor caso
+       1. =Best-fit= tiene performance ratio de 1.7 en el peor caso
        2. Extract from "Best-Fit Bin-Packing with Random Order (1997), Kenyon"
 
 	  Best-fit is the best known algorithm for on-line
 	  binpacking, in the sense that no algorithm is known to
 	  behave better both in the worst case (when Best-fit has
-	  performance ratio 1.7) and in the average uniform case,
-	  with items drawn uniformly in the interval [0; 1] (then
-	  Best-fit has expected wasted space O(n 1=2 (log n) 3=4
-	  )). In practical applications, Best-fit appears to perform
-	  within a few percent of optimal. In this paper, in the
-	  spirit of previous work in computational geometry, we study
-	  the expected performance ratio, taking the worst-case
-	  multiset of items L, and assuming that the elements of L
-	  are inserted in random order, with all permutations equally
-	  likely. We show a lower bound of 1:08 : : : and an upper
-	  bound of 1:5 on the random order performance ratio of
-	  Best-fit. The upper bound contrasts with the result that in
-	  the worst case, any (deterministic or randomized) on-line
-	  bin-packing algorithm has performance ratio at least
-	  1:54 : : :. 1
+	  performance ratio 1.7) 
 
        3. Un otro paper donde particionan los $x_i$ en tres classes,
 	  placeando los $x_i$ mas grande primero, buscando el
 	  placamiento optimal de los $x_i$ promedio, y usando un
 	  algoritmo greedy para los $x_i$ pequenos. [Karpinski?]
 
-       4. la distribucion de los tamanos de las cajas hacen la
-	  instancia dificil o facil.
+       4. la distribucion de los tamanos de las valores hacen la
+          instancia dificil o facil.
 
 ***** Ejemplo: Recubrimiento de Vertices (Vertex Cover)
       :PROPERTIES:
@@ -5921,9 +5920,11 @@ REFERENCIA:
 
      - DEFINICION:
 
-       Dado un grafo $G=(V,E)$, cual es el menor $V'\subseteq V$ tal
-       que $V'$ sea un vertex cover de $G$.
-       (o sea $V'$ mas pequeno tq $\forall e=(u,v)\in E, u\in V'o v\in V')
+       - Dado un grafo $G=(V,E)$,
+       - cual es el menor $V'\subseteq V$ tal que
+	 - $V'$ sea un /vertex cover/ de $G$?
+	 - ($V'$ de tamano minimo
+	 - tq $\forall e=(u,v)\in E$, $u\in V'$ o $v\in V'$)
 
      - Algoritmo de aproximacion:
 
@@ -5931,8 +5932,8 @@ REFERENCIA:
        - while $E\neq \emptyset$
 	 - sea $(u,v) \in E$
 	 - $V'\leftarrow V'\cup {u,v}$
-	 - $E \leftarrow E \ {(x,y), x=u o x=v o y=u o y=v }$
-       - return V
+	 - $E \leftarrow E \ {(x,y), x=u \text{ o } x=v \text{ o } y=u \text{ o } y=v }$
+       - return $V$
 
      - Discusion: es una 2-aproximacion o no?
 
@@ -5947,6 +5948,60 @@ REFERENCIA:
 	   el actual, entonces cada 2 nodos que el algoritmo elige,
 	   uno pertenece a la solucion optima.
 	 + quod erat demonstrandum, (QED).
+
+
+***** Ejemplo: Vertex Cover con pesos
+      :PROPERTIES:
+      :Effort:   30
+      :END:
+
+     - DEFINICION
+
+       Dado $G=(V,E)$ y $c:V\rightarrowR^+$, se quiere un $V^*\subseteq V$ que cubra
+       E y que minimice $\sum_{v\in V^*} c(v)$.
+
+     - Este problema es NP Completo.
+       - exercicio: que los alumnos le prueban.
+       - Pregunta:
+	 - una reduccion a un problema NP completa con esquema de
+           approximacion impliqua un esquema de approximacion o no?
+
+     - LEMA: Vertex Cover con pesos es 2-aproximable
+     - PROOF:
+
+       1. Sea variables $x(v)\in {0,1}$, $\forall v\in V$
+	  - el costo de $V^*$ sera $\sum x(v) c(v)$ 
+	  - objetivo: $\min \sum_{v\in V} x(v) c(v)$
+	    donde $0\leq x(v) \leq 1 \forall v\in V$
+	  - $x(u)+x(v)\geq 1 \forall u,v \in E$
+
+       2. $x(v) \in Z$ sere programacion entera, que es NP Completa
+	  $x(v) \in R$ sere programacion lineal, que es polinomial
+	  el valor $\sum x(v) c(v)$ que produce el programo lineal
+	  es inferior a la mejor solucion al problema de VC.
+
+       3. Algoritmo
+	  - resolver el problema de programacion lineal
+	    - nos da $x(v_1),\ldots,x(v_n)$
+	  - $V^* \leftarrow\emptyset$
+	  - for $v\in V$
+	    - si $x(v)\geq 1/2$
+	      - $V^* \leftarrow V^* \cup {v}$
+	  - return $V^*$
+
+       4. Propiedades
+	  - $V^*$ es un vertex cover:
+	    - si $\forall(u,v)\in E, x(u)+x(v)\geq 1$
+	    - entonces, $x(u)\geq 1/2 o x(v)/geq 1/2$
+	    - entonces, $u\in V^* o v\in V^*$
+	  - $V^*$ es una 2-aproximacion:
+	    - $c(V^*) = \sum_v y(v) c(v)$
+	      donde $y(v) = 1 si x(v) \geq 1/2$, y $0$ sino
+	    - entonces $y(v) \leq 2 x(v)$
+	    - $\sum y(v) c(v) \leq \sum 2 x(v) c(v) \leq 2 OPT$
+	    - $C(V^*)         \leq 2 OPT$
+
+       5. QED
 
 
 
@@ -5999,51 +6054,6 @@ REFERENCIA:
 	 - Si hay un Ciclo Hamiltonian en E
 	   - tenemos una aproximacion de una soluciono de costo menos
 	     que $(n-1)p(n)$                 QED
-
-***** Ejemplo: Vertex Cover con pesos
-      :PROPERTIES:
-      :Effort:   90
-      :END:
-
-
-     - DEFINICION
-
-       Dado $G=(V,E)$ y $c:V\rightarrowR^+$, se quiere un $V^*\subseteq V$ que cubra
-       E y que minimice $\sum_{v\in V^*} c(v)$.
-
-     - Este problema es NP Completo.
-
-     - LEMA: Vertex Cover con pesos es 2-aproximable
-     - PROOF:
-       1. Sea variables $x(v)\in {0,1}$, $\forall v\in V$
-	   - el costo de $V^*$ sera $\sum x(v) c(v)$ 
-	   - objetivo: $\min \sum_{v\in V} x(v) c(v)$
-	     donde $0\leq x(v) \leq 1 \forall v\in V$
-	   - $x(u)+x(v)\geq 1 \forall u,v \in E$
-       2. $x(v) \in Z$ sere programacion entera, que es NP Completa
-	  $x(v) \in R$ sere programacion lineal, que es polinomial
-	  el valor $\sum x(v) c(v)$ que produce el programo lineal
-	  es inferior a la mejor solucion al problema de VC.
-       3. Algoritmo
-	  - resolver el problema de programacion lineal
-	    - nos da $x(v_1),\ldots,x(v_n)$
-	  - $V^* \leftarrow\emptyset$
-	  - for $v\in V$
-	    - si $x(v)\geq 1/2$
-	      - $V^* \leftarrow V^* \cup {v}$
-	  - return $V^*$
-       4. Propiedades
-	  - $V^*$ es un vertex cover:
-	    - si $\forall(u,v)\in E, x(u)+x(v)\geq 1$
-	    - entonces, $x(u)\geq 1/2 o x(v)/geq 1/2$
-	    - entonces, $u\in V^* o v\in V^*$
-	  - $V^*$ es una 2-aproximacion:
-	    - $c(V^*) = \sum_v y(v) c(v)$
-	      donde $y(v) = 1 si x(v) \geq 1/2$, y $0$ sino
-	    - entonces $y(v) \leq 2 x(v)$
-	    - $\sum y(v) c(v) \leq \sum 2 x(v) c(v) \leq 2 OPT$
-	    - $C(V^*)         \leq 2 OPT$
-       5. QED
 
 
 **** PTAS y FPTAS
@@ -6178,7 +6188,11 @@ REFERENCIA:
 		 - Las $n$ iteraciones en total toman 
 		   - $O(n^2 \lg t /\epsilon)$ operaciones
 
-*** Algoritmos *paralelos* y distribuidos (2w = 4t = 360mns)
+
+**** Conclusion/Wrap up Aproximabilidad
+     :PROPERTIES:
+     :Effort:   60
+     :END:*** Algoritmos *paralelos* y distribuidos (2w = 4t = 360mns)
     - Medidas de complejidad
     - Tecnicas de diseno
 **** PREREQUISITOS
