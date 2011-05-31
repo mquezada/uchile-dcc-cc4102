@@ -6192,7 +6192,8 @@ REFERENCIA:
 **** Conclusion/Wrap up Aproximabilidad
      :PROPERTIES:
      :Effort:   60
-     :END:*** Algoritmos *paralelos* y distribuidos (2w = 4t = 360mns)
+     :END:
+*** Algoritmos *paralelos* y distribuidos (2w = 4t = 360mns)
     - Medidas de complejidad
     - Tecnicas de diseno
 **** PREREQUISITOS
